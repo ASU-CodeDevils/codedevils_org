@@ -1,0 +1,40 @@
+{% load static %}
+<section class="section bg-6">
+    <div class="container bring-to-front py-0">
+        <div class="shadow bg-1 p-5 rounded">
+            <div class="row gap-y align-items-center text-center text-lg-left">
+                {% if not user.is_authenticated %}
+                    <div class="col-12 col-md-6 py-4 px-5 b-md-r">
+                        <i class="pe pe-7s-user pe-3x color-3"></i>
+                        <a href="#" class="mt-4 color-3 d-flex align-items-center">
+                            <h4 class="mr-3">Join as a member</h4>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </a>
+                        <p class="mt-4">Not already a member? Join today and experience all that CodeDevils has to
+                            offer, including webinars with the industry leaders in software and infrastructure,
+                            club-sponsored projects, and upcoming events.</p>
+                    </div>
+                {% else %}
+                    <div class="col-12 col-md-6 py-4 px-5 b-md-r">
+                        <i class="pe pe-7s-user pe-3x color-3"></i>
+                        <a href="{% url 'about' %}" class="mt-4 color-3 d-flex align-items-center">
+                            <h4 class="mr-3">Learn more about CodeDevils</h4>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </a>
+                        <p class="mt-4">Find out what makes CodeDevils so successful! Learn about the history
+                            of the club, view our sponsors, and meet our CodeDevils leadership.</p>
+                    </div>
+                {% endif %}
+                <div class="col-12 col-md-6 py-4 px-5">
+                    <i class="pe pe-7s-portfolio pe-3x color-4"></i>
+                    <a href="#" class="mt-4 color-4 d-flex align-items-center">
+                        <h4 class="mr-3">Submit a project</h4>
+                        <i class="fa fa-long-arrow-alt-right"></i>
+                    </a>
+                    <p class="mt-4">Coming soon! Submit or join projects, track progress, and seek all the
+                        different opportunities sponsored through CodeDevils!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

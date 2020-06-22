@@ -1,0 +1,292 @@
+{% extends "_index/base.html" %}
+{% load i18n %}
+{% load static %}
+{% load custom_urls %}
+{% block header %}
+    <!--HEADER-->
+    <header class="header section parallax image-background overlay gradient gradient-53 alpha-8 color-1" style="background-image: url({% static 'img/bg/code-grid.png' %})">
+        <div class="container overflow-hidden">
+            <div class="row">
+                <div class="col-md-8">
+                    <!--
+                    <p class="lead bold">Welcome CodeDevilers!</p>
+                -->
+                    <h1 class="display-4 color-1 light"><strong>CodeDevils</strong> - {% blocktrans %} An ASU<br> Student Organization{% endblocktrans %}</h1>
+                    <h1 class="color-1">
+                        <span class="typed bold display-4 display-md-3"></span>
+                    </h1>
+                    <!--
+                    <nav class="nav mt-5">
+                        <a href="#" class="nav-link btn btn btn-rounded btn-1 btn-lg px-5 bold">button</a>
+                    </nav>
+                -->
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+{% block content %}
+		<!--WEBMASTER CHANGELOG-->
+		<section class="section bg-5">
+			<div class="container text-center pt-4 pb-7">
+				<p class="color-1">{%trans 'Stay posted on new website integrations and updates.' %}
+					<a href="#" class="bold d-inline-flex align-items-center color-1 ml-3">{% trans 'Update Log' %}
+						<i class="pe pe-7s-angle-right"></i>
+					</a>
+				</p>
+			</div>
+		</section>
+		<!--CALLOUT BOX-->
+		<section class="section mt-6n">
+			<div class="container pt-0">
+				<div class="shadow bg-1 p-4 rounded">
+					<div class="row gap-y text-center text-md-left">
+						<div class="col-md-4 py-4 px-5 d-flex flex-column b-md-r">
+							<a href="javascript:;" class="color-5">
+								<h4 class="bold mr-3">{% trans 'Community' %}</h4>
+							</a>
+							{% blocktrans trimmed %}
+                            <p class="mt-4">Be part of an amazing group of individuals who have a passion for coding.<br><br>
+                                            Network with fellow students, faculty members, and guest speakers.<br><br>
+                                            We even have dedicated Slack channels for SER/CSE classes!</p>
+							{% endblocktrans %}
+                            <a href="{% url 'about' %}" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
+								<i class="fas fa-long-arrow-alt-right ml-3"></i>
+							</a>
+						</div>
+						<div class="col-md-4 py-4 px-5 d-flex flex-column b-md-r">
+							<a href="{% url 'about' %}" class="color-5">
+								<h4 class="bold mr-3">{% trans 'Code' %}</h4>
+							</a>
+							{% blocktrans trimmed %}
+							<p class="mt-4">Work on exclusive CodeDevils projects!<br><br>
+                                            Projects are an opportunity for members to collaborate on coding projects.
+                                            Anyone can propose an idea for a project, and a project can be anything that
+                                            involves coding in some way (regardless of language or platform).</p>
+							{% endblocktrans %}
+                            <a href="{% url 'about' %}" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
+								<i class="fas fa-long-arrow-alt-right ml-3"></i>
+							</a>
+						</div>
+						<div class="col-md-4 py-4 px-5 d-flex flex-column">
+							<a href="javascript:;" class="color-5">
+								<h4 class="bold mr-3">{% trans 'Compete' %}</h4>
+							</a>
+							{% blocktrans trimmed %}
+							<p class="mt-4">Coding competitions are hosted each semester on HackerRank.<br><br>
+                                Challenges range from easy to hard problems that may be solved using any supported
+                                programming language.<br><br>
+                                These are a great opportunity to try out problem solving in a programming language you
+                                are trying to learn or showing off your skills! At the end of the term you could win
+                                some swag!</p>
+							{% endblocktrans %}
+                            <a href="{% url 'about' %}" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
+								<i class="fas fa-long-arrow-alt-right ml-3"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    <!--UPDATE BANNER-->
+    <section class="section bg-light">
+        <div class="container bring-to-front pb-0">
+            <div class="section-heading text-center w-75 mx-auto">
+                <h2>{% trans 'Welcome to CodeDevils' %}</h2>
+                <p class="lead text-secondary">{% trans 'Welcome to CodeDevils - We are An ASU student run organization' %}</p>
+            </div>
+            <div class="shadow bg-contrast p-5 rounded">
+                <nav class="nav nav-tabs tabs-clean slide d-inline-flex mb-4"><a
+                        class="nav-item nav-link text-uppercase bold active" data-toggle="tab" href="#what-is-new">{% trans 'What\'s New?' %} 
+					</a><a class="nav-item nav-link text-uppercase bold" data-toggle="tab"
+                                href="#events">{% trans 'Events' %}</a></nav>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="what-is-new">
+                        <div class="row gap-y">
+                            <div class="col-lg-6">
+                                <h2 class="bold mb-4">{% trans 'Our Operation Bat Signal' %}</h2>
+                                <p class="lead text-secondary">{% trans 'Do you have any general questions or assistance finding resources since the move to remote learning. Reach out with any inquiries.' %} 
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <figure class="px-2"><img src="{% static 'img/screens/dash/newsletter.png' %}"
+                                                          class="img-responsive shadow rounded" alt="..."></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="events">
+                        <div class="row gap-y">
+                            <div class="col-lg-6">
+                                <h2 class="bold mb-4">{% trans 'Virtual Study Hall' %}</h2>
+                                <p class="lead text-secondary">
+								{% trans 'Join us for a virtual study session! Find your study buddies, conquer that homework, and enjoy the nerdiest study breaks at ASU!' %}
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <figure class="px-2"><img src="{% static 'img/virtual-study-hall.png' %}"
+                                                          class="img-responsive shadow rounded" alt="..."></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+		<!--OUR MISSION-->
+		<!--Maybe convert into Hero for next update-->
+		<section class="section gradient gradient-34 color-1">
+			<div class="container text-center pb-7 pb-md-0">
+				<div class="section-heading">
+					<h2 class="bold">{% trans 'OUR MISSION' %}</h2>
+					<p class="lead">{% trans 'Create a community of students in the online setting to provide the opportunity to meet and mingle with other students.' %}</p>
+					<p class="lead">{% trans 'With weekly coding challenges, peer mentorship, guest speakers, and big projects like moble applications, all completely online, there are plenty of ways to get involved and stay involved!' %}</p>
+				</div>
+			</div>
+		</section>
+		<!--MINI CALLOUT-->
+		<!--Perhaps we can chagne this to contain an image for the next update-->
+		<section class="section mt-9n">
+			<div class="container">
+				<div class="row gap-y">
+					<div class="col-md-6">
+						<div class="rounded media bg-1 shadow-lg p-4">
+							<i class="shadow fa fa-book gradient gradient-43 color-1 rounded-circle fa-2x mr-3 p-3 aos-init aos-animate" data-aos="zoom-in"></i>
+							<div class="media-body">
+								<h5 class="bold text-capitalize">{% trans 'Virtual Study Hall' %}</h5>
+								<p class="color-2 mb-0">
+								{% trans 'An online coworking environment where you can get that
+                                    experience of working alongside your peers and create good study habits!' %}</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="rounded media bg-1 shadow-lg p-4">
+							<i class="shadow fa fa-database gradient gradient-43 color-1 rounded-circle fa-2x mr-3 p-3 aos-init aos-animate" data-aos="zoom-in"></i>
+							<div class="media-body">
+								<h5 class="bold text-capitalize">{% trans 'Hackathons' %}</h5>
+								<p class="color-2 mb-0">{% trans 'Compete alongside fellow students and test your abilities on complex coding problems.' %}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--HOW TO JOIN-->
+		<section class="section extending-core">
+			<div class="shape shape-background top shape-left bg-6"></div>
+			<div class="container">
+				<div class="row gap-y align-items-center">
+					<div class="col-lg-6">
+						<div class="section-heading">
+							<p class="accent bold small text-uppercase">{% trans 'TOOLS TO DEVELOP' %}</p>
+							<h2>{% trans 'BECOME A CODEDEVIL' %}</h2>
+
+				<div style="padding-top: 20px;" class="row">
+					<div class="col-md-12 mx-auto">
+						<nav class="nav nav-tabs tabs-bordered mb-4" id="tab-bordered">
+							<a class="nav-item nav-link active" id="home-bordered-tab" data-toggle="tab" href="#home-bordered">{% trans 'REGISTER' %}</a>
+                            <a class="nav-item nav-link" id="contact-bordered-tab" data-toggle="tab"
+                               href="#contact-bordered">{% trans 'SLACK' %}</a>
+                            <a class="nav-item nav-link" id="profile-bordered-tab" data-toggle="tab"
+                               href="#profile-bordered">{% trans 'CLUB DOCS' %}</a>
+						</nav>
+						<div class="tab-content" id="tab-default-content">
+							<div class="tab-pane fade show active" id="home-bordered"><p>{% trans 'Officially register your membership as a CodeDevil on SunDevilSync.' %}
+</p><p>
+{% trans 'SunDevilSync is Arizona State University\'s online student involvement system.' %}
+</p><p>
+{% trans 'It connects students with student organizations and student organizations with their members and Administrative Advisors in a customizable, online campus community.' %}</p>
+                                <a href="{% custom_url 'sundevilsync' %}" target="_blank"
+                                   class="d-block d-md-flex align-items-center mt-auto">{% trans 'SunDevilSync' %}
+								<i class="fas fa-long-arrow-alt-right ml-3"></i>
+							</a>
+</div>
+							<div class="tab-pane fade" id="profile-bordered"><p>{% trans 'Now that you\'re registered, take a look at the CodeDevils Constitution so you are aware how the organization is run.' %}</p>
+                                <a href="{% static 'files/CDWelcomeLetter.pdf' %}" target="_blank"
+                                   class="d-block d-md-flex align-items-center mt-auto">{% trans 'View Welcome Docs' %}
+								<i class="fas fa-long-arrow-alt-right ml-3"></i>
+							</a>
+<p>{% trans 'Afterwards, check out our welcome letter to get some information, tips, and rules as you get involved in the club.' %}</p>
+                                <a href="{% custom_url 'constitution' %}" target="_blank"
+                                   class="d-block d-md-flex align-items-center mt-auto">{% trans 'View Constitution' %}
+								<i class="fas fa-long-arrow-alt-right ml-3"></i>
+							</a>
+							</div>
+							<div class="tab-pane fade" id="contact-bordered">
+								<p>{% trans 'After completing the previous steps, you are now an official CodeDevils member!' %}
+</p><p>
+{% blocktrans %}It's time to join a discussion with {{ member_count }} members!{% endblocktrans %}
+</p><p>
+{% trans 'Please sign up for our slack channel using your ASU e-mail and introduce yourself to the community.' %}
+</p><p>
+{% trans 'We\'re looking forward to meeting you!' %}
+</p>
+<a href="https://codedevils.slack.com" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Slack Signup' %}
+								<i class="fas fa-long-arrow-alt-right ml-3"></i>
+							</a>
+							</div>
+						</div>
+					</div>
+				</div>
+						</div>
+                        <a href="{% custom_url 'sundevilsync' %}" class="btn btn-rounded btn-outline-3 bw-2 mr-3"
+                           target="_blank">{% trans 'SunDevilSYNC' %}</a>
+                        <a href="#"
+                           class="btn btn-rounded btn-outline-1 bw-2 bold gradient gradient-43 color-1">{% trans 'SIGNUP' %}</a>
+					</div>
+					<div class="col-lg-6">
+						<div class="icons-wrapper position-relative">
+							<!--Youtube-->
+                            <a href="{% custom_url 'youtube' %}" target="_blank">
+							<div class="floating icon icon-xl bg-1 rounded-circle p-3 shadow m-0 absolute d-flex justify-content-center align-items-center aos-init aos-animate" style="left: 100%; top: 30%;" data-aos="fade-left">
+                                <img src="{% static 'img/integration/youtube.svg' %}" class="img-responsive" alt="">
+							</div>
+                            </a>
+							<!--CodeDevils-->
+                            <a href="{% custom_url 'sundevilsync' %}" target="_blank">
+							<div class="floating icon icon-xxl bg-1 rounded-circle p-3 shadow m-0 absolute d-flex justify-content-center align-items-center aos-init aos-animate" style="left: 60%; top: -10%;" data-aos="fade-left">
+								<img src="{% static 'img/integration/codedevils.svg' %}" class="img-responsive" alt="">
+							</div>
+                            </a>
+							<!--Github-->
+                            <a href="{% custom_url 'github' %}" target="_blank">
+							<div class="floating icon icon-xxl bg-1 rounded-circle p-3 shadow m-0 absolute d-flex justify-content-center align-items-center aos-init aos-animate" style="left: 25%; top: 0%;" data-aos="fade-left">
+                                <img src="{% static 'img/integration/github.svg' %}" class="img-responsive" alt="">
+							</div>
+                            </a>
+							<!--HackerRank-->
+                            <a href="{% custom_url 'hackerrank' %}" target="_blank">
+							<div class="floating icon icon-2xl bg-1 rounded-circle p-3 shadow m-0 absolute d-flex justify-content-center align-items-center aos-init aos-animate" style="left: 0%; top: 50%;" data-aos="fade-left">
+								<img src="{% static 'img/integration/hackerrank.svg' %}" class="img-responsive" alt="">
+							</div>
+                            </a>
+							<!--Slack-->
+                            <a href="{% custom_url 'slack' %}" target="_blank">
+							<div class="floating icon icon-2xxl bg-1 rounded-circle p-3 shadow m-0 absolute d-flex justify-content-center align-items-center aos-init aos-animate" style="left: 23%; top: 70%;" data-aos="fade-left">
+								<img src="{% static 'img/integration/slack.svg' %}" class="img-responsive" alt="">
+							</div>
+                            </a>
+							<!--ASU-->
+                            <a href="{% custom_url 'asu-home' %}" target="_blank">
+							<div class="floating icon icon-xxl bg-1 rounded-circle p-3 shadow m-0 absolute d-flex justify-content-center align-items-center aos-init aos-animate" style="left: 65%; top: 44%;" data-aos="fade-left">
+								<img src="{% static 'img/integration/asu.svg' %}" class="img-responsive" alt="">
+							</div>
+                            </a>
+                            <a href="{% custom_url 'swag' %}" target="_blank">
+							<div class="floating icon icon-xl bg-1 rounded-circle p-3 shadow m-0 absolute d-flex justify-content-center align-items-center aos-init aos-animate" style="left: 95%; top: 83%;" data-aos="fade-left">
+								<img src="{% static 'img/integration/redbubble.svg' %}" class="img-responsive" alt="">
+							</div>
+                            </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!--PADDING-->
+		<section style="padding-top: 200px;">
+			
+		</section>
+		<!--MEMBER CALLOUT-->
+        {% include '_index/callout_box.html' %}
+{% endblock content %}

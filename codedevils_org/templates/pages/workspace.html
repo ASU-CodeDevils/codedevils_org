@@ -1,0 +1,262 @@
+{% extends '_index/base.html' %}
+{% load i18n %}
+{% load static %}
+{% block create_account_footer %}{% endblock create_account_footer %}
+{% block header %}
+    <!--HEADER-->
+    <header class="bg-3 section image-background overlay gradient gradient-53 alpha-8 color-1" style="background-image: url({% static 'img/bg/code-grid.png' %})">
+        <div class="container overflow-hidden">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-4 color-1 light">{% trans 'Workspace' %}</h1>
+                    <!--
+                    <h1 class="color-1">
+                        <span class="typed bold display-4 display-md-3"></span>
+                    </h1>
+                -->
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+{% block content %}
+		<!--API LOG-->
+		<section class="section bg-5">
+			<div class="container text-center pt-4 pb-7">
+			{% blocktrans trimmed %}
+				<p class="color-1"><strong>Coming soon!</strong> We are working hard to create a New Integration API.
+					<a href="#" class="bold d-inline-flex align-items-center color-1 ml-3">Learn more
+						<i class="pe pe-7s-angle-right"></i>
+					</a>
+				</p>
+			{% endblocktrans %}
+			</div>
+		</section>
+		<!--CALLOUT BOX-->
+		<section class="section mt-6n">
+			<div class="container pt-0">
+				<div class="shadow bg-1 p-4 rounded">
+					<div class="row gap-y text-center text-md-left">
+						<div class="col-md-4 py-4 px-5 d-flex flex-column b-md-r">
+							<a href="javascript:;" class="color-5">
+								<h4 class="bold mr-3">{% trans 'Project Requests' %}</h4>
+							</a>
+							<p class="mt-4"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'In the next update, we\'ll let you submit your own project!' %}</p>
+							<a href="javascript:;" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
+								<i class="fas fa-long-arrow-alt-right ml-3"></i>
+							</a>
+						</div>
+						<div class="col-md-4 py-4 px-5 d-flex flex-column b-md-r">
+							<a href="javascript:;" class="color-5">
+								<h4 class="bold mr-3">{% trans 'Dashboard' %}</h4>
+							</a>
+							<p class="mt-4"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'View activity related directly to you!' %}</p>
+							<a href="javascript:;" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
+								<i class="fas fa-long-arrow-alt-right ml-3"></i>
+							</a>
+						</div>
+						<div class="col-md-4 py-4 px-5 d-flex flex-column">
+							<a href="javascript:;" class="color-5">
+								<h4 class="bold mr-3">{% trans 'Introducing API' %}</h4>
+							</a>
+							<p class="mt-4"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'We will have an entire suite of APIs for use on CodeDevils-sponsored projects.' %}</p>
+							<a href="{% url 'api:index' %}" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
+								<i class="fas fa-long-arrow-alt-right ml-3"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--ABOUT WORKSPACE-->
+		<section class="bg-1 edge bottom-right">
+			<div class="container">
+				<div class="row align-items-center text-center text-lg-left">
+					<div class="col-12 col-md-7 col-lg-6 mr-lg-auto text-center text-md-left">
+						<p class="small accent bold">{% trans 'Pushing project based club environment' %}</p>
+						<h2 class="bold">{% trans 'Get the very best of us by doing the best of you' %}</h2>
+						<p class="color-2">{% trans 'Join our contributors and fellow students in our project-based environment.' %}</p>
+					</div>
+					<div class="col-12 col-md-5 col-lg-5">
+						<div class="row no-gutters">
+							<div class="col-6 mb-3 pr-3">
+								<div class="rounded shadow-box shadow-hover p-2 p-sm-3 d-flex align-items-center flex-wrap bg-1">
+									<i class="pe pe-3x mr-4 pe-7s-user color-2"></i>
+									<div class="text-left">
+										<p class="counter font-md bold m-0 color-4">{{ member_count }}</p>
+										<p class="m-0">{% trans 'Members' %}</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 mb-3">
+								<div class="rounded shadow-box shadow-hover p-2 p-sm-3 d-flex align-items-center flex-wrap bg-1">
+									<i class="pe pe-3x mr-4 pe-7s-users color-2"></i>
+									<div class="text-left">
+										<p class="counter font-md bold m-0 color-4">{{ contributor_count }}</p>
+										<p class="m-0">{% trans 'Contributors' %}</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 pr-3">
+								<div class="rounded shadow-box shadow-hover p-2 p-sm-3 d-flex align-items-center flex-wrap bg-1">
+									<i class="pe pe-3x mr-4 pe-7s-plugin color-2"></i>
+									<div class="text-left">
+										<p class="counter font-md bold m-0 color-4">{{ project_count }}</p>
+										<p class="m-0">{% trans 'Projects' %}</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="rounded shadow-box shadow-hover p-2 p-sm-3 d-flex align-items-center flex-wrap bg-3 color-1">
+									<i class="pe pe-3x mr-4 pe-7s-coffee op-7"></i>
+									<div class="text-left">
+										<p class="counter font-md bold m-0">{{ coffee_count }}</p>
+										<p class="m-0">{% trans 'Cups of Coffee' %}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--ADDITIONAL FEATURES -->
+		<section class="section bg-6">
+			<div class="container bring-to-front">
+				<div class="row gap-y align-items-center">
+					<div class="col-md-6">
+						<div class="rounded bg-3-gradient shadow">
+							<div class="d-flex flex-column align-items-center py-3">
+								<img src="{% static 'img/bg/asset-1.svg' %}" class="img-responsive w-50" alt="">
+							</div>
+						</div>
+						<div class="rounded shadow-box bg-1 mt-3">
+							<div class="media align-items-center px-3">
+								<i class="pe pe-7s-graph pe-3x accent mr-3"></i>
+								<div class="media-body my-3 pl-3 b-l">
+									<p class="bold my-0">{% trans 'Powerful Dashborad' %}</p>
+									<p class="my-0 color-2"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'We will include a fully functional starter dashboard' %}</p>
+								</div>
+							</div>
+						</div>
+						<div class="rounded shadow-box bg-1 mt-3">
+							<div class="media align-items-center px-3">
+								<i class="pe pe-7s-graph1 pe-3x accent mr-3"></i>
+								<div class="media-body my-3 pl-3 b-l">
+									<p class="bold my-0">{% trans 'Powered with fresh air' %}</p>
+									<p class="my-0 color-2">{% trans 'It\'s awesome you to have a nice feature to show up' %}</p>
+									<hr class="my-3">
+									<nav id="sw-nav-1" class="nav nav-tabs tabs-clean border-bottom-0">
+										<a href="javascript:;" class="nav-item nav-link pl-md-0 py-0 d-flex flex-column align-items-center border-bottom-0 active" data-step="1">
+											<i class="icon pe pe-7s-plugin pe-2x"></i>
+											<span class="d-none small">{% trans 'Inbox' %}</span>
+										</a>
+										<a href="javascript:;" class="nav-item nav-link py-0 d-flex flex-column align-items-center border-bottom-0" data-step="2">
+											<i class="icon pe pe-7s-plugin pe-2x"></i>
+											<span class="d-none small">{% trans 'Calendar' %}</span>
+										</a>
+										<a href="javascript:;" class="nav-item nav-link py-0 d-flex flex-column align-items-center border-bottom-0" data-step="3">
+											<i class="icon pe pe-7s-plugin pe-2x"></i>
+											<span class="d-none small">{% trans 'Invoice' %}</span>
+										</a>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 ml-md-auto text-center text-md-left">
+						<h2>{% trans 'Bring your idea to life' %}</h2>
+						<p class="color-2">{% trans 'CodeDevils includes an outstanding starter for cooking up those fresh apps. With this feature you can start developing right away your web based application.' %}</p>
+						<hr>
+						<div class="swiper-container" data-sw-navigation="#sw-nav-1" data-sw-navigation-active="active">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<figure class="shadow-box">
+										<img src="{% static 'img/screens/dash/4.png' %}" alt="" class="img-responsive rounded">
+									</figure>
+									<p class="small text-center text-danger">{% trans 'Clean inbox UI design' %}</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="shadow-box">
+										<img src="{% static 'img/screens/dash/4.png' %}" alt="" class="img-responsive rounded">
+									</figure>
+									<p class="small text-center text-danger">{% trans 'Outstanding calendar UI design' %}</p>
+								</div>
+								<div class="swiper-slide">
+									<figure class="shadow-box">
+										<img src="{% static 'img/screens/dash/4.png' %}" alt="" class="img-responsive rounded">
+									</figure>
+									<p class="small text-center text-danger">{% trans 'Draft purchases with the invoice feature' %}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--WORKSPACE TOOLS-->
+		<section class="section">
+			<div class="shape-wrapper">
+				<img src="{% static 'img/shps/shape-2.svg' %}" class="shape-right" alt="...">
+			</div>
+			<div class="container bring-to-front">
+				<div class="row gap-y align-items-center">
+					<div class="col-12 col-md-5 col-lg-5 mr-md-auto text-center text-lg-left">
+						<p class="small accent bold">{% trans 'CodeDevil API for Workspace' %}</p>
+						<h2 class="bold">{% trans 'Easy integrations for your projects' %}</h2>
+						<p class="color-2"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'Seamlessly integrate your project with hosting options designed for you.' %}</p>
+					</div>
+					<div class="col-12 col-md-7 col-lg-6">
+						<div class="row gap-y">
+							<div class="col-6 col-sm-5 col-md-6 col-lg-5 mt-6 ml-lg-auto">
+								<div class="bg-3-gradient rounded color-1 p-2 p-sm-4 shadow text-center" data-aos="fade-up">
+									<img src="{% static 'img/logos/2.svg' %}" class="img-responsive op-5 px-0 px-sm-4" alt="...">
+									<p class="bold mt-5">{% trans 'Apache Server' %}</p>
+									<p class="op-5 small"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'Host your web application on an Apache web server.' %}</p>
+									<a href="javascript:;" class="btn btn-rounded btn-1 mt-4">
+										<i class="d-inline-block d-sm-none fas fa-long-arrow-alt-right"></i>
+										<span class="d-none d-sm-inline-block">{% trans 'Integrate' %}</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-sm-5 col-md-6 col-lg-5 mr-lg-auto">
+								<div class="bg-4-gradient rounded color-1 p-2 p-sm-4 shadow text-center" data-aos="fade-up">
+									<img src="{% static 'img/logos/1.svg' %}" class="img-responsive op-5 px-0 px-sm-4" alt="...">
+									<p class="bold mt-5">{% trans 'HTML 5' %}</p>
+									<p class="op-5 small"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'Learn HTML and use it to create web pages that bring your project to the eyes of your consumers.' %}</p>
+									<a href="javascript:;" class="btn btn-rounded btn-1 mt-4">
+										<i class="d-inline-block d-sm-none fas fa-long-arrow-alt-right"></i>
+										<span class="d-none d-sm-inline-block">{% trans 'Integrate' %}</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-sm-5 col-md-6 col-lg-5 ml-lg-auto">
+								<div class="bg-danger rounded color-1 p-2 p-sm-4 shadow text-center" data-aos="fade-up">
+									<img src="{% static 'img/logos/3.svg' %}" class="img-responsive op-5 px-0 px-sm-4" alt="...">
+									<p class="bold mt-5">{% trans 'Python' %}</p>
+									<p class="op-5 small"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'Python is growing ever-more popular, and is what this website uses! Use Python and Python-based frameworks for your applications.' %}</p>
+									<a href="javascript:;" class="btn btn-rounded btn-1 mt-4">
+										<i class="d-inline-block d-sm-none fas fa-long-arrow-alt-right"></i>
+										<span class="d-none d-sm-inline-block">{% trans 'Integrate' %}</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-sm-5 col-md-6 col-lg-5 mt-6n mr-lg-auto">
+								<div class="bg-info rounded color-1 p-2 p-sm-4 shadow text-center" data-aos="fade-up">
+									<img src="{% static 'img/logos/4.svg' %}" class="img-responsive op-5 px-0 px-sm-4" alt="...">
+									<p class="bold mt-5">{% trans 'CodeDevil API' %}</p>
+									<p class="op-5 small"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'Use APIs provided by this website to power your application.' %}</p>
+									<a href="javascript:;" class="btn btn-rounded btn-1 mt-4">
+										<i class="d-inline-block d-sm-none fas fa-long-arrow-alt-right"></i>
+										<span class="d-none d-sm-inline-block">{% trans 'Integrate' %}</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--CALLOUT BOX-->
+    {% include 'index/callout_box.html' %}
+{% endblock content %}

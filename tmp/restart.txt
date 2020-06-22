@@ -1,0 +1,10 @@
+This file is used by Phusion Passenger to rebuild and rerun the
+CodeDevils WSGI app. Passenger watches this file and restarts
+when this file is updated.
+
+Whenever you make an update, run the following command:
+
+    touch tmp/restart.txt
+
+For more information on Passenger on DreamHost see:
+https://help.dreamhost.com/hc/en-us/articles/216385637-How-do-I-enable-Passenger-on-my-domain-

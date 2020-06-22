@@ -1,0 +1,24 @@
+<div id="apps_marketing_banner" class="spec_banner">
+    <div class="spec_banner__content">
+        <div class="first_row"><i class="wave"></i> <b>Join us at Spec,</b>
+            <span>the Slack developer conference, on Oct. 22-23</span></div>
+        <div class="second_row"><a class="btn"
+                                   href="https://slack.com/spec?cvosrc=general%20promotion.slackhq.slackhq_spec_api_banner&amp;cvo_creative=null&amp;utm_medium=general%20promotion&amp;utm_source=slackhq&amp;utm_campaign=d_general%20promotion_slackhq_amer_en_all_ob-null_cr-null_ym-201909"
+                                   data-clog-click="true" data-clog-ui-action="click"
+                                   data-clog-event="WEBSITE_CLICK"
+                                   data-gtm-click="GTM-auto-pages_api-link_spec_cta"
+                                   data-clog-ui-step="pages_api" data-clog-ui-element="link_spec_cta"
+                                   target="_blank">Learn more</a></div>
+    </div>
+    <button class="close_spec ts_icon ts_icon_times"></button>
+</div>
+<script>$(document).ready(function () {
+    if (!readCookie('documentation_banner_cookie')) {
+        $('.spec_banner').removeClass('hidden');
+        $('.close_spec').on('click', function () {
+            createCookie('documentation_banner_cookie', 1, 30, '.slack.com');
+            $('.spec_banner').addClass('hidden');
+        });
+    }
+});
+</script>

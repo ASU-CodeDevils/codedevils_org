@@ -1,0 +1,85 @@
+{% load static %}
+{% load i18n %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include 'index/_header_meta.html' %}
+    {% block extrahead %}{% endblock extrahead %}
+</head>
+
+<body>
+    {% block navbar %}
+        {% include 'index/_nav.html' %}
+    {% endblock navbar %}
+	<main class="{% block main_class %}{% endblock main_class %}">
+        {% block header %}
+		<!--HEADER-->
+            <header class="page header color-1 overlay alpha-8 image-background cover gradient gradient-53"
+                    style="background-image: url({% static 'home/img/bg/code-grid.png' %})">
+                <div class="divider-shape">
+                    <!-- waves divider -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"
+                         class="shape-waves" style="left: 0; transform: rotate3d(0,1,0,180deg);">
+                        <path class="shape-fill shape-fill-1"
+                              d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"/>
+                    </svg>
+                </div>
+                <div class="container" style="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1 class="regular display-4 color-1 mb-4">{% block header_title %}{% endblock %}</h1>
+                            <p class="lead color-1">{% block header_message %}{% endblock %}</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        {% endblock header %}
+        <!--CONTENT-->
+        {% block base_content %}{% endblock base_content %}
+		<!--CREATE ACCOUNT-->
+        {% block create_account_footer %}
+            {% if not user.is_authenticated %}
+		        <section class="section bg-1 edge top-left b-b">
+			        <div class="container pt-5">
+				        <div class="d-flex align-items-center flex-column flex-md-row">
+					        <div class="text-center text-md-left">
+						        <p class="light mb-0 accent lead">{% trans 'Ready to join?' %}</p>
+						        <h2 class="mt-0">{% trans 'Create a CodeDevil account' %}</h2>
+					        </div>
+					        <a href="{% url 'users:register' %}" class="btn btn-accent btn-rounded mt-3 mt-md-0 ml-md-auto">{% trans 'Create account' %}</a>
+				        </div>
+			        </div>
+		        </section>
+            {% endif %}
+        {% endblock create_account_footer %}
+	</main>
+    <!--FOOTER-->
+    {% include 'index/_footer.html' %}
+
+	<!--SCRIPTS-->
+    {% include 'index/_scripts.html' %}
+
+    <!--SNACKBAR-->
+    {% if messages %}
+        {% for message in messages %}
+            <div id="snackbar" class="alert alert-{{ message.tags }}">
+                {% blocktrans %}{{ message }}{% endblocktrans %}
+            </div>
+        {% endfor %}
+        <script type="application/javascript">
+            $(document).ready(function() {
+                showSnackbar()
+            })
+        </script>
+    {% endif %}
+    {% block help_fab %}
+        <script data-jsd-embedded data-key="990dc0da-6ab1-474e-a40a-444084903b30"
+                data-base-url="https://jsd-widget.atlassian.com"
+                src="https://jsd-widget.atlassian.com/assets/embed.js">
+        </script>
+    {% endblock help_fab %}
+    {% block bottom_content %}{% endblock bottom_content %}
+</body>
+
+</html>

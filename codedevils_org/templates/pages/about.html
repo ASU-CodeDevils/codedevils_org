@@ -1,0 +1,227 @@
+{% extends '_index/base.html' %}
+{% load i18n %}
+{% load static %}
+{% load custom_urls %}
+{% block head_title %}{% trans 'About Us' %}{% endblock head_title %}
+{% block head_message %}{% blocktrans trimmed %}CodeDevils aims to provide ASU students with an organization designed to encourage and promote
+    involvement in coding projects and competitions through an exclusively online setting.{% endblocktrans %}{% endblock head_message %}
+{% block content %}
+		<!--ABOUT OUR ORGANIZATION-->
+	{% blocktrans trimmed %}
+		<section class="section overview">
+			<div class="container">
+				<div class="row align-items-center gap-y">
+					<div class="col-lg-5 mr-auto text-center text-md-left">
+						<div class="section-heading">
+							<h2>Our <br>Organization's<br> History</h2>
+                            <p class="lead color-2">CodeDevils was found in 2016 as a fully-virtual student
+                                organization. We pride ourselves in giving our members the tools needed to be successful
+                                in their cirriculum and have a competitive edge in the industry after graduating.</p>
+						</div>
+                        <p>CodeDevils isn't your traditional club; we are one of ASU's first organizations that caters
+                            to online students. We aim to further ASU's mission to maintaining the lead in innovation by
+                            successfully organizing and cultivating a rich student community existing exclusively
+                            online. Meetings, projects, guest speakers, and competitions are all organized and conducted
+                            virtually. Although we utilizes exclusively digital forms of communication to involve
+                            members and foster interaction, we do welcome all ASU students regardless of how you
+                            attend.</p>
+                        <p>We offer unique opportunities for all ASU students interested in software development and
+                            tech in general. Those opportunities include exclusive workshops with industry insiders,
+                            guest speakers from big name companies and prestigious institutions, weekly HackerRank
+                            challenges, online hackathons, and the opportunity to collaborate on resume-worthy projects
+                            (as well as weekly study sessions with fun and nerdy study breaks!)</p>
+					</div>
+					<div class="col-lg-6">
+						<div class="row gap-y">
+							<div class="col-6 col-sm-5 col-md-6 mt-6 ml-lg-auto">
+								<div class="card rounded p-2 p-sm-4 shadow text-center text-md-left" data-aos="fade-up">
+									<i class="pe pe-3x pe-7s-date color-3"></i>
+									<p class="bold mb-0">Club Calendar</p>
+                                    <p class="op-7 small"><strong>Coming soon!</strong> In the next couple updates, you will be able to view all CodeDevils events, sync it with your own calendar, and receive notifications on Slack/email.</p>
+								</div>
+							</div>
+							<div class="col-6 col-sm-5 col-md-6 mr-lg-auto">
+								<div class="color-1 bg-4-gradient card rounded p-2 p-sm-4 shadow text-center text-md-left" data-aos="fade-up">
+									<i class="pe pe-3x pe-7s-graph1"></i>
+									<p class="bold mb-0">Hosting</p>
+									<p class="op-7 small"><strong>Coming soon!</strong> For future projects, CodeDevils will give the option to host your website on a virtual private server <em>for free</em>. Other options also include access to the email backend, database storage, and much more!</p>
+								</div>
+							</div>
+							<div class="col-6 col-sm-5 col-md-6 ml-lg-auto">
+								<div class="card rounded p-2 p-sm-4 shadow text-center text-md-left" data-aos="fade-up">
+									<i class="pe pe-3x pe-7s-keypad color-3"></i>
+									<p class="bold mb-0">Project Based</p>
+                                    <p class="op-7 small"><strong>Coming soon!</strong> In the next update, you will be able to view all open projects, join and collaborate on them, and even submit one of your own.</p>
+								</div>
+							</div>
+							<div class="col-6 col-sm-5 col-md-6 mt-6n mr-lg-auto">
+								<div class="card rounded p-2 p-sm-4 shadow text-center text-md-left" data-aos="fade-up">
+									<i class="pe pe-3x pe-7s-users color-3"></i>
+									<p class="bold mb-0">Workspace</p>
+									<p class="op-7 small">A centralized page for all members to join projects, collaborate for course work, and see all the exciting activity at CodeDevils.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	{% endblocktrans %}
+		<!--LEADERSHIP-->
+		<section style="padding-top: 50px;" class="section bg-6">
+			<div class="container bring-to-front pt-0 pb-5">
+				<div class="section-heading text-center">
+					<h2>{% trans 'CodeDevils Leadership' %}</h2>
+					<p class="lead color-2">{% trans 'The driving force behind everything CodeDevils' %}</p>
+				</div>
+				<!-- sm: 576px, md: 768px,-->
+				<div class="swiper-container pb-5" data-sw-centered-slides="false" data-sw-show-items="2" data-sw-space-between="30" data-sw-breakpoints='{"576": {"slidesPerView": 1, "spaceBetween": 10, "slidesPerGroup": 1}}'>
+					<div class="swiper-wrapper">
+                        {% for officer in officers %}
+						<div class="swiper-slide">
+							<div class="card shadow">
+								<div class="container-fluid py-0">
+									<div class="row">
+										<div class="col-md-5 py-9 py-sm-7 overlay overlay-5 alpha-2 image-background cover center-top" style="background-image: url('{{ officer.user.profile.image.url }}')"></div>
+										<div class="col-md-7">
+											<div class="p-4">
+												<h6 class="bold font-l">{{ officer.user.first_name }} {{ officer.user.last_name }}</h6>
+												<p class="small mt-0 accent text-uppercase mb-5">{{ officer.get_position_display }}</p>
+                                                {% if officer.quote %}
+												<blockquote class="team-quote pt-1">
+													<p class="italic pl-4">{% blocktrans %}{{ officer.quote }}{% endblocktrans %}</p>
+												</blockquote>
+                                                {% endif %}
+                                                <hr class="w-25 mt-5">
+                                                <nav class="nav">
+                                                    {% if officer.user.profile.facebook_url %}
+                                                        <a href="{{ officer.user.profile.facebook_url }}"
+                                                           class="nav-item nav-link pb-0">
+                                                            <i class="fab fa-facebook color-2"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if officer.user.profile.twitter_username %}
+                                                        <a href="https://twitter.com/{{ officer.user.profile.twitter_username }}"
+                                                           class="nav-item nav-link pb-0">
+                                                            <i class="fab fa-twitter color-2"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if officer.user.profile.linkedin_url %}
+                                                        <a href="{{ officer.user.profile.linkedin_url }}"
+                                                           class="nav-item nav-link pb-0">
+                                                            <i class="fab fa-linkedin color-2"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                </nav>
+                                            </div>
+                                        </div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        {% endfor %}
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<!--MEETINGS-->
+		<section class="section">
+			<div class="container bring-to-front">
+				<div class="shadow rounded text-center overlay overlay-5 alpha-8 color-1 p-5 image-background cover" style="background-image: url({% static 'img/screens/dash/4.png' %})">
+					<div class="content">
+						<div class="section-heading">
+							<h2 class="color-1">{% trans 'Our Meetings are held online' %}</h2>
+						</div>
+						<p class="handwritten highlight font-md">{% trans 'Join In' %}</p>
+                        <a href="{% custom_url 'gbm' %}"
+                           class="modal-popup mfp-iframe btn btn-circle btn-lg btn-accent" data-effect="mfp-fade">
+							<i class="pe pe-7s-play pe-2x ml-2"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- WORKSPACE-->
+		<section class="section bg-6 edge top-left">
+			<div class="container bring-to-front">
+				<div class="section-heading text-center">
+					<h2>{% trans 'We promote collaboration' %}</h2>
+					<p class="lead">{% trans 'Collaborate with students on projects and course work while developing both your skills as a developer and your network.' %}</p>
+				</div>
+				<div class="row align-items-center gap-y">
+					<div class="col-md-6 col-lg-5 text-center text-md-left">
+						<ul class="list-unstyled">
+							<li class="media d-block d-lg-flex">
+								<i class="pe pe-3x pe-7s-network accent icon-lg mr-3 text-lg-right"></i>
+								<div class="media-body mt-3 mt-lg-0 text-center text-md-left">
+									<h5 class="bold color-5">{% trans 'Network' %}</h5>
+									<p class="mt-0 mb-5">{% trans 'Meet other members of CodeDevils.' %}</p>
+								</div>
+							</li>
+							<li class="media d-block d-lg-flex">
+								<i class="pe pe-3x pe-7s-portfolio accent icon-lg mr-3 text-lg-right"></i>
+								<div class="media-body mt-3 mt-lg-0 text-center text-md-left">
+									<h5 class="bold color-5">{% trans 'Develop' %}</h5>
+									<p class="mt-0 mb-5">{% trans 'Enhance your skills and grow as a developer through projects, webinars, and team collaboration.' %}</p>
+								</div>
+							</li>
+							<li class="media d-block d-lg-flex">
+								<i class="pe pe-3x pe-7s-plugin accent icon-lg mr-3 text-lg-right"></i>
+								<div class="media-body mt-3 mt-lg-0 text-center text-md-left">
+									<h5 class="bold color-5">{% trans 'Create' %}</h5>
+									<p class="mt-0">{% trans 'Have a great idea? Start your own project or join one today!' %}</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-5 ml-md-auto">
+						<div class="shadow card">
+							<div class="card-header overlay gradient gradient-34 alpha-5 image-background cover" style="background-image: url({% static 'home/img/screens/dash/4.png' %})">
+								<div class="content">
+									<h2 class="mt-9 color-1 light">{% trans 'Workspace' %}</h2>
+								</div>
+							</div>
+							<div class="card-body">
+								{% blocktrans trimmed %}
+								<p>Our club is packed full of things
+									<span class="bold">like collaboration.</span> Login to take advantage of our all new workspace</p>
+								{% endblocktrans %}
+                                {% if not user.is_authenticated %}
+								    <a href="{% url 'account_login' %}" class="btn btn-accent btn-rounded mt-4">{% trans 'Login' %}</a>
+                                {% else %}
+                                    <a href="#" class="btn btn-accent btn-rounded mt-4">{% trans 'View Workspace' %}</a>
+                                {% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--SPONSORS/MEMBER PROJECTS-->
+		<!--Add logos later... Abraham's Mental Note-->
+		<section class="section bg-1 edge bottom-right">
+			<div class="container">
+				<div class="section-heading text-center">
+					<h2>{% trans 'Sponsored Projects' %}</h2>
+					<p class="color-2 lead">{% trans 'CodeDevils sponsors projects developed by club members by providing assistance and insight. <br>Check out some of our projects. ' %}</p>
+				</div>
+				<ul class="list-unstyled d-flex flex-wrap justify-content-around">
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-right" data-aos-delay="0" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-6" style="background-image: url(img...)"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-down-right" data-aos-delay="100" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-4" style="background-image: url(img...)"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-up-right" data-aos-delay="200" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-5" style="background-image: url(img...)"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-up" data-aos-delay="300" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-6" style="background-image: url(img...)"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-down-left" data-aos-delay="400" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-4" style="background-image: url(img...)"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-up-left" data-aos-delay="0" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-5" style="background-image: url(img...)"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-left" data-aos-delay="100" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-6" style="background-image: url(img...)"></li>
+				</ul>
+			</div>
+		</section>
+    <!--CALLOUT BOX-->
+    {% include '_index/callout_box.html' %}
+{% endblock content %}

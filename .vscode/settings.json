@@ -1,0 +1,11 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/Users/kevin/projects/python_venv/cdweb/bin/python3",
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "**/templates/*.html": "django-html",
+        "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
+}

@@ -1,0 +1,14 @@
+<!--CREATE ACCOUNT-->
+{% if not user.is_authenticated %}
+<section class="section bg-1{% block new_member_edge %} edge top-left b-b{% endblock new_member_edge %}">
+    <div class="container pt-5">
+        <div class="d-flex align-items-center flex-column flex-md-row">
+            <div class="text-center text-md-left">
+                <p class="light mb-0 accent lead">Ready to join?</p>
+                <h2 class="mt-0">Create a CodeDevil account</h2>
+            </div>
+            <a href="#" class="btn btn-accent btn-rounded mt-3 mt-md-0 ml-md-auto">Create account</a>
+        </div>
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,25 @@
+{% extends "_index/base.html" %}
+{% load static %}
+
+{% block header %}
+    <!--HEADER-->
+    <header class="bg-3 section image-background overlay gradient gradient-53 alpha-8 color-1" style="background-image: url({% static 'img/bg/code-grid.png' %})">
+        <div class="container overflow-hidden">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-4 color-1 light">{% block head_title %}{% endblock head_title %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    {% block inner %}{% endblock %}
+  </div>
+</div>
+{% endblock %}
+
+{% block create_account_footer %}{% endblock create_account_footer %}

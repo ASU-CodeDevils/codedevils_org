@@ -1,0 +1,58 @@
+{% load static %}
+{% load custom_urls %}
+<!--FOOTER-->
+<footer class="site-footer section">
+    <div class="container pb-3">
+        <div class="row gap-y text-center text-md-left">
+            <div class="col-md-4 mr-auto">
+                <img src="{% static 'img/logo.png' %}" alt="" class="logo">
+                <p>CodeDevils is an inclusive virtual club that aims to bring ASU students together.</p>
+            </div>
+            <div class="col-md-2">
+                <h6 class="py-2 bold">Organization</h6>
+                <nav class="nav flex-column">
+                    <a class="nav-item py-2" href="{% url 'about' %}">About</a>
+                    <a class="nav-item py-2" href="{% url 'about' %}">Leadership</a>
+                    <a class="nav-item py-2" href="{% custom_url 'sundevilsync' %}" target="_blank">SunDevilSync</a>
+                </nav>
+            </div>
+            <div class="col-md-2">
+                <h6 class="py-2 bold">&nbsp;</h6>
+                <nav class="nav flex-column">
+                    <a class="nav-item py-2" href="#">Welcome Docs</a>
+                    <a class="nav-item py-2"
+                       href="{% custom_url 'constitution' %}">Constitution</a>
+                    <a class="nav-item py-2" href="{% custom_url 'slack' %}" target="_blank">Slack</a>
+                </nav>
+            </div>
+            <div class="col-md-2">
+                <h6 class="py-2 bold">Club</h6>
+                <nav class="nav flex-column">
+                    <a class="nav-item py-2" href="{% custom_url 'documentation' %}" target="_blank">Documentation</a>
+                    <a class="nav-item py-2" href="{% custom_url 'github' %}" target="_blank">Github</a>
+                    <a class="nav-item py-2" href="{% custom_url 'hackerrank' %}" target="_blank">HackerRank</a>
+                </nav>
+            </div>
+        </div>
+        <hr class="mt-5">
+        <div class="row small align-items-center">
+            <div class="col-md-4">
+                <p class="mt-2 mb-md-0 color-2 text-center text-md-left">© 2020 CodeDevils - Arizona State University
+                    All Rights Reserved.</p>
+            </div>
+            <div class="col-md-8">
+                <nav class="nav justify-content-center justify-content-md-end">
+                    <a href="{% custom_url 'slack' %}" class="btn btn-circle btn-sm btn-2 mr-3 op-4" target="_blank">
+                        <i class="fab fa-slack"></i>
+                    </a>
+                    <a href="{% custom_url 'github' %}" class="btn btn-circle btn-sm btn-2 mr-3 op-4" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="{% custom_url 'hackerrank' %}" class="btn btn-circle btn-sm btn-2 op-4" target="_blank">
+                        <i class="fab fa-hackerrank"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>

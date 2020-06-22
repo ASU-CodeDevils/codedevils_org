@@ -1,0 +1,76 @@
+{% extends "_index/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block header %}{% endblock header %}
+{% block content %}
+    <section class="checkout-header page header bg-dark section">
+        <div class="container bring-to-front pt-5 pb-0">
+            <div class="page-title">
+                <h1 class="regular text-contrast">CodeDevils Profile</h1>
+                <p class="mb-0 text-muted">Welcome Back, {{ user.first_name }}!</p>
+            </div>
+            <nav class="nav navbar mt-4">
+                <a href="{% url 'user_detail' username=user.username %}" class="nav-item nav-link">
+                    <i class="far fa-user mr-2"></i>
+                    <span class="d-none d-md-inline">Overview</span>
+                </a>
+                <a href="#" class="nav-item nav-link active">
+                    <i class="far fa-address-card mr-2"></i>
+                    <span class="d-none d-md-inline">My Details</span>
+                </a>
+            </nav>
+        </div>
+        <div class="bg-light shadow-box">
+            <div class="container bring-to-front py-0">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb small">
+                        <li class="breadcrumb-item"><a href="#">User</a></li>
+                        <li class="breadcrumb-item"><a href="#">Profile</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">My Details</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!--Difficulty (5/10) Two fathers and two sons sat down to eat eggs for breakfast. They ate exactly three eggs, each person had an egg. How is this possible?-->
+    <!-- Address -->
+    <section class="section">
+        <form type="submit" method="post" class="bg-white">
+            {% csrf_token %}
+            <div class="container pt-2">
+                <div class="row form-group">
+                    <div class="col-sm mt-4">
+                        <h5>About Me</h5>
+                        <div class="card">
+                            <div class="card-body">
+                                {{ u_form|crispy }}
+                                {{ image_form|crispy }}
+                            </div>
+                        </div>
+                        <h5 class="mt-4 mb-2">Additional Info</h5>
+                        <div class="card">
+                            <div class="card-body">
+                                {{ update_form|crispy }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm mt-4">
+                        <h5>Public Info</h5>
+                        <div class="card">
+                            <div class="card-body">
+                                {{ usernames_form|crispy }}
+                            </div>
+                        </div>
+                        <h5 class="mt-4 mb-2">Preferences</h5>
+                        <div class="card">
+                            <div class="card-body">
+                                {{ preferences_form|crispy }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input class="btn btn-3" type="submit" value="Update">
+            </div>
+        </form>
+    </section>
+{% endblock content %}
