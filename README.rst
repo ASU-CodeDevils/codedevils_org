@@ -6,6 +6,9 @@ The official CodeDevils website
 .. image:: https://travis-ci.com/ASU-CodeDevils/codedevils_org.svg?token=FhsGC7ZUMb7rskmp3jDy&branch=master
     :target: https://travis-ci.com/ASU-CodeDevils/codedevils_org
     :alt: Build
+.. image:: https://codecov.io/gh/ASU-CodeDevils/codedevils_org/branch/master/graph/badge.svg?token=FF94MF9N4M
+    :target: https://codecov.io/gh/ASU-CodeDevils/codedevils_org
+    :alt: Codecov
 .. image:: https://img.shields.io/website-up-down-green-red/http/shields.io.svg
     :target: https://codedevils.org
     :alt: Website
