@@ -35,17 +35,17 @@ class User(AbstractUser):
     github_username = models.CharField(db_column="GithubUsername", blank=True, null=True, max_length=30,
                                        verbose_name=_("GitHub Username"),
                                        help_text=_("We use this to automatically enroll you in our GitHub projects."))
-    slack_username = models.CharField(db_column="SlackUsername", blank=True, null=True, max_length=30,
+    slack_username = models.CharField(db_column="SlackUsername", blank=True, null=True, max_length=30, 
                                       verbose_name=_("Slack Username"),
                                       help_text=_("The user\"s slack user name registered on the CodeDevils slack "
-                                                "channel"))
+                                                  "channel"))
     twitter_username = models.CharField(db_column="TwitterUsername", blank=True, null=True, max_length=15,
                                         verbose_name=_("Twitter Username"),
-                                        help_text="Just the username. This username will be appended to the Twitter URL.")
+                                        help_text="Just the username. This username will be appended to the Twitter "
+                                                  "URL.")
     instagram_url = models.URLField(db_column="InstagramUrl", blank=True, null=True, verbose_name=_("Instagram URL"))
     facebook_url = models.URLField(db_column="FacebookUrl", blank=True, null=True, verbose_name=_("Facebook URL"))
     linkedin_url = models.URLField(db_column="LinkedInUrl", blank=True, null=True, verbose_name=_("LinkedIn URL"))
-
 
     # user preferences
     receive_notifications = models.BooleanField(db_column="ReceiveNotifications", default=False,
@@ -53,9 +53,9 @@ class User(AbstractUser):
                                                 help_text="Receive emails about the latest and greatest at CodeDevils!")
     anonymous = models.BooleanField(db_column="IsAnonymous", default=True, blank=False, null=False,
                                     verbose_name=_("Anonymous"),
-                                    help_text=_("You have the option of keeping your account anonymous with CD. Selecting"
-                                              "this will ensure your account stays private and supported applications "
-                                              "don\"t have access to your data"))
+                                    help_text=_("You have the option of keeping your account anonymous with CD. "
+                                                "Selectingthis will ensure your account stays private and supported "
+                                                "applications don't have access to your data"))
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
@@ -74,8 +74,8 @@ class OfficerPosition(models.Model):
                             unique=True, verbose_name=_("Name"))
     order = models.PositiveSmallIntegerField(db_column="Order", null=False,
                                              verbose_name=_("Order"),
-                                             help_text=_("The order of precedence of the position. For example, the President "
-                                                         "is 1, Vice President is 2, and so on."))
+                                             help_text=_("The order of precedence of the position. For example, the "
+                                                         "President is 1, Vice President is 2, and so on."))
     sds_position = models.CharField(db_column="SDSPosition", blank=True, null=True, max_length=32,
                                     verbose_name=_("SunDevilSync Position"),
                                     help_text=_("The name of the officer position as it is registered on SunDevilSync"))
@@ -106,7 +106,7 @@ class OfficerPosition(models.Model):
         if not positions or not positions.filter(order__exact=self.order):
             log.debug(f"No position found at {self.order}. No reordering required!")
             return
-        
+
         positions = positions.order_by("order")
         name = self.name
         order_max_to_check = self.order + len(positions)

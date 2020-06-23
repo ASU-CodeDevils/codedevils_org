@@ -24,7 +24,7 @@ class UserAdmin(auth_admin.UserAdmin):
 class OfficerPositionAdmin(admin.ModelAdmin):
     empty_value_display = "-N/A-"
     list_display = ["name", "sds_position", "order"]
-    actions = ["rebase_order",]
+    actions = ["rebase_order"]
 
     def changelist_view(self, request, extra_context=None):
         """
