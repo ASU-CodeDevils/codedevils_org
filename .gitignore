@@ -283,6 +283,3 @@ pip-selfcheck.json
 codedevils_org/media/
 codedevils_org/files/dh/
 .pytest_cache/
-**/migrations/*
-!**/migrations/__init__.py
-!codedevils_org/contrib/sites/migrations/*
