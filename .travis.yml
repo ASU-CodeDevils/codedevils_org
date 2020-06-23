@@ -31,3 +31,5 @@ jobs:
       script:
         - "pytest"
         - "coverage run -m pytest"
+      after_success:
+        - codecov
