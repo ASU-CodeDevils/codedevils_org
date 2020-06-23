@@ -6,6 +6,8 @@ import os
 import sys
 from pathlib import Path
 
+from django.core.wsgi import get_wsgi_application
+
 VENV = "/home/codedevils_admin/.envs/codedevils.org/"
 INTERP = VENV + "bin/python3"
 
@@ -18,10 +20,6 @@ if sys.executable != INTERP:
 # codedevils_org directory.
 ROOT_DIR = Path(__file__).resolve(strict=True)
 sys.path.append(str(ROOT_DIR / "codedevils_org"))
-
-# import django wsgi after system executable is defined in case
-# django is only availalble through the virtual environment
-from django.core.wsgi import get_wsgi_application
 
 # add the project and virtual environment to the system path
 cwd = os.getcwd()

@@ -1,7 +1,6 @@
 import logging
 
 from django.db import models
-from django.db.models import Max
 from django.db.models import CharField
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -37,12 +36,12 @@ class User(AbstractUser):
                                        help_text=_("We use this to automatically enroll you in our GitHub projects."))
     slack_username = models.CharField(db_column="SlackUsername", blank=True, null=True, max_length=30, 
                                       verbose_name=_("Slack Username"),
-                                      help_text=_("The user\"s slack user name registered on the CodeDevils slack "
-                                                  "channel"))
+                                      help_text=_("The user\"s slack user name registered on the CodeDevils slack"
+                                                  " channel"))
     twitter_username = models.CharField(db_column="TwitterUsername", blank=True, null=True, max_length=15,
                                         verbose_name=_("Twitter Username"),
-                                        help_text="Just the username. This username will be appended to the Twitter "
-                                                  "URL.")
+                                        help_text="Just the username. This username will be appended to the Twitter"
+                                                  " URL.")
     instagram_url = models.URLField(db_column="InstagramUrl", blank=True, null=True, verbose_name=_("Instagram URL"))
     facebook_url = models.URLField(db_column="FacebookUrl", blank=True, null=True, verbose_name=_("Facebook URL"))
     linkedin_url = models.URLField(db_column="LinkedInUrl", blank=True, null=True, verbose_name=_("LinkedIn URL"))
