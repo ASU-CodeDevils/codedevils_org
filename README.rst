@@ -3,6 +3,9 @@ codedevils.org
 
 The official CodeDevils website
 
+.. image:: https://travis-ci.com/ASU-CodeDevils/codedevils_org.svg?token=FhsGC7ZUMb7rskmp3jDy&branch=master
+     :target: https://travis-ci.com/github/ASU-CodeDevils/codedevils_org
+     :alt: Build
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
      :alt: Built with Cookiecutter Django
