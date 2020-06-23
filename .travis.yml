@@ -6,6 +6,7 @@ python:
 
 services:
   - mysql
+  - redis
 jobs:
   include:
     - name: "Linter"
