@@ -8,4 +8,5 @@
         "**/templates/**/*": "django-txt",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
+    "restructuredtext.confPath": "${workspaceFolder}/docs",
 }

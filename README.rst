@@ -4,18 +4,23 @@ codedevils.org
 The official CodeDevils website
 
 .. image:: https://travis-ci.com/ASU-CodeDevils/codedevils_org.svg?token=FhsGC7ZUMb7rskmp3jDy&branch=master
-     :target: https://travis-ci.com/github/ASU-CodeDevils/codedevils_org
-     :alt: Build
+    :target: https://travis-ci.com/ASU-CodeDevils/codedevils_org
+    :alt: Build
+.. image:: https://img.shields.io/website-up-down-green-red/http/shields.io.svg
+    :target: https://codedevils.org
+    :alt: Website
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
-     :target: https://github.com/pydanny/cookiecutter-django/
-     :alt: Built with Cookiecutter Django
+    :target: https://github.com/pydanny/cookiecutter-django/
+    :alt: Built with Cookiecutter Django
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-     :target: https://github.com/ambv/black
-     :alt: Black code style
-
-
-:License: MIT
-
+    :target: https://github.com/ambv/black
+    :alt: Black code style
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :target: https://opensource.org/licenses/MIT
+    :alt: License
+.. image:: https://img.shields.io/badge/chat-slack-pink.svg
+    :target: https://codedevils.slack.com/archives/GPNBSDM27
+    :alt: Slack
 
 Settings
 --------
@@ -94,7 +99,3 @@ Deployment
 ----------
 
 The following details how to deploy this application.
-
-
-
-
