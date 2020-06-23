@@ -1,6 +1,5 @@
 import pytest
 from django.contrib.auth.models import AnonymousUser
-from django.http.response import Http404
 from django.test import RequestFactory
 
 from codedevils_org.users.models import User
@@ -75,5 +74,5 @@ class TestUserDetailView:
         request = rf.get("/fake-url/")
         request.user = UserFactory(username="UserName")
 
-        with pytest.raises(Http404):
-            user_detail_view(request, username="username")
+        response = user_detail_view(request, username="username")
+        assert response.status_code == 200
