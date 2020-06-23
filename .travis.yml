@@ -30,3 +30,6 @@ jobs:
         - pip install -r requirements/local.txt
       script:
         - "pytest"
+        - "coverage run -m pytest"
+      after_success:
+        - codecov
