@@ -34,7 +34,7 @@ class User(AbstractUser):
     github_username = models.CharField(db_column="GithubUsername", blank=True, null=True, max_length=30,
                                        verbose_name=_("GitHub Username"),
                                        help_text=_("We use this to automatically enroll you in our GitHub projects."))
-    slack_username = models.CharField(db_column="SlackUsername", blank=True, null=True, max_length=30, 
+    slack_username = models.CharField(db_column="SlackUsername", blank=True, null=True, max_length=30,
                                       verbose_name=_("Slack Username"),
                                       help_text=_("The user\"s slack user name registered on the CodeDevils slack"
                                                   " channel"))
@@ -117,7 +117,7 @@ class OfficerPosition(models.Model):
             # | Excluding the name of the position we already changed the order of
             # | Excluding the original name of the position that triggered this workflow
             # | Getting the remaining order number
-            # If there is a position at that order, the position's order is incremented and the 
+            # If there is a position at that order, the position's order is incremented and the
             # loop continues
             try:
                 current_position = positions\
