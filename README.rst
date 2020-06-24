@@ -25,6 +25,29 @@ The official CodeDevils website
     :target: https://codedevils.slack.com/archives/GPNBSDM27
     :alt: Slack
 
+Website Status
+--------------
+
+Production
+^^^^^^^^^^
+
+.. image:: https://img.shields.io/uptimerobot/status/m784417521-1b9dcabb76b05ae6fdc099b3
+    :target: https://status.codedevils.org/784417521
+    :alt: Status (prod)
+.. image:: https://img.shields.io/uptimerobot/ratio/m784417521-1b9dcabb76b05ae6fdc099b3
+    :target: https://status.codedevils.org/784417521
+    :alt: Uptime (prod)
+
+QA
+^^
+
+.. image:: https://img.shields.io/uptimerobot/status/m784417527-57e543ec1e2e0752a9ba2228
+    :target: https://status.codedevils.org/784417527
+    :alt: Status (QA)
+.. image:: https://img.shields.io/uptimerobot/ratio/m784417527-57e543ec1e2e0752a9ba2228
+    :target: https://status.codedevils.org/784417527
+    :alt: Uptime (QA)
+
 Settings
 --------
 
