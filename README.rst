@@ -9,9 +9,6 @@ The official CodeDevils website
 .. image:: https://codecov.io/gh/ASU-CodeDevils/codedevils_org/branch/master/graph/badge.svg?token=FF94MF9N4M
     :target: https://codecov.io/gh/ASU-CodeDevils/codedevils_org
     :alt: Codecov
-.. image:: https://img.shields.io/website-up-down-green-red/http/shields.io.svg
-    :target: https://codedevils.org
-    :alt: Website
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
     :target: https://github.com/pydanny/cookiecutter-django/
     :alt: Built with Cookiecutter Django
@@ -32,7 +29,7 @@ Production
 ^^^^^^^^^^
 
 .. image:: https://img.shields.io/uptimerobot/status/m784417521-1b9dcabb76b05ae6fdc099b3
-    :target: https://status.codedevils.org/784417521
+    :target: https://codedevils.org
     :alt: Status (prod)
 .. image:: https://img.shields.io/uptimerobot/ratio/m784417521-1b9dcabb76b05ae6fdc099b3
     :target: https://status.codedevils.org/784417521
@@ -42,7 +39,7 @@ QA
 ^^
 
 .. image:: https://img.shields.io/uptimerobot/status/m784417527-57e543ec1e2e0752a9ba2228
-    :target: https://status.codedevils.org/784417527
+    :target: https://qa.codedevils.org
     :alt: Status (QA)
 .. image:: https://img.shields.io/uptimerobot/ratio/m784417527-57e543ec1e2e0752a9ba2228
     :target: https://status.codedevils.org/784417527
