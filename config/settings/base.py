@@ -29,11 +29,11 @@ TIME_ZONE = "UTC"
 LANGUAGE_CODE = env("DJANGO_LANGUAGE_CODE", default="en-us")
 
 LANGUAGES = [
-  ('es', _('Spanish')),
-  ('en-us', _('English')),
-  ('fr', _('French')),
-  ('ar', _('Arabic')),
-  ('nl', _('Dutch'))
+    ('es', _('Spanish')),
+    ('en-us', _('English')),
+    ('fr', _('French')),
+    ('ar', _('Arabic')),
+    ('nl', _('Dutch'))
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1
@@ -79,7 +79,6 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-    "allauth.socialaccount.providers.keycloak",
     "django_celery_beat",
     "rest_framework",
     "rest_framework.authtoken",
@@ -319,10 +318,8 @@ REST_FRAMEWORK = {
 # Your stuff...
 # ------------------------------------------------------------------------------
 
-# keycloak local settings
-SOCIALACCOUNT_PROVIDERS = {
-    "keycloak": {
-        "KEYCLOAK_URL": "http://localhost:8080/auth",
-        "KEYCLOAK_REALM": "master"
-    }
-}
+# django_cas_ng
+INSTALLED_APPS += ["django_cas_ng"]
+MIDDLEWARE += ["django_cas_ng.middleware.CASMiddleware"]
+AUTHENTICATION_BACKENDS += ["django_cas_ng.backends.CASBackend"]
+CAS_VERSION = "3"

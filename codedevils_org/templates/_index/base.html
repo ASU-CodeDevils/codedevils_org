@@ -1,8 +1,8 @@
-{% load static %}
-{% load i18n %}
+{% load i18n static %}
 <!doctype html>
-<html lang="en">
-
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!-- Current language: {{ LANGUAGE_CODE }} -->
+<html lang="{{ LANGUAGE_CODE|default:'en-us' }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
     {% include '_index/header_meta.html' %}
     {% block extrahead %}{% endblock extrahead %}

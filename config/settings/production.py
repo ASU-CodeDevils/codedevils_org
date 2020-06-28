@@ -159,3 +159,6 @@ LOGGING = {
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+# django-cas-ng
+# https://djangocas.dev/docs/latest/
+CAS_SERVER_URL = "https://sso.codedevils.org/cas/"
