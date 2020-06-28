@@ -1,6 +1,7 @@
 """
 This file is the WSGI module for Phusion Passenger (currently used on DreamHost).
 """
+# flake8: noqa
 
 import os
 import sys
