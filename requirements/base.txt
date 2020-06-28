@@ -25,3 +25,4 @@ djangorestframework==3.11.0  # https://github.com/encode/django-rest-framework
 # ------------------------------------------------------------------------------
 django-localflavor==3.0.1  # https://pypi.org/project/django-localflavor/
 django-countries==6.1.2  # https://github.com/SmileyChris/django-countries
+django-cas-ng==4.1.1  # https://djangocas.dev/
