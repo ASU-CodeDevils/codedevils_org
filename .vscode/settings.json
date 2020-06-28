@@ -1,6 +1,6 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": "/Users/kevin/projects/python_venv/cdweb/bin/python3",
+    "python.pythonPath": "${workspaceFolder}/../.envs/cdweb/bin/python",
     "files.associations": {
         "**/*.html": "html",
         "**/templates/**/*.html": "django-html",
