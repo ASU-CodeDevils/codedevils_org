@@ -5,9 +5,6 @@ This file is the WSGI module for Phusion Passenger (currently used on DreamHost)
 
 import os
 import sys
-from pathlib import Path
-
-from django.core.wsgi import get_wsgi_application
 
 try:
     VENV = open("tmp/venv.txt", "r").read().strip()
@@ -19,6 +16,10 @@ INTERP = VENV + "bin/python3"
 # knows the actual executable path
 if sys.executable != INTERP:
     os.execl(INTERP, INTERP, *sys.argv)
+
+# Dreamhost requires virtual environment for these resources
+from pathlib import Path
+from django.core.wsgi import get_wsgi_application
 
 # This allows easy placement of apps within the interior
 # codedevils_org directory.
