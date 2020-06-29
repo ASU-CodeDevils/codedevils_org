@@ -60,15 +60,21 @@ QA
 Support
 ^^^^^^^
 
-Our webmasters develop and maintain the website and can be reached via .. _email: mailto:webmaster@codedevils.org.
+Our webmasters develop and maintain the website and can be reached via `email`_.
 For general information, including questions about the website, the organization, or how to become a member,
-reach out to .. _our officers directly: mailto:info@codedevils.org.
+reach out to .. `our officers directly`_.
+
+.. _`our officers`: mailto:info@codedevils.org
+
+.. _`email`: mailto:webmaster@codedevils.org
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
    installation
+   languages
    release_notes
 
    pycharm/configuration
