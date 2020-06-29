@@ -15,6 +15,9 @@ Dependencies
 * Redis (optional when installed locally)
 * Celery (optional when installed locally)
 
+Instructions
+^^^^^^^^^^^^
+
 Clone from GitHub
 -----------------
 
@@ -117,3 +120,53 @@ To complete the configuration, run the following `django-admin` commands:
 
     ./manage.py migrate             # for creating the database tables
     ./manage.py compilemessages     # for compiling translations
+
+VS Code configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+A good VSCode integration for this project is:
+
+`settings.json`
+
+.. code:: json
+
+    {
+        "python.linting.pylintEnabled": true,
+        "python.pythonPath": "${workspaceFolder}/ven/bin/python",
+        "files.associations": {
+            "**/*.html": "html",
+            "**/templates/**/*.html": "django-html",
+            "**/templates/*.html": "django-html",
+            "**/templates/**/*": "django-txt",
+            "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+        }
+    }
+
+`launch.json`
+
+.. code:: json
+
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python: Django",
+                "type": "python",
+                "request": "launch",
+                "program": "${workspaceFolder}/manage.py",
+                "args": [
+                    "runserver",
+                    "--noreload"
+                ],
+                "django": true
+            },
+            {
+                "type": "firefox",
+                "request": "launch",
+                "reAttach": true,
+                "name": "Launch localhost",
+                "url": "http://localhost:8000",
+                "webRoot": "${workspaceFolder}/public/"
+            }
+        ]
+    }

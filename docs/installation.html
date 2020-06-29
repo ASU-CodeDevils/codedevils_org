@@ -36,7 +36,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Release Notes" href="release_notes.html" />
+    <link rel="next" title="Languages" href="languages.html" />
     <link rel="prev" title="Welcome to codedevils.org documentation!" href="index.html" /> 
 </head>
 
@@ -85,7 +85,8 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instructions">Instructions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#clone-from-github">Clone from GitHub</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#install-dependencies">Install Dependencies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#configure-the-database">Configure the Database</a></li>
@@ -93,8 +94,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#finish-configuration">Finish configuration</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#vs-code-configuration">VS Code configuration</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="languages.html">Languages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
 </ul>
 
@@ -175,6 +178,9 @@ website is installed on a Debian Stretch OS, so it is the preferred OS&gt;</p>
 <li><p>Redis (optional when installed locally)</p></li>
 <li><p>Celery (optional when installed locally)</p></li>
 </ul>
+</div>
+<div class="section" id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="clone-from-github">
 <h3>Clone from GitHub<a class="headerlink" href="#clone-from-github" title="Permalink to this headline">¶</a></h3>
 <p>Clone the repository from GitHub.</p>
@@ -262,6 +268,51 @@ actual email.</p>
 </div>
 </div>
 </div>
+<div class="section" id="vs-code-configuration">
+<h2>VS Code configuration<a class="headerlink" href="#vs-code-configuration" title="Permalink to this headline">¶</a></h2>
+<p>A good VSCode integration for this project is:</p>
+<p><cite>settings.json</cite></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;python.linting.pylintEnabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;python.pythonPath&quot;</span><span class="p">:</span> <span class="s2">&quot;${workspaceFolder}/ven/bin/python&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;files.associations&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;**/*.html&quot;</span><span class="p">:</span> <span class="s2">&quot;html&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;**/templates/**/*.html&quot;</span><span class="p">:</span> <span class="s2">&quot;django-html&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;**/templates/*.html&quot;</span><span class="p">:</span> <span class="s2">&quot;django-html&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;**/templates/**/*&quot;</span><span class="p">:</span> <span class="s2">&quot;django-txt&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;**/requirements{/**,*}.{txt,in}&quot;</span><span class="p">:</span> <span class="s2">&quot;pip-requirements&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><cite>launch.json</cite></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;configurations&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Python: Django&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;program&quot;</span><span class="p">:</span> <span class="s2">&quot;${workspaceFolder}/manage.py&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;runserver&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;--noreload&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;django&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;firefox&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;reAttach&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Launch localhost&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:8000&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;webRoot&quot;</span><span class="p">:</span> <span class="s2">&quot;${workspaceFolder}/public/&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -272,7 +323,7 @@ actual email.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="release_notes.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="languages.html" class="btn btn-neutral float-right" title="Languages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="Welcome to codedevils.org documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
