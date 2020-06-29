@@ -115,8 +115,17 @@ To run a celery worker:
 Please note: For Celery's import magic to work, it is important *where* the celery commands are run. If you are in the same folder with *manage.py*, you should be right.
 
 
+Sphinx Documentation
+^^^^^^^^^^^^^^^^^^^^
+To build the documentation for GitHub pages, run the following:
 
+.. code-block:: bash
 
+    cd sphinx
+    make github
+
+This will generate the documentation in the `docs` directory which will automatically update GitHub pages
+when the `master` branch is updated.
 
 Deployment
 ----------
