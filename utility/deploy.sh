@@ -173,7 +173,7 @@ PROJECT_UPDATED="True"
 git pull || PROJECT_UPDATED="False"
 if [[ ${PROJECT_UPDATED} == "False" ]]; then
     debug "${RED}Git failed to update the project. Check the git credentials on the server.${NC}"
-    exit 1
+    deployment_failed
 fi
 
 # install the logs directory just in case it doesn't get installed
@@ -190,7 +190,7 @@ debug "Using pip to install project dependencies"
 pip3 install -r requirements.txt || INSTALLED_DEPENDENCIES="False"
 if [[ ${INSTALLED_DEPENDENCIES} == "False" ]]; then
     debug "${RED}Failed to install one or more dependencies. Review the failed installs, fix the issue and try again.${NC}"
-    exit 1
+    deployment_failed
 fi
 
 # make database migrations (if applicable)
@@ -199,17 +199,25 @@ debug "Creating model migration templates"
 ./manage.py makemigrations || FAILED_MAKE_MIGRATIONS="True"
 if [[ ${FAILED_MAKE_MIGRATIONS} == "True" ]]; then
     debug "${RED}Failed to make database migrations. Please ensure your database credentials in settings.py are correct.${NC}"
-    exit 1
+    deployment_failed
 fi
 debug "Migration files created. Running database migration..."
 
 # migrate database
 FAILED_MIGRATE="False"
-./manage.py migrate || FAILED_MIGRATE="True"
 debug "Migrating templated models to database"
+./manage.py migrate || FAILED_MIGRATE="True"
 if [[ ${FAILED_MIGRATE} == "True" ]]; then
     debug "${RED}Failed to migrate databases. Please ensure that the database server is online and no other users are accessing it.${NC}"
-    exit 1
+    deployment_failed
+fi
+
+# compile locale messages
+FAILED_COMPILATION="False"
+debug "Compiling PO local files"
+./manage.py compilemessages || FAILED_COMPILATION="True"
+if [[ ${FAILED_COMPILATION} == "True" ]]; then
+    debug "${YELLOW}One or more PO files failed to compile. This will not stop deployment, but some translations may not work correctly.${NC}"
 fi
 
 # restart passenger
@@ -221,7 +229,7 @@ if [[ ${RESTART} == "True" ]]; then
     touch tmp/restart.txt || RESTARTED_PASSENGER="False"
     if [[ ${RESTARTED_PASSENGER} == "False" ]]; then
         debug "${RED}Passenger failed to restart.${NC}"
-        exit 1
+        deployment_failed
     fi
 fi
 
