@@ -33,9 +33,13 @@ jobs:
       after_success:
         - codecov
       before_deploy:
-        - sudo apt-get install -qq sshpass
+        - sudo apt-get install -y -qq sshpass
       deploy:
         - provider: script
+          addons:
+            apt:
+              packages:
+                - sshpass
           script: sshpass -p$SSH_PASSWORD ssh $SSH_USERNAME@SSH_HOST "bash -s" -- < utility/deploy.sh
           on:
             branch: master
