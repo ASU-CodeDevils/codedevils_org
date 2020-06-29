@@ -1,12 +1,6 @@
 codedevils.org
 ==============
 
-.. image:: https://www.codedevils.org/static/home/img/logo-light.png
-    :alt: CodeDevils
-    :target: https://codedevils.org
-    :align: center
-    :width: 20%
-
 The official CodeDevils website. Check out our `Documentation`_ for more information.
 
 .. _`Documentation`: https://asu-codedevils.github.io/codedevils_org/
