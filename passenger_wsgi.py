@@ -9,7 +9,10 @@ from pathlib import Path
 
 from django.core.wsgi import get_wsgi_application
 
-VENV = "/home/codedevils_admin/.envs/codedevils.org/"
+try:
+    VENV = open("tmp/venv.txt", "r").read().strip()
+except FileNotFoundError:
+    VENV = "/home/codedevils_admin/.envs/codedevils.org/"
 INTERP = VENV + "bin/python3"
 
 # INTERP is present twice so that the new python interpreter
