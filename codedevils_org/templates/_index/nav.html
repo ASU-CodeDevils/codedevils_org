@@ -22,7 +22,7 @@
             </li>
             {% if not user.is_authenticated %}
                 <li class="st-nav-section st-nav-secondary nav-item">
-                    <a class="btn btn-rounded btn-outline mr-3 px-3" href="#">
+                    <a class="btn btn-rounded btn-outline mr-3 px-3" href="{% url 'account_signup' %}">
                         <i class="fas fa-user-plus d-none d-md-inline mr-md-0 mr-lg-2"></i>
                         <span class="d-md-none d-lg-inline">{% trans 'Register' %}</span>
                     </a>
@@ -33,7 +33,7 @@
                 </li>
             {% else %}
                 <li class="st-nav-section st-nav-secondary nav-item">
-                    <a class="btn btn-rounded btn-solid mr-3 px-3" href="#"
+                    <a class="btn btn-rounded btn-solid mr-3 px-3" href="{% url 'users:detail' username=user.username %}"
                        target="_blank">
                         <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="" height="20px"
                              width="20px">
@@ -92,7 +92,7 @@
                                 </a>
                             </div>
                             <div class="st-dropdown-content-group bg-6 b-t">
-                                <a href="{% url 'account_login' %}">{% trans 'Sign in' %}
+                                <a href="{% url 'cas_ng_login' %}">{% trans 'Sign in' %}
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -103,12 +103,8 @@
                                 </a>
                             </div>
                             <div class="st-dropdown-content-group bg-6 b-t">
-                                {% if user.is_student %}
-                                    <a href="{% url 'account_logout' %}">{% trans 'Logout' %}
-                                {% else %}
-                                    <a href="{% url 'account_logout' %}">{% trans 'Logout' %}
-                                {% endif %}
-                                    <i class="fas fa-arrow-right"></i>
+                                <a href="{% url 'cas_ng_logout' %}">{% trans 'Logout' %}
+                                <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         {% endif %}
