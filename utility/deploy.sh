@@ -10,7 +10,7 @@
 RUN_VENV="True"
 DEBUG="ON"
 ENV="prod"
-PYTHON_VERSION="python3.8"
+PYTHON_VERSION="python3.7"
 RESTART="True"
 
 ENV_PROD="codedevils.org"
