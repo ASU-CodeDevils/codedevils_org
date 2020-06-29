@@ -33,13 +33,12 @@ jobs:
         - "coverage run -m pytest"
       after_success:
         - codecov
-
-#deploy:
-#  - provider: script
-#    script: sshpass -p$SSH_PASSWORD ssh $SSH_USERNAME@SSH_HOST "bash -s" -- < bin/deploy.sh
-#    on:
-#      branch: master
-#  - provider: script
-#    script: sshpass -p$SSH_PASSWORD ssh $SSH_USERNAME@SSH_HOST "bash -s" -- < bin/deploy.sh "-dev"
-#    on:
-#      branch: dev
+deploy:
+  - provider: script
+    script: sshpass -p$SSH_PASSWORD ssh $SSH_USERNAME@SSH_HOST "bash -s" -- < bin/deploy.sh
+    on:
+      branch: master
+  - provider: script
+    script: sshpass -p$SSH_PASSWORD ssh $SSH_USERNAME@SSH_HOST "bash -s" -- < bin/deploy.sh "-dev"
+    on:
+      branch: dev
