@@ -34,3 +34,4 @@ pytest-django==3.9.0  # https://github.com/pytest-dev/pytest-django
 # Custom
 # ------------------------------------------------------------------------------
 django-rosetta==0.9.4  # https://github.com/mbi/django-rosetta
+sphinx-rtd-theme==0.5.0  # https://github.com/readthedocs/sphinx_rtd_theme
