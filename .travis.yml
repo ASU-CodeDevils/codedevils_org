@@ -32,6 +32,8 @@ jobs:
         - "coverage run -m pytest"
       after_success:
         - codecov
+        - sudo apt-get install -y -qq sshpass
+        - sudo apt-get install -y -qq rsync grsync
       deploy:
         - provider: script
           addons:
