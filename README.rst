@@ -1,7 +1,15 @@
 codedevils.org
 ==============
 
-The official CodeDevils website
+.. image:: https://www.codedevils.org/static/home/img/logo-light.png
+    :alt: CodeDevils
+    :target: https://codedevils.org
+    :align: center
+    :width: 20%
+
+The official CodeDevils website. Check out our `Documentation`_ for more information.
+
+.. _`Documentation`: https://asu-codedevils.github.io/codedevils_org/
 
 .. image:: https://travis-ci.com/ASU-CodeDevils/codedevils_org.svg?token=FhsGC7ZUMb7rskmp3jDy&branch=master
     :target: https://travis-ci.com/ASU-CodeDevils/codedevils_org
@@ -130,4 +138,4 @@ when the `master` branch is updated.
 Deployment
 ----------
 
-The following details how to deploy this application.
+Deployment instructions are not available publicly.
