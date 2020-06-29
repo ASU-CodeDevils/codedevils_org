@@ -32,14 +32,19 @@ jobs:
         - "coverage run -m pytest"
       after_success:
         - codecov
-      before_deploy:
-        - sudo apt-get install -y -qq sshpass
       deploy:
         - provider: script
           addons:
+            ssh_known_hosts:
+              - $SSH_KNOWN_HOST_PS
+              - $SSH_KNOWN_HOST_PSIP
+              - $SSH_KNOWN_HOST_FM
+              - $SSH_KNOWN_HOST_FMIP
             apt:
               packages:
                 - sshpass
+                - rsync
+                - grsync
           script: sshpass -p$SSH_PASSWORD ssh $SSH_USERNAME@SSH_HOST "bash -s" -- < utility/deploy.sh
           on:
             branch: master
