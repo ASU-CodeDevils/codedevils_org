@@ -33,6 +33,8 @@ jobs:
         - "coverage run -m pytest"
       after_success:
         - codecov
+      before_deploy:
+        - sudo apt-get install -qq sshpass
       deploy:
         - provider: script
           script: sshpass -p$SSH_PASSWORD ssh $SSH_USERNAME@SSH_HOST "bash -s" -- < utility/deploy.sh
