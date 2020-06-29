@@ -1,4 +1,4 @@
-{% load static %}
+{% load i18n static %}
 {% load custom_urls %}
 <!--FOOTER-->
 <footer class="site-footer section">
@@ -6,39 +6,39 @@
         <div class="row gap-y text-center text-md-left">
             <div class="col-md-4 mr-auto">
                 <img src="{% static 'img/logo.png' %}" alt="" class="logo">
-                <p>CodeDevils is an inclusive virtual club that aims to bring ASU students together.</p>
+                <p>{% trans 'CodeDevils is an inclusive virtual club that aims to bring ASU students together.' %}</p>
             </div>
             <div class="col-md-2">
-                <h6 class="py-2 bold">Organization</h6>
+                <h6 class="py-2 bold">{% trans 'Organization' %}</h6>
                 <nav class="nav flex-column">
-                    <a class="nav-item py-2" href="{% url 'about' %}">About</a>
-                    <a class="nav-item py-2" href="{% url 'about' %}">Leadership</a>
-                    <a class="nav-item py-2" href="{% custom_url 'sundevilsync' %}" target="_blank">SunDevilSync</a>
+                    <a class="nav-item py-2" href="{% url 'about' %}">{% trans 'About' %}</a>
+                    <a class="nav-item py-2" href="{% url 'about' %}">{% trans 'Leadership' %}</a>
+                    <a class="nav-item py-2" href="{% custom_url 'sundevilsync' %}" target="_blank">{% trans 'SunDevilSync' %}</a>
                 </nav>
             </div>
             <div class="col-md-2">
                 <h6 class="py-2 bold">&nbsp;</h6>
                 <nav class="nav flex-column">
-                    <a class="nav-item py-2" href="#">Welcome Docs</a>
+                    <a class="nav-item py-2" href="#">{% trans 'Welcome Docs' %}</a>
                     <a class="nav-item py-2"
-                       href="{% custom_url 'constitution' %}">Constitution</a>
-                    <a class="nav-item py-2" href="{% custom_url 'slack' %}" target="_blank">Slack</a>
+                       href="{% custom_url 'constitution' %}">{% trans 'Constitution' %}</a>
+                    <a class="nav-item py-2" href="{% custom_url 'slack' %}" target="_blank">{% trans 'Slack' %}</a>
                 </nav>
             </div>
             <div class="col-md-2">
-                <h6 class="py-2 bold">Club</h6>
+                <h6 class="py-2 bold">{% trans 'Club' %}</h6>
                 <nav class="nav flex-column">
-                    <a class="nav-item py-2" href="{% custom_url 'documentation' %}" target="_blank">Documentation</a>
-                    <a class="nav-item py-2" href="{% custom_url 'github' %}" target="_blank">Github</a>
-                    <a class="nav-item py-2" href="{% custom_url 'hackerrank' %}" target="_blank">HackerRank</a>
+                    <a class="nav-item py-2" href="{% custom_url 'documentation' %}" target="_blank">{% trans 'Documentation' %}</a>
+                    <a class="nav-item py-2" href="{% custom_url 'github' %}" target="_blank">{% trans 'Github' %}</a>
+                    <a class="nav-item py-2" href="{% custom_url 'hackerrank' %}" target="_blank">{% trans 'HackerRank' %}</a>
                 </nav>
             </div>
         </div>
         <hr class="mt-5">
         <div class="row small align-items-center">
             <div class="col-md-4">
-                <p class="mt-2 mb-md-0 color-2 text-center text-md-left">© 2020 CodeDevils - Arizona State University
-                    All Rights Reserved.</p>
+                <p class="mt-2 mb-md-0 color-2 text-center text-md-left">{% blocktrans %}© 2020 CodeDevils - Arizona State University
+                All Rights Reserved.{% endblocktrans %}</p>
             </div>
             <div class="col-md-8">
                 <nav class="nav justify-content-center justify-content-md-end">

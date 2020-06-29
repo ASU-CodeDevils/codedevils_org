@@ -29,11 +29,12 @@ TIME_ZONE = "UTC"
 LANGUAGE_CODE = env("DJANGO_LANGUAGE_CODE", default="en-us")
 
 LANGUAGES = [
-    ('es', _('Spanish')),
-    ('en-us', _('English')),
-    ('fr', _('French')),
-    ('ar', _('Arabic')),
-    ('nl', _('Dutch'))
+    ("es", _("Spanish")),
+    ("en-us", _("English")),
+    ("fr", _("French")),
+    ("ar", _("Arabic")),
+    ("nl", _("Dutch")),
+    ("hi", _("Hindi"))
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1

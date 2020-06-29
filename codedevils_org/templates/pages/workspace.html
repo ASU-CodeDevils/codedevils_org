@@ -1,6 +1,5 @@
 {% extends '_index/base.html' %}
-{% load i18n %}
-{% load static %}
+{% load i18n static %}
 {% block create_account_footer %}{% endblock create_account_footer %}
 {% block header %}
     <!--HEADER-->
@@ -60,7 +59,7 @@
 								<h4 class="bold mr-3">{% trans 'Introducing API' %}</h4>
 							</a>
 							<p class="mt-4"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'We will have an entire suite of APIs for use on CodeDevils-sponsored projects.' %}</p>
-							<a href="{% url 'api:index' %}" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
+							<a href="#" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
 								<i class="fas fa-long-arrow-alt-right ml-3"></i>
 							</a>
 						</div>
@@ -134,7 +133,7 @@
 							<div class="media align-items-center px-3">
 								<i class="pe pe-7s-graph pe-3x accent mr-3"></i>
 								<div class="media-body my-3 pl-3 b-l">
-									<p class="bold my-0">{% trans 'Powerful Dashborad' %}</p>
+									<p class="bold my-0">{% trans 'Powerful Dashboard' %}</p>
 									<p class="my-0 color-2"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'We will include a fully functional starter dashboard' %}</p>
 								</div>
 							</div>
@@ -258,5 +257,5 @@
 			</div>
 		</section>
 		<!--CALLOUT BOX-->
-    {% include 'index/callout_box.html' %}
+    {% include '_index/callout_box.html' %}
 {% endblock content %}

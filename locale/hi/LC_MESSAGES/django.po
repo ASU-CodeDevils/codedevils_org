@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-28 23:11+0000\n"
-"PO-Revision-Date: 2020-06-29 00:10+0000\n"
+"POT-Creation-Date: 2020-06-28 23:27+0000\n"
+"PO-Revision-Date: 2020-06-29 02:24+0000\n"
 "Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -21,42 +21,42 @@ msgstr ""
 
 #: codedevils_org/cd_url/apps.py:7
 msgid "CodeDevils URLs"
-msgstr "CodeDevils-koppelingen"
+msgstr "कोडडिविल्स लिंक"
 
 #: codedevils_org/cd_url/models.py:14
 msgid ""
 "The string used to reference the URL from within a Django template. The slug"
 " can only contain letters, numbers, underscores and hyphens."
 msgstr ""
-"De tekenreeks die wordt gebruikt om naar de link te verwijzen vanuit een "
-"Django-sjabloon. De slak mag alleen letters, cijfers, onderstrepingstekens "
-"en koppeltekens bevatten."
+"स्ट्रिंग का उपयोग एक Django टेम्पलेट के भीतर से URL को संदर्भित करने के लिए "
+"किया जाता है। स्लग में केवल अक्षर, संख्या, अंडरस्कोर और हाइफ़न शामिल हो सकते"
+" हैं।"
 
 #: codedevils_org/cd_url/models.py:21
 msgid "Custom URL"
-msgstr "Aangepaste link"
+msgstr "विशिष्ट संबंध"
 
 #: codedevils_org/cd_url/models.py:22
 msgid "Custom URLs"
-msgstr "Aangepaste links"
+msgstr "कस्टम लिंक"
 
 #: codedevils_org/templates/_index/base.html:49
 #: codedevils_org/templates/_index/new_member_footer.html:8
 #: codedevils_org/templates/base.html:47
 msgid "Ready to join?"
-msgstr "Klaar om mee te doen?"
+msgstr "शामिल होने के लिए तैयार हैं?"
 
 #: codedevils_org/templates/_index/base.html:50
 #: codedevils_org/templates/_index/new_member_footer.html:9
 #: codedevils_org/templates/base.html:48
 msgid "Create a CodeDevil account"
-msgstr "Maak een CodeDevil-account aan"
+msgstr "एक कोडडविल खाता बनाएँ"
 
 #: codedevils_org/templates/_index/base.html:52
 #: codedevils_org/templates/_index/new_member_footer.html:11
 #: codedevils_org/templates/base.html:50
 msgid "Create account"
-msgstr "Account aanmaken"
+msgstr "खाता बनाएं"
 
 #: codedevils_org/templates/_index/base.html:70
 #: codedevils_org/templates/base.html:67
@@ -66,7 +66,7 @@ msgstr "%(message)s"
 
 #: codedevils_org/templates/_index/callout_box.html:10
 msgid "Join as a member"
-msgstr "Word lid als lid"
+msgstr "सदस्य के रूप में शामिल हों"
 
 #: codedevils_org/templates/_index/callout_box.html:13
 msgid ""
@@ -74,56 +74,56 @@ msgid ""
 "                            offer, including webinars with the industry leaders in software and infrastructure,\n"
 "                            club-sponsored projects, and upcoming events."
 msgstr ""
-"Nog geen lid? Word vandaag lid en ervaar alles wat CodeDevils moet doen\n"
-"aanbod, inclusief webinars met de marktleiders in software en infrastructuur,\n"
-"door de club gesponsorde projecten en aankomende evenementen."
+"पहले से ही सदस्य नहीं हैं? आज ही ज्वाइन करें और कोडडविल्स को अनुभव करें\n"
+"सॉफ्टवेयर और बुनियादी ढांचे में उद्योग के नेताओं के साथ वेबिनार सहित प्रस्ताव,\n"
+"क्लब-प्रायोजित परियोजनाएं, और आगामी कार्यक्रम।"
 
 #: codedevils_org/templates/_index/callout_box.html:21
 msgid "Learn more about CodeDevils"
-msgstr "Lees meer over CodeDevils"
+msgstr "CodeDevils के बारे में अधिक जानें"
 
 #: codedevils_org/templates/_index/callout_box.html:24
 msgid ""
 "Find out what makes CodeDevils so successful! Learn about the history\n"
 "                            of the club, view our sponsors, and meet our CodeDevils leadership."
 msgstr ""
-"Ontdek wat CodeDevils zo succesvol maakt! Leer over de geschiedenis\n"
-"van de club, bekijk onze sponsors en ontmoet onze leiders van CodeDevils."
+"पता लगाएँ कि क्या CodeDevils इतना सफल बनाता है! इतिहास के बारे में जानें\n"
+"क्लब में, हमारे प्रायोजकों को देखें, और हमारे कोडडविल्स नेतृत्व को पूरा करें।"
 
 #: codedevils_org/templates/_index/callout_box.html:31
 msgid "Submit a project"
-msgstr "Dien een project in"
+msgstr "एक प्रोजेक्ट सबमिट करें"
 
 #: codedevils_org/templates/_index/callout_box.html:34
 msgid ""
 "Coming soon! Submit or join projects, track progress, and seek all the\n"
 "                        different opportunities sponsored through CodeDevils!"
 msgstr ""
-"Komt binnenkort! Dien projecten in of sluit u aan, volg de voortgang en zoek alle\n"
-"verschillende mogelijkheden gesponsord door CodeDevils!"
+"जल्द आ रहा है! प्रोजेक्ट सबमिट करें या उसमें शामिल हों, प्रगति को ट्रैक करें, और सभी की तलाश करें\n"
+"विभिन्न अवसरों CodeDevils के माध्यम से प्रायोजित!"
 
 #: codedevils_org/templates/_index/footer.html:9
 msgid ""
 "CodeDevils is an inclusive virtual club that aims to bring ASU students "
 "together."
 msgstr ""
-"CodeDevils is een inclusieve virtuele club die ASU-studenten bij elkaar wil "
-"brengen."
+"CodeDevils एक समावेशी आभासी क्लब है जिसका उद्देश्य ASU के छात्रों को एक साथ "
+"लाना है।"
 
 #: codedevils_org/templates/_index/footer.html:12
 msgid "Organization"
-msgstr "Organisatie"
+msgstr "संगठन"
 
 #: codedevils_org/templates/_index/footer.html:14
 #: codedevils_org/templates/_index/nav.html:14
 #: codedevils_org/templates/_index/nav.html:62
 #: codedevils_org/users/models.py:22
 msgid "About"
-msgstr "Over"
+msgstr "के बारे में"
 
 #: codedevils_org/templates/_index/footer.html:15
 msgid "Leadership"
-msgstr "Leiderschap"
+msgstr "नेतृत्व"
 
 #: codedevils_org/templates/_index/footer.html:16
 #: codedevils_org/templates/pages/home.html:194
@@ -132,11 +132,11 @@ msgstr "SunDevilSync"
 
 #: codedevils_org/templates/_index/footer.html:22
 msgid "Welcome Docs"
-msgstr "Welkom documenten"
+msgstr "आपका स्वागत है डॉक्स"
 
 #: codedevils_org/templates/_index/footer.html:24
 msgid "Constitution"
-msgstr "Grondwet"
+msgstr "संविधान"
 
 #: codedevils_org/templates/_index/footer.html:25
 msgid "Slack"
@@ -144,11 +144,11 @@ msgstr "Slack"
 
 #: codedevils_org/templates/_index/footer.html:29
 msgid "Club"
-msgstr "Club"
+msgstr "क्लब"
 
 #: codedevils_org/templates/_index/footer.html:31
 msgid "Documentation"
-msgstr "Documentatie"
+msgstr "प्रलेखन"
 
 #: codedevils_org/templates/_index/footer.html:32
 msgid "Github"
@@ -163,17 +163,17 @@ msgid ""
 "© 2020 CodeDevils - Arizona State University\n"
 "                All Rights Reserved."
 msgstr ""
-"© 2020 CodeDevils - Arizona State University\n"
-"Alle rechten voorbehouden."
+"© 2020 CodeDevils - एरिज़ोना स्टेट यूनिवर्सिटी\n"
+"सभी अधिकार सुरक्षित।"
 
 #: codedevils_org/templates/_index/header_meta.html:4
 msgid "CodeDevils - Develop. Network. Create."
-msgstr "CodeDevils - Ontwikkelen. Netwerk. Creëer."
+msgstr "CodeDevils - विकसित करें। नेटवर्क। सृजन करना।"
 
 #: codedevils_org/templates/_index/nav.html:13
 #: codedevils_org/templates/_index/nav.html:60
 msgid "Home"
-msgstr "Huis"
+msgstr "घर"
 
 #: codedevils_org/templates/_index/nav.html:16
 #: codedevils_org/templates/_index/nav.html:65
@@ -182,47 +182,47 @@ msgstr "Huis"
 #: codedevils_org/templates/pages/about.html:187
 #: codedevils_org/templates/pages/workspace.html:11
 msgid "Workspace"
-msgstr "Werkruimte"
+msgstr "कार्यस्थान"
 
 #: codedevils_org/templates/_index/nav.html:18
 #: codedevils_org/templates/_index/nav.html:72
 #: codedevils_org/templates/pages/contactus.html:4
 msgid "Contact Us"
-msgstr "Neem contact op"
+msgstr "संपर्क करें"
 
 #: codedevils_org/templates/_index/nav.html:20
 #: codedevils_org/templates/_index/nav.html:69
 msgid "Admin"
-msgstr "Beheerder"
+msgstr "व्यवस्थापक"
 
 #: codedevils_org/templates/_index/nav.html:27
 #: codedevils_org/templates/_index/nav.html:90
 msgid "Register"
-msgstr "Registreren"
+msgstr "रजिस्टर करें"
 
 #: codedevils_org/templates/_index/nav.html:31
 #: codedevils_org/templates/pages/about.html:196
 msgid "Login"
-msgstr "Log in"
+msgstr "लॉग इन करें"
 
 #: codedevils_org/templates/_index/nav.html:40
 #: codedevils_org/templates/_index/nav.html:101
 msgid "Profile"
-msgstr "Profiel"
+msgstr "प्रोफ़ाइल"
 
 #: codedevils_org/templates/_index/nav.html:44
 #: codedevils_org/templates/_index/nav.html:107
 #: codedevils_org/templates/_index/nav.html:109
 msgid "Logout"
-msgstr "Uitloggen"
+msgstr "लॉग आउट"
 
 #: codedevils_org/templates/_index/nav.html:56
 msgid "Close"
-msgstr "Dichtbij"
+msgstr "बंद करे"
 
 #: codedevils_org/templates/_index/nav.html:58
 msgid "Pages"
-msgstr "Pagina's"
+msgstr "पेज"
 
 #: codedevils_org/templates/_index/nav.html:76
 msgid "CodeDevils"
@@ -230,60 +230,60 @@ msgstr "CodeDevils"
 
 #: codedevils_org/templates/_index/nav.html:82
 msgid "Project Request"
-msgstr "Projectaanvraag"
+msgstr "परियोजना का अनुरोध"
 
 #: codedevils_org/templates/_index/nav.html:95
 msgid "Sign in"
-msgstr "Inloggen"
+msgstr "साइन इन करें"
 
 #: codedevils_org/templates/account/account_inactive.html:5
 #: codedevils_org/templates/account/account_inactive.html:8
 msgid "Account Inactive"
-msgstr "Account Inactief"
+msgstr "खाता निष्क्रिय"
 
 #: codedevils_org/templates/account/account_inactive.html:10
 msgid "This account is inactive."
-msgstr "Dit account is inactief."
+msgstr "यह खाता निष्क्रिय है।"
 
 #: codedevils_org/templates/account/email.html:7
 msgid "Account"
-msgstr "Account"
+msgstr "लेखा"
 
 #: codedevils_org/templates/account/email.html:10
 msgid "E-mail Addresses"
-msgstr "E-mailadressen"
+msgstr "ईमेल पता"
 
 #: codedevils_org/templates/account/email.html:13
 msgid "The following e-mail addresses are associated with your account:"
-msgstr "De volgende e-mailadressen zijn gekoppeld aan uw account:"
+msgstr "निम्नलिखित ई-मेल पते आपके खाते से जुड़े हैं:"
 
 #: codedevils_org/templates/account/email.html:27
 msgid "Verified"
-msgstr "Geverifieerd"
+msgstr "सत्यापित"
 
 #: codedevils_org/templates/account/email.html:29
 msgid "Unverified"
-msgstr "Niet geverifieerd"
+msgstr "असत्यापित"
 
 #: codedevils_org/templates/account/email.html:31
 msgid "Primary"
-msgstr "Primair"
+msgstr "मुख्य"
 
 #: codedevils_org/templates/account/email.html:37
 msgid "Make Primary"
-msgstr "Voorop stellen"
+msgstr "प्राथमिक बनाएं"
 
 #: codedevils_org/templates/account/email.html:38
 msgid "Re-send Verification"
-msgstr "Stuur verificatie opnieuw"
+msgstr "सत्यापन पुनः भेजें"
 
 #: codedevils_org/templates/account/email.html:39
 msgid "Remove"
-msgstr "Verwijderen"
+msgstr "हटाना"
 
 #: codedevils_org/templates/account/email.html:46
 msgid "Warning:"
-msgstr "Waarschuwing:"
+msgstr "चेतावनी:"
 
 #: codedevils_org/templates/account/email.html:46
 msgid ""
@@ -291,26 +291,26 @@ msgid ""
 "an e-mail address so you can receive notifications, reset your password, "
 "etc."
 msgstr ""
-"U heeft momenteel geen e-mailadres ingesteld. U moet echt een e-mailadres "
-"toevoegen zodat u meldingen kunt ontvangen, uw wachtwoord opnieuw kunt "
-"instellen, enz."
+"वर्तमान में आपके पास कोई ई-मेल पता सेट नहीं है। आपको वास्तव में एक ई-मेल पता"
+" जोड़ना चाहिए ताकि आप सूचनाएं प्राप्त कर सकें, अपना पासवर्ड रीसेट कर सकें, "
+"आदि।"
 
 #: codedevils_org/templates/account/email.html:51
 msgid "Add E-mail Address"
-msgstr "Voeg email adres toe"
+msgstr "ईमेल पता जोड़ें"
 
 #: codedevils_org/templates/account/email.html:56
 msgid "Add E-mail"
-msgstr "E-mail toevoegen"
+msgstr "ई-मेल जोड़ें"
 
 #: codedevils_org/templates/account/email.html:66
 msgid "Do you really want to remove the selected e-mail address?"
-msgstr "Weet u zeker dat u het geselecteerde e-mailadres wilt verwijderen?"
+msgstr "क्या आप वास्तव में चयनित ई-मेल पते को निकालना चाहते हैं?"
 
 #: codedevils_org/templates/account/email_confirm.html:6
 #: codedevils_org/templates/account/email_confirm.html:10
 msgid "Confirm E-mail Address"
-msgstr "E-mailadres bevestigen"
+msgstr "ईमेल पते की पुष्टि करें"
 
 #: codedevils_org/templates/account/email_confirm.html:16
 #, python-format
@@ -318,12 +318,12 @@ msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address for user %(user_display)s."
 msgstr ""
-"Bevestig dat <a href=\"mailto:%(email)s\">%(email)s</a> een e-mailadres is "
-"voor gebruiker %(user_display)s."
+"कृपया पुष्टि करें कि <a href=\"mailto:%(email)s\">%(email)s</a> उपयोगकर्ता "
+"%(user_display)s के लिए एक ई-मेल पता है।"
 
 #: codedevils_org/templates/account/email_confirm.html:20
 msgid "Confirm"
-msgstr "Bevestigen"
+msgstr "पुष्टि करें"
 
 #: codedevils_org/templates/account/email_confirm.html:27
 #, python-format
@@ -331,14 +331,14 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a "
 "href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
-"Deze e-mailbevestigingslink is verlopen of is ongeldig. <a "
-"href=\"%(email_url)s\">dien een nieuw e-mailbevestigingsverzoek in</a>."
+"यह ई-मेल पुष्टिकरण लिंक की समय सीमा समाप्त या अमान्य है। कृपया <a "
+"href=\"%(email_url)s\"> एक नया ई-मेल पुष्टिकरण अनुरोध जारी करें</a>।"
 
 #: codedevils_org/templates/account/login.html:7
 #: codedevils_org/templates/account/login.html:11
 #: codedevils_org/templates/account/login.html:44
 msgid "Sign In"
-msgstr "Inloggen"
+msgstr "साइन इन करें"
 
 #: codedevils_org/templates/account/login.html:16
 #, python-format
@@ -347,13 +347,13 @@ msgid ""
 "of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign up</a>\n"
 "for a %(site_name)s account and sign in below:"
 msgstr ""
-"Meld u aan met één\n"
-"van uw bestaande accounts van derden. Of <a href=\"%(signup_url)s\"> meld je aan </a>\n"
-"voor een account van %(site_name)s en log hieronder in:"
+"कृपया एक के साथ साइन इन करें\n"
+"आपके मौजूदा तीसरे पक्ष के खातों में। या, <a href=\"%(signup_url)s\"> साइन अप करें</a>\n"
+"एक %(site_name)s खाते के लिए और नीचे साइन इन करें:"
 
 #: codedevils_org/templates/account/login.html:26
 msgid "or"
-msgstr "of"
+msgstr "या"
 
 #: codedevils_org/templates/account/login.html:33
 #, python-format
@@ -361,22 +361,22 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "<a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
-"Als u nog geen account heeft aangemaakt, graag\n"
-"<a href=\"%(signup_url)s\">meld je eerst aan</a>."
+"यदि आपने अभी तक खाता नहीं बनाया है, तो कृपया\n"
+"पहले <a href=\"%(signup_url)s\"> साइन अप करें </a>।"
 
 #: codedevils_org/templates/account/login.html:43
 msgid "Forgot Password?"
-msgstr "Wachtwoord vergeten?"
+msgstr "पासवर्ड भूल गए?"
 
 #: codedevils_org/templates/account/logout.html:5
 #: codedevils_org/templates/account/logout.html:8
 #: codedevils_org/templates/account/logout.html:17
 msgid "Sign Out"
-msgstr "Afmelden"
+msgstr "प्रस्थान करें"
 
 #: codedevils_org/templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
-msgstr "Weet u zeker dat u zich wilt afmelden?"
+msgstr "क्या आप द्वारा साइन आउट किया जाना सुनिश्चित है?"
 
 #: codedevils_org/templates/account/password_change.html:6
 #: codedevils_org/templates/account/password_change.html:9
@@ -386,44 +386,44 @@ msgstr "Weet u zeker dat u zich wilt afmelden?"
 #: codedevils_org/templates/account/password_reset_from_key_done.html:4
 #: codedevils_org/templates/account/password_reset_from_key_done.html:7
 msgid "Change Password"
-msgstr "Wachtwoord wijzigen"
+msgstr "पासवर्ड बदलें"
 
 #: codedevils_org/templates/account/password_reset.html:7
 #: codedevils_org/templates/account/password_reset.html:11
 #: codedevils_org/templates/account/password_reset_done.html:6
 #: codedevils_org/templates/account/password_reset_done.html:9
 msgid "Password Reset"
-msgstr "Wachtwoord reset"
+msgstr "पासवर्ड रीसेट"
 
 #: codedevils_org/templates/account/password_reset.html:16
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you"
 " an e-mail allowing you to reset it."
 msgstr ""
-"Je wachtwoord vergeten? Voer hieronder uw e-mailadres in en we sturen u een "
-"e-mail waarmee u het kunt resetten."
+"अपना पासवर्ड भूल गए? अपना ई-मेल पता नीचे दर्ज करें, और हम आपको एक ई-मेल "
+"भेजेंगे जिससे आप इसे रीसेट कर सकते हैं।"
 
 #: codedevils_org/templates/account/password_reset.html:21
 msgid "Reset My Password"
-msgstr "Reset mijn wachtwoord"
+msgstr "अपना पासवर्ड रीसेट करें"
 
 #: codedevils_org/templates/account/password_reset.html:24
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
-"Neem contact met ons op als u problemen ondervindt bij het opnieuw instellen"
-" van uw wachtwoord."
+"यदि आपको अपना पासवर्ड रीसेट करने में कोई परेशानी हो तो कृपया हमसे संपर्क "
+"करें।"
 
 #: codedevils_org/templates/account/password_reset_done.html:15
 msgid ""
 "We have sent you an e-mail. Please contact us if you do not receive it "
 "within a few minutes."
 msgstr ""
-"We hebben je een e-mail gestuurd. Neem contact met ons op als u deze niet "
-"binnen enkele minuten ontvangt."
+"हमने आपको एक ई-मेल भेजा है। कृपया हमसे संपर्क करें यदि आप इसे कुछ मिनटों के "
+"भीतर प्राप्त नहीं करते हैं।"
 
 #: codedevils_org/templates/account/password_reset_from_key.html:8
 msgid "Bad Token"
-msgstr "Slecht teken"
+msgstr "खराब टोकन"
 
 #: codedevils_org/templates/account/password_reset_from_key.html:12
 #, python-format
@@ -432,55 +432,57 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password "
 "reset</a>."
 msgstr ""
-"De link voor het opnieuw instellen van het wachtwoord was ongeldig, mogelijk"
-" omdat deze al is gebruikt. Vraag een <a href=\"%(passwd_reset_url)s\"> "
-"nieuw wachtwoord opnieuw instellen </a> aan."
+"पासवर्ड रीसेट लिंक अमान्य था, संभवतः क्योंकि इसका उपयोग पहले ही किया जा चुका"
+" है। कृपया <a href=\"%(passwd_reset_url)s\"> नया पासवर्ड रीसेट </a> का "
+"अनुरोध करें।"
 
 #: codedevils_org/templates/account/password_reset_from_key.html:18
 msgid "change password"
-msgstr "wachtwoord wijzigen"
+msgstr "पासवर्ड बदलें"
 
 #: codedevils_org/templates/account/password_reset_from_key.html:21
 #: codedevils_org/templates/account/password_reset_from_key_done.html:8
 msgid "Your password is now changed."
-msgstr "Uw wachtwoord is nu gewijzigd."
+msgstr "अब आपका पासवर्ड बदल गया है।"
 
 #: codedevils_org/templates/account/password_set.html:6
 #: codedevils_org/templates/account/password_set.html:9
 #: codedevils_org/templates/account/password_set.html:14
 msgid "Set Password"
-msgstr "Stel een wachtwoord in"
+msgstr "पासवर्ड सेट करें"
 
 #: codedevils_org/templates/account/signup.html:6
 msgid "Signup"
-msgstr "Inschrijven"
+msgstr "साइन अप करें"
 
 #: codedevils_org/templates/account/signup.html:9
 #: codedevils_org/templates/account/signup.html:19
 msgid "Sign Up"
-msgstr "Inschrijven"
+msgstr "साइन अप करें"
 
 #: codedevils_org/templates/account/signup.html:11
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
-msgstr "Heeft u al een account? <a href=\"%(login_url)s\"> Meld u dan aan </a>."
+msgstr ""
+"क्या आपके पास पहले से एक खाता मौजूद है? फिर कृपया <a href=\"%(login_url)s\">"
+" साइन इन करें </a>।"
 
 #: codedevils_org/templates/account/signup_closed.html:5
 #: codedevils_org/templates/account/signup_closed.html:8
 msgid "Sign Up Closed"
-msgstr "Inschrijving gesloten"
+msgstr "पंजीकरण अब बंद"
 
 #: codedevils_org/templates/account/signup_closed.html:10
 msgid "We are sorry, but the sign up is currently closed."
-msgstr "Het spijt ons, maar de aanmelding is momenteel gesloten."
+msgstr "हमें खेद है, लेकिन वर्तमान में साइन अप बंद है।"
 
 #: codedevils_org/templates/account/verification_sent.html:5
 #: codedevils_org/templates/account/verification_sent.html:8
 #: codedevils_org/templates/account/verified_email_required.html:5
 #: codedevils_org/templates/account/verified_email_required.html:8
 msgid "Verify Your E-mail Address"
-msgstr "Verifieer je e-mailadres"
+msgstr "अपने ईमेल पते की पुष्टि करें"
 
 #: codedevils_org/templates/account/verification_sent.html:10
 msgid ""
@@ -488,9 +490,9 @@ msgid ""
 "finalize the signup process. Please contact us if you do not receive it "
 "within a few minutes."
 msgstr ""
-"We hebben u ter verificatie een e-mail gestuurd. Volg de gegeven link om het"
-" aanmeldingsproces te voltooien. Neem contact met ons op als u deze niet "
-"binnen enkele minuten ontvangt."
+"हमने आपको सत्यापन के लिए एक ई-मेल भेजा है। साइनअप प्रक्रिया को अंतिम रूप "
+"देने के लिए दिए गए लिंक का पालन करें। कृपया हमसे संपर्क करें यदि आप इसे कुछ "
+"मिनटों के भीतर प्राप्त नहीं करते हैं।"
 
 #: codedevils_org/templates/account/verified_email_required.html:12
 msgid ""
@@ -498,9 +500,9 @@ msgid ""
 "you are who you claim to be. For this purpose, we require that you\n"
 "verify ownership of your e-mail address. "
 msgstr ""
-"Dit deel van de site vereist dat we dat verifiëren\n"
-"je bent wie je beweert te zijn. Voor dit doel hebben we u nodig\n"
-"controleer het eigendom van uw e-mailadres."
+"साइट के इस भाग को हमें सत्यापित करने की आवश्यकता है\n"
+"आप वह हैं जो आप होने का दावा करते हैं। इस उद्देश्य के लिए, हमें आपकी आवश्यकता है\n"
+"अपने ई-मेल पते के स्वामित्व को सत्यापित करें।"
 
 #: codedevils_org/templates/account/verified_email_required.html:16
 msgid ""
@@ -508,9 +510,9 @@ msgid ""
 "verification. Please click on the link inside this e-mail. Please\n"
 "contact us if you do not receive it within a few minutes."
 msgstr ""
-"We hebben u een e-mail gestuurd voor\n"
-"verificatie. Klik op de link in deze e-mail. Alstublieft\n"
-"neem contact met ons op als u deze niet binnen enkele minuten ontvangt."
+"हमने आपके लिए एक ई-मेल भेजा है\n"
+"सत्यापन। कृपया इस ई-मेल के लिंक पर क्लिक करें। कृप्या\n"
+"हमसे संपर्क करें यदि आप इसे कुछ मिनटों के भीतर प्राप्त नहीं करते हैं।"
 
 #: codedevils_org/templates/account/verified_email_required.html:20
 #, python-format
@@ -518,12 +520,12 @@ msgid ""
 "<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
 "e-mail address</a>."
 msgstr ""
-"<strong> Opmerking: </strong> u kunt nog steeds <a href=\"%(email_url)s\"> "
-"uw e-mailadres wijzigen </a>."
+"<strong>नोट: </strong>आप अभी भी <a href=\"%(email_url)s\"> अपना ई-मेल बदल "
+"सकते हैं</a>।"
 
 #: codedevils_org/templates/pages/about.html:4
 msgid "About Us"
-msgstr "Over ons"
+msgstr "हमारे बारे में"
 
 #: codedevils_org/templates/pages/about.html:5
 msgid ""
@@ -531,13 +533,13 @@ msgid ""
 "encourage and promote involvement in coding projects and competitions "
 "through an exclusively online setting."
 msgstr ""
-"CodeDevils heeft tot doel ASU-studenten een organisatie te bieden die is "
-"ontworpen om betrokkenheid bij coderingsprojecten en -wedstrijden te "
-"stimuleren en te bevorderen via een uitsluitend online setting."
+"CodeDevils का लक्ष्य एएसयू के छात्रों को विशेष रूप से ऑनलाइन सेटिंग के "
+"माध्यम से कोडिंग परियोजनाओं और प्रतियोगिताओं में भागीदारी को प्रोत्साहित "
+"करने और बढ़ावा देने के लिए डिज़ाइन किया गया संगठन प्रदान करना है।"
 
 #: codedevils_org/templates/pages/about.html:14
 msgid "<h2>Our <br>Organization's<br> History</h2>"
-msgstr "<h2>De geschiedenis van onze<br> organisatie</h2>"
+msgstr "<h2> हमारा <br> संगठन का इतिहास </ h2> है"
 
 #: codedevils_org/templates/pages/about.html:15
 msgid ""
@@ -546,10 +548,10 @@ msgid ""
 "needed to be successful in their cirriculum and have a competitive edge in "
 "the industry after graduating.</p>"
 msgstr ""
-"<p class=\"lead color-2\"> CodeDevils werd in 2016 gevonden als een volledig"
-" virtuele studentenorganisatie. We zijn er trots op onze leden de tools te "
-"geven die nodig zijn om succesvol te zijn in hun cirriculum en om een "
-"​​concurrentievoordeel in de branche te hebben na hun afstuderen.</p>"
+"<p class=\"lead color-2\">CodeDevils को 2016 में पूरी तरह से आभासी छात्र "
+"संगठन के रूप में पाया गया था। हम अपने सदस्यों को अपने सिरिकुलम में सफल होने "
+"के लिए आवश्यक उपकरण देने में गर्व करते हैं और स्नातक होने के बाद उद्योग में "
+"प्रतिस्पर्धात्मक बढ़त रखते हैं।</p>"
 
 #: codedevils_org/templates/pages/about.html:21
 msgid ""
@@ -569,22 +571,22 @@ msgid ""
 "\t\t\t\t\t\t"
 msgstr ""
 "\n"
-"<p>CodeDevils is niet jouw traditionele club; wij zijn een van de eerste organisaties van ASU die zich bezighoudt\n"
-"voor online studenten. We streven ernaar om de missie van ASU om de voorsprong op het gebied van innovatie te behouden verder te zetten\n"
-"het succesvol organiseren en cultiveren van een rijke studentengemeenschap die exclusief bestaat\n"
-"online. Vergaderingen, projecten, gastsprekers en wedstrijden worden allemaal georganiseerd en gehouden\n"
-"virtueel. Al gebruiken we daarbij uitsluitend digitale vormen van communicatie\n"
-"leden en interactie bevorderen, we verwelkomen alle ASU-studenten, ongeacht hoe u\n"
-"aanwezig zijn.</p>\n"
-"<p>We bieden unieke kansen voor alle ASU-studenten die geïnteresseerd zijn in softwareontwikkeling en\n"
-"tech in het algemeen. Die kansen omvatten exclusieve workshops met insiders uit de industrie,\n"
-"gastsprekers van grote namen en prestigieuze instellingen, wekelijks HackerRank\n"
-"uitdagingen, online hackathons en de mogelijkheid om samen te werken aan cv-waardige projecten\n"
-"(evenals wekelijkse studiesessies met leuke en nerdy studiepauzes!)</p>"
+"<p>CodeDevils आपका पारंपरिक क्लब नहीं है; हम ASU के पहले संगठनों में से एक हैं जो पूरा करता है\n"
+"ऑनलाइन छात्रों के लिए। हम ASU के मिशन को आगे बढ़ाने का लक्ष्य रखते हैं जिससे नवाचार में अग्रणीता बनी रहे\n"
+"सफलतापूर्वक एक समृद्ध छात्र समुदाय को विशेष रूप से संगठित करना और खेती करना\n"
+"ऑनलाइन। बैठकें, परियोजनाएं, अतिथि वक्ता, और प्रतियोगिताओं का आयोजन और संचालन किया जाता है\n"
+"वस्तुतः। यद्यपि हम इसमें शामिल होने के लिए संचार के विशेष रूप से डिजिटल रूपों का उपयोग करते हैं\n"
+"सदस्यों और बातचीत को बढ़ावा, हम कैसे आप की परवाह किए बिना सभी ASU छात्रों का स्वागत करते हैं\n"
+"भाग लेते हैं।</p>\n"
+"<p> हम सॉफ्टवेयर विकास में रुचि रखने वाले सभी एएसयू छात्रों के लिए अद्वितीय अवसर प्रदान करते हैं और\n"
+"सामान्य तौर पर तकनीक। उन अवसरों में उद्योग के अंदरूनी सूत्रों के साथ विशेष कार्यशालाएं शामिल हैं,\n"
+"बड़ी नाम कंपनियों और प्रतिष्ठित संस्थानों, साप्ताहिक हैकरैंक के अतिथि वक्ता\n"
+"चुनौतियां, ऑनलाइन हैकाथॉन, और फिर से शुरू करने योग्य परियोजनाओं पर सहयोग करने का अवसर\n"
+"(साथ ही मजेदार और नीरिय अध्ययन विराम के साथ साप्ताहिक अध्ययन सत्र!) </p>"
 
 #: codedevils_org/templates/pages/about.html:41
 msgid "Club Calendar"
-msgstr "Club Kalender"
+msgstr "क्लब कैलेंडर"
 
 #: codedevils_org/templates/pages/about.html:42
 #: codedevils_org/templates/pages/about.html:49
@@ -599,20 +601,19 @@ msgstr "Club Kalender"
 #: codedevils_org/templates/pages/workspace.html:237
 #: codedevils_org/templates/pages/workspace.html:248
 msgid "Coming soon!"
-msgstr "Komt binnenkort!"
+msgstr "जल्द आ रहा है!"
 
 #: codedevils_org/templates/pages/about.html:42
 msgid ""
 "In the next couple updates, you will be able to view all CodeDevils events, "
 "sync it with your own calendar, and receive notifications on Slack/email."
 msgstr ""
-"In de volgende paar updates kun je alle CodeDevils-evenementen bekijken, "
-"synchroniseren met je eigen agenda en meldingen ontvangen over Slack / "
-"e-mail."
+"अगले युगल अपडेट में, आप सभी कोडडविल्स घटनाओं को देख पाएंगे, इसे अपने कैलेंडर"
+" के साथ सिंक कर सकते हैं, और स्लैक / ईमेल पर सूचनाएं प्राप्त कर सकते हैं।"
 
 #: codedevils_org/templates/pages/about.html:48
 msgid "Hosting"
-msgstr "Hosting"
+msgstr "मेजबानी"
 
 #: codedevils_org/templates/pages/about.html:49
 msgid ""
@@ -620,38 +621,37 @@ msgid ""
 " a virtual private server <em>for free</em>. Other options also include "
 "access to the email backend, database storage, and much more!"
 msgstr ""
-"Voor toekomstige projecten biedt CodeDevils de mogelijkheid om uw website "
-"<em> gratis </em> op een virtuele privéserver te hosten. Andere opties zijn "
-"ook toegang tot de e-mailbackend, databaseopslag en nog veel meer!"
+"भविष्य की परियोजनाओं के लिए, CodeDevils आपकी वेबसाइट को एक वर्चुअल प्राइवेट "
+"सर्वर <em> पर मुफ्त </ em> होस्ट करने का विकल्प देगा। अन्य विकल्पों में ईमेल"
+" बैकएंड, डेटाबेस स्टोरेज, और भी बहुत कुछ शामिल हैं!"
 
 #: codedevils_org/templates/pages/about.html:55
 msgid "Project Based"
-msgstr "Projectmatige"
+msgstr "परियोजना पर आधारित"
 
 #: codedevils_org/templates/pages/about.html:56
 msgid ""
 "In the next update, you will be able to view all open projects, join and "
 "collaborate on them, and even submit one of your own."
 msgstr ""
-"In de volgende update kunt u alle geopende projecten bekijken, eraan "
-"deelnemen en eraan samenwerken en zelfs een eigen project indienen."
+"अगले अपडेट में, आप सभी खुली परियोजनाओं को देख पाएंगे, उनमें शामिल हो सकते "
+"हैं और सहयोग कर सकते हैं, और यहां तक ​​कि अपना खुद का एक भी जमा कर सकते हैं।"
 
 #: codedevils_org/templates/pages/about.html:63
 msgid ""
 "A centralized page for all members to join projects, collaborate for course "
 "work, and see all the exciting activity at CodeDevils."
 msgstr ""
-"Een gecentraliseerde pagina voor alle leden om deel te nemen aan projecten, "
-"samen te werken voor cursuswerk en alle spannende activiteiten bij "
-"CodeDevils te bekijken."
+"सभी सदस्यों के लिए परियोजनाओं में शामिल होने, पाठ्यक्रम के काम में सहयोग "
+"करने और CodeDevils में सभी रोमांचक गतिविधि देखने के लिए एक केंद्रीकृत पृष्ठ।"
 
 #: codedevils_org/templates/pages/about.html:75
 msgid "CodeDevils Leadership"
-msgstr "Leiderschap van CodeDevils"
+msgstr "CodeDevils नेतृत्व"
 
 #: codedevils_org/templates/pages/about.html:76
 msgid "The driving force behind everything CodeDevils"
-msgstr "De drijvende kracht achter alles CodeDevils"
+msgstr "सब कुछ CodeDevils के पीछे ड्राइविंग बल"
 
 #: codedevils_org/templates/pages/about.html:93
 #, python-format
@@ -660,76 +660,76 @@ msgstr "%(officer.quote)s"
 
 #: codedevils_org/templates/pages/about.html:139
 msgid "Our Meetings are held online"
-msgstr "Onze vergaderingen worden online gehouden"
+msgstr "हमारी बैठकें ऑनलाइन आयोजित की जाती हैं"
 
 #: codedevils_org/templates/pages/about.html:141
 msgid "Join In"
-msgstr "Kom er bij"
+msgstr "में शामिल हों"
 
 #: codedevils_org/templates/pages/about.html:154
 msgid "We promote collaboration"
-msgstr "We bevorderen samenwerking"
+msgstr "हम सहयोग को बढ़ावा देते हैं"
 
 #: codedevils_org/templates/pages/about.html:155
 msgid ""
 "Collaborate with students on projects and course work while developing both "
 "your skills as a developer and your network."
 msgstr ""
-"Werk samen met studenten aan projecten en cursussen terwijl je zowel je "
-"vaardigheden als ontwikkelaar als je netwerk ontwikkelt."
+"एक डेवलपर और आपके नेटवर्क के रूप में अपने दोनों कौशल विकसित करते हुए "
+"परियोजनाओं और पाठ्यक्रम के काम पर छात्रों के साथ सहयोग करें।"
 
 #: codedevils_org/templates/pages/about.html:163
 msgid "Network"
-msgstr "Netwerk"
+msgstr "नेटवर्क"
 
 #: codedevils_org/templates/pages/about.html:164
 msgid "Meet other members of CodeDevils."
-msgstr "Ontmoet andere leden van CodeDevils."
+msgstr "CodeDevils के अन्य सदस्यों से मिलें।"
 
 #: codedevils_org/templates/pages/about.html:170
 msgid "Develop"
-msgstr "Ontwikkelen"
+msgstr "विकसित करना"
 
 #: codedevils_org/templates/pages/about.html:171
 msgid ""
 "Enhance your skills and grow as a developer through projects, webinars, and "
 "team collaboration."
 msgstr ""
-"Verbeter uw vaardigheden en groei als ontwikkelaar door middel van "
-"projecten, webinars en teamsamenwerking."
+"अपने कौशल को बढ़ाएं और परियोजनाओं, वेबिनार, और टीम सहयोग के माध्यम से एक "
+"डेवलपर के रूप में विकसित करें।"
 
 #: codedevils_org/templates/pages/about.html:177
 msgid "Create"
-msgstr "Creëer"
+msgstr "सृजन करना"
 
 #: codedevils_org/templates/pages/about.html:178
 msgid "Have a great idea? Start your own project or join one today!"
-msgstr "Heeft u een goed idee? Start uw eigen project of doe vandaag nog mee!"
+msgstr ""
+"एक महान विचार है? अपना खुद का प्रोजेक्ट शुरू करें या आज ही ज्वाइन करें!"
 
 #: codedevils_org/templates/pages/about.html:191
 msgid ""
 "<p>Our club is packed full of things <span class=\"bold\">like "
 "collaboration.</span> Login to take advantage of our all new workspace</p>"
 msgstr ""
-"<p>Onze club zit boordevol dingen <span class=\"bold\"> zoals "
-"samenwerking.</span> Log in om te profiteren van onze geheel nieuwe "
-"werkruimte</p>"
+"<p>हमारा क्लब चीजों से भरा है <span class=\"bold\"> जैसे सहयोग।</span> हमारे"
+" सभी नए कार्यक्षेत्र का लाभ उठाने के लिए लॉगिन करें </p>"
 
 #: codedevils_org/templates/pages/about.html:198
 msgid "View Workspace"
-msgstr "Bekijk Workspace"
+msgstr "कार्यक्षेत्र देखें"
 
 #: codedevils_org/templates/pages/about.html:212
 msgid "Sponsored Projects"
-msgstr "Gesponsorde projecten"
+msgstr "प्रायोजित परियोजनाएँ"
 
 #: codedevils_org/templates/pages/about.html:213
 msgid ""
 "CodeDevils sponsors projects developed by club members by providing "
 "assistance and insight. <br>Check out some of our projects. "
 msgstr ""
-"CodeDevils sponsort projecten die door clubleden zijn ontwikkeld door hulp "
-"en inzicht te bieden. <br> Bekijk enkele van onze projecten."
+"CodeDevils सहायता और अंतर्दृष्टि प्रदान करके क्लब के सदस्यों द्वारा विकसित "
+"परियोजनाओं को प्रायोजित करता है।<br>हमारे कुछ प्रोजेक्ट देखें।"
 
 #: codedevils_org/templates/pages/contactus.html:5
 msgid ""
@@ -738,46 +738,45 @@ msgid ""
 "Fill out the form and we’ll be in touch as soon as possible.\n"
 msgstr ""
 "\n"
-"Neem contact met ons op en laat ons weten hoe we u kunnen helpen met uw kookbehoeften.\n"
-"Vul het formulier in en we nemen zo snel mogelijk contact met u op.\n"
+"संपर्क में रहें और हमें बताएं कि हम आपकी खाना पकाने की जरूरतों में आपकी मदद कैसे कर सकते हैं।\n"
+"फ़ॉर्म भरें और हम जल्द से जल्द संपर्क करेंगे।\n"
 
 #: codedevils_org/templates/pages/contactus.html:19
 msgid "Email address"
-msgstr "E-mailadres"
+msgstr "ईमेल पता"
 
 #: codedevils_org/templates/pages/contactus.html:20
 #: codedevils_org/templates/pages/home.html:217
 msgid "We\\"
-msgstr "Wij\\"
+msgstr "हम \\"
 
 #: codedevils_org/templates/pages/contactus.html:24
 msgid "Subject"
-msgstr "Onderwerpen"
+msgstr "विषय"
 
 #: codedevils_org/templates/pages/contactus.html:28
 msgid "Message"
-msgstr "Bericht"
+msgstr "संदेश"
 
 #: codedevils_org/templates/pages/contactus.html:32
 msgid "Send Message"
-msgstr "Bericht versturen"
+msgstr "मेसेज भेजें"
 
 #: codedevils_org/templates/pages/contactus.html:38
 msgid "Thank you!"
-msgstr "Dank u!"
+msgstr "धन्यवाद!"
 
 #: codedevils_org/templates/pages/contactus.html:39
 msgid "Your message has been send, we will contact you as soon as possible."
-msgstr ""
-"Uw bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op."
+msgstr "आपका संदेश भेज दिया गया है, हम आपसे जल्द से जल्द संपर्क करेंगे।"
 
 #: codedevils_org/templates/pages/contactus.html:46
 msgid "Get in touch"
-msgstr "Kom in contact"
+msgstr "संपर्क में रहो"
 
 #: codedevils_org/templates/pages/contactus.html:50
 msgid "Arizona State University,"
-msgstr "Staatsuniversiteit van Arizona,"
+msgstr "Arizona State University,"
 
 #: codedevils_org/templates/pages/contactus.html:51
 msgid "Tempe, AZ"
@@ -785,43 +784,44 @@ msgstr "Tempe, AZ"
 
 #: codedevils_org/templates/pages/contactus.html:90
 msgid "Project Support"
-msgstr "Projectondersteuning"
+msgstr "परियोजना का समर्थन"
 
 #: codedevils_org/templates/pages/contactus.html:93
 msgid ""
 "Looking for a custom quote? need to tell us more about your project? or want"
 " a demonstration? drop us a line to"
 msgstr ""
-"Op zoek naar een offerte op maat? wilt u ons meer vertellen over uw project?"
-" of wil je een demonstratie? stuur ons een bericht naar"
+"एक कस्टम उद्धरण के लिए खोज रहे हैं? हमें अपनी परियोजना के बारे में अधिक "
+"बताने की आवश्यकता है? या एक प्रदर्शन चाहते हैं? हमें एक पंक्ति के लिए छोड़ "
+"दें"
 
 #: codedevils_org/templates/pages/contactus.html:100
 msgid "Technical Support"
-msgstr "Technische ondersteuning"
+msgstr "तकनीकी सहायता"
 
 #: codedevils_org/templates/pages/contactus.html:103
 msgid ""
 "Any question about how to integrate your product?. Don't fret, our geek team"
 " is ready for you at"
 msgstr ""
-"Heeft u een vraag over hoe u uw product kunt integreren ?. Maak je geen "
-"zorgen, ons nerdteam staat voor je klaar bij"
+"कैसे अपने उत्पाद को एकीकृत करने के बारे में कोई सवाल ?. झल्लाहट मत करो, "
+"हमारी गीक टीम आपके लिए तैयार है"
 
 #: codedevils_org/templates/pages/home.html:14
 msgid " An ASU<br> Student Organization"
-msgstr "Een ASU<br> Studentenorganisatie"
+msgstr "एक ASU<br> छात्र संगठन"
 
 #: codedevils_org/templates/pages/home.html:32
 msgid "Stay posted on new website integrations and updates."
-msgstr "Blijf op de hoogte van nieuwe website-integraties en updates."
+msgstr "नई वेबसाइट एकीकरण और अपडेट पर तैनात रहें।"
 
 #: codedevils_org/templates/pages/home.html:33
 msgid "Update Log"
-msgstr "Logboek bijwerken"
+msgstr "लॉग अपडेट करें"
 
 #: codedevils_org/templates/pages/home.html:46
 msgid "Community"
-msgstr "Gemeenschap"
+msgstr "समुदाय"
 
 #: codedevils_org/templates/pages/home.html:48
 msgid ""
@@ -829,9 +829,9 @@ msgid ""
 "                                            Network with fellow students, faculty members, and guest speakers.<br><br>\n"
 "                                            We even have dedicated Slack channels for SER/CSE classes!"
 msgstr ""
-"Maak deel uit van een geweldige groep mensen met een passie voor coderen.<br><br>\n"
-"Netwerk met medestudenten, docenten en gastsprekers.<br><br>\n"
-"We hebben zelfs speciale Slack-kanalen voor SER / CSE-klassen!"
+"उन व्यक्तियों के एक अद्भुत समूह का हिस्सा बनें जिन्हें कोडिंग का शौक है।<br><br>\n"
+"साथी छात्रों, संकाय सदस्यों और अतिथि वक्ताओं के साथ नेटवर्क।<br><br>\n"
+"यहां तक ​​कि हमने SER/CSE कक्षाओं के लिए स्लैक चैनल समर्पित किए हैं!"
 
 #: codedevils_org/templates/pages/home.html:51
 #: codedevils_org/templates/pages/home.html:63
@@ -840,15 +840,15 @@ msgstr ""
 #: codedevils_org/templates/pages/workspace.html:54
 #: codedevils_org/templates/pages/workspace.html:63
 msgid "Learn more"
-msgstr "Leer meer"
+msgstr "और अधिक जानें"
 
 #: codedevils_org/templates/pages/home.html:57
 msgid "Code"
-msgstr "Code"
+msgstr "कोड"
 
 #: codedevils_org/templates/pages/home.html:59
 msgid "Work on exclusive CodeDevils projects!"
-msgstr "Werk aan exclusieve CodeDevils-projecten!"
+msgstr "अनन्य CodeDevils परियोजनाओं पर काम करें!"
 
 #: codedevils_org/templates/pages/home.html:60
 msgid ""
@@ -856,13 +856,13 @@ msgid ""
 "                                            Anyone can propose an idea for a project, and a project can be anything that\n"
 "                                            involves coding in some way (regardless of language or platform)."
 msgstr ""
-"Projecten bieden leden de mogelijkheid om samen te werken aan coderingsprojecten.\n"
-"Iedereen kan een idee voor een project voorstellen en een project kan van alles zijn\n"
-"omvat op een of andere manier codering (ongeacht taal of platform)."
+"परियोजनाएं सदस्यों के लिए कोडिंग परियोजनाओं पर सहयोग करने का एक अवसर हैं।\n"
+"कोई भी एक परियोजना के लिए एक विचार का प्रस्ताव कर सकता है, और एक परियोजना कुछ भी हो सकती है\n"
+"किसी तरह से कोडिंग करना शामिल है (भाषा या मंच की परवाह किए बिना)।"
 
 #: codedevils_org/templates/pages/home.html:69
 msgid "Compete"
-msgstr "Concurreren"
+msgstr "प्रतिस्पर्धा"
 
 #: codedevils_org/templates/pages/home.html:71
 msgid ""
@@ -873,66 +873,65 @@ msgid ""
 "                                are trying to learn or showing off your skills! At the end of the term you could win\n"
 "                                some swag!"
 msgstr ""
-"Codeerwedstrijden worden elk semester op HackerRank georganiseerd.<br><br>\n"
-"Uitdagingen variëren van eenvoudige tot moeilijke problemen die kunnen worden opgelost met behulp van ondersteunde\n"
-"programmeertaal.<br><br>\n"
-"Dit zijn een geweldige kans om het oplossen van problemen in een programmeertaal uit te proberen\n"
-"proberen je vaardigheden te leren of te laten zien! Aan het einde van de termijn kon je winnen\n"
-"wat swag!"
+"कोडिंग प्रतियोगिताओं को हैकरैंक पर प्रत्येक सेमेस्टर की मेजबानी की जाती है।<br><br>\n"
+"चुनौतियां आसान से लेकर कठिन समस्याओं तक होती हैं जिन्हें किसी भी समर्थित का उपयोग करके हल किया जा सकता है\n"
+"प्रोग्रामिंग भाषा।<br><br>\n"
+"आपके द्वारा प्रोग्रामिंग की गई भाषा में समस्या को सुलझाने का प्रयास करने के लिए ये एक शानदार अवसर है\n"
+"अपने कौशल को सीखने या दिखाने की कोशिश कर रहे हैं! कार्यकाल के अंत में आप जीत सकते थे\n"
+"कुछ स्वैग!"
 
 #: codedevils_org/templates/pages/home.html:89
 msgid "Welcome to CodeDevils"
-msgstr "Welkom bij CodeDevils"
+msgstr "CodeDevils में आपका स्वागत है"
 
 #: codedevils_org/templates/pages/home.html:90
 msgid "Welcome to CodeDevils - We are An ASU student run organization"
-msgstr ""
-"Welkom bij CodeDevils - Wij zijn een door ASU gerunde studentenorganisatie"
+msgstr "CodeDevils में आपका स्वागत है - हम एक ASU छात्र रन संगठन हैं"
 
 #: codedevils_org/templates/pages/home.html:94
 msgid "What\\"
-msgstr "Wat\\"
+msgstr "क्या\\"
 
 #: codedevils_org/templates/pages/home.html:96
 msgid "Events"
-msgstr "Evenementen"
+msgstr "आयोजन"
 
 #: codedevils_org/templates/pages/home.html:101
 msgid "Our Operation Bat Signal"
-msgstr "Onze operatie Bat Signal"
+msgstr "हमारे ऑपरेशन बैट सिग्नल"
 
 #: codedevils_org/templates/pages/home.html:102
 msgid ""
 "Do you have any general questions or assistance finding resources since the "
 "move to remote learning. Reach out with any inquiries."
 msgstr ""
-"Heeft u algemene vragen of hulp bij het vinden van bronnen sinds de overstap"
-" naar leren op afstand. Neem contact op met eventuele vragen."
+"क्या आपके पास दूरस्थ शिक्षा के लिए जाने के बाद से कोई सामान्य प्रश्न या "
+"संसाधन खोजने में सहायता है। किसी भी पूछताछ के साथ पहुंचें।"
 
 #: codedevils_org/templates/pages/home.html:114
 #: codedevils_org/templates/pages/home.html:149
 msgid "Virtual Study Hall"
-msgstr "Virtuele studiezaal"
+msgstr "वर्चुअल स्टडी हॉल"
 
 #: codedevils_org/templates/pages/home.html:116
 msgid ""
 "Join us for a virtual study session! Find your study buddies, conquer that "
 "homework, and enjoy the nerdiest study breaks at ASU!"
 msgstr ""
-"Ga met ons mee voor een virtuele studiesessie! Vind je studievrienden, "
-"verover dat huiswerk en geniet van de meest nerdy studiepauzes bij ASU!"
+"एक आभासी अध्ययन सत्र के लिए हमसे जुड़ें! अपने अध्ययन के साथी खोजें, उस "
+"होमवर्क पर विजय प्राप्त करें, और ASU में nerdiest अध्ययन विराम का आनंद लें!"
 
 #: codedevils_org/templates/pages/home.html:134
 msgid "OUR MISSION"
-msgstr "ONZE MISSIE"
+msgstr "हमारा लक्ष्य"
 
 #: codedevils_org/templates/pages/home.html:135
 msgid ""
 "Create a community of students in the online setting to provide the "
 "opportunity to meet and mingle with other students."
 msgstr ""
-"Creëer een gemeenschap van studenten in de online setting om de mogelijkheid"
-" te bieden om andere studenten te ontmoeten en te ontmoeten."
+"अन्य छात्रों के साथ मिलने और मिलाने का अवसर प्रदान करने के लिए ऑनलाइन सेटिंग"
+" में छात्रों का एक समुदाय बनाएँ।"
 
 #: codedevils_org/templates/pages/home.html:136
 msgid ""
@@ -940,41 +939,41 @@ msgid ""
 "projects like moble applications, all completely online, there are plenty of"
 " ways to get involved and stay involved!"
 msgstr ""
-"Met wekelijkse codeeruitdagingen, peer mentorschap, gastsprekers en grote "
-"projecten zoals mobiele applicaties, allemaal volledig online, zijn er tal "
-"van manieren om mee te doen en betrokken te blijven!"
+"साप्ताहिक कोडिंग चुनौतियों के साथ, सहकर्मी मेंटरशिप, गेस्ट स्पीकर, और मोबल "
+"एप्लिकेशन जैसे बड़े प्रोजेक्ट, पूरी तरह से ऑनलाइन, इसमें शामिल होने और रहने "
+"के लिए बहुत सारे तरीके हैं!"
 
 #: codedevils_org/templates/pages/home.html:151
 msgid ""
 "An online coworking environment where you can get that\n"
 "                                    experience of working alongside your peers and create good study habits!"
 msgstr ""
-"Een online coworking-omgeving waar u die kunt krijgen\n"
-"ervaring met het werken met je leeftijdsgenoten en het creëren van goede studiegewoonten!"
+"एक ऑनलाइन सहकर्मी वातावरण जहां आप वह प्राप्त कर सकते हैं\n"
+"अपने साथियों के साथ काम करने का अनुभव और अध्ययन की अच्छी आदतें बनाना!"
 
 #: codedevils_org/templates/pages/home.html:160
 msgid "Hackathons"
-msgstr "Hackathons"
+msgstr "हैकेथन्स"
 
 #: codedevils_org/templates/pages/home.html:161
 msgid ""
 "Compete alongside fellow students and test your abilities on complex coding "
 "problems."
 msgstr ""
-"Concurreer met medestudenten en test je vaardigheden op complexe "
-"coderingsproblemen."
+"साथी छात्रों के साथ प्रतिस्पर्धा करें और जटिल कोडिंग समस्याओं पर अपनी "
+"क्षमताओं का परीक्षण करें।"
 
 #: codedevils_org/templates/pages/home.html:175
 msgid "TOOLS TO DEVELOP"
-msgstr "GEREEDSCHAP OM TE ONTWIKKELEN"
+msgstr "विकास के लिए उपकरण"
 
 #: codedevils_org/templates/pages/home.html:176
 msgid "BECOME A CODEDEVIL"
-msgstr "WORD EEN CODEDEVIL"
+msgstr "बेसिक एक CODEDEVIL"
 
 #: codedevils_org/templates/pages/home.html:181
 msgid "REGISTER"
-msgstr "REGISTREREN"
+msgstr "रजिस्टर करें"
 
 #: codedevils_org/templates/pages/home.html:183
 msgid "SLACK"
@@ -982,16 +981,17 @@ msgstr "SLACK"
 
 #: codedevils_org/templates/pages/home.html:185
 msgid "CLUB DOCS"
-msgstr "CLUB DOCS"
+msgstr "क्लब डॉट्स"
 
 #: codedevils_org/templates/pages/home.html:188
 msgid "Officially register your membership as a CodeDevil on SunDevilSync."
 msgstr ""
-"Registreer uw lidmaatschap officieel als een CodeDevil op SunDevilSync."
+"आधिकारिक तौर पर अपनी सदस्यता को SunDevilSync पर CodeDevil के रूप में पंजीकृत"
+" करें।"
 
 #: codedevils_org/templates/pages/home.html:190
 msgid "SunDevilSync is Arizona State University\\"
-msgstr "SunDevilSync is de Arizona State University \\"
+msgstr "SunDevilSync एरिजोना स्टेट यूनिवर्सिटी है\\"
 
 #: codedevils_org/templates/pages/home.html:192
 msgid ""
@@ -999,59 +999,57 @@ msgid ""
 "with their members and Administrative Advisors in a customizable, online "
 "campus community."
 msgstr ""
-"Het verbindt studenten met studentenorganisaties en studentenorganisaties "
-"met hun leden en administratief adviseurs in een aanpasbare, online "
-"campusgemeenschap."
+"यह छात्रों को छात्र संगठनों और छात्र संगठनों के साथ उनके सदस्यों और "
+"प्रशासनिक सलाहकारों के साथ एक अनुकूलन योग्य, ऑनलाइन परिसर समुदाय में जोड़ता "
+"है।"
 
 #: codedevils_org/templates/pages/home.html:198
 msgid ""
 "Now that you're registered, take a look at the CodeDevils Constitution \n"
 "\t\t\t\t\t\t\t\tso you are aware how the organization is run."
 msgstr ""
-"Nu je geregistreerd bent, bekijk de CodeDevils-grondwet\n"
-"zodat u weet hoe de organisatie wordt geleid."
+"अब जब आप पंजीकृत हो गए हैं, तो कोडडेविल्स संविधान को देखें\n"
+"इसलिए आप जानते हैं कि संगठन कैसे चलाया जाता है।"
 
 #: codedevils_org/templates/pages/home.html:201
 msgid "View Welcome Docs"
-msgstr "Bekijk welkomstdocumenten"
+msgstr "स्वागत है आपका स्वागत है डॉक्स"
 
 #: codedevils_org/templates/pages/home.html:204
 msgid ""
 "Afterwards, check out our welcome letter to get some information, tips, and "
 "rules as you get involved in the club."
 msgstr ""
-"Bekijk daarna onze welkomstbrief om wat informatie, tips en regels te "
-"krijgen terwijl je betrokken raakt bij de club."
+"बाद में, क्लब में शामिल होते ही कुछ जानकारी, सुझाव और नियम प्राप्त करने के "
+"लिए हमारे स्वागत पत्र को देखें।"
 
 #: codedevils_org/templates/pages/home.html:206
 msgid "View Constitution"
-msgstr "Bekijk grondwet"
+msgstr "संविधान देखें"
 
 #: codedevils_org/templates/pages/home.html:211
 msgid ""
 "After completing the previous steps, you are now an official CodeDevils "
 "member!"
 msgstr ""
-"Na het voltooien van de voorgaande stappen, ben je nu een officieel "
-"CodeDevils-lid!"
+"पिछले चरणों को पूरा करने के बाद, अब आप एक आधिकारिक CodeDevils सदस्य हैं!"
 
 #: codedevils_org/templates/pages/home.html:213
 #, python-format
 msgid "It's time to join a discussion with %(member_count)s members!"
-msgstr ""
-"Het is tijd om deel te nemen aan een discussie met %(member_count)s leden!"
+msgstr "यह %(member_count)s सदस्यों के साथ चर्चा में शामिल होने का समय है!"
 
 #: codedevils_org/templates/pages/home.html:215
 msgid ""
 "Please sign up for our slack channel using your ASU e-mail and introduce "
 "yourself to the community."
 msgstr ""
-"Meld u aan voor ons slappe kanaal met uw ASU-e-mail en stel uzelf voor aan "
-"de gemeenschap."
+"कृपया अपने ASU ई-मेल का उपयोग करके हमारे सुस्त चैनल के लिए साइन अप करें और "
+"समुदाय में अपना परिचय दें।"
 
 #: codedevils_org/templates/pages/home.html:219
 msgid "Slack Signup"
-msgstr "Slack Aanmelden"
+msgstr "Slack साइन अप करें"
 
 #: codedevils_org/templates/pages/home.html:228
 msgid "SunDevilSYNC"
@@ -1059,7 +1057,7 @@ msgstr "SunDevilSYNC"
 
 #: codedevils_org/templates/pages/home.html:230
 msgid "SIGNUP"
-msgstr "INSCHRIJVEN"
+msgstr "साइन अप करें"
 
 #: codedevils_org/templates/pages/workspace.html:26
 msgid ""
@@ -1068,101 +1066,101 @@ msgid ""
 "align-items-center color-1 ml-3\">Learn more <i class=\"pe pe-7s-angle-"
 "right\"></i> </a> </p>"
 msgstr ""
-"<p class=\"color-1\"> <strong> Binnenkort! </strong> We werken er hard aan "
-"om een ​​nieuwe integratie-API te maken. <a href=\"#\" class=\"bold "
-"d-inline-flex align-items-center color-1 ml-3\"> Meer informatie <i class = "
-"\"pe pe-7s-angle-right\"></i></a></p>"
+"<p class=\"color-1\"><strong>जल्द ही आ रहा है!</strong> हम एक नई एकता API "
+"बनाने के लिए कड़ी मेहनत कर रहे हैं। <a href=\"#\" class=\"bold d-inline-flex"
+" align-items-center color-1 ml-3\"> और जानें <i class=\"pe pe-7s-angle-"
+"right\"></i></a></p>"
 
 #: codedevils_org/templates/pages/workspace.html:42
 msgid "Project Requests"
-msgstr "Projectaanvragen"
+msgstr "परियोजना अनुरोध"
 
 #: codedevils_org/templates/pages/workspace.html:44
 msgid "In the next update, we\\"
-msgstr "In de volgende update zullen we \\"
+msgstr "अगले अद्यतन में, हम \\"
 
 #: codedevils_org/templates/pages/workspace.html:51
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "डैशबोर्ड"
 
 #: codedevils_org/templates/pages/workspace.html:53
 msgid "View activity related directly to you!"
-msgstr "Bekijk activiteiten die direct aan jou gerelateerd zijn!"
+msgstr "सीधे आप से संबंधित गतिविधि देखें!"
 
 #: codedevils_org/templates/pages/workspace.html:60
 msgid "Introducing API"
-msgstr "Introductie van API"
+msgstr "पेश है एपीआई"
 
 #: codedevils_org/templates/pages/workspace.html:62
 msgid ""
 "We will have an entire suite of APIs for use on CodeDevils-sponsored "
 "projects."
 msgstr ""
-"We zullen een hele reeks API's hebben voor gebruik op door CodeDevils "
-"gesponsorde projecten."
+"हमारे पास CodeDevils- प्रायोजित परियोजनाओं पर उपयोग के लिए एपीआई का एक पूरा "
+"सूट होगा।"
 
 #: codedevils_org/templates/pages/workspace.html:76
 msgid "Pushing project based club environment"
-msgstr "Duwende projectmatige clubomgeving"
+msgstr "पुशिंग प्रोजेक्ट आधारित क्लब वातावरण"
 
 #: codedevils_org/templates/pages/workspace.html:77
 msgid "Get the very best of us by doing the best of you"
-msgstr "Haal het beste uit ons door het beste uit jezelf te halen"
+msgstr "आप सबसे अच्छा करके हम में से सबसे अच्छा प्राप्त करें"
 
 #: codedevils_org/templates/pages/workspace.html:78
 msgid ""
 "Join our contributors and fellow students in our project-based environment."
 msgstr ""
-"Sluit je aan bij onze medewerkers en medestudenten in onze projectmatige "
-"omgeving."
+"हमारे प्रोजेक्ट-आधारित वातावरण में हमारे योगदानकर्ताओं और साथी छात्रों से "
+"जुड़ें।"
 
 #: codedevils_org/templates/pages/workspace.html:87
 msgid "Members"
-msgstr "Leden"
+msgstr "सदस्य"
 
 #: codedevils_org/templates/pages/workspace.html:96
 msgid "Contributors"
-msgstr "Bijdragers"
+msgstr "योगदानकर्ता"
 
 #: codedevils_org/templates/pages/workspace.html:105
 msgid "Projects"
-msgstr "Projecten"
+msgstr "परियोजनाओं"
 
 #: codedevils_org/templates/pages/workspace.html:114
 msgid "Cups of Coffee"
-msgstr "Koppen koffie"
+msgstr "कॉफी के कप"
 
 #: codedevils_org/templates/pages/workspace.html:137
 msgid "Powerful Dashboard"
-msgstr "Krachtig dashboard"
+msgstr "शक्तिशाली डैशबोर्ड"
 
 #: codedevils_org/templates/pages/workspace.html:138
 msgid "We will include a fully functional starter dashboard"
-msgstr "We zullen een volledig functioneel startersdashboard opnemen"
+msgstr "हम एक पूरी तरह कार्यात्मक स्टार्टर डैशबोर्ड शामिल करेंगे"
 
 #: codedevils_org/templates/pages/workspace.html:146
 msgid "Powered with fresh air"
-msgstr "Aangedreven door frisse lucht"
+msgstr "ताजी हवा से संचालित"
 
 #: codedevils_org/templates/pages/workspace.html:147
 msgid "It\\"
-msgstr "Het\\"
+msgstr "यह \\"
 
 #: codedevils_org/templates/pages/workspace.html:152
 msgid "Inbox"
-msgstr "Postvak IN"
+msgstr "इनबॉक्स"
 
 #: codedevils_org/templates/pages/workspace.html:156
 msgid "Calendar"
-msgstr "Kalender"
+msgstr "पंचांग"
 
 #: codedevils_org/templates/pages/workspace.html:160
 msgid "Invoice"
-msgstr "Factuur"
+msgstr "बीजक"
 
 #: codedevils_org/templates/pages/workspace.html:168
 msgid "Bring your idea to life"
-msgstr "Breng uw idee tot leven"
+msgstr "अपने विचार को जीवन में उतारें"
 
 #: codedevils_org/templates/pages/workspace.html:169
 msgid ""
@@ -1170,50 +1168,51 @@ msgid ""
 "With this feature you can start developing right away your web based "
 "application."
 msgstr ""
-"CodeDevils bevat een uitstekende starter voor het koken van die verse apps. "
-"Met deze functie kunt u direct beginnen met het ontwikkelen van uw "
-"webapplicatie."
+"CodeDevils में उन ताज़ा ऐप को पकाने के लिए एक उत्कृष्ट स्टार्टर शामिल है। इस"
+" सुविधा से आप अपने वेब आधारित एप्लिकेशन को तुरंत विकसित करना शुरू कर सकते "
+"हैं।"
 
 #: codedevils_org/templates/pages/workspace.html:177
 msgid "Clean inbox UI design"
-msgstr "Schoon inbox UI-ontwerp"
+msgstr "साफ इनबॉक्स यूआई डिजाइन"
 
 #: codedevils_org/templates/pages/workspace.html:183
 msgid "Outstanding calendar UI design"
-msgstr "Uitstekend kalender UI-ontwerp"
+msgstr "बकाया कैलेंडर UI डिज़ाइन"
 
 #: codedevils_org/templates/pages/workspace.html:189
 msgid "Draft purchases with the invoice feature"
-msgstr "Conceptaankopen met de factuurfunctie"
+msgstr "इनवॉइस सुविधा के साथ ड्राफ्ट खरीद"
 
 #: codedevils_org/templates/pages/workspace.html:205
 msgid "CodeDevil API for Workspace"
-msgstr "CodeDevil API voor werkruimte"
+msgstr "कार्यक्षेत्र के लिए कोडडविल एपीआई"
 
 #: codedevils_org/templates/pages/workspace.html:206
 msgid "Easy integrations for your projects"
-msgstr "Gemakkelijke integraties voor uw projecten"
+msgstr "अपनी परियोजनाओं के लिए आसान एकीकरण"
 
 #: codedevils_org/templates/pages/workspace.html:207
 msgid ""
 "Seamlessly integrate your project with hosting options designed for you."
 msgstr ""
-"Integreer uw project naadloos met hostingopties die voor u zijn ontworpen."
+"निर्बाध रूप से आपके लिए डिज़ाइन किए गए होस्टिंग विकल्पों के साथ अपनी "
+"परियोजना को एकीकृत करें।"
 
 #: codedevils_org/templates/pages/workspace.html:214
 msgid "Apache Server"
-msgstr "Apache Server"
+msgstr "अपाचे सर्वर"
 
 #: codedevils_org/templates/pages/workspace.html:215
 msgid "Host your web application on an Apache web server."
-msgstr "Host uw webtoepassing op een Apache-webserver."
+msgstr "अपाचे वेब सर्वर पर अपने वेब एप्लिकेशन को होस्ट करें।"
 
 #: codedevils_org/templates/pages/workspace.html:218
 #: codedevils_org/templates/pages/workspace.html:229
 #: codedevils_org/templates/pages/workspace.html:240
 #: codedevils_org/templates/pages/workspace.html:251
 msgid "Integrate"
-msgstr "Integreren"
+msgstr "एकीकृत"
 
 #: codedevils_org/templates/pages/workspace.html:225
 msgid "HTML 5"
@@ -1224,8 +1223,8 @@ msgid ""
 "Learn HTML and use it to create web pages that bring your project to the "
 "eyes of your consumers."
 msgstr ""
-"Leer HTML en gebruik het om webpagina's te maken die uw project onder de "
-"ogen van uw consumenten brengen."
+"HTML जानें और इसका उपयोग वेब पेज बनाने के लिए करें जो आपके प्रोजेक्ट को आपके"
+" उपभोक्ताओं की नज़र में लाए।"
 
 #: codedevils_org/templates/pages/workspace.html:236
 msgid "Python"
@@ -1236,8 +1235,8 @@ msgid ""
 "Python is growing ever-more popular, and is what this website uses! Use "
 "Python and Python-based frameworks for your applications."
 msgstr ""
-"Python wordt steeds populairder en dat is wat deze website gebruikt! Gebruik"
-" op Python en Python gebaseerde frameworks voor uw toepassingen."
+"अजगर कभी अधिक लोकप्रिय हो रहा है, और इस वेबसाइट का उपयोग करता है! अपने "
+"अनुप्रयोगों के लिए पायथन और पायथन-आधारित फ्रेमवर्क का उपयोग करें।"
 
 #: codedevils_org/templates/pages/workspace.html:247
 msgid "CodeDevil API"
@@ -1246,104 +1245,103 @@ msgstr "CodeDevil API"
 #: codedevils_org/templates/pages/workspace.html:248
 msgid "Use APIs provided by this website to power your application."
 msgstr ""
-"Gebruik API's die door deze website worden aangeboden om uw applicatie van "
-"stroom te voorzien."
+"अपने एप्लिकेशन को पावर देने के लिए इस वेबसाइट द्वारा दिए गए API का उपयोग "
+"करें।"
 
 #: codedevils_org/users/admin.py:49
 msgid "There are no positions to rebase"
-msgstr "Er zijn geen posities om te rebasen"
+msgstr "रिबेस करने के लिए कोई पोजीशन नहीं हैं"
 
 #: codedevils_org/users/admin.py:58
 msgid "Position orders successfully rebased"
-msgstr "Positieorders zijn succesvol hersteld"
+msgstr "स्थिति के आदेश सफलतापूर्वक छूट दिए गए"
 
 #: codedevils_org/users/admin.py:61
 msgid "Rebase order starting at 1"
-msgstr "Rebase-bestelling vanaf 1"
+msgstr "1 से शुरू होने पर रिबेस का क्रम"
 
 #: codedevils_org/users/apps.py:7
 msgid "Users"
-msgstr "Gebruikers"
+msgstr "उपयोगकर्ता"
 
 #: codedevils_org/users/forms.py:16
 msgid "This username has already been taken."
-msgstr "Deze gebruikersnaam is al in gebruik."
+msgstr "यह उपयोगकर्ता नाम पहले ही लिया जा चुका है।"
 
 #: codedevils_org/users/models.py:19
 msgid "Name of User"
-msgstr "Naam van gebruiker"
+msgstr "उपयोगकर्ता का नाम"
 
 #: codedevils_org/users/models.py:23
 msgid "Date of birth"
-msgstr "Geboortedatum"
+msgstr "जन्म की तारीख"
 
 #: codedevils_org/users/models.py:26
 msgid "City"
-msgstr "stad"
+msgstr "शहर"
 
 #: codedevils_org/users/models.py:27
 msgid "The city that the user currently resides in"
-msgstr "De stad waar de gebruiker momenteel verblijft"
+msgstr "वर्तमान में उपयोगकर्ता जिस शहर में रहता है"
 
 #: codedevils_org/users/models.py:28
 msgid "State"
-msgstr "Staat"
+msgstr "राज्य"
 
 #: codedevils_org/users/models.py:29
 msgid "The state the city resides in (for inside the US only)"
-msgstr "De staat waarin de stad zich bevindt (alleen voor binnen de VS)"
+msgstr "शहर जिस राज्य में रहता है (केवल अमेरिका के अंदर)"
 
 #: codedevils_org/users/models.py:30
 msgid "Country"
-msgstr "Land"
+msgstr "देश"
 
 #: codedevils_org/users/models.py:31
 msgid "The country the city resides in"
-msgstr "Het land waarin de stad woont"
+msgstr "शहर जिस देश में रहता है"
 
 #: codedevils_org/users/models.py:35
 msgid "GitHub Username"
-msgstr "GitHub-gebruikersnaam"
+msgstr "GitHub उपयोगकर्ता नाम"
 
 #: codedevils_org/users/models.py:36
 msgid "We use this to automatically enroll you in our GitHub projects."
 msgstr ""
-"We gebruiken dit om u automatisch in te schrijven voor onze GitHub-"
-"projecten."
+"इसका उपयोग हम अपने GitHub प्रोजेक्ट्स में स्वचालित रूप से नामांकन करने के "
+"लिए करते हैं।"
 
 #: codedevils_org/users/models.py:38
 msgid "Slack Username"
-msgstr "Slack gebruikersnaam"
+msgstr "Slack उपयोगकर्ता नाम"
 
 #: codedevils_org/users/models.py:39
 msgid "The user\"s slack user name registered on the CodeDevils slack channel"
 msgstr ""
-"De slappe gebruikersnaam van de gebruiker die is geregistreerd op het slappe"
-" kanaal van CodeDevils"
+"उपयोगकर्ता का सुस्त उपयोगकर्ता नाम CodeDevils सुस्त चैनल पर पंजीकृत है"
 
 #: codedevils_org/users/models.py:42
 msgid "Twitter Username"
-msgstr "Twitter gebruikersnaam"
+msgstr "ट्विटर उपयोगकर्ता का नाम"
 
 #: codedevils_org/users/models.py:45
 msgid "Instagram URL"
-msgstr "Instagram-link"
+msgstr "इंस्टाग्राम लिंक"
 
 #: codedevils_org/users/models.py:46
 msgid "Facebook URL"
-msgstr "Facebook-link"
+msgstr "फेसबुक लिंक"
 
 #: codedevils_org/users/models.py:47
 msgid "LinkedIn URL"
-msgstr "LinkedIn-link"
+msgstr "लिंक्डइन लिंक"
 
 #: codedevils_org/users/models.py:51
 msgid "Receive notifications"
-msgstr "Meldingen ontvangen"
+msgstr "सूचनाएं प्राप्त करें"
 
 #: codedevils_org/users/models.py:54
 msgid "Anonymous"
-msgstr "Anoniem"
+msgstr "गुमनाम"
 
 #: codedevils_org/users/models.py:55
 msgid ""
@@ -1351,54 +1349,53 @@ msgid ""
 " will ensure your account stays private and supported applications don't "
 "have access to your data"
 msgstr ""
-"Je hebt de mogelijkheid om je account anoniem te houden met CD. Als u dit "
-"selecteert, blijft uw account privé en hebben ondersteunde applicaties geen "
-"toegang tot uw gegevens"
+"आपके पास अपने खाते को CodeDevils के साथ गुमनाम रखने का विकल्प है। इसे चुनने "
+"से यह सुनिश्चित होगा कि आपका खाता निजी रहेगा और समर्थित एप्लिकेशन को आपके "
+"डेटा तक पहुंच प्राप्त नहीं होगी"
 
 #: codedevils_org/users/models.py:72
 msgid "Name of the position"
-msgstr "Naam van de functie"
+msgstr "पद का नाम"
 
 #: codedevils_org/users/models.py:73
 msgid "Name"
-msgstr "Naam"
+msgstr "नाम"
 
 #: codedevils_org/users/models.py:75
 msgid "Order"
-msgstr "Bestellen"
+msgstr "गण"
 
 #: codedevils_org/users/models.py:76
 msgid ""
 "The order of precedence of the position. For example, the President is 1, "
 "Vice President is 2, and so on."
 msgstr ""
-"De rangorde van de positie. De president is bijvoorbeeld 1, de vice-"
-"president is 2, enzovoort."
+"स्थिति की पूर्वता का क्रम। उदाहरण के लिए, राष्ट्रपति 1 है, उपराष्ट्रपति 2 "
+"हैं, इत्यादि।"
 
 #: codedevils_org/users/models.py:79
 msgid "SunDevilSync Position"
-msgstr "SunDevilSync Positie"
+msgstr "SunDevilSync स्थिति"
 
 #: codedevils_org/users/models.py:80
 msgid "The name of the officer position as it is registered on SunDevilSync"
-msgstr ""
-"De naam van de officiersfunctie zoals deze is geregistreerd op SunDevilSync"
+msgstr "SunDevilSync पर पंजीकृत के रूप में अधिकारी की स्थिति का नाम"
 
 #: codedevils_org/users/models.py:82
 msgid "Email"
-msgstr "E-mail"
+msgstr "ईमेल"
 
 #: codedevils_org/users/models.py:83
 msgid "The email address associated to the Officer position"
-msgstr "Het e-mailadres dat is gekoppeld aan de functie van officier"
+msgstr "अधिकारी पद से संबंधित ईमेल पता"
 
 #: codedevils_org/users/models.py:87
 msgid "Officer position"
-msgstr "Functie van officier"
+msgstr "अधिकारी पद"
 
 #: codedevils_org/users/models.py:88
 msgid "Officer positions"
-msgstr "Functies van officieren"
+msgstr "अधिकारी के पद"
 
 #: codedevils_org/users/models.py:92
 #, python-brace-format
@@ -1412,64 +1409,67 @@ msgstr "{name} <{email}>"
 
 #: codedevils_org/users/models.py:161
 msgid "Position"
-msgstr "Positie"
+msgstr "स्थान"
 
 #: codedevils_org/users/models.py:163
 msgid "User"
-msgstr "Gebruiker"
+msgstr "उपयोगकर्ता"
 
 #: codedevils_org/users/models.py:164
 msgid "The holder the position"
-msgstr "De houder de positie"
+msgstr "धारक की स्थिति"
 
 #: codedevils_org/users/models.py:166
 msgid "Personal email"
-msgstr "Persoonlijke email"
+msgstr "व्यक्तिगत ईमेल"
 
 #: codedevils_org/users/models.py:167
 msgid ""
 "The email address belonging to the student (generally <first name>.<last "
 "name>@codedevils.org)"
 msgstr ""
-"Het e-mailadres van de student (meestal "
-"<voornaam>.<Achternaam>@codedevils.org)"
+"छात्र से संबंधित ईमेल पता (आम तौर पर <पहला नाम>।<आखिरी नाम>@codedevils.org)"
 
 #: codedevils_org/users/models.py:169
 msgid "Quote"
-msgstr "Citaat"
+msgstr "उद्धरण"
 
 #: codedevils_org/users/models.py:170
 msgid "A cliche quote that truly defines who this being is"
-msgstr "Een clichécitaat dat echt definieert wie dit wezen is"
+msgstr "एक क्लिच बोली जो वास्तव में परिभाषित करती है कि यह कौन है"
 
 #: codedevils_org/users/models.py:176
 msgid "Officer"
-msgstr "Officier"
+msgstr "अफ़सर"
 
 #: codedevils_org/users/models.py:177
 msgid "Officers"
-msgstr "Officieren"
+msgstr "अधिकारी"
 
 #: codedevils_org/users/views.py:34
 msgid "Infos successfully updated"
-msgstr "Infos succesvol bijgewerkt"
+msgstr "Infos सफलतापूर्वक अपडेट किया गया"
 
 #: config/settings/base.py:32
 msgid "Spanish"
-msgstr "Spaans"
+msgstr "स्पेनिश"
 
 #: config/settings/base.py:33
 msgid "English"
-msgstr "Engels"
+msgstr "अंग्रेज़ी"
 
 #: config/settings/base.py:34
 msgid "French"
-msgstr "Frans"
+msgstr "फ्रेंच"
 
 #: config/settings/base.py:35
 msgid "Arabic"
-msgstr "Arabisch"
+msgstr "अरबी"
 
 #: config/settings/base.py:36
 msgid "Dutch"
-msgstr "Nederlands"
+msgstr "डच"
+
+#: config/settings/base.py:37
+msgid "Hindi"
+msgstr "हिन्दी"

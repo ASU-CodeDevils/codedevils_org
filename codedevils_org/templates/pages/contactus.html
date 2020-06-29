@@ -1,11 +1,11 @@
 {% extends '_index/base.html' %}
-{% load static %}
+{% load i18n static %}
 {% load custom_urls %}
 {% block head_title %}{% trans 'Contact Us' %}{% endblock head_title %}
-{% block head_message %}
-{% trans 'Get in touch and let us know how we can help you with your cooking needs.
-Fill out the form and we’ll be in touch as soon as possible.' %}
-{% endblock head_message %}
+{% block head_message %}{% blocktrans %}
+Get in touch and let us know how we can help you with your cooking needs.
+Fill out the form and we’ll be in touch as soon as possible.
+{% endblocktrans %}{% endblock head_message %}
 {% block content %}
 		<!--CONTACT FORM-->
 		<section class="section mt-7n">
@@ -90,7 +90,7 @@ Fill out the form and we’ll be in touch as soon as possible.' %}
 							<h4 class="mr-3">{% trans 'Project Support' %}</h4>
 							<i class="fas fa-long-arrow-alt-right"></i>
 						</a>
-						<p class="mt-4">{% trans 'Looking for a custom quote? need to tell us more about your project? or want a demonstration? drop us a line to' %}
+						<p class="mt-4">{% blocktrans %}Looking for a custom quote? need to tell us more about your project? or want a demonstration? drop us a line to{% endblocktrans %}
 							<a href="mailto:pec@codedevils.org">PEC@CodeDevils.org</a>
 						</p>
 					</div>
@@ -100,7 +100,7 @@ Fill out the form and we’ll be in touch as soon as possible.' %}
 							<h4 class="mr-3">{% trans 'Technical Support' %}</h4>
 							<i class="fas fa-long-arrow-alt-right"></i>
 						</a>
-						<p class="mt-4">{% trans 'Any question about how to integrate your product?. Don\'t fret, our geek team is ready for you at' %}
+						<p class="mt-4">{% blocktrans %}Any question about how to integrate your product?. Don't fret, our geek team is ready for you at{% endblocktrans %}
 							<a href="mailto:webmaster@codedevils.org">Webmaster@CodeDevils.org</a>
 						</p>
 					</div>
