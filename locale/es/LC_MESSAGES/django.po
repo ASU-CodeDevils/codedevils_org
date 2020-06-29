@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 01:48+0000\n"
-"PO-Revision-Date: 2020-06-16 02:04+0000\n"
-"Last-Translator: b'  <kevin.shelley@asu.edu>'\n"
+"POT-Creation-Date: 2020-06-28 23:11+0000\n"
+"PO-Revision-Date: 2020-06-28 23:11+0000\n"
+"Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -41,16 +41,19 @@ msgid "Custom URLs"
 msgstr "URLs personalizada"
 
 #: codedevils_org/templates/_index/base.html:49
+#: codedevils_org/templates/_index/new_member_footer.html:8
 #: codedevils_org/templates/base.html:47
 msgid "Ready to join?"
 msgstr "¿Lista para unirte?"
 
 #: codedevils_org/templates/_index/base.html:50
+#: codedevils_org/templates/_index/new_member_footer.html:9
 #: codedevils_org/templates/base.html:48
 msgid "Create a CodeDevil account"
 msgstr "Crea una cuenta CodeDevil"
 
 #: codedevils_org/templates/_index/base.html:52
+#: codedevils_org/templates/_index/new_member_footer.html:11
 #: codedevils_org/templates/base.html:50
 msgid "Create account"
 msgstr "Crear una cuenta"
@@ -59,7 +62,179 @@ msgstr "Crear una cuenta"
 #: codedevils_org/templates/base.html:67
 #, python-format
 msgid "%(message)s"
+msgstr "%(message)s"
+
+#: codedevils_org/templates/_index/callout_box.html:10
+msgid "Join as a member"
+msgstr "Únete como miembro"
+
+#: codedevils_org/templates/_index/callout_box.html:13
+msgid ""
+"Not already a member? Join today and experience all that CodeDevils has to\n"
+"                            offer, including webinars with the industry leaders in software and infrastructure,\n"
+"                            club-sponsored projects, and upcoming events."
 msgstr ""
+"¿Aún no eres miembro? Únete hoy y experimenta todo lo que CodeDevils tiene para\n"
+"oferta, que incluye seminarios web con los líderes de la industria en software e infraestructura,\n"
+"proyectos patrocinados por el club y próximos eventos."
+
+#: codedevils_org/templates/_index/callout_box.html:21
+msgid "Learn more about CodeDevils"
+msgstr "Obtenga más información sobre CodeDevils"
+
+#: codedevils_org/templates/_index/callout_box.html:24
+msgid ""
+"Find out what makes CodeDevils so successful! Learn about the history\n"
+"                            of the club, view our sponsors, and meet our CodeDevils leadership."
+msgstr ""
+"¡Descubre qué hace que CodeDevils sea tan exitoso! Aprende sobre la historia\n"
+"del club, vea a nuestros patrocinadores y conozca a nuestro liderazgo de CodeDevils."
+
+#: codedevils_org/templates/_index/callout_box.html:31
+msgid "Submit a project"
+msgstr "Enviar un proyecto"
+
+#: codedevils_org/templates/_index/callout_box.html:34
+msgid ""
+"Coming soon! Submit or join projects, track progress, and seek all the\n"
+"                        different opportunities sponsored through CodeDevils!"
+msgstr ""
+"¡Próximamente! Envía o únete a proyectos, realiza un seguimiento del progreso y busca todos los\n"
+"diferentes oportunidades patrocinadas a través de CodeDevils!"
+
+#: codedevils_org/templates/_index/footer.html:9
+msgid ""
+"CodeDevils is an inclusive virtual club that aims to bring ASU students "
+"together."
+msgstr ""
+"CodeDevils es un club virtual inclusivo que tiene como objetivo reunir a los"
+" estudiantes de ASU."
+
+#: codedevils_org/templates/_index/footer.html:12
+msgid "Organization"
+msgstr "Organización"
+
+#: codedevils_org/templates/_index/footer.html:14
+#: codedevils_org/templates/_index/nav.html:14
+#: codedevils_org/templates/_index/nav.html:62
+#: codedevils_org/users/models.py:22
+msgid "About"
+msgstr "Acerca de"
+
+#: codedevils_org/templates/_index/footer.html:15
+msgid "Leadership"
+msgstr "Liderazgo"
+
+#: codedevils_org/templates/_index/footer.html:16
+#: codedevils_org/templates/pages/home.html:194
+msgid "SunDevilSync"
+msgstr "SunDevilSync"
+
+#: codedevils_org/templates/_index/footer.html:22
+msgid "Welcome Docs"
+msgstr "Bienvenidos Docs"
+
+#: codedevils_org/templates/_index/footer.html:24
+msgid "Constitution"
+msgstr "Constitución"
+
+#: codedevils_org/templates/_index/footer.html:25
+msgid "Slack"
+msgstr "Slack"
+
+#: codedevils_org/templates/_index/footer.html:29
+msgid "Club"
+msgstr "Club"
+
+#: codedevils_org/templates/_index/footer.html:31
+msgid "Documentation"
+msgstr "Documentación"
+
+#: codedevils_org/templates/_index/footer.html:32
+msgid "Github"
+msgstr "Github"
+
+#: codedevils_org/templates/_index/footer.html:33
+msgid "HackerRank"
+msgstr "HackerRank"
+
+#: codedevils_org/templates/_index/footer.html:40
+msgid ""
+"© 2020 CodeDevils - Arizona State University\n"
+"                All Rights Reserved."
+msgstr ""
+"© 2020 CodeDevils - Universidad Estatal de Arizona\n"
+"Todos los derechos reservados."
+
+#: codedevils_org/templates/_index/header_meta.html:4
+msgid "CodeDevils - Develop. Network. Create."
+msgstr "CodeDevils - Desarrollar. Red. Crear."
+
+#: codedevils_org/templates/_index/nav.html:13
+#: codedevils_org/templates/_index/nav.html:60
+msgid "Home"
+msgstr "Hogar"
+
+#: codedevils_org/templates/_index/nav.html:16
+#: codedevils_org/templates/_index/nav.html:65
+#: codedevils_org/templates/_index/nav.html:79
+#: codedevils_org/templates/pages/about.html:62
+#: codedevils_org/templates/pages/about.html:187
+#: codedevils_org/templates/pages/workspace.html:11
+msgid "Workspace"
+msgstr "Espacio de trabajo"
+
+#: codedevils_org/templates/_index/nav.html:18
+#: codedevils_org/templates/_index/nav.html:72
+#: codedevils_org/templates/pages/contactus.html:4
+msgid "Contact Us"
+msgstr "Contacta con nosotras"
+
+#: codedevils_org/templates/_index/nav.html:20
+#: codedevils_org/templates/_index/nav.html:69
+msgid "Admin"
+msgstr "Administradora"
+
+#: codedevils_org/templates/_index/nav.html:27
+#: codedevils_org/templates/_index/nav.html:90
+msgid "Register"
+msgstr "Registrarse"
+
+#: codedevils_org/templates/_index/nav.html:31
+#: codedevils_org/templates/pages/about.html:196
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: codedevils_org/templates/_index/nav.html:40
+#: codedevils_org/templates/_index/nav.html:101
+msgid "Profile"
+msgstr "Perfil"
+
+#: codedevils_org/templates/_index/nav.html:44
+#: codedevils_org/templates/_index/nav.html:107
+#: codedevils_org/templates/_index/nav.html:109
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: codedevils_org/templates/_index/nav.html:56
+msgid "Close"
+msgstr "Cerca"
+
+#: codedevils_org/templates/_index/nav.html:58
+msgid "Pages"
+msgstr "Páginas"
+
+#: codedevils_org/templates/_index/nav.html:76
+msgid "CodeDevils"
+msgstr "CodeDevils"
+
+#: codedevils_org/templates/_index/nav.html:82
+msgid "Project Request"
+msgstr "Solicitud de proyecto"
+
+#: codedevils_org/templates/_index/nav.html:95
+msgid "Sign in"
+msgstr "Registrarse"
 
 #: codedevils_org/templates/account/account_inactive.html:5
 #: codedevils_org/templates/account/account_inactive.html:8
@@ -146,8 +321,8 @@ msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address for user %(user_display)s."
 msgstr ""
-"Confirme que <a href=\"mailto:%(email)s\">% (email) s </a> es una dirección "
-"de correo electrónico para el usuario% (user_display) s."
+"Confirme que <a href=\"mailto:%(email)s\">%(email)s</a> es una dirección de "
+"correo electrónico para el usuario%(user_display)s."
 
 #: codedevils_org/templates/account/email_confirm.html:20
 msgid "Confirm"
@@ -178,7 +353,7 @@ msgid ""
 msgstr ""
 "Inicia sesión con uno\n"
 "De sus cuentas de terceros existentes. O, <a href=\"%(signup_url)s\"> regístrate </a>\n"
-"para una cuenta% (site_name) s e inicie sesión a continuación:"
+"para una cuenta %(site_name)s e inicie sesión a continuación:"
 
 #: codedevils_org/templates/account/login.html:26
 msgid "or"
@@ -222,31 +397,36 @@ msgstr "Cambia la contraseña"
 #: codedevils_org/templates/account/password_reset_done.html:6
 #: codedevils_org/templates/account/password_reset_done.html:9
 msgid "Password Reset"
-msgstr ""
+msgstr "Restablecimiento de contraseña"
 
 #: codedevils_org/templates/account/password_reset.html:16
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you"
 " an e-mail allowing you to reset it."
 msgstr ""
+"¿Olvidaste tu contraseña? Ingrese su dirección de correo electrónico a "
+"continuación y le enviaremos un correo electrónico que le permitirá "
+"restablecerla."
 
 #: codedevils_org/templates/account/password_reset.html:21
 msgid "Reset My Password"
-msgstr ""
+msgstr "Restablecer mi contraseña"
 
 #: codedevils_org/templates/account/password_reset.html:24
 msgid "Please contact us if you have any trouble resetting your password."
-msgstr ""
+msgstr "Contáctanos si tienes problemas para restablecer tu contraseña."
 
 #: codedevils_org/templates/account/password_reset_done.html:15
 msgid ""
 "We have sent you an e-mail. Please contact us if you do not receive it "
 "within a few minutes."
 msgstr ""
+"Te hemos enviado un correo electrónico. Póngase en contacto con nosotros si "
+"no lo recibe en unos minutos."
 
 #: codedevils_org/templates/account/password_reset_from_key.html:8
 msgid "Bad Token"
-msgstr ""
+msgstr "Token malo"
 
 #: codedevils_org/templates/account/password_reset_from_key.html:12
 #, python-format
@@ -255,21 +435,24 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password "
 "reset</a>."
 msgstr ""
+"El enlace de restablecimiento de contraseña no era válido, posiblemente "
+"porque ya se ha utilizado. Solicite un <a href=\"%(passwd_reset_url)s\"> "
+"restablecimiento de contraseña nueva</a>."
 
 #: codedevils_org/templates/account/password_reset_from_key.html:18
 msgid "change password"
-msgstr ""
+msgstr "cambia la contraseña"
 
 #: codedevils_org/templates/account/password_reset_from_key.html:21
 #: codedevils_org/templates/account/password_reset_from_key_done.html:8
 msgid "Your password is now changed."
-msgstr ""
+msgstr "Su contraseña ahora ha cambiado."
 
 #: codedevils_org/templates/account/password_set.html:6
 #: codedevils_org/templates/account/password_set.html:9
 #: codedevils_org/templates/account/password_set.html:14
 msgid "Set Password"
-msgstr ""
+msgstr "Configurar la clave"
 
 #: codedevils_org/templates/account/signup.html:6
 msgid "Signup"
@@ -343,114 +526,179 @@ msgstr ""
 "<strong> Nota: </strong> todavía puede <a href=\"%(email_url)s\"> cambiar su"
 " dirección de correo electrónico </a>."
 
-#: codedevils_org/templates/pages/about.html:5
+#: codedevils_org/templates/pages/about.html:4
 msgid "About Us"
 msgstr "Sobre nosotras"
 
-#: codedevils_org/templates/pages/about.html:6
+#: codedevils_org/templates/pages/about.html:5
 msgid ""
 "CodeDevils aims to provide ASU students with an organization designed to "
 "encourage and promote involvement in coding projects and competitions "
 "through an exclusively online setting."
 msgstr ""
+"CodeDevils tiene como objetivo proporcionar a los estudiantes de ASU una "
+"organización diseñada para alentar y promover la participación en proyectos "
+"y competencias de codificación a través de un entorno exclusivamente en "
+"línea."
 
-#: codedevils_org/templates/pages/about.html:10
+#: codedevils_org/templates/pages/about.html:14
+msgid "<h2>Our <br>Organization's<br> History</h2>"
+msgstr "<h2>Historia <br>de nuestra <br> organización</h2>"
+
+#: codedevils_org/templates/pages/about.html:15
 msgid ""
-"<section class=\"section overview\"> <div class=\"container\"> <div "
-"class=\"row align-items-center gap-y\"> <div class=\"col-lg-5 mr-auto text-"
-"center text-md-left\"> <div class=\"section-heading\"> <h2>Our "
-"<br>Organization's<br> History</h2> <p class=\"lead color-2\">CodeDevils was"
-" found in 2016 as a fully-virtual student organization. We pride ourselves "
-"in giving our members the tools needed to be successful in their cirriculum "
-"and have a competitive edge in the industry after graduating.</p> </div> "
-"<p>CodeDevils isn't your traditional club; we are one of ASU's first "
-"organizations that caters to online students. We aim to further ASU's "
-"mission to maintaining the lead in innovation by successfully organizing and"
-" cultivating a rich student community existing exclusively online. Meetings,"
-" projects, guest speakers, and competitions are all organized and conducted "
-"virtually. Although we utilizes exclusively digital forms of communication "
-"to involve members and foster interaction, we do welcome all ASU students "
-"regardless of how you attend.</p> <p>We offer unique opportunities for all "
-"ASU students interested in software development and tech in general. Those "
-"opportunities include exclusive workshops with industry insiders, guest "
-"speakers from big name companies and prestigious institutions, weekly "
-"HackerRank challenges, online hackathons, and the opportunity to collaborate"
-" on resume-worthy projects (as well as weekly study sessions with fun and "
-"nerdy study breaks!)</p> </div> <div class=\"col-lg-6\"> <div class=\"row "
-"gap-y\"> <div class=\"col-6 col-sm-5 col-md-6 mt-6 ml-lg-auto\"> <div "
-"class=\"card rounded p-2 p-sm-4 shadow text-center text-md-left\" data-"
-"aos=\"fade-up\"> <i class=\"pe pe-3x pe-7s-date color-3\"></i> <p "
-"class=\"bold mb-0\">Club Calendar</p> <p class=\"op-7 small\"><strong>Coming"
-" soon!</strong> In the next couple updates, you will be able to view all "
-"CodeDevils events, sync it with your own calendar, and receive notifications"
-" on Slack/email.</p> </div> </div> <div class=\"col-6 col-sm-5 col-md-6 mr-"
-"lg-auto\"> <div class=\"color-1 bg-4-gradient card rounded p-2 p-sm-4 shadow"
-" text-center text-md-left\" data-aos=\"fade-up\"> <i class=\"pe pe-3x "
-"pe-7s-graph1\"></i> <p class=\"bold mb-0\">Hosting</p> <p class=\"op-7 "
-"small\"><strong>Coming soon!</strong> For future projects, CodeDevils will "
-"give the option to host your website on a virtual private server <em>for "
-"free</em>. Other options also include access to the email backend, database "
-"storage, and much more!</p> </div> </div> <div class=\"col-6 col-sm-5 col-"
-"md-6 ml-lg-auto\"> <div class=\"card rounded p-2 p-sm-4 shadow text-center "
-"text-md-left\" data-aos=\"fade-up\"> <i class=\"pe pe-3x pe-7s-keypad "
-"color-3\"></i> <p class=\"bold mb-0\">Project Based</p> <p class=\"op-7 "
-"small\"><strong>Coming soon!</strong> In the next update, you will be able "
-"to view all open projects, join and collaborate on them, and even submit one"
-" of your own.</p> </div> </div> <div class=\"col-6 col-sm-5 col-md-6 mt-6n "
-"mr-lg-auto\"> <div class=\"card rounded p-2 p-sm-4 shadow text-center text-"
-"md-left\" data-aos=\"fade-up\"> <i class=\"pe pe-3x pe-7s-users "
-"color-3\"></i> <p class=\"bold mb-0\">Workspace</p> <p class=\"op-7 "
-"small\">A centralized page for all members to join projects, collaborate for"
-" course work, and see all the exciting activity at CodeDevils.</p> </div> "
-"</div> </div> </div> </div> </div> </section>"
+"<p class=\"lead color-2\">CodeDevils was found in 2016 as a fully-virtual "
+"student organization. We pride ourselves in giving our members the tools "
+"needed to be successful in their cirriculum and have a competitive edge in "
+"the industry after graduating.</p>"
 msgstr ""
+"<p class=\"lead color-2\">CodeDevils se encontró en 2016 como una "
+"organización estudiantil completamente virtual. Nos enorgullecemos de "
+"brindar a nuestros miembros las herramientas necesarias para tener éxito en "
+"su plan de estudios y tener una ventaja competitiva en la industria después "
+"de graduarse.</p>"
 
-#: codedevils_org/templates/pages/about.html:74
-#, fuzzy
-#| msgid "CodeDevils URLs"
-msgid "CodeDevils Leadership"
-msgstr "CodeDevils URLs"
+#: codedevils_org/templates/pages/about.html:21
+msgid ""
+"\n"
+"                        <p>CodeDevils isn't your traditional club; we are one of ASU's first organizations that caters\n"
+"                            to online students. We aim to further ASU's mission to maintaining the lead in innovation by\n"
+"                            successfully organizing and cultivating a rich student community existing exclusively\n"
+"                            online. Meetings, projects, guest speakers, and competitions are all organized and conducted\n"
+"                            virtually. Although we utilizes exclusively digital forms of communication to involve\n"
+"                            members and foster interaction, we do welcome all ASU students regardless of how you\n"
+"                            attend.</p>\n"
+"                        <p>We offer unique opportunities for all ASU students interested in software development and\n"
+"                            tech in general. Those opportunities include exclusive workshops with industry insiders,\n"
+"                            guest speakers from big name companies and prestigious institutions, weekly HackerRank\n"
+"                            challenges, online hackathons, and the opportunity to collaborate on resume-worthy projects\n"
+"                            (as well as weekly study sessions with fun and nerdy study breaks!)</p>\n"
+"\t\t\t\t\t\t"
+msgstr ""
+"\n"
+"<p>CodeDevils no es tu club tradicional; Somos una de las primeras organizaciones de ASU que atiende\n"
+"a estudiantes en línea. Nuestro objetivo es promover la misión de ASU de mantener el liderazgo en innovación mediante\n"
+"Organizar y cultivar con éxito una comunidad estudiantil rica que exista exclusivamente\n"
+"en línea. Reuniones, proyectos, oradores invitados y concursos están organizados y conducidos.\n"
+"virtualmente. Aunque utilizamos formas de comunicación exclusivamente digitales para involucrar\n"
+"miembros y fomentar la interacción, damos la bienvenida a todos los estudiantes de ASU, independientemente de cómo\n"
+"asistir.</p>\n"
+"<p>Ofrecemos oportunidades únicas para todos los estudiantes de ASU interesados ​​en el desarrollo de software y\n"
+"tecnología en general. Esas oportunidades incluyen talleres exclusivos con expertos de la industria,\n"
+"oradores invitados de grandes compañías e instituciones prestigiosas, semanalmente HackerRank\n"
+"desafíos, hackatones en línea y la oportunidad de colaborar en proyectos dignos de currículum\n"
+"(¡así como sesiones de estudio semanales con descansos de estudio divertidos y nerd!)</p>"
+
+#: codedevils_org/templates/pages/about.html:41
+msgid "Club Calendar"
+msgstr "Calendario del club"
+
+#: codedevils_org/templates/pages/about.html:42
+#: codedevils_org/templates/pages/about.html:49
+#: codedevils_org/templates/pages/about.html:56
+#: codedevils_org/templates/pages/workspace.html:44
+#: codedevils_org/templates/pages/workspace.html:53
+#: codedevils_org/templates/pages/workspace.html:62
+#: codedevils_org/templates/pages/workspace.html:138
+#: codedevils_org/templates/pages/workspace.html:207
+#: codedevils_org/templates/pages/workspace.html:215
+#: codedevils_org/templates/pages/workspace.html:226
+#: codedevils_org/templates/pages/workspace.html:237
+#: codedevils_org/templates/pages/workspace.html:248
+msgid "Coming soon!"
+msgstr "¡Próximamente!"
+
+#: codedevils_org/templates/pages/about.html:42
+msgid ""
+"In the next couple updates, you will be able to view all CodeDevils events, "
+"sync it with your own calendar, and receive notifications on Slack/email."
+msgstr ""
+"En las próximas actualizaciones, podrá ver todos los eventos de CodeDevils, "
+"sincronizarlos con su propio calendario y recibir notificaciones en Slack / "
+"correo electrónico."
+
+#: codedevils_org/templates/pages/about.html:48
+msgid "Hosting"
+msgstr "Hospedaje"
+
+#: codedevils_org/templates/pages/about.html:49
+msgid ""
+"For future projects, CodeDevils will give the option to host your website on"
+" a virtual private server <em>for free</em>. Other options also include "
+"access to the email backend, database storage, and much more!"
+msgstr ""
+"Para futuros proyectos, CodeDevils le dará la opción de alojar su sitio web "
+"en un servidor privado virtual <em> gratis </em>. ¡Otras opciones también "
+"incluyen acceso al backend de correo electrónico, almacenamiento de base de "
+"datos y mucho más!"
+
+#: codedevils_org/templates/pages/about.html:55
+msgid "Project Based"
+msgstr "Proyecto basado"
+
+#: codedevils_org/templates/pages/about.html:56
+msgid ""
+"In the next update, you will be able to view all open projects, join and "
+"collaborate on them, and even submit one of your own."
+msgstr ""
+"En la próxima actualización, podrá ver todos los proyectos abiertos, unirse "
+"y colaborar en ellos e incluso enviar uno propio."
+
+#: codedevils_org/templates/pages/about.html:63
+msgid ""
+"A centralized page for all members to join projects, collaborate for course "
+"work, and see all the exciting activity at CodeDevils."
+msgstr ""
+"Una página centralizada para que todos los miembros se unan a proyectos, "
+"colaboren para el trabajo del curso y vean toda la actividad emocionante en "
+"CodeDevils."
 
 #: codedevils_org/templates/pages/about.html:75
-msgid "The driving force behind everything CodeDevils"
-msgstr ""
+msgid "CodeDevils Leadership"
+msgstr "Liderazgo de CodeDevils"
 
-#: codedevils_org/templates/pages/about.html:92
+#: codedevils_org/templates/pages/about.html:76
+msgid "The driving force behind everything CodeDevils"
+msgstr "La fuerza impulsora detrás de todo CodeDevils"
+
+#: codedevils_org/templates/pages/about.html:93
 #, python-format
 msgid "%(officer.quote)s"
-msgstr ""
+msgstr "%(officer.quote)s"
 
-#: codedevils_org/templates/pages/about.html:138
+#: codedevils_org/templates/pages/about.html:139
 msgid "Our Meetings are held online"
-msgstr ""
+msgstr "Nuestras reuniones se llevan a cabo en línea."
 
-#: codedevils_org/templates/pages/about.html:140
+#: codedevils_org/templates/pages/about.html:141
 msgid "Join In"
-msgstr ""
-
-#: codedevils_org/templates/pages/about.html:153
-msgid "We promote collaboration"
-msgstr ""
+msgstr "Participar"
 
 #: codedevils_org/templates/pages/about.html:154
+msgid "We promote collaboration"
+msgstr "Nosotras promovemos la colaboración"
+
+#: codedevils_org/templates/pages/about.html:155
 msgid ""
 "Collaborate with students on projects and course work while developing both "
 "your skills as a developer and your network."
 msgstr ""
-
-#: codedevils_org/templates/pages/about.html:162
-msgid "Network"
-msgstr ""
+"Colabore con los estudiantes en proyectos y cursos mientras desarrolla sus "
+"habilidades como desarrollador y su red."
 
 #: codedevils_org/templates/pages/about.html:163
-msgid "Meet other members of CodeDevils."
-msgstr ""
+msgid "Network"
+msgstr "Red"
 
-#: codedevils_org/templates/pages/about.html:169
+#: codedevils_org/templates/pages/about.html:164
+msgid "Meet other members of CodeDevils."
+msgstr "Conoce a otras miembros de CodeDevils."
+
+#: codedevils_org/templates/pages/about.html:170
 msgid "Develop"
 msgstr "Desarrollar"
 
-#: codedevils_org/templates/pages/about.html:170
+#: codedevils_org/templates/pages/about.html:171
 msgid ""
 "Enhance your skills and grow as a developer through projects, webinars, and "
 "team collaboration."
@@ -458,23 +706,16 @@ msgstr ""
 "Mejore sus habilidades y crezca como desarrollador a través de proyectos, "
 "seminarios web y colaboración en equipo."
 
-#: codedevils_org/templates/pages/about.html:176
-#, fuzzy
-#| msgid "Create account"
-msgid "Create"
-msgstr "Crear una cuenta"
-
 #: codedevils_org/templates/pages/about.html:177
+msgid "Create"
+msgstr "Crear"
+
+#: codedevils_org/templates/pages/about.html:178
 msgid "Have a great idea? Start your own project or join one today!"
 msgstr ""
 "¿Tienes una gran idea? ¡Comience su propio proyecto o únase a uno hoy!"
 
-#: codedevils_org/templates/pages/about.html:186
-#: codedevils_org/templates/pages/workspace.html:10
-msgid "Workspace"
-msgstr "Espacio de trabajo"
-
-#: codedevils_org/templates/pages/about.html:190
+#: codedevils_org/templates/pages/about.html:191
 msgid ""
 "<p>Our club is packed full of things <span class=\"bold\">like "
 "collaboration.</span> Login to take advantage of our all new workspace</p>"
@@ -483,19 +724,15 @@ msgstr ""
 "colaboración. </span> Inicie sesión para aprovechar nuestro nuevo espacio de"
 " trabajo </p>"
 
-#: codedevils_org/templates/pages/about.html:195
-msgid "Login"
-msgstr "Iniciar sesión"
-
-#: codedevils_org/templates/pages/about.html:197
+#: codedevils_org/templates/pages/about.html:198
 msgid "View Workspace"
 msgstr "Ver espacio de trabajo"
 
-#: codedevils_org/templates/pages/about.html:211
+#: codedevils_org/templates/pages/about.html:212
 msgid "Sponsored Projects"
 msgstr "Proyectos patrocinados"
 
-#: codedevils_org/templates/pages/about.html:212
+#: codedevils_org/templates/pages/about.html:213
 msgid ""
 "CodeDevils sponsors projects developed by club members by providing "
 "assistance and insight. <br>Check out some of our projects. "
@@ -504,50 +741,58 @@ msgstr ""
 "proporcionando asistencia y conocimiento. <br> Vea algunos de nuestros "
 "proyectos."
 
-#: codedevils_org/templates/pages/contactus.html:4
-msgid "Contact Us"
-msgstr "Contacta con nosotras"
+#: codedevils_org/templates/pages/contactus.html:5
+msgid ""
+"\n"
+"Get in touch and let us know how we can help you with your cooking needs.\n"
+"Fill out the form and we’ll be in touch as soon as possible.\n"
+msgstr ""
+"\n"
+"Póngase en contacto y díganos cómo podemos ayudarlo con sus necesidades de cocina.\n"
+"Rellene el formulario y nos pondremos en contacto lo antes posible.\n"
 
 #: codedevils_org/templates/pages/contactus.html:19
 msgid "Email address"
-msgstr ""
+msgstr "Dirección de correo electrónico"
 
 #: codedevils_org/templates/pages/contactus.html:20
-#: codedevils_org/templates/pages/home.html:221
+#: codedevils_org/templates/pages/home.html:217
 msgid "We\\"
-msgstr ""
+msgstr "Nosotras\\"
 
 #: codedevils_org/templates/pages/contactus.html:24
 msgid "Subject"
-msgstr ""
+msgstr "Sujeta"
 
 #: codedevils_org/templates/pages/contactus.html:28
 msgid "Message"
-msgstr ""
+msgstr "Mensaje"
 
 #: codedevils_org/templates/pages/contactus.html:32
 msgid "Send Message"
-msgstr ""
+msgstr "Enviar mensaje"
 
 #: codedevils_org/templates/pages/contactus.html:38
 msgid "Thank you!"
-msgstr ""
+msgstr "¡Gracias!"
 
 #: codedevils_org/templates/pages/contactus.html:39
 msgid "Your message has been send, we will contact you as soon as possible."
 msgstr ""
+"Su mensaje ha sido enviado, nos pondremos en contacto con usted lo antes "
+"posible."
 
 #: codedevils_org/templates/pages/contactus.html:46
 msgid "Get in touch"
-msgstr ""
+msgstr "Ponerse en contacto"
 
 #: codedevils_org/templates/pages/contactus.html:50
 msgid "Arizona State University,"
-msgstr ""
+msgstr "Arizona State University,"
 
 #: codedevils_org/templates/pages/contactus.html:51
 msgid "Tempe, AZ"
-msgstr ""
+msgstr "Tempe, AZ"
 
 #: codedevils_org/templates/pages/contactus.html:90
 msgid "Project Support"
@@ -566,501 +811,787 @@ msgid "Technical Support"
 msgstr "Soporte técnico"
 
 #: codedevils_org/templates/pages/contactus.html:103
-msgid "Any question about how to integrate your product?. Don\\"
+msgid ""
+"Any question about how to integrate your product?. Don't fret, our geek team"
+" is ready for you at"
 msgstr ""
+"¿Alguna pregunta sobre cómo integrar su producto? No te preocupes, nuestro "
+"equipo geek está listo para ti en"
 
-#: codedevils_org/templates/pages/home.html:13
-msgid "An ASU <br> Student Organization"
-msgstr "Una ASU <br> Organización estudiantil"
+#: codedevils_org/templates/pages/home.html:14
+msgid " An ASU<br> Student Organization"
+msgstr "Una ASU<br> Organización estudiantil"
 
-#: codedevils_org/templates/pages/home.html:31
+#: codedevils_org/templates/pages/home.html:32
 msgid "Stay posted on new website integrations and updates."
 msgstr ""
 "Manténgase publicado en las nuevas integraciones y actualizaciones del sitio"
 " web."
 
-#: codedevils_org/templates/pages/home.html:32
+#: codedevils_org/templates/pages/home.html:33
 msgid "Update Log"
 msgstr "Actualizar registro"
 
-#: codedevils_org/templates/pages/home.html:45
+#: codedevils_org/templates/pages/home.html:46
 msgid "Community"
 msgstr "Comunidad"
 
-#: codedevils_org/templates/pages/home.html:47
+#: codedevils_org/templates/pages/home.html:48
 msgid ""
-"<p class=\"mt-4\">Be part of an amazing group of individuals who have a "
-"passion for coding.<br><br> Network with fellow students, faculty members, "
-"and guest speakers.<br><br> We even have dedicated Slack channels for "
-"SER/CSE classes!</p>"
+"Be part of an amazing group of individuals who have a passion for coding.<br><br>\n"
+"                                            Network with fellow students, faculty members, and guest speakers.<br><br>\n"
+"                                            We even have dedicated Slack channels for SER/CSE classes!"
 msgstr ""
-"<p class = \"mt-4\"> Sea parte de un increíble grupo de personas que sienten"
-" pasión por la codificación. <br> <br> Conéctese con otros estudiantes, "
-"miembros de la facultad y oradores invitados. <br> <br> Nosotros ¡incluso "
-"tienen canales dedicados de Slack para las clases SER / CSE! </p>"
+"Sé parte de un increíble grupo de personas apasionadas por la codificación. <br> <br>\n"
+"Conéctese con otros estudiantes, miembros de la facultad y oradores invitados. <br> <br>\n"
+"¡Incluso tenemos canales dedicados de Slack para las clases SER / CSE!"
 
-#: codedevils_org/templates/pages/home.html:52
-#: codedevils_org/templates/pages/home.html:66
-#: codedevils_org/templates/pages/home.html:82
-#: codedevils_org/templates/pages/workspace.html:44
-#: codedevils_org/templates/pages/workspace.html:53
-#: codedevils_org/templates/pages/workspace.html:62
+#: codedevils_org/templates/pages/home.html:51
+#: codedevils_org/templates/pages/home.html:63
+#: codedevils_org/templates/pages/home.html:77
+#: codedevils_org/templates/pages/workspace.html:45
+#: codedevils_org/templates/pages/workspace.html:54
+#: codedevils_org/templates/pages/workspace.html:63
 msgid "Learn more"
 msgstr "Aprende más"
 
-#: codedevils_org/templates/pages/home.html:58
+#: codedevils_org/templates/pages/home.html:57
 msgid "Code"
-msgstr ""
+msgstr "Código"
+
+#: codedevils_org/templates/pages/home.html:59
+msgid "Work on exclusive CodeDevils projects!"
+msgstr "¡Trabaja en proyectos exclusivos de CodeDevils!"
 
 #: codedevils_org/templates/pages/home.html:60
 msgid ""
-"<p class=\"mt-4\">Work on exclusive CodeDevils projects!<br><br> Projects "
-"are an opportunity for members to collaborate on coding projects. Anyone can"
-" propose an idea for a project, and a project can be anything that involves "
-"coding in some way (regardless of language or platform).</p>"
+"Projects are an opportunity for members to collaborate on coding projects.\n"
+"                                            Anyone can propose an idea for a project, and a project can be anything that\n"
+"                                            involves coding in some way (regardless of language or platform)."
 msgstr ""
+"Los proyectos son una oportunidad para que los miembros colaboren en proyectos de codificación.\n"
+"Cualquiera puede proponer una idea para un proyecto, y un proyecto puede ser cualquier cosa que\n"
+"implica la codificación de alguna manera (independientemente del idioma o la plataforma)."
 
-#: codedevils_org/templates/pages/home.html:72
+#: codedevils_org/templates/pages/home.html:69
 msgid "Compete"
-msgstr ""
+msgstr "Competir"
 
-#: codedevils_org/templates/pages/home.html:74
+#: codedevils_org/templates/pages/home.html:71
 msgid ""
-"<p class=\"mt-4\">Coding competitions are hosted each semester on "
-"HackerRank.<br><br> Challenges range from easy to hard problems that may be "
-"solved using any supported programming language.<br><br> These are a great "
-"opportunity to try out problem solving in a programming language you are "
-"trying to learn or showing off your skills! At the end of the term you could"
-" win some swag!</p>"
+"Coding competitions are hosted each semester on HackerRank.<br><br>\n"
+"                                Challenges range from easy to hard problems that may be solved using any supported\n"
+"                                programming language.<br><br>\n"
+"                                These are a great opportunity to try out problem solving in a programming language you\n"
+"                                are trying to learn or showing off your skills! At the end of the term you could win\n"
+"                                some swag!"
 msgstr ""
+"Cada semestre se organizan concursos de codificación en HackerRank. <br> <br>\n"
+"Los desafíos van desde problemas fáciles a difíciles que pueden resolverse usando cualquier soporte compatible\n"
+"lenguaje de programación. <br> <br>\n"
+"Estas son una gran oportunidad para probar la resolución de problemas en un lenguaje de programación que\n"
+"están tratando de aprender o mostrar sus habilidades! Al final del plazo puedes ganar\n"
+"un poco de botín!"
 
-#: codedevils_org/templates/pages/home.html:94
+#: codedevils_org/templates/pages/home.html:89
 msgid "Welcome to CodeDevils"
-msgstr ""
+msgstr "Bienvenido a CodeDevils"
 
-#: codedevils_org/templates/pages/home.html:95
+#: codedevils_org/templates/pages/home.html:90
 msgid "Welcome to CodeDevils - We are An ASU student run organization"
 msgstr ""
+"Bienvenido a CodeDevils - Somos una organización dirigida por estudiantes de"
+" ASU"
 
-#: codedevils_org/templates/pages/home.html:99
+#: codedevils_org/templates/pages/home.html:94
 msgid "What\\"
-msgstr ""
+msgstr "Qué\\"
+
+#: codedevils_org/templates/pages/home.html:96
+msgid "Events"
+msgstr "Eventos"
 
 #: codedevils_org/templates/pages/home.html:101
-msgid "Events"
-msgstr ""
-
-#: codedevils_org/templates/pages/home.html:106
 msgid "Our Operation Bat Signal"
-msgstr ""
+msgstr "Nuestra operación Bat Signal"
 
-#: codedevils_org/templates/pages/home.html:107
+#: codedevils_org/templates/pages/home.html:102
 msgid ""
 "Do you have any general questions or assistance finding resources since the "
 "move to remote learning. Reach out with any inquiries."
 msgstr ""
+"¿Tiene alguna pregunta general o ayuda para encontrar recursos desde el paso"
+" al aprendizaje remoto? Póngase en contacto con cualquier consulta."
 
-#: codedevils_org/templates/pages/home.html:119
-#: codedevils_org/templates/pages/home.html:154
+#: codedevils_org/templates/pages/home.html:114
+#: codedevils_org/templates/pages/home.html:149
 msgid "Virtual Study Hall"
-msgstr ""
+msgstr "Virtual Study Hall"
 
-#: codedevils_org/templates/pages/home.html:121
+#: codedevils_org/templates/pages/home.html:116
 msgid ""
 "Join us for a virtual study session! Find your study buddies, conquer that "
 "homework, and enjoy the nerdiest study breaks at ASU!"
 msgstr ""
+"¡Únete a nosotros para una sesión de estudio virtual! ¡Encuentra a tus "
+"compañeros de estudio, conquista esa tarea y disfruta de los descansos de "
+"estudio más nerd en ASU!"
 
-#: codedevils_org/templates/pages/home.html:139
+#: codedevils_org/templates/pages/home.html:134
 msgid "OUR MISSION"
-msgstr ""
+msgstr "NUESTRA MISIÓN"
 
-#: codedevils_org/templates/pages/home.html:140
+#: codedevils_org/templates/pages/home.html:135
 msgid ""
 "Create a community of students in the online setting to provide the "
 "opportunity to meet and mingle with other students."
 msgstr ""
+"Cree una comunidad de estudiantes en el entorno en línea para brindar la "
+"oportunidad de reunirse y mezclarse con otros estudiantes."
 
-#: codedevils_org/templates/pages/home.html:141
+#: codedevils_org/templates/pages/home.html:136
 msgid ""
 "With weekly coding challenges, peer mentorship, guest speakers, and big "
 "projects like moble applications, all completely online, there are plenty of"
 " ways to get involved and stay involved!"
 msgstr ""
+"Con desafíos semanales de codificación, tutoría entre pares, oradores "
+"invitados y grandes proyectos como aplicaciones móviles, todo completamente "
+"en línea, ¡hay muchas maneras de involucrarse y mantenerse involucrado!"
 
-#: codedevils_org/templates/pages/home.html:165
-msgid "Hackathons"
+#: codedevils_org/templates/pages/home.html:151
+msgid ""
+"An online coworking environment where you can get that\n"
+"                                    experience of working alongside your peers and create good study habits!"
 msgstr ""
+"Un entorno de coworking en línea donde puedes conseguir eso\n"
+"¡Experiencia de trabajar junto a tus compañeros y crear buenos hábitos de estudio!"
 
-#: codedevils_org/templates/pages/home.html:166
+#: codedevils_org/templates/pages/home.html:160
+msgid "Hackathons"
+msgstr "Hackatones"
+
+#: codedevils_org/templates/pages/home.html:161
 msgid ""
 "Compete alongside fellow students and test your abilities on complex coding "
 "problems."
 msgstr ""
+"Compite junto a otros estudiantes y prueba tus habilidades en problemas de "
+"codificación complejos."
 
-#: codedevils_org/templates/pages/home.html:180
+#: codedevils_org/templates/pages/home.html:175
 msgid "TOOLS TO DEVELOP"
-msgstr ""
+msgstr "HERRAMIENTAS PARA DESARROLLAR"
+
+#: codedevils_org/templates/pages/home.html:176
+msgid "BECOME A CODEDEVIL"
+msgstr "Conviértete en una CodeDevils"
 
 #: codedevils_org/templates/pages/home.html:181
-msgid "BECOME A CODEDEVIL"
-msgstr ""
-
-#: codedevils_org/templates/pages/home.html:186
 msgid "REGISTER"
-msgstr ""
+msgstr "REGISTRARSE"
+
+#: codedevils_org/templates/pages/home.html:183
+msgid "SLACK"
+msgstr "SLACK"
+
+#: codedevils_org/templates/pages/home.html:185
+msgid "CLUB DOCS"
+msgstr "DOCUMENTOS DEL CLUB"
 
 #: codedevils_org/templates/pages/home.html:188
-msgid "SLACK"
-msgstr ""
+msgid "Officially register your membership as a CodeDevil on SunDevilSync."
+msgstr "Registra oficialmente tu membresía como CodeDevil en SunDevilSync."
 
 #: codedevils_org/templates/pages/home.html:190
-msgid "CLUB DOCS"
-msgstr ""
-
-#: codedevils_org/templates/pages/home.html:193
-msgid "Officially register your membership as a CodeDevil on SunDevilSync."
-msgstr ""
-
-#: codedevils_org/templates/pages/home.html:195
 msgid "SunDevilSync is Arizona State University\\"
-msgstr ""
+msgstr "SunDevilSync es la Universidad Estatal de Arizona \\"
 
-#: codedevils_org/templates/pages/home.html:197
+#: codedevils_org/templates/pages/home.html:192
 msgid ""
 "It connects students with student organizations and student organizations "
 "with their members and Administrative Advisors in a customizable, online "
 "campus community."
 msgstr ""
+"Conecta a los estudiantes con organizaciones estudiantiles y organizaciones "
+"estudiantiles con sus miembros y asesores administrativos en una comunidad "
+"de campus en línea personalizable."
 
-#: codedevils_org/templates/pages/home.html:199
-msgid "SunDevilSync"
+#: codedevils_org/templates/pages/home.html:198
+msgid ""
+"Now that you're registered, take a look at the CodeDevils Constitution \n"
+"\t\t\t\t\t\t\t\tso you are aware how the organization is run."
 msgstr ""
+"Ahora que está registrado, eche un vistazo a la Constitución de CodeDevils\n"
+"para que sepa cómo se ejecuta la organización."
 
-#: codedevils_org/templates/pages/home.html:203
-msgid "Now that you\\"
-msgstr ""
-
-#: codedevils_org/templates/pages/home.html:205
+#: codedevils_org/templates/pages/home.html:201
 msgid "View Welcome Docs"
-msgstr ""
+msgstr "Ver documentos de bienvenida"
 
-#: codedevils_org/templates/pages/home.html:208
+#: codedevils_org/templates/pages/home.html:204
 msgid ""
 "Afterwards, check out our welcome letter to get some information, tips, and "
 "rules as you get involved in the club."
 msgstr ""
+"Luego, consulte nuestra carta de bienvenida para obtener información, "
+"consejos y reglas a medida que se involucra en el club."
 
-#: codedevils_org/templates/pages/home.html:210
+#: codedevils_org/templates/pages/home.html:206
 msgid "View Constitution"
-msgstr ""
+msgstr "Ver Constitución"
 
-#: codedevils_org/templates/pages/home.html:215
+#: codedevils_org/templates/pages/home.html:211
 msgid ""
 "After completing the previous steps, you are now an official CodeDevils "
 "member!"
 msgstr ""
+"Después de completar los pasos anteriores, ¡ahora eres miembro oficial de "
+"CodeDevils!"
 
-#: codedevils_org/templates/pages/home.html:217
+#: codedevils_org/templates/pages/home.html:213
 #, python-format
 msgid "It's time to join a discussion with %(member_count)s members!"
-msgstr ""
+msgstr "¡Es hora de unirse a una discusión con %(member_count)s miembros!"
 
-#: codedevils_org/templates/pages/home.html:219
+#: codedevils_org/templates/pages/home.html:215
 msgid ""
 "Please sign up for our slack channel using your ASU e-mail and introduce "
 "yourself to the community."
 msgstr ""
+"Regístrese en nuestro canal slack utilizando su correo electrónico de ASU y "
+"preséntese a la comunidad."
 
-#: codedevils_org/templates/pages/home.html:223
+#: codedevils_org/templates/pages/home.html:219
 msgid "Slack Signup"
-msgstr ""
+msgstr "Registro Slack"
 
-#: codedevils_org/templates/pages/home.html:232
+#: codedevils_org/templates/pages/home.html:228
 msgid "SunDevilSYNC"
-msgstr ""
+msgstr "SunDevilSYNC"
 
-#: codedevils_org/templates/pages/home.html:234
+#: codedevils_org/templates/pages/home.html:230
 msgid "SIGNUP"
-msgstr ""
+msgstr "REGÍSTRATE"
 
-#: codedevils_org/templates/pages/workspace.html:25
+#: codedevils_org/templates/pages/workspace.html:26
 msgid ""
 "<p class=\"color-1\"><strong>Coming soon!</strong> We are working hard to "
 "create a New Integration API. <a href=\"#\" class=\"bold d-inline-flex "
 "align-items-center color-1 ml-3\">Learn more <i class=\"pe pe-7s-angle-"
 "right\"></i> </a> </p>"
 msgstr ""
+"<p class=\"color-1\"><strong>¡Próximamente!</strong> Estamos trabajando "
+"arduamente para crear una nueva API de integración. <a href=\"#\" "
+"class=\"bold d-inline-flex align-items-center color-1 ml-3\">Obtenga más "
+"información <i class =\"pe pe-7s-angle-right\"></i></a></p>"
 
-#: codedevils_org/templates/pages/workspace.html:41
+#: codedevils_org/templates/pages/workspace.html:42
 msgid "Project Requests"
-msgstr ""
+msgstr "Solicitudes de proyectos"
 
-#: codedevils_org/templates/pages/workspace.html:43
-#: codedevils_org/templates/pages/workspace.html:52
-#: codedevils_org/templates/pages/workspace.html:61
-#: codedevils_org/templates/pages/workspace.html:137
-#: codedevils_org/templates/pages/workspace.html:206
-#: codedevils_org/templates/pages/workspace.html:214
-#: codedevils_org/templates/pages/workspace.html:225
-#: codedevils_org/templates/pages/workspace.html:236
-#: codedevils_org/templates/pages/workspace.html:247
-msgid "Coming soon!"
-msgstr ""
-
-#: codedevils_org/templates/pages/workspace.html:43
+#: codedevils_org/templates/pages/workspace.html:44
 msgid "In the next update, we\\"
-msgstr ""
+msgstr "En la próxima actualización, nosotros \\"
 
-#: codedevils_org/templates/pages/workspace.html:50
+#: codedevils_org/templates/pages/workspace.html:51
 msgid "Dashboard"
-msgstr ""
+msgstr "Tablero"
 
-#: codedevils_org/templates/pages/workspace.html:52
+#: codedevils_org/templates/pages/workspace.html:53
 msgid "View activity related directly to you!"
-msgstr ""
+msgstr "Ver actividad relacionada directamente con usted!"
 
-#: codedevils_org/templates/pages/workspace.html:59
+#: codedevils_org/templates/pages/workspace.html:60
 msgid "Introducing API"
-msgstr ""
+msgstr "Introduciendo API"
 
-#: codedevils_org/templates/pages/workspace.html:61
+#: codedevils_org/templates/pages/workspace.html:62
 msgid ""
 "We will have an entire suite of APIs for use on CodeDevils-sponsored "
 "projects."
 msgstr ""
-
-#: codedevils_org/templates/pages/workspace.html:75
-msgid "Pushing project based club environment"
-msgstr ""
+"Tendremos un conjunto completo de API para usar en proyectos patrocinados "
+"por CodeDevils."
 
 #: codedevils_org/templates/pages/workspace.html:76
-msgid "Get the very best of us by doing the best of you"
-msgstr ""
+msgid "Pushing project based club environment"
+msgstr "Empujando el entorno del club basado en proyectos"
 
 #: codedevils_org/templates/pages/workspace.html:77
+msgid "Get the very best of us by doing the best of you"
+msgstr "Obtenga lo mejor de nosotros haciendo lo mejor de usted"
+
+#: codedevils_org/templates/pages/workspace.html:78
 msgid ""
 "Join our contributors and fellow students in our project-based environment."
 msgstr ""
+"Únase a nuestros colaboradores y compañeros estudiantes en nuestro entorno "
+"basado en proyectos."
 
-#: codedevils_org/templates/pages/workspace.html:86
+#: codedevils_org/templates/pages/workspace.html:87
 msgid "Members"
-msgstr ""
+msgstr "Miembros"
 
-#: codedevils_org/templates/pages/workspace.html:95
+#: codedevils_org/templates/pages/workspace.html:96
 msgid "Contributors"
-msgstr ""
+msgstr "Contribuyentes"
 
-#: codedevils_org/templates/pages/workspace.html:104
+#: codedevils_org/templates/pages/workspace.html:105
 msgid "Projects"
-msgstr ""
+msgstr "Proyectos"
 
-#: codedevils_org/templates/pages/workspace.html:113
+#: codedevils_org/templates/pages/workspace.html:114
 msgid "Cups of Coffee"
-msgstr ""
-
-#: codedevils_org/templates/pages/workspace.html:136
-msgid "Powerful Dashborad"
-msgstr ""
+msgstr "Tazas de café"
 
 #: codedevils_org/templates/pages/workspace.html:137
-msgid "We will include a fully functional starter dashboard"
-msgstr ""
+#| msgid "Powerful Dashborad"
+msgid "Powerful Dashboard"
+msgstr "Panel de control potente"
 
-#: codedevils_org/templates/pages/workspace.html:145
-msgid "Powered with fresh air"
-msgstr ""
+#: codedevils_org/templates/pages/workspace.html:138
+msgid "We will include a fully functional starter dashboard"
+msgstr "Incluiremos un panel de inicio completamente funcional"
 
 #: codedevils_org/templates/pages/workspace.html:146
+msgid "Powered with fresh air"
+msgstr "Alimentado con aire fresco"
+
+#: codedevils_org/templates/pages/workspace.html:147
 msgid "It\\"
-msgstr ""
+msgstr "Eso\\"
 
-#: codedevils_org/templates/pages/workspace.html:151
+#: codedevils_org/templates/pages/workspace.html:152
 msgid "Inbox"
-msgstr ""
+msgstr "Bandeja de entrada"
 
-#: codedevils_org/templates/pages/workspace.html:155
+#: codedevils_org/templates/pages/workspace.html:156
 msgid "Calendar"
-msgstr ""
+msgstr "Calendario"
 
-#: codedevils_org/templates/pages/workspace.html:159
+#: codedevils_org/templates/pages/workspace.html:160
 msgid "Invoice"
-msgstr ""
-
-#: codedevils_org/templates/pages/workspace.html:167
-msgid "Bring your idea to life"
-msgstr ""
+msgstr "Factura"
 
 #: codedevils_org/templates/pages/workspace.html:168
+msgid "Bring your idea to life"
+msgstr "Da vida a tu idea"
+
+#: codedevils_org/templates/pages/workspace.html:169
 msgid ""
 "CodeDevils includes an outstanding starter for cooking up those fresh apps. "
 "With this feature you can start developing right away your web based "
 "application."
 msgstr ""
+"CodeDevils incluye un excelente iniciador para cocinar esas nuevas "
+"aplicaciones. Con esta característica, puede comenzar a desarrollar de "
+"inmediato su aplicación basada en web."
 
-#: codedevils_org/templates/pages/workspace.html:176
+#: codedevils_org/templates/pages/workspace.html:177
 msgid "Clean inbox UI design"
-msgstr ""
+msgstr "Diseño de interfaz de usuario de bandeja de entrada limpia"
 
-#: codedevils_org/templates/pages/workspace.html:182
+#: codedevils_org/templates/pages/workspace.html:183
 msgid "Outstanding calendar UI design"
-msgstr ""
+msgstr "Excelente diseño de la interfaz de usuario del calendario"
 
-#: codedevils_org/templates/pages/workspace.html:188
+#: codedevils_org/templates/pages/workspace.html:189
 msgid "Draft purchases with the invoice feature"
-msgstr ""
-
-#: codedevils_org/templates/pages/workspace.html:204
-msgid "CodeDevil API for Workspace"
-msgstr ""
+msgstr "Borrador de compras con la función de factura"
 
 #: codedevils_org/templates/pages/workspace.html:205
-msgid "Easy integrations for your projects"
-msgstr ""
+msgid "CodeDevil API for Workspace"
+msgstr "CodeDevil API para Workspace"
 
 #: codedevils_org/templates/pages/workspace.html:206
+msgid "Easy integrations for your projects"
+msgstr "Integraciones fáciles para sus proyectos."
+
+#: codedevils_org/templates/pages/workspace.html:207
 msgid ""
 "Seamlessly integrate your project with hosting options designed for you."
 msgstr ""
-
-#: codedevils_org/templates/pages/workspace.html:213
-msgid "Apache Server"
-msgstr ""
+"Integre perfectamente su proyecto con opciones de alojamiento diseñadas para"
+" usted."
 
 #: codedevils_org/templates/pages/workspace.html:214
+msgid "Apache Server"
+msgstr "Servidor Apache"
+
+#: codedevils_org/templates/pages/workspace.html:215
 msgid "Host your web application on an Apache web server."
-msgstr ""
+msgstr "Hospede su aplicación web en un servidor web Apache."
 
-#: codedevils_org/templates/pages/workspace.html:217
-#: codedevils_org/templates/pages/workspace.html:228
-#: codedevils_org/templates/pages/workspace.html:239
-#: codedevils_org/templates/pages/workspace.html:250
+#: codedevils_org/templates/pages/workspace.html:218
+#: codedevils_org/templates/pages/workspace.html:229
+#: codedevils_org/templates/pages/workspace.html:240
+#: codedevils_org/templates/pages/workspace.html:251
 msgid "Integrate"
-msgstr ""
-
-#: codedevils_org/templates/pages/workspace.html:224
-msgid "HTML 5"
-msgstr ""
+msgstr "Integrar"
 
 #: codedevils_org/templates/pages/workspace.html:225
+msgid "HTML 5"
+msgstr "HTML 5"
+
+#: codedevils_org/templates/pages/workspace.html:226
 msgid ""
 "Learn HTML and use it to create web pages that bring your project to the "
 "eyes of your consumers."
 msgstr ""
-
-#: codedevils_org/templates/pages/workspace.html:235
-msgid "Python"
-msgstr ""
+"Aprenda HTML y úselo para crear páginas web que lleven su proyecto a los "
+"ojos de sus consumidores."
 
 #: codedevils_org/templates/pages/workspace.html:236
+msgid "Python"
+msgstr "Python"
+
+#: codedevils_org/templates/pages/workspace.html:237
 msgid ""
 "Python is growing ever-more popular, and is what this website uses! Use "
 "Python and Python-based frameworks for your applications."
 msgstr ""
-
-#: codedevils_org/templates/pages/workspace.html:246
-#, fuzzy
-#| msgid "CodeDevils URLs"
-msgid "CodeDevil API"
-msgstr "CodeDevils URLs"
+"Python se está volviendo cada vez más popular, ¡y es lo que usa este sitio "
+"web! Utilice marcos basados ​​en Python y Python para sus aplicaciones."
 
 #: codedevils_org/templates/pages/workspace.html:247
+msgid "CodeDevil API"
+msgstr "CodeDevil API"
+
+#: codedevils_org/templates/pages/workspace.html:248
 msgid "Use APIs provided by this website to power your application."
 msgstr ""
+"Utilice las API proporcionadas por este sitio web para potenciar su "
+"aplicación."
+
+#: codedevils_org/users/admin.py:49
+msgid "There are no positions to rebase"
+msgstr "No hay posiciones para rebase"
+
+#: codedevils_org/users/admin.py:58
+msgid "Position orders successfully rebased"
+msgstr "Las órdenes de posición se han modificado correctamente"
+
+#: codedevils_org/users/admin.py:61
+msgid "Rebase order starting at 1"
+msgstr "Rebase orden a partir de 1"
 
 #: codedevils_org/users/apps.py:7
 msgid "Users"
-msgstr ""
+msgstr "Los usuarios"
 
 #: codedevils_org/users/forms.py:16
 msgid "This username has already been taken."
-msgstr ""
-
-#: codedevils_org/users/models.py:15
-msgid "Name of User"
-msgstr ""
+msgstr "Este nombre de usuario ya ha sido tomado."
 
 #: codedevils_org/users/models.py:19
-msgid "Date of birth"
-msgstr ""
+msgid "Name of User"
+msgstr "Nombre de la usuaria"
 
 #: codedevils_org/users/models.py:23
-msgid "The city that the user currently resides in"
-msgstr ""
+msgid "Date of birth"
+msgstr "Fecha de nacimiento"
 
-#: codedevils_org/users/models.py:25
-msgid "The state the city resides in (for inside the US only)"
-msgstr ""
+#: codedevils_org/users/models.py:26
+msgid "City"
+msgstr "Ciudad"
 
 #: codedevils_org/users/models.py:27
-msgid "The country the city resides in"
+msgid "The city that the user currently resides in"
+msgstr "La ciudad en la que reside actualmente el usuario"
+
+#: codedevils_org/users/models.py:28
+msgid "State"
+msgstr "Estado"
+
+#: codedevils_org/users/models.py:29
+msgid "The state the city resides in (for inside the US only)"
 msgstr ""
+"El estado en el que reside la ciudad (solo dentro de los Estados Unidos)"
+
+#: codedevils_org/users/models.py:30
+msgid "Country"
+msgstr "País"
 
 #: codedevils_org/users/models.py:31
+msgid "The country the city resides in"
+msgstr "El país donde reside la ciudad"
+
+#: codedevils_org/users/models.py:35
+msgid "GitHub Username"
+msgstr "Nombre de usuario de GitHub"
+
+#: codedevils_org/users/models.py:36
 msgid "We use this to automatically enroll you in our GitHub projects."
 msgstr ""
+"Usamos esto para inscribirlo automáticamente en nuestros proyectos de "
+"GitHub."
 
-#: codedevils_org/users/models.py:33
-msgid "The user's slack user name registered on the CodeDevils slack channel"
+#: codedevils_org/users/models.py:38
+msgid "Slack Username"
+msgstr "Nombre de usuario flojo"
+
+#: codedevils_org/users/models.py:39
+msgid "The user\"s slack user name registered on the CodeDevils slack channel"
 msgstr ""
+"El nombre de usuario slack del usuario registrado en el canal slack de "
+"CodeDevils"
+
+#: codedevils_org/users/models.py:42
+msgid "Twitter Username"
+msgstr "Nombre de usuario de Twitter"
 
 #: codedevils_org/users/models.py:45
+msgid "Instagram URL"
+msgstr "URL de Instagram"
+
+#: codedevils_org/users/models.py:46
+msgid "Facebook URL"
+msgstr "Facebook URL"
+
+#: codedevils_org/users/models.py:47
+msgid "LinkedIn URL"
+msgstr "LinkedIn URL"
+
+#: codedevils_org/users/models.py:51
+msgid "Receive notifications"
+msgstr "Recibir notificaciones"
+
+#: codedevils_org/users/models.py:54
+msgid "Anonymous"
+msgstr "Anónima"
+
+#: codedevils_org/users/models.py:55
 msgid ""
 "You have the option of keeping your account anonymous with CD. Selectingthis"
 " will ensure your account stays private and supported applications don't "
 "have access to your data"
 msgstr ""
+"Tiene la opción de mantener su cuenta anónima con CD. Al seleccionar esto, "
+"se asegurará de que su cuenta permanezca privada y las aplicaciones "
+"compatibles no tengan acceso a sus datos"
 
 #: codedevils_org/users/models.py:72
-msgid "The position (display of the position is the name)"
-msgstr ""
+msgid "Name of the position"
+msgstr "Nombre del puesto"
 
-#: codedevils_org/users/models.py:74
-msgid "The user in the position"
-msgstr ""
+#: codedevils_org/users/models.py:73
+msgid "Name"
+msgstr "Nombre"
+
+#: codedevils_org/users/models.py:75
+msgid "Order"
+msgstr "Orden"
 
 #: codedevils_org/users/models.py:76
-msgid "The email address associated to the Officer position"
+msgid ""
+"The order of precedence of the position. For example, the President is 1, "
+"Vice President is 2, and so on."
 msgstr ""
+"El orden de precedencia de la posición. Por ejemplo, el presidente es 1, el "
+"vicepresidente es 2, y así sucesivamente."
 
-#: codedevils_org/users/models.py:78
+#: codedevils_org/users/models.py:79
+msgid "SunDevilSync Position"
+msgstr "Posición SunDevilSync"
+
+#: codedevils_org/users/models.py:80
+msgid "The name of the officer position as it is registered on SunDevilSync"
+msgstr ""
+"El nombre del puesto de oficial tal como está registrado en SunDevilSync"
+
+#: codedevils_org/users/models.py:82
+msgid "Email"
+msgstr "Email"
+
+#: codedevils_org/users/models.py:83
+msgid "The email address associated to the Officer position"
+msgstr "La dirección de correo electrónico asociada al puesto de Oficial"
+
+#: codedevils_org/users/models.py:87
+msgid "Officer position"
+msgstr "Puesto de oficial"
+
+#: codedevils_org/users/models.py:88
+msgid "Officer positions"
+msgstr "Puestos de oficial"
+
+#: codedevils_org/users/models.py:92
+#, python-brace-format
+msgid "{name}"
+msgstr "{name}"
+
+#: codedevils_org/users/models.py:93
+#, python-brace-format
+msgid "{name} <{email}>"
+msgstr "{name} <{email}>"
+
+#: codedevils_org/users/models.py:161
+msgid "Position"
+msgstr "Posición"
+
+#: codedevils_org/users/models.py:163
+msgid "User"
+msgstr "Usuaria"
+
+#: codedevils_org/users/models.py:164
+msgid "The holder the position"
+msgstr "La titular de la posición"
+
+#: codedevils_org/users/models.py:166
+msgid "Personal email"
+msgstr "Email personal"
+
+#: codedevils_org/users/models.py:167
 msgid ""
 "The email address belonging to the student (generally <first name>.<last "
 "name>@codedevils.org)"
 msgstr ""
+"La dirección de correo electrónico que pertenece al alumno (generalmente "
+"<nombre>.<Apellido>@codedevils.org)"
 
-#: codedevils_org/users/models.py:81
-msgid "SunDevilSync Position"
-msgstr ""
+#: codedevils_org/users/models.py:169
+msgid "Quote"
+msgstr "Citar"
 
-#: codedevils_org/users/models.py:82
-msgid "The name of the officer position as it is registered on SunDevilSync"
-msgstr ""
+#: codedevils_org/users/models.py:170
+msgid "A cliche quote that truly defines who this being is"
+msgstr "Una cita cliché que realmente define quién es este ser"
 
-#: codedevils_org/users/models.py:84
-msgid "A cliche quote that defines this particular officer"
-msgstr ""
+#: codedevils_org/users/models.py:176
+msgid "Officer"
+msgstr "Oficial"
+
+#: codedevils_org/users/models.py:177
+msgid "Officers"
+msgstr "Oficiales"
 
 #: codedevils_org/users/views.py:34
 msgid "Infos successfully updated"
-msgstr ""
+msgstr "Información actualizada con éxito"
 
 #: config/settings/base.py:32
 msgid "Spanish"
-msgstr ""
+msgstr "Española"
 
 #: config/settings/base.py:33
 msgid "English"
-msgstr ""
+msgstr "Inglesa"
 
 #: config/settings/base.py:34
 msgid "French"
-msgstr ""
+msgstr "Francesa"
 
 #: config/settings/base.py:35
 msgid "Arabic"
-msgstr ""
+msgstr "Arábica"
 
 #: config/settings/base.py:36
 msgid "Dutch"
-msgstr ""
+msgstr "Holandesa"
+
+#~ msgid "Now that you\\"
+#~ msgstr "Ahora que tu \\"
+
+#, fuzzy
+#~ msgid ""
+#~ "<section class=\"section overview\"> <div class=\"container\"> <div "
+#~ "class=\"row align-items-center gap-y\"> <div class=\"col-lg-5 mr-auto text-"
+#~ "center text-md-left\"> <div class=\"section-heading\"> <h2>Our "
+#~ "<br>Organization's<br> History</h2> <p class=\"lead color-2\">CodeDevils was"
+#~ " found in 2016 as a fully-virtual student organization. We pride ourselves "
+#~ "in giving our members the tools needed to be successful in their cirriculum "
+#~ "and have a competitive edge in the industry after graduating.</p> </div> "
+#~ "<p>CodeDevils isn't your traditional club; we are one of ASU's first "
+#~ "organizations that caters to online students. We aim to further ASU's "
+#~ "mission to maintaining the lead in innovation by successfully organizing and"
+#~ " cultivating a rich student community existing exclusively online. Meetings,"
+#~ " projects, guest speakers, and competitions are all organized and conducted "
+#~ "virtually. Although we utilizes exclusively digital forms of communication "
+#~ "to involve members and foster interaction, we do welcome all ASU students "
+#~ "regardless of how you attend.</p> <p>We offer unique opportunities for all "
+#~ "ASU students interested in software development and tech in general. Those "
+#~ "opportunities include exclusive workshops with industry insiders, guest "
+#~ "speakers from big name companies and prestigious institutions, weekly "
+#~ "HackerRank challenges, online hackathons, and the opportunity to collaborate"
+#~ " on resume-worthy projects (as well as weekly study sessions with fun and "
+#~ "nerdy study breaks!)</p> </div> <div class=\"col-lg-6\"> <div class=\"row "
+#~ "gap-y\"> <div class=\"col-6 col-sm-5 col-md-6 mt-6 ml-lg-auto\"> <div "
+#~ "class=\"card rounded p-2 p-sm-4 shadow text-center text-md-left\" data-"
+#~ "aos=\"fade-up\"> <i class=\"pe pe-3x pe-7s-date color-3\"></i> <p "
+#~ "class=\"bold mb-0\">Club Calendar</p> <p class=\"op-7 small\"><strong>Coming"
+#~ " soon!</strong> In the next couple updates, you will be able to view all "
+#~ "CodeDevils events, sync it with your own calendar, and receive notifications"
+#~ " on Slack/email.</p> </div> </div> <div class=\"col-6 col-sm-5 col-md-6 mr-"
+#~ "lg-auto\"> <div class=\"color-1 bg-4-gradient card rounded p-2 p-sm-4 shadow"
+#~ " text-center text-md-left\" data-aos=\"fade-up\"> <i class=\"pe pe-3x "
+#~ "pe-7s-graph1\"></i> <p class=\"bold mb-0\">Hosting</p> <p class=\"op-7 "
+#~ "small\"><strong>Coming soon!</strong> For future projects, CodeDevils will "
+#~ "give the option to host your website on a virtual private server <em>for "
+#~ "free</em>. Other options also include access to the email backend, database "
+#~ "storage, and much more!</p> </div> </div> <div class=\"col-6 col-sm-5 col-"
+#~ "md-6 ml-lg-auto\"> <div class=\"card rounded p-2 p-sm-4 shadow text-center "
+#~ "text-md-left\" data-aos=\"fade-up\"> <i class=\"pe pe-3x pe-7s-keypad "
+#~ "color-3\"></i> <p class=\"bold mb-0\">Project Based</p> <p class=\"op-7 "
+#~ "small\"><strong>Coming soon!</strong> In the next update, you will be able "
+#~ "to view all open projects, join and collaborate on them, and even submit one"
+#~ " of your own.</p> </div> </div> <div class=\"col-6 col-sm-5 col-md-6 mt-6n "
+#~ "mr-lg-auto\"> <div class=\"card rounded p-2 p-sm-4 shadow text-center text-"
+#~ "md-left\" data-aos=\"fade-up\"> <i class=\"pe pe-3x pe-7s-users "
+#~ "color-3\"></i> <p class=\"bold mb-0\">Workspace</p> <p class=\"op-7 "
+#~ "small\">A centralized page for all members to join projects, collaborate for"
+#~ " course work, and see all the exciting activity at CodeDevils.</p> </div> "
+#~ "</div> </div> </div> </div> </div> </section>"
+#~ msgstr ""
+#~ "<section class=\"section overview\"><div class=\"container\"> <div "
+#~ "class=\"row align-items-center gap-y\"><div class=\"col-lg-5 mr-auto text-"
+#~ "center text -md-left\"><div class=\"section-"
+#~ "header\"><h2>Nuestra<br><br><br>Historial</h2><p class=\"lead "
+#~ "color-2\">CodeDevils se encontró en 2016 como un organización estudiantil "
+#~ "totalmente virtual. Nos enorgullecemos de brindar a nuestros miembros las "
+#~ "herramientas necesarias para tener éxito en su plan de estudios y tener una "
+#~ "ventaja competitiva en la industria después de "
+#~ "graduarse.</p></div><p>CodeDevils no es su club tradicional; Somos una de "
+#~ "las primeras organizaciones de ASU que atiende a estudiantes en línea. "
+#~ "Nuestro objetivo es promover la misión de ASU de mantener el liderazgo en "
+#~ "innovación al organizar y cultivar con éxito una comunidad estudiantil rica "
+#~ "que exista exclusivamente en línea. Reuniones, proyectos, oradores invitados"
+#~ " y concursos se organizan y se llevan a cabo virtualmente. Aunque utilizamos"
+#~ " formas de comunicación exclusivamente digitales para involucrar a los "
+#~ "miembros y fomentar la interacción, damos la bienvenida a todos los "
+#~ "estudiantes de ASU, independientemente de cómo asistan.</p><p> Ofrecemos "
+#~ "oportunidades únicas para todos los estudiantes de ASU interesados ​​en el "
+#~ "desarrollo de software y tecnología en general. . Esas oportunidades "
+#~ "incluyen talleres exclusivos con expertos de la industria, oradores "
+#~ "invitados de grandes empresas e instituciones prestigiosas, desafíos "
+#~ "semanales de HackerRank, hackatones en línea y la oportunidad de colaborar "
+#~ "en proyectos dignos de currículum (¡así como sesiones de estudio semanales "
+#~ "con descansos de estudio divertidos y nerd! )</p></div><div class=\"col-"
+#~ "lg-6\"><div class=\"row gap-y\"><div class=\"col-6 col-sm-5 col-md-6 mt-6 "
+#~ "ml-lg-auto\"><div class=\"card rounded p-2 p-sm-4 shadow text-center text-"
+#~ "md-left \" data-aos=\"fade-up\"><i class=\"pe pe-3x pe-7s-date "
+#~ "color-3\"></i><p class=\"bold mb-0\">Calendario del club</p><p class=\"op-7 "
+#~ "small\"> <strong>¡Próximamente!</strong>En las próximas actualizaciones, "
+#~ "podrá ver todos los eventos de CodeDevils, sincronizarlos con su propio "
+#~ "calendario y recibir notificaciones en Slack / correo electrónico.</p></div>"
+#~ " </div> <div class = \"col-6 col-sm-5 col-md-6 mr-lg-auto\"><div class = "
+#~ "\"color-1 bg-4-gradient card rounded p-2 p-sm-4 shadow text-center text-md-"
+#~ "left\" data-aos=\"fade-up \"> <i class=\"pe pe-3x pe-7s-graph1\"></i><p "
+#~ "class=\"bold mb-0\"> Alojamiento</p><p class=\"op-7 small\"><strong> "
+#~ "¡Próximamente!</strong>Para futuros proyectos, CodeDevils dará la opción de "
+#~ "alojar su sitio web en un servidor privado virtual <em>gratis</em>. ¡Otras "
+#~ "opciones también incluyen acceso al backend de correo electrónico, "
+#~ "almacenamiento de la base de datos y mucho más!</p></div></div><div "
+#~ "class=\"col-6 col-sm-5 col-md-6 ml-lg -auto\"><div class=\"card rounded p-2 "
+#~ "p-sm-4 shadow text-center text-md-left\" data-aos=\"fade-up\"><i class=\"pe "
+#~ "pe-3x pe- 7s-keypad color-3\"></i><p class=\"bold mb-0\"> Basado en "
+#~ "proyecto</p><p class=\"op-7 small \"><strong> ¡Próximamente! </strong> En la"
+#~ " próxima actualización, podrá ver todos los proyectos abiertos, unirse y "
+#~ "colaborar en ellos, e incluso enviar uno propio.</p></div></div><div "
+#~ "class=\"col-6 col -sm-5 col-md-6 mt-6n mr-lg-auto\"><div class =\"card "
+#~ "rounded p-2 p-sm-4 shadow text-center text-md-left\" data-aos=\"fade-up\"><i"
+#~ " class=\"pe pe-3x pe-7s-users color-3 \"> </i> <p class =\" bold mb-0 \"> "
+#~ "Espacio de trabajo </p> <p class =\" op- 7 pequeños \"> Una página "
+#~ "centralizada para que todos los miembros se unan a proyectos, colaboren para"
+#~ " el trabajo del curso y vean toda la actividad emocionante en "
+#~ "CodeDevils.</p></div></div></div></div></ div></div></section>"

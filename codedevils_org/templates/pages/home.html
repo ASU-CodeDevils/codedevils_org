@@ -45,11 +45,9 @@
 							<a href="javascript:;" class="color-5">
 								<h4 class="bold mr-3">{% trans 'Community' %}</h4>
 							</a>
-							{% blocktrans trimmed %}
-                            <p class="mt-4">Be part of an amazing group of individuals who have a passion for coding.<br><br>
+                            <p class="mt-4">{% blocktrans %}Be part of an amazing group of individuals who have a passion for coding.<br><br>
                                             Network with fellow students, faculty members, and guest speakers.<br><br>
-                                            We even have dedicated Slack channels for SER/CSE classes!</p>
-							{% endblocktrans %}
+                                            We even have dedicated Slack channels for SER/CSE classes!{% endblocktrans %}</p>
                             <a href="{% url 'about' %}" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
 								<i class="fas fa-long-arrow-alt-right ml-3"></i>
 							</a>
@@ -58,12 +56,10 @@
 							<a href="{% url 'about' %}" class="color-5">
 								<h4 class="bold mr-3">{% trans 'Code' %}</h4>
 							</a>
-							{% blocktrans trimmed %}
-							<p class="mt-4">Work on exclusive CodeDevils projects!<br><br>
-                                            Projects are an opportunity for members to collaborate on coding projects.
+							<p class="mt-4">{% trans 'Work on exclusive CodeDevils projects!' %}<br><br>
+                                            {% blocktrans %}Projects are an opportunity for members to collaborate on coding projects.
                                             Anyone can propose an idea for a project, and a project can be anything that
-                                            involves coding in some way (regardless of language or platform).</p>
-							{% endblocktrans %}
+                                            involves coding in some way (regardless of language or platform).{% endblocktrans %}</p>
                             <a href="{% url 'about' %}" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
 								<i class="fas fa-long-arrow-alt-right ml-3"></i>
 							</a>
@@ -72,14 +68,12 @@
 							<a href="javascript:;" class="color-5">
 								<h4 class="bold mr-3">{% trans 'Compete' %}</h4>
 							</a>
-							{% blocktrans trimmed %}
-							<p class="mt-4">Coding competitions are hosted each semester on HackerRank.<br><br>
+							<p class="mt-4">{% blocktrans %}Coding competitions are hosted each semester on HackerRank.<br><br>
                                 Challenges range from easy to hard problems that may be solved using any supported
                                 programming language.<br><br>
                                 These are a great opportunity to try out problem solving in a programming language you
                                 are trying to learn or showing off your skills! At the end of the term you could win
-                                some swag!</p>
-							{% endblocktrans %}
+                                some swag!{% endblocktrans %}</p>
                             <a href="{% url 'about' %}" class="d-block d-md-flex align-items-center mt-auto">{% trans 'Learn more' %}
 								<i class="fas fa-long-arrow-alt-right ml-3"></i>
 							</a>
@@ -154,8 +148,8 @@
 							<div class="media-body">
 								<h5 class="bold text-capitalize">{% trans 'Virtual Study Hall' %}</h5>
 								<p class="color-2 mb-0">
-								{% trans 'An online coworking environment where you can get that
-                                    experience of working alongside your peers and create good study habits!' %}</p>
+								{% blocktrans %}An online coworking environment where you can get that
+                                    experience of working alongside your peers and create good study habits!{% endblocktrans %}</p>
 							</div>
 						</div>
 					</div>
@@ -164,7 +158,7 @@
 							<i class="shadow fa fa-database gradient gradient-43 color-1 rounded-circle fa-2x mr-3 p-3 aos-init aos-animate" data-aos="zoom-in"></i>
 							<div class="media-body">
 								<h5 class="bold text-capitalize">{% trans 'Hackathons' %}</h5>
-								<p class="color-2 mb-0">{% trans 'Compete alongside fellow students and test your abilities on complex coding problems.' %}</p>
+								<p class="color-2 mb-0">{% blocktrans %}Compete alongside fellow students and test your abilities on complex coding problems.{% endblocktrans %}</p>
 							</div>
 						</div>
 					</div>
@@ -201,7 +195,8 @@
 								<i class="fas fa-long-arrow-alt-right ml-3"></i>
 							</a>
 </div>
-							<div class="tab-pane fade" id="profile-bordered"><p>{% trans 'Now that you\'re registered, take a look at the CodeDevils Constitution so you are aware how the organization is run.' %}</p>
+							<div class="tab-pane fade" id="profile-bordered"><p>{% blocktrans %}Now that you're registered, take a look at the CodeDevils Constitution 
+								so you are aware how the organization is run.{% endblocktrans %}</p>
                                 <a href="{% static 'files/CDWelcomeLetter.pdf' %}" target="_blank"
                                    class="d-block d-md-flex align-items-center mt-auto">{% trans 'View Welcome Docs' %}
 								<i class="fas fa-long-arrow-alt-right ml-3"></i>

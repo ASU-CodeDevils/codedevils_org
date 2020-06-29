@@ -1,23 +1,24 @@
 {% extends '_index/base.html' %}
-{% load i18n %}
-{% load static %}
+{% load i18n static %}
 {% load custom_urls %}
 {% block head_title %}{% trans 'About Us' %}{% endblock head_title %}
 {% block head_message %}{% blocktrans trimmed %}CodeDevils aims to provide ASU students with an organization designed to encourage and promote
     involvement in coding projects and competitions through an exclusively online setting.{% endblocktrans %}{% endblock head_message %}
 {% block content %}
 		<!--ABOUT OUR ORGANIZATION-->
-	{% blocktrans trimmed %}
 		<section class="section overview">
 			<div class="container">
 				<div class="row align-items-center gap-y">
 					<div class="col-lg-5 mr-auto text-center text-md-left">
 						<div class="section-heading">
-							<h2>Our <br>Organization's<br> History</h2>
+							{% blocktrans %}<h2>Our <br>Organization's<br> History</h2>{% endblocktrans %}
+							{% blocktrans trimmed %}
                             <p class="lead color-2">CodeDevils was found in 2016 as a fully-virtual student
                                 organization. We pride ourselves in giving our members the tools needed to be successful
                                 in their cirriculum and have a competitive edge in the industry after graduating.</p>
+							{% endblocktrans %}
 						</div>
+						{% blocktrans %}
                         <p>CodeDevils isn't your traditional club; we are one of ASU's first organizations that caters
                             to online students. We aim to further ASU's mission to maintaining the lead in innovation by
                             successfully organizing and cultivating a rich student community existing exclusively
@@ -30,35 +31,36 @@
                             guest speakers from big name companies and prestigious institutions, weekly HackerRank
                             challenges, online hackathons, and the opportunity to collaborate on resume-worthy projects
                             (as well as weekly study sessions with fun and nerdy study breaks!)</p>
+						{% endblocktrans %}
 					</div>
 					<div class="col-lg-6">
 						<div class="row gap-y">
 							<div class="col-6 col-sm-5 col-md-6 mt-6 ml-lg-auto">
 								<div class="card rounded p-2 p-sm-4 shadow text-center text-md-left" data-aos="fade-up">
 									<i class="pe pe-3x pe-7s-date color-3"></i>
-									<p class="bold mb-0">Club Calendar</p>
-                                    <p class="op-7 small"><strong>Coming soon!</strong> In the next couple updates, you will be able to view all CodeDevils events, sync it with your own calendar, and receive notifications on Slack/email.</p>
+									<p class="bold mb-0">{% trans 'Club Calendar' %}</p>
+                                    <p class="op-7 small"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'In the next couple updates, you will be able to view all CodeDevils events, sync it with your own calendar, and receive notifications on Slack/email.' %}</p>
 								</div>
 							</div>
 							<div class="col-6 col-sm-5 col-md-6 mr-lg-auto">
 								<div class="color-1 bg-4-gradient card rounded p-2 p-sm-4 shadow text-center text-md-left" data-aos="fade-up">
 									<i class="pe pe-3x pe-7s-graph1"></i>
-									<p class="bold mb-0">Hosting</p>
-									<p class="op-7 small"><strong>Coming soon!</strong> For future projects, CodeDevils will give the option to host your website on a virtual private server <em>for free</em>. Other options also include access to the email backend, database storage, and much more!</p>
+									<p class="bold mb-0">{% trans 'Hosting' %}</p>
+									<p class="op-7 small"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'For future projects, CodeDevils will give the option to host your website on a virtual private server <em>for free</em>. Other options also include access to the email backend, database storage, and much more!' %}</p>
 								</div>
 							</div>
 							<div class="col-6 col-sm-5 col-md-6 ml-lg-auto">
 								<div class="card rounded p-2 p-sm-4 shadow text-center text-md-left" data-aos="fade-up">
 									<i class="pe pe-3x pe-7s-keypad color-3"></i>
-									<p class="bold mb-0">Project Based</p>
-                                    <p class="op-7 small"><strong>Coming soon!</strong> In the next update, you will be able to view all open projects, join and collaborate on them, and even submit one of your own.</p>
+									<p class="bold mb-0">{% trans 'Project Based' %}</p>
+                                    <p class="op-7 small"><strong>{% trans 'Coming soon!' %}</strong> {% trans 'In the next update, you will be able to view all open projects, join and collaborate on them, and even submit one of your own.' %}</p>
 								</div>
 							</div>
 							<div class="col-6 col-sm-5 col-md-6 mt-6n mr-lg-auto">
 								<div class="card rounded p-2 p-sm-4 shadow text-center text-md-left" data-aos="fade-up">
 									<i class="pe pe-3x pe-7s-users color-3"></i>
-									<p class="bold mb-0">Workspace</p>
-									<p class="op-7 small">A centralized page for all members to join projects, collaborate for course work, and see all the exciting activity at CodeDevils.</p>
+									<p class="bold mb-0">{% trans 'Workspace' %}</p>
+									<p class="op-7 small">{% trans 'A centralized page for all members to join projects, collaborate for course work, and see all the exciting activity at CodeDevils.' %}</p>
 								</div>
 							</div>
 						</div>
@@ -66,9 +68,8 @@
 				</div>
 			</div>
 		</section>
-	{% endblocktrans %}
 		<!--LEADERSHIP-->
-		<section style="padding-top: 50px;" class="section bg-6">
+		<section id="Leadership" style="padding-top: 50px;" class="section bg-6">
 			<div class="container bring-to-front pt-0 pb-5">
 				<div class="section-heading text-center">
 					<h2>{% trans 'CodeDevils Leadership' %}</h2>

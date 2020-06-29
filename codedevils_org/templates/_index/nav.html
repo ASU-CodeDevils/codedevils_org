@@ -1,4 +1,4 @@
-{% load static %}
+{% load i18n static %}
 <nav class="st-nav navbar main-nav navigation fixed-top">
     <div class="container">
         <ul class="st-nav-menu nav navbar-nav">
@@ -10,25 +10,25 @@
                 </a>
             </li>
             <li class="st-nav-section st-nav-primary nav-item">
-                <a class="st-root-link nav-link" href="{% url 'home' %}">Home </a>
-                <a class="st-root-link nav-link" href="{% url 'about' %}">About </a>
+                <a class="st-root-link nav-link" href="{% url 'home' %}">{% trans 'Home' %} </a>
+                <a class="st-root-link nav-link" href="{% url 'about' %}">{% trans 'About' %} </a>
                 {% if user.is_authenticated %}
-                    <a class="st-root-link nav-link" href="{% url 'workspace' %">Workspace </a>
+                    <a class="st-root-link nav-link" href="{% url 'workspace' %}">{% trans 'Workspace' %} </a>
                 {% endif %}
-                <a class="st-root-link nav-link" href="{% url 'contactus' %}">Contact Us</a>
+                <a class="st-root-link nav-link" href="{% url 'contactus' %}">{% trans 'Contact Us' %}</a>
                 {% if user.is_staff %}
-                    <a class="st-root-link nav-link" href="{% url 'admin:index' %}" target="_blank">Admin</a>
+                    <a class="st-root-link nav-link" href="{% url 'admin:index' %}" target="_blank">{% trans 'Admin' %}</a>
                 {% endif %}
             </li>
             {% if not user.is_authenticated %}
                 <li class="st-nav-section st-nav-secondary nav-item">
                     <a class="btn btn-rounded btn-outline mr-3 px-3" href="#">
                         <i class="fas fa-user-plus d-none d-md-inline mr-md-0 mr-lg-2"></i>
-                        <span class="d-md-none d-lg-inline">Register</span>
+                        <span class="d-md-none d-lg-inline">{% trans 'Register' %}</span>
                     </a>
-                    <a class="btn btn-rounded btn-solid px-3" href="#">
+                    <a class="btn btn-rounded btn-solid px-3" href="{% url 'cas_ng_login' %}">
                         <i class="fas fa-sign-in-alt d-none d-md-inline mr-md-0 mr-lg-2"></i>
-                        <span class="d-md-none d-lg-inline">Login</span>
+                        <span class="d-md-none d-lg-inline">{% trans 'Login' %}</span>
                     </a>
                 </li>
             {% else %}
@@ -37,15 +37,11 @@
                        target="_blank">
                         <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="" height="20px"
                              width="20px">
-                        <span class="d-md-none d-lg-inline">Profile</span>
+                        <span class="d-md-none d-lg-inline">{% trans 'Profile' %}</span>
                     </a>
-                    {% if user.is_student %}
-                        <a class="btn btn-rounded btn-outline px-3" href="{% url 'account_logout' %}">
-                    {% else %}
-                        <a class="btn btn-rounded btn-outline px-3" href="{% url 'account_logout' %}">
-                    {% endif %}
+                    <a class="btn btn-rounded btn-outline px-3" href="{% url 'cas_ng_logout' %}">
                         <i class="fas fa-sign-in-alt d-none d-md-inline mr-md-0 mr-lg-2"></i>
-                        <span class="d-md-none d-lg-inline">Logout</span>
+                        <span class="d-md-none d-lg-inline">{% trans 'Logout' %}</span>
                     </a>
                 </li>
             {% endif %}
@@ -57,33 +53,33 @@
                 </button>
                 <div class="st-popup">
                     <div class="st-popup-container">
-                        <a class="st-popup-close-button">Close</a>
+                        <a class="st-popup-close-button">{% trans 'Close' %}</a>
                         <div class="st-dropdown-content-group">
-                            <h4 class="text-uppercase regular">Pages</h4>
+                            <h4 class="text-uppercase regular">{% trans 'Pages' %}</h4>
                             <a class="regular text-primary" href="{% url 'home' %}">
-                                <i class="far fa-building icon"></i> Home </a>
+                                <i class="far fa-building icon"></i> {% trans 'Home' %} </a>
                             <a class="regular text-success" href="{% url 'about' %}">
-                                <i class="far fa-envelope icon"></i> About </a>
+                                <i class="far fa-envelope icon"></i> {% trans 'About' %} </a>
                             {% if user.is_authenticated %}
                                 <a class="regular text-warning" href="{% url 'workspace' %}">
-                                    <i class="fas fa-hand-holding-usd icon"></i> Workspace </a>
+                                    <i class="fas fa-hand-holding-usd icon"></i> {% trans 'Workspace' %} </a>
                             {% endif %}
                             {% if user.is_staff %}
                                 <a class="regular text-black-50" href="{% url 'admin:index' %}">
-                                    <i class="fas fa-id-card icon"></i> Admin </a>
+                                    <i class="fas fa-id-card icon"></i> {% trans 'Admin' %} </a>
                             {% endif %}
                             <a class="regular text-info" href="{% url 'contactus' %}">
-                                <i class="far fa-question-circle icon"></i> Contact Us</a>
+                                <i class="far fa-question-circle icon"></i> {% trans 'Contact Us' %}</a>
                         </div>
                         {% if user.is_authenticated %}
                             <div class="st-dropdown-content-group b-t bw-2">
-                                <h4 class="text-uppercase regular">CodeDevils</h4>
+                                <h4 class="text-uppercase regular">{% trans 'CodeDevils' %}</h4>
                                 <div class="row">
                                     <div class="col mr-4">
-                                        <a target="_blank" href="#">Workspace</a>
+                                        <a target="_blank" href="#">{% trans 'Workspace' %}</a>
                                     </div>
                                     <div class="col mr-4">
-                                        <a target="_blank" href="#">Project Request</a>
+                                        <a target="_blank" href="#">{% trans 'Project Request' %}</a>
                                         ​
                                     </div>
                                 </div>
@@ -91,26 +87,26 @@
                         {% endif %}
                         {% if not user.is_authenticated %}
                             <div class="st-dropdown-content-group bg-6 b-t">
-                                <a href="#">Register
+                                <a href="#">{% trans 'Register' %}
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                             <div class="st-dropdown-content-group bg-6 b-t">
-                                <a href="{% url 'account_login' %}">Sign in
+                                <a href="{% url 'account_login' %}">{% trans 'Sign in' %}
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         {% else %}
                             <div class="st-dropdown-content-group bg-6 b-t">
-                                <a href="#">Profile
+                                <a href="#">{% trans 'Profile' %}
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                             <div class="st-dropdown-content-group bg-6 b-t">
                                 {% if user.is_student %}
-                                    <a href="{% url 'account_logout' %}">Logout
+                                    <a href="{% url 'account_logout' %}">{% trans 'Logout' %}
                                 {% else %}
-                                    <a href="{% url 'account_logout' %}">Logout
+                                    <a href="{% url 'account_logout' %}">{% trans 'Logout' %}
                                 {% endif %}
                                     <i class="fas fa-arrow-right"></i>
                                 </a>

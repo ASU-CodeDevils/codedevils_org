@@ -4,19 +4,19 @@
 <html lang="en">
 
 <head>
-    {% include 'index/_header_meta.html' %}
+    {% include '_index/_header_meta.html' %}
     {% block extrahead %}{% endblock extrahead %}
 </head>
 
 <body>
     {% block navbar %}
-        {% include 'index/_nav.html' %}
+        {% include '_index/_nav.html' %}
     {% endblock navbar %}
 	<main class="{% block main_class %}{% endblock main_class %}">
         {% block header %}
 		<!--HEADER-->
             <header class="page header color-1 overlay alpha-8 image-background cover gradient gradient-53"
-                    style="background-image: url({% static 'home/img/bg/code-grid.png' %})">
+                    style="background-image: url({% static 'img/bg/code-grid.png' %})">
                 <div class="divider-shape">
                     <!-- waves divider -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"
@@ -55,10 +55,10 @@
         {% endblock create_account_footer %}
 	</main>
     <!--FOOTER-->
-    {% include 'index/_footer.html' %}
+    {% include '_index/_footer.html' %}
 
 	<!--SCRIPTS-->
-    {% include 'index/_scripts.html' %}
+    {% include '_index/_scripts.html' %}
 
     <!--SNACKBAR-->
     {% if messages %}

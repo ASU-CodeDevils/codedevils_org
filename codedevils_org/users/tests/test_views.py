@@ -29,7 +29,7 @@ class TestUserUpdateView:
 
         view.request = request
 
-        assert view.get_success_url() == f"/users/{user.username}/"
+        assert view.get_success_url() == f"/en-us/users/{user.username}/"
 
     def test_get_object(self, user: User, rf: RequestFactory):
         view = UserUpdateView()
@@ -49,7 +49,7 @@ class TestUserRedirectView:
 
         view.request = request
 
-        assert view.get_redirect_url() == f"/users/{user.username}/"
+        assert view.get_redirect_url() == f"/en-us/users/{user.username}/"
 
 
 class TestUserDetailView:
@@ -68,7 +68,7 @@ class TestUserDetailView:
         response = user_detail_view(request, username=user.username)
 
         assert response.status_code == 302
-        assert response.url == "/accounts/login/?next=/fake-url/"
+        assert response.url == "/en-us/accounts/login/?next=/fake-url/"
 
     def test_case_sensitivity(self, rf: RequestFactory):
         request = rf.get("/fake-url/")
