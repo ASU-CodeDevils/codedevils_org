@@ -12,6 +12,7 @@
 #
 import os
 import sys
+from datetime import datetime
 
 import django
 sys.path.insert(0, os.path.abspath('..'))
@@ -21,9 +22,10 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 
+year = datetime.now().year
 project = "codedevils.org"
-copyright = """2020, Kevin Shelley"""
-author = "Kevin Shelley"
+copyright = f"© {year} CodeDevils - All rights reserved"
+author = "CodeDevils"
 
 
 # -- General configuration ---------------------------------------------------
