@@ -36,7 +36,7 @@ class User(AbstractUser):
                                        help_text=_("We use this to automatically enroll you in our GitHub projects."))
     slack_username = models.CharField(db_column="SlackUsername", blank=True, null=True, max_length=30,
                                       verbose_name=_("Slack Username"),
-                                      help_text=_("The user\"s slack user name registered on the CodeDevils slack"
+                                      help_text=_("The user's slack user name registered on the CodeDevils slack"
                                                   " channel"))
     twitter_username = models.CharField(db_column="TwitterUsername", blank=True, null=True, max_length=15,
                                         verbose_name=_("Twitter Username"),
@@ -89,8 +89,8 @@ class OfficerPosition(models.Model):
 
     def __str__(self):
         if not self.email:
-            return _("{name}").format(name=self.name)
-        return _("{name} <{email}>").format(name=self.name, email=self.email)
+            return f"{self.name}"
+        return f"{self.name} <{self.email}>"
 
     def _do_insert_in_order(self):
         """
