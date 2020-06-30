@@ -8,21 +8,8 @@ from django.views.generic import TemplateView
 from django_cas_ng import views as cas_views
 from rest_framework.authtoken.views import obtain_auth_token
 
-urlpatterns = [
-    # Your stuff: custom urls includes go here
-    path("rosetta/", include("rosetta.urls"))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-# API URLS
-urlpatterns += [
-    # API base url
-    path("api/", include("config.api_router")),
-    # DRF auth token
-    path("auth-token/", obtain_auth_token),
-]
-
 # locale
-urlpatterns += i18n_patterns(
+urlpatterns = i18n_patterns(
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
@@ -43,10 +30,23 @@ urlpatterns += i18n_patterns(
     path("accounts/", include("allauth.urls")),
 )
 
+# API URLS
+urlpatterns += [
+    # API base url
+    path("api/", include("config.api_router")),
+    # DRF auth token
+    path("auth-token/", obtain_auth_token),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
     # these url in browser to see how these error pages look like.
+
     urlpatterns += [
+        # rosetta translation page
+        path("rosetta/", include("rosetta.urls")),
+        # custom error pages for debugging in development
+        # these will be replaced by the server's error pages
         path(
             "400/",
             default_views.bad_request,

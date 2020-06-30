@@ -87,7 +87,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "codedevils_org.users.apps.UsersConfig",
-    "codedevils_org.cd_url.apps.CDUrlConfig"
+    "codedevils_org.contrib.cd_url.apps.CDUrlConfig"
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
