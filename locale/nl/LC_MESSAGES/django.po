@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-30 02:59+0000\n"
-"PO-Revision-Date: 2020-06-30 03:03+0000\n"
+"POT-Creation-Date: 2020-06-30 04:42+0000\n"
+"PO-Revision-Date: 2020-06-30 04:51+0000\n"
 "Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -201,6 +201,7 @@ msgstr "Log in"
 
 #: codedevils_org/templates/_index/nav.html:40
 #: codedevils_org/templates/_index/nav.html:101
+#: codedevils_org/templates/users/user_detail.html:29
 msgid "Profile"
 msgstr "Profiel"
 
@@ -1123,6 +1124,7 @@ msgid "Contributors"
 msgstr "Bijdragers"
 
 #: codedevils_org/templates/pages/workspace.html:104
+#: codedevils_org/templates/users/user_detail.html:154
 msgid "Projects"
 msgstr "Projecten"
 
@@ -1247,6 +1249,78 @@ msgstr ""
 "Gebruik API's die door deze website worden aangeboden om uw applicatie van "
 "stroom te voorzien."
 
+#: codedevils_org/templates/users/user_detail.html:7
+#| msgid "CodeDevils"
+msgid "CodeDevils Profile"
+msgstr "CodeDevils-profiel"
+
+#: codedevils_org/templates/users/user_detail.html:9
+#| msgid "Welcome Docs"
+msgid "Welcome Back,"
+msgstr "Welkom terug,"
+
+#: codedevils_org/templates/users/user_detail.html:16
+msgid "Overview"
+msgstr "Overzicht"
+
+#: codedevils_org/templates/users/user_detail.html:20
+msgid "My Details"
+msgstr "Mijn details"
+
+#: codedevils_org/templates/users/user_detail.html:28
+#: codedevils_org/users/models.py:163
+msgid "User"
+msgstr "Gebruiker"
+
+#: codedevils_org/templates/users/user_detail.html:45
+#| msgid "Projects"
+msgid "Current Projects"
+msgstr "Huidige projecten"
+
+#: codedevils_org/templates/users/user_detail.html:50
+#| msgid "CodeDevils URLs"
+msgid "CodeDevils Sponsored"
+msgstr "CodeDevils gesponsord"
+
+#: codedevils_org/templates/users/user_detail.html:58
+#| msgid "Projects"
+msgid "Project:"
+msgstr "Project:"
+
+#: codedevils_org/templates/users/user_detail.html:84
+msgid "Discover"
+msgstr "Ontdek"
+
+#: codedevils_org/templates/users/user_detail.html:85
+msgid "You can find the work of other CodeDevils and their various projects."
+msgstr ""
+"Je kunt het werk van andere CodeDevils en hun verschillende projecten "
+"vinden."
+
+#: codedevils_org/templates/users/user_detail.html:86
+#| msgid "Contributors"
+msgid "Continue to projects"
+msgstr "Ga door naar projecten"
+
+#: codedevils_org/templates/users/user_detail.html:94
+msgid "My Information"
+msgstr "Mijn informatie"
+
+#: codedevils_org/templates/users/user_detail.html:104
+#| msgid "CodeDevils"
+msgid "CodeDevil Since"
+msgstr "CodeDevil Sinds"
+
+#: codedevils_org/templates/users/user_detail.html:138
+#| msgid "About"
+msgid "About Me"
+msgstr "Over mij"
+
+#: codedevils_org/templates/users/user_detail.html:166
+#: codedevils_org/users/apps.py:7
+msgid "Users"
+msgstr "Gebruikers"
+
 #: codedevils_org/users/admin.py:49
 msgid "There are no positions to rebase"
 msgstr "Er zijn geen posities om te rebasen"
@@ -1262,10 +1336,6 @@ msgstr "Rebase-bestelling vanaf 1"
 #: codedevils_org/users/admin.py:71 codedevils_org/users/models.py:161
 msgid "Position"
 msgstr "Positie"
-
-#: codedevils_org/users/apps.py:7
-msgid "Users"
-msgstr "Gebruikers"
 
 #: codedevils_org/users/forms.py:16
 msgid "This username has already been taken."
@@ -1318,8 +1388,6 @@ msgid "Slack Username"
 msgstr "Slack gebruikersnaam"
 
 #: codedevils_org/users/models.py:39
-#| msgid ""
-#| "The user\"s slack user name registered on the CodeDevils slack channel"
 msgid "The user's slack user name registered on the CodeDevils slack channel"
 msgstr ""
 "De slappe gebruikersnaam van de gebruiker geregistreerd op het CodeDevils "
@@ -1403,10 +1471,6 @@ msgstr "Functie van officier"
 #: codedevils_org/users/models.py:88
 msgid "Officer positions"
 msgstr "Functies van officieren"
-
-#: codedevils_org/users/models.py:163
-msgid "User"
-msgstr "Gebruiker"
 
 #: codedevils_org/users/models.py:164
 msgid "The holder the position"

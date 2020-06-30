@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-30 02:59+0000\n"
-"PO-Revision-Date: 2020-06-30 03:01+0000\n"
+"POT-Creation-Date: 2020-06-30 04:42+0000\n"
+"PO-Revision-Date: 2020-06-30 04:46+0000\n"
 "Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -201,6 +201,7 @@ msgstr "S'identifier"
 
 #: codedevils_org/templates/_index/nav.html:40
 #: codedevils_org/templates/_index/nav.html:101
+#: codedevils_org/templates/users/user_detail.html:29
 msgid "Profile"
 msgstr "Profil"
 
@@ -1140,6 +1141,7 @@ msgid "Contributors"
 msgstr "Contributrice"
 
 #: codedevils_org/templates/pages/workspace.html:104
+#: codedevils_org/templates/users/user_detail.html:154
 msgid "Projects"
 msgstr "Projets"
 
@@ -1265,6 +1267,78 @@ msgid "Use APIs provided by this website to power your application."
 msgstr ""
 "Utilisez les API fournies par ce site Web pour alimenter votre application."
 
+#: codedevils_org/templates/users/user_detail.html:7
+#| msgid "CodeDevils"
+msgid "CodeDevils Profile"
+msgstr "Profil de CodeDevils"
+
+#: codedevils_org/templates/users/user_detail.html:9
+#| msgid "Welcome Docs"
+msgid "Welcome Back,"
+msgstr "Nous saluons le retour,"
+
+#: codedevils_org/templates/users/user_detail.html:16
+msgid "Overview"
+msgstr "Aperçu"
+
+#: codedevils_org/templates/users/user_detail.html:20
+msgid "My Details"
+msgstr "Mes Details"
+
+#: codedevils_org/templates/users/user_detail.html:28
+#: codedevils_org/users/models.py:163
+msgid "User"
+msgstr "Utilisatrice"
+
+#: codedevils_org/templates/users/user_detail.html:45
+#| msgid "Projects"
+msgid "Current Projects"
+msgstr "Projets actuels"
+
+#: codedevils_org/templates/users/user_detail.html:50
+#| msgid "CodeDevils URLs"
+msgid "CodeDevils Sponsored"
+msgstr "CodeDevils Sponsorisé"
+
+#: codedevils_org/templates/users/user_detail.html:58
+#| msgid "Projects"
+msgid "Project:"
+msgstr "Projet:"
+
+#: codedevils_org/templates/users/user_detail.html:84
+msgid "Discover"
+msgstr "Découvrir"
+
+#: codedevils_org/templates/users/user_detail.html:85
+msgid "You can find the work of other CodeDevils and their various projects."
+msgstr ""
+"Vous pouvez trouver le travail d'autres CodeDevils et leurs différents "
+"projets."
+
+#: codedevils_org/templates/users/user_detail.html:86
+#| msgid "Contributors"
+msgid "Continue to projects"
+msgstr "Continuer vers les projets"
+
+#: codedevils_org/templates/users/user_detail.html:94
+msgid "My Information"
+msgstr "Mon information"
+
+#: codedevils_org/templates/users/user_detail.html:104
+#| msgid "CodeDevils"
+msgid "CodeDevil Since"
+msgstr "CodeDevil Depuis"
+
+#: codedevils_org/templates/users/user_detail.html:138
+#| msgid "About"
+msgid "About Me"
+msgstr "À propos de moi"
+
+#: codedevils_org/templates/users/user_detail.html:166
+#: codedevils_org/users/apps.py:7
+msgid "Users"
+msgstr "Utilisatrices"
+
 #: codedevils_org/users/admin.py:49
 msgid "There are no positions to rebase"
 msgstr "Il n'y a aucune position à rebaser"
@@ -1280,10 +1354,6 @@ msgstr "Ordre de rebase à partir de 1"
 #: codedevils_org/users/admin.py:71 codedevils_org/users/models.py:161
 msgid "Position"
 msgstr "Position"
-
-#: codedevils_org/users/apps.py:7
-msgid "Users"
-msgstr "Utilisatrices"
 
 #: codedevils_org/users/forms.py:16
 msgid "This username has already been taken."
@@ -1337,8 +1407,6 @@ msgid "Slack Username"
 msgstr "Nom d'utilisateur Slack"
 
 #: codedevils_org/users/models.py:39
-#| msgid ""
-#| "The user\"s slack user name registered on the CodeDevils slack channel"
 msgid "The user's slack user name registered on the CodeDevils slack channel"
 msgstr ""
 "Le nom d'utilisateur mou de l'utilisateur enregistré sur le canal mou "
@@ -1421,10 +1489,6 @@ msgstr "Poste d'officier"
 #: codedevils_org/users/models.py:88
 msgid "Officer positions"
 msgstr "Postes d'officier"
-
-#: codedevils_org/users/models.py:163
-msgid "User"
-msgstr "Utilisatrice"
 
 #: codedevils_org/users/models.py:164
 msgid "The holder the position"

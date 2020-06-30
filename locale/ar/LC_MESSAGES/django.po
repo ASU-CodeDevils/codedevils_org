@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-30 02:59+0000\n"
-"PO-Revision-Date: 2020-06-30 03:44+0000\n"
+"POT-Creation-Date: 2020-06-30 04:42+0000\n"
+"PO-Revision-Date: 2020-06-30 04:49+0000\n"
 "Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -198,6 +198,7 @@ msgstr "تسجيل الدخول"
 
 #: codedevils_org/templates/_index/nav.html:40
 #: codedevils_org/templates/_index/nav.html:101
+#: codedevils_org/templates/users/user_detail.html:29
 msgid "Profile"
 msgstr "الملف الشخصي"
 
@@ -1097,6 +1098,7 @@ msgid "Contributors"
 msgstr "المساهمون"
 
 #: codedevils_org/templates/pages/workspace.html:104
+#: codedevils_org/templates/users/user_detail.html:154
 msgid "Projects"
 msgstr "المشاريع"
 
@@ -1216,6 +1218,76 @@ msgstr "CodeDevil API"
 msgid "Use APIs provided by this website to power your application."
 msgstr "استخدم واجهات برمجة التطبيقات التي يوفرها هذا الموقع لتشغيل تطبيقك."
 
+#: codedevils_org/templates/users/user_detail.html:7
+#| msgid "CodeDevils"
+msgid "CodeDevils Profile"
+msgstr "ملف تعريف CodeDevils"
+
+#: codedevils_org/templates/users/user_detail.html:9
+#| msgid "Welcome Docs"
+msgid "Welcome Back,"
+msgstr "مرحبا بعودتك،"
+
+#: codedevils_org/templates/users/user_detail.html:16
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#: codedevils_org/templates/users/user_detail.html:20
+msgid "My Details"
+msgstr "تفاصيلي"
+
+#: codedevils_org/templates/users/user_detail.html:28
+#: codedevils_org/users/models.py:163
+msgid "User"
+msgstr "المستعمل"
+
+#: codedevils_org/templates/users/user_detail.html:45
+#| msgid "Projects"
+msgid "Current Projects"
+msgstr "المشاريع الحالية"
+
+#: codedevils_org/templates/users/user_detail.html:50
+#| msgid "CodeDevils URLs"
+msgid "CodeDevils Sponsored"
+msgstr "برعاية CodeDevils"
+
+#: codedevils_org/templates/users/user_detail.html:58
+#| msgid "Projects"
+msgid "Project:"
+msgstr "مشروع:"
+
+#: codedevils_org/templates/users/user_detail.html:84
+msgid "Discover"
+msgstr "اكتشف"
+
+#: codedevils_org/templates/users/user_detail.html:85
+msgid "You can find the work of other CodeDevils and their various projects."
+msgstr "يمكنك العثور على عمل CodeDevils ومشاريعهم المختلفة."
+
+#: codedevils_org/templates/users/user_detail.html:86
+#| msgid "Contributors"
+msgid "Continue to projects"
+msgstr "تابع المشاريع"
+
+#: codedevils_org/templates/users/user_detail.html:94
+msgid "My Information"
+msgstr "معلوماتي"
+
+#: codedevils_org/templates/users/user_detail.html:104
+#| msgid "CodeDevils"
+msgid "CodeDevil Since"
+msgstr "CodeDevil منذ"
+
+#: codedevils_org/templates/users/user_detail.html:138
+#| msgid "About"
+msgid "About Me"
+msgstr "عني"
+
+#: codedevils_org/templates/users/user_detail.html:166
+#: codedevils_org/users/apps.py:7
+msgid "Users"
+msgstr "المستخدمون"
+
 #: codedevils_org/users/admin.py:49
 msgid "There are no positions to rebase"
 msgstr "لا توجد مواقف لإعادة القاعدة"
@@ -1231,10 +1303,6 @@ msgstr "طلب إعادة البدء يبدأ من واحد"
 #: codedevils_org/users/admin.py:71 codedevils_org/users/models.py:161
 msgid "Position"
 msgstr "موضع"
-
-#: codedevils_org/users/apps.py:7
-msgid "Users"
-msgstr "المستخدمون"
 
 #: codedevils_org/users/forms.py:16
 msgid "This username has already been taken."
@@ -1285,8 +1353,6 @@ msgid "Slack Username"
 msgstr "اسم المستخدم Slack"
 
 #: codedevils_org/users/models.py:39
-#| msgid ""
-#| "The user\"s slack user name registered on the CodeDevils slack channel"
 msgid "The user's slack user name registered on the CodeDevils slack channel"
 msgstr "اسم المستخدم المتراخي للمستخدم المسجل على قناة CodeDevils Slack"
 
@@ -1366,10 +1432,6 @@ msgstr "منصب ضابط"
 #: codedevils_org/users/models.py:88
 msgid "Officer positions"
 msgstr "وظائف الضباط"
-
-#: codedevils_org/users/models.py:163
-msgid "User"
-msgstr "المستعمل"
 
 #: codedevils_org/users/models.py:164
 msgid "The holder the position"
