@@ -67,7 +67,7 @@
     {% if messages %}
         {% for message in messages %}
             <div id="snackbar" class="alert alert-{{ message.tags }}">
-                {% blocktrans %}{{ message }}{% endblocktrans %}
+                {{ message }}
             </div>
         {% endfor %}
         <script type="application/javascript">

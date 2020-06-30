@@ -15,14 +15,18 @@ class UserAdmin(auth_admin.UserAdmin):
 
     form = UserChangeForm
     add_form = UserCreationForm
-    fieldsets = (("User", {"fields": ("name",)}),) + auth_admin.UserAdmin.fieldsets
+    fieldsets = (("User", {"fields": ("name",)}),
+                 ("About", {"fields": ("city", "state", "country", "bio"), "classes": ("collapse",)}),
+                 ("Links", {"fields": ("github_username", "slack_username", "twitter_username", "instagram_url",
+                                       "facebook_url", "linkedin_url")}),
+                 ("Preferences", {"fields": ("anonymous", "receive_notifications")})) + auth_admin.UserAdmin.fieldsets
     list_display = ["username", "name", "is_superuser"]
     search_fields = ["name"]
 
 
 @admin.register(OfficerPosition)
 class OfficerPositionAdmin(admin.ModelAdmin):
-    empty_value_display = "-N/A-"
+    empty_value_display = "-----"
     list_display = ["name", "sds_position", "order"]
     actions = ["rebase_order"]
 
@@ -63,12 +67,12 @@ class OfficerPositionAdmin(admin.ModelAdmin):
 
 @admin.register(Officer)
 class OfficerAdmin(admin.ModelAdmin):
-    empty_value_display = "-N/A-"
+    empty_value_display = "-----"
     list_display = ["user", "position"]
 
     def get_position(self, officer):
         return officer.position.name
-    get_position.short_description = "Position"
+    get_position.short_description = _("Position")
     get_position.admin_order_field = "position__name"
 
     def delete_queryset(self, request, queryset):

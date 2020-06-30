@@ -3,6 +3,19 @@
  * Author:  http://themeforest.net/user/5studiosnet
  **/
 
+// languages for the typed text on the home page
+// The array is in the order: Network, Develop, Create
+const TYPED_LAGUAGES = {
+    'en-us': ['Network.', 'Develop.', 'Create'],
+    'ar': ['شبكة الاتصال.', 'طور.', 'خلق.'],
+    'cmn': ['網絡。', '發展。', '創造。'],
+    'de': ['Netzwerk.', 'Sich entwickeln.', 'Erstellen.'],
+    'es': ['Red.', 'Desarrollar.', 'Crear.'],
+    'fr': ['Réseau.', 'Développer.', 'Créer.'],
+    'nl': ['Netwerk.', 'Ontwikkelen.', 'Creëer.'],
+    'hi': ['नेटवर्क।', 'का विकास करना।', 'सृजन करना।'],
+};
+
 (function() {
     'use strict';
 
@@ -156,8 +169,10 @@ $(function() {
      * typed.js
      **/
     if ($(".typed").length) {
+        let lang = document.documentElement.lang
+        console.log("Typed sequence for language: " + TYPED_LAGUAGES[lang])
         var typed = new Typed('.typed', {
-            strings: ['Network.', 'Develop.', 'Create.'],
+            strings: TYPED_LAGUAGES[lang],
             typeSpeed: 150,
             backDelay: 500,
             backSpeed: 50,

@@ -4,13 +4,13 @@
 <html lang="en">
 
 <head>
-    {% include '_index/_header_meta.html' %}
+    {% include '_index/header_meta.html' %}
     {% block extrahead %}{% endblock extrahead %}
 </head>
 
 <body>
     {% block navbar %}
-        {% include '_index/_nav.html' %}
+        {% include '_index/nav.html' %}
     {% endblock navbar %}
 	<main class="{% block main_class %}{% endblock main_class %}">
         {% block header %}
@@ -55,10 +55,10 @@
         {% endblock create_account_footer %}
 	</main>
     <!--FOOTER-->
-    {% include '_index/_footer.html' %}
+    {% include '_index/footer.html' %}
 
 	<!--SCRIPTS-->
-    {% include '_index/_scripts.html' %}
+    {% include '_index/scripts.html' %}
 
     <!--SNACKBAR-->
     {% if messages %}

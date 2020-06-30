@@ -24,7 +24,7 @@ django.setup()
 
 year = datetime.now().year
 project = "codedevils.org"
-copyright = f"© {year} CodeDevils - All rights reserved"
+copyright = f"{year} CodeDevils - All rights reserved"
 author = "CodeDevils"
 
 

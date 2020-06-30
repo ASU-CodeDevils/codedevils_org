@@ -9,9 +9,6 @@ from django_cas_ng import views as cas_views
 from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
-    # cas log in
-    path("login/", cas_views.LoginView.as_view(), name="cas_ng_login"),
-    path("logout/", cas_views.LogoutView.as_view(), name="cas_ng_logout"),
     # Your stuff: custom urls includes go here
     path("rosetta/", include("rosetta.urls"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
@@ -38,6 +35,9 @@ urlpatterns += i18n_patterns(
     ),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
+    # cas log in
+    path("login/", cas_views.LoginView.as_view(), name="cas_ng_login"),
+    path("logout/", cas_views.LogoutView.as_view(), name="cas_ng_logout"),
     # User management
     path("users/", include("codedevils_org.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),

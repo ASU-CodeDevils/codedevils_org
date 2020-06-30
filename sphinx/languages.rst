@@ -113,3 +113,24 @@ for use:
 .. code:: bash
 
     ./manage.py compilemessages -l de
+
+The language will also need to be added to the `public/js/site.js` file `TYPED_LANGUAGES` object
+with the translation. The translations (in order) are *Network. Develop. Create*:
+
+.. code:: js
+
+    const TYPED_LAGUAGES = {
+        'en-us': ['Network.', 'Develop.', 'Create'],
+        'ar': ['شبكة الاتصال.', 'طور.', 'خلق.'],
+        'cmn': ['網絡。', '發展。', '創造。'],
+        'es': ['Red.', 'Desarrollar.', 'Crear.'],
+        'fr': ['Réseau.', 'Développer.', 'Créer.'],
+        'nl': ['Netwerk.', 'Ontwikkelen.', 'Creëer.'],
+        'hi': ['नेटवर्क।', 'का विकास करना।', 'सृजन करना।'],
+        
+        // add languages
+        'de': ['Netzwerk.', 'Sich entwickeln.', 'Erstellen.']
+    };
+
+Note that the language code needs to be the same as the locale. The typed sequence on the
+home page should now reflect the tranlsation.

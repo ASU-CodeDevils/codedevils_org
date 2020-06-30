@@ -22,4 +22,4 @@ class CustomUrl(models.Model):
         verbose_name_plural = _("Custom URLs")
 
     def __str__(self):
-        return _(self.name)
+        return self.name

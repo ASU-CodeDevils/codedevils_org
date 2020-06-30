@@ -1,24 +1,23 @@
 {% extends "_index/base.html" %}
-{% load crispy_forms_tags %}
-{% load static %}
+{% load i18n crispy_forms_tags static account %}
 {% block header %}
     <section class="checkout-header page header bg-dark section">
         <div class="container bring-to-front pt-5 pb-0">
             <div class="page-title">
-                <h1 class="regular text-contrast">CodeDevils Profile</h1>
+                <h1 class="regular text-contrast">{%trans 'CodeDevils Profile' %}</h1>
                 {% if user.id == object.id %}
-                    <p class="mb-0 text-muted">Welcome Back,
+                    <p class="mb-0 text-muted">{% trans 'Welcome Back,' %}
                         {% if user.first_name %}{{ object.first_name }}{% else %}{{ object.username }}{% endif %}!</p>
                 {% endif %}
             </div>
             <nav class="nav navbar mt-4">
                 <a href="#" class="nav-item nav-link active">
                     <i class="far fa-user mr-2"></i>
-                    <span class="d-none d-md-inline">Overview</span>
+                    <span class="d-none d-md-inline">{% trans 'Overview' %}</span>
                 </a>
                 <a href="#" class="nav-item nav-link">
                     <i class="far fa-address-card mr-2"></i>
-                    <span class="d-none d-md-inline">My Details</span>
+                    <span class="d-none d-md-inline">{% trans 'My Details' %}</span>
                 </a>
             </nav>
         </div>
@@ -26,8 +25,8 @@
             <div class="container bring-to-front py-0">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb small">
-                        <li class="breadcrumb-item"><a href="#">User</a></li>
-                        <li class="breadcrumb-item"><a href="#">Profile</a></li>
+                        <li class="breadcrumb-item"><a href="#">{% trans 'User' %}</a></li>
+                        <li class="breadcrumb-item"><a href="#">{% trans 'Profile' %}</a></li>
                     </ol>
                 </nav>
             </div>
@@ -43,22 +42,20 @@
                     <div class="row gap-y">
                         <!--COLUMN1-->
                         <div class="col-md-6 mr-md-auto">
-                            <h4 class="border-bottom mb-4 pb-3">Current Projects</h4>
+                            <h4 class="border-bottom mb-4 pb-3">{% trans 'Current Projects' %}</h4>
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex flex-column flex-sm-row align-items-sm-center">
                                         <div class="">
-                                            <label class="control-label text-darker" for="free-shipping">CodeDevils
-                                                Sponsored</label
-                                            >
+                                            <label class="control-label text-darker" for="free-shipping">{% trans 'CodeDevils Sponsored' %}</label>
                                         </div>
                                     </div>
                                     <p></p>
                                     <p class="small text-muted my-0 ml-4">
-                                        {% if profile_user.project %}
-                                            {% for project in profile_user.project %}
+                                        {% if object.project %}
+                                            {% for project in object.project %}
                                                 <a href="{{ project.githubrepository.url }}">
-                                                    <span class="badge badge-pill badge-info">Project: {{ project.name }}</span>
+                                                    <span class="badge badge-pill badge-info">{% trans 'Project:' %} {{ project.name }}</span>
                                                 </a>
                                             {% endfor %}
                                         {% else %}
@@ -84,10 +81,9 @@
                         </div>
                         <!--COLUMN 2-->
                         <div class="col-md-5">
-                            <h4 class="border-bottom mb-4 pb-3">Discover</h4>
-                            <p class="small text-muted">You can find the work of other CodeDevils and their various
-                                projects. </p>
-                            <a href="#" class="btn btn-primary">Continue to projects</a>
+                            <h4 class="border-bottom mb-4 pb-3">{% trans 'Discover' %}</h4>
+                            <p class="small text-muted">{% trans 'You can find the work of other CodeDevils and their various projects.' %}</p>
+                            <a href="#" class="btn btn-primary">{% trans 'Continue to projects' %}</a>
                         </div>
                     </div>
                 </div>
@@ -95,38 +91,37 @@
                 <aside class="col-lg-4 pt-4 pt-lg-0">
                     <div class="card shadow border-0 rounded-lg">
                         <div class="card-body">
-                            <h6>My Information</h6>
+                            <h6>{% trans 'My Information' %}</h6>
                             <div class="border-bottom py-3">
                                 <div class="media d-block text-center d-sm-flex text-sm-left">
                                     <a class="mr-sm-4" href="javascript:;">
                                         <img class="rounded-circle account-img"
-                                             src="{{ profile_user.profile.image.url }}"
-                                             alt="{{ profile_user.profile.image }}"
+                                             src="{{ object.profile.image.url }}"
+                                             alt="{{ object.profile.image }}"
                                              style="max-width: 80px">
                                     </a>
                                     <div class="media-body">
-                                        <a class="product-category text-muted font-xs" href="javascript:;">CodeDevil
-                                            Since {{ profile_user.date_joined.date }}
+                                        <a class="product-category text-muted font-xs" href="javascript:;">{% trans 'CodeDevil Since' %} {{ object.date_joined.date }}
                                         </a>
                                         <h6 class="product-title bold d-flex">
                                             <a href="#"
                                                class="text-darker mr-auto">
-                                                {% if profile_user.first_name and profile_user.last_name %}
-                                                    {{ profile_user.get_full_name }}{% else %}
-                                                    {{ profile_user.profile_username }}{% endif %}</a>
+                                                {% if object.first_name and object.last_name %}
+                                                    {{ object.get_full_name }}{% else %}
+                                                    {{ object.objectname }}{% endif %}</a>
                                         </h6>
                                         <div class="text-primary light mt-3">
-                                            <p><a href="mailto:{{ profile_user.email }}">{{ profile_user.email }}</a>
+                                            <p><a href="mailto:{{ object.email }}">{{ object.email }}</a>
                                             </p>
-                                            {% if profile_user.officer %}
-                                                {% if profile_user.officer.officer_email %}
+                                            {% if object.officer %}
+                                                {% if object.officer.officer_email %}
                                                     <p><small>
-                                                        <a href="mailto:{{ profile_user.officer.officer_email }}">{{ profile_user.officer.officer_email }}</a>
+                                                        <a href="mailto:{{ object.officer.officer_email }}">{{ object.officer.officer_email }}</a>
                                                     </small></p>
                                                 {% endif %}
-                                                {% if profile_user.officer.personal_email %}
+                                                {% if object.officer.personal_email %}
                                                     <p><small>
-                                                        <a href="mailto:{{ profile_user.officer.personal_email }}">{{ profile_user.officer.personal_email }}</a>
+                                                        <a href="mailto:{{ object.officer.personal_email }}">{{ object.officer.personal_email }}</a>
                                                     </small></p>
                                                 {% endif %}
                                             {% endif %}
@@ -140,8 +135,8 @@
                             <div class="border-bottom py-3">
                                 <div class="media d-block d-sm-flex text-sm-left">
                                     <div style="text-align: left;">
-                                        <h5>About Me</h5>
-                                        <p>{{ profile_user.profile.bio }}</p>
+                                        <h5>{% trans 'About Me' %}</h5>
+                                        <p>{{ object.bio }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +151,7 @@
                                                 <div class="text-left">
                                                     <p class="counter font-md bold m-0 text-info"
                                                        style="visibility: visible;">12</p>
-                                                    <p class="m-0">Projects</p>
+                                                    <p class="m-0">{% trans 'Projects' %}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -168,7 +163,7 @@
                                                 <div class="text-left">
                                                     <p class="counter font-md bold m-0 text-info"
                                                        style="visibility: visible;">7</p>
-                                                    <p class="m-0">Users</p>
+                                                    <p class="m-0">{% trans 'Users' %}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -177,34 +172,34 @@
                             {% endif %}
                             <div class="row no-gutters mt-2">
                                 <nav class="nav justify-content-center justify-content-md-start">
-                                    {% if profile_user.profile.github_username %}
-                                        <a href="https://github.com/{{ profile_user.profile.github_username }}"
+                                    {% if object.github_username %}
+                                        <a href="https://github.com/{{ object.github_username }}"
                                            target="_blank"
                                            class="btn btn-circle btn-sm brand-git mr-3">
                                             <i class="fab fa-github"></i>
                                         </a>
                                     {% endif %}
-                                    {% if profile_user.profile.linkedin_url %}
-                                        <a href="{{ profile_user.profile.linkedin_url }}" target="_blank"
+                                    {% if object.linkedin_url %}
+                                        <a href="{{ object.linkedin_url }}" target="_blank"
                                            class="btn btn-circle btn-sm brand-linkedin mr-3">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
                                     {% endif %}
-                                    {% if profile_user.profile.facebook_url %}
-                                        <a href="{{ profile_user.profile.facebook_url }}" target="_blank"
+                                    {% if object.facebook_url %}
+                                        <a href="{{ object.facebook_url }}" target="_blank"
                                            class="btn btn-circle btn-sm brand-facebook mr-3">
                                             <i class="fab fa-facebook"></i>
                                         </a>
                                     {% endif %}
-                                    {% if profile_user.profile.twitter_username %}
-                                        <a href="https://twitter.com/{{ profile_user.profile.twitter_username }}"
+                                    {% if object.twitter_username %}
+                                        <a href="https://twitter.com/{{ object.twitter_username }}"
                                            target="_blank"
                                            class="btn btn-circle btn-sm brand-twitter mr-3">
                                             <i class="fab fa-twitter"></i>
                                         </a>
                                     {% endif %}
-                                    {% if profile_user.profile.instagram_url %}
-                                        <a href="{{ profile_user.profile.instagram_url }}" target="_blank"
+                                    {% if object.instagram_url %}
+                                        <a href="{{ object.instagram_url }}" target="_blank"
                                            class="btn btn-circle btn-sm brand-instagram">
                                             <i class="fab fa-instagram"></i>
                                         </a>
@@ -215,7 +210,7 @@
                     </div>
                 </aside>
             </div>
-            {% if user.id == profile_user.id %}
+            {% if user.id == object.id %}
                 <a href="#" class="btn btn-3 mt-4">Edit</a>
             {% endif %}
         </div>
