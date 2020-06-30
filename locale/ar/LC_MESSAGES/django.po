@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-28 23:11+0000\n"
-"PO-Revision-Date: 2020-06-28 23:12+0000\n"
+"POT-Creation-Date: 2020-06-30 02:59+0000\n"
+"PO-Revision-Date: 2020-06-30 03:02+0000\n"
 "Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -56,12 +56,6 @@ msgstr "قم بإنشاء حساب CodeDevil"
 #: codedevils_org/templates/base.html:50
 msgid "Create account"
 msgstr "إصنع حساب"
-
-#: codedevils_org/templates/_index/base.html:70
-#: codedevils_org/templates/base.html:67
-#, python-format
-msgid "%(message)s"
-msgstr "%(message)s"
 
 #: codedevils_org/templates/_index/callout_box.html:10
 msgid "Join as a member"
@@ -177,7 +171,7 @@ msgstr "الصفحة الرئيسية"
 #: codedevils_org/templates/_index/nav.html:79
 #: codedevils_org/templates/pages/about.html:62
 #: codedevils_org/templates/pages/about.html:187
-#: codedevils_org/templates/pages/workspace.html:11
+#: codedevils_org/templates/pages/workspace.html:10
 msgid "Workspace"
 msgstr "مساحة العمل"
 
@@ -208,8 +202,7 @@ msgid "Profile"
 msgstr "الملف الشخصي"
 
 #: codedevils_org/templates/_index/nav.html:44
-#: codedevils_org/templates/_index/nav.html:107
-#: codedevils_org/templates/_index/nav.html:109
+#: codedevils_org/templates/_index/nav.html:106
 msgid "Logout"
 msgstr "تسجيل خروج"
 
@@ -512,6 +505,11 @@ msgstr ""
 "<strong> ملاحظة: </strong> لا يزال بإمكانك <a href=\"%(email_url)s\"> تغيير "
 "عنوان بريدك الإلكتروني </a>."
 
+#: codedevils_org/templates/base.html:67
+#, python-format
+msgid "%(message)s"
+msgstr "%(message)s"
+
 #: codedevils_org/templates/pages/about.html:4
 msgid "About Us"
 msgstr "معلومات عنا"
@@ -579,15 +577,15 @@ msgstr "تقويم النادي"
 #: codedevils_org/templates/pages/about.html:42
 #: codedevils_org/templates/pages/about.html:49
 #: codedevils_org/templates/pages/about.html:56
-#: codedevils_org/templates/pages/workspace.html:44
-#: codedevils_org/templates/pages/workspace.html:53
-#: codedevils_org/templates/pages/workspace.html:62
-#: codedevils_org/templates/pages/workspace.html:138
-#: codedevils_org/templates/pages/workspace.html:207
-#: codedevils_org/templates/pages/workspace.html:215
-#: codedevils_org/templates/pages/workspace.html:226
-#: codedevils_org/templates/pages/workspace.html:237
-#: codedevils_org/templates/pages/workspace.html:248
+#: codedevils_org/templates/pages/workspace.html:43
+#: codedevils_org/templates/pages/workspace.html:52
+#: codedevils_org/templates/pages/workspace.html:61
+#: codedevils_org/templates/pages/workspace.html:137
+#: codedevils_org/templates/pages/workspace.html:206
+#: codedevils_org/templates/pages/workspace.html:214
+#: codedevils_org/templates/pages/workspace.html:225
+#: codedevils_org/templates/pages/workspace.html:236
+#: codedevils_org/templates/pages/workspace.html:247
 msgid "Coming soon!"
 msgstr "قريبا!"
 
@@ -820,9 +818,9 @@ msgstr ""
 #: codedevils_org/templates/pages/home.html:51
 #: codedevils_org/templates/pages/home.html:63
 #: codedevils_org/templates/pages/home.html:77
-#: codedevils_org/templates/pages/workspace.html:45
-#: codedevils_org/templates/pages/workspace.html:54
-#: codedevils_org/templates/pages/workspace.html:63
+#: codedevils_org/templates/pages/workspace.html:44
+#: codedevils_org/templates/pages/workspace.html:53
+#: codedevils_org/templates/pages/workspace.html:62
 msgid "Learn more"
 msgstr "أعرف أكثر"
 
@@ -1037,7 +1035,7 @@ msgstr "SunDevilSYNC"
 msgid "SIGNUP"
 msgstr "سجل"
 
-#: codedevils_org/templates/pages/workspace.html:26
+#: codedevils_org/templates/pages/workspace.html:25
 msgid ""
 "<p class=\"color-1\"><strong>Coming soon!</strong> We are working hard to "
 "create a New Integration API. <a href=\"#\" class=\"bold d-inline-flex "
@@ -1049,27 +1047,27 @@ msgstr ""
 "align-items-center color-1 ml-3\">Learn more <i class=\"pe pe-7s-angle-"
 "right\"></i> </a> </p>"
 
-#: codedevils_org/templates/pages/workspace.html:42
+#: codedevils_org/templates/pages/workspace.html:41
 msgid "Project Requests"
 msgstr "طلبات المشروع"
 
-#: codedevils_org/templates/pages/workspace.html:44
+#: codedevils_org/templates/pages/workspace.html:43
 msgid "In the next update, we\\"
 msgstr "في التحديث القادم ، نحن \\"
 
-#: codedevils_org/templates/pages/workspace.html:51
+#: codedevils_org/templates/pages/workspace.html:50
 msgid "Dashboard"
 msgstr "لوحة القيادة"
 
-#: codedevils_org/templates/pages/workspace.html:53
+#: codedevils_org/templates/pages/workspace.html:52
 msgid "View activity related directly to you!"
 msgstr "عرض النشاط المتعلق بك مباشرة!"
 
-#: codedevils_org/templates/pages/workspace.html:60
+#: codedevils_org/templates/pages/workspace.html:59
 msgid "Introducing API"
 msgstr "إدخال واجهة برمجة التطبيقات"
 
-#: codedevils_org/templates/pages/workspace.html:62
+#: codedevils_org/templates/pages/workspace.html:61
 msgid ""
 "We will have an entire suite of APIs for use on CodeDevils-sponsored "
 "projects."
@@ -1077,69 +1075,68 @@ msgstr ""
 "سيكون لدينا مجموعة كاملة من واجهات برمجة التطبيقات للاستخدام في المشاريع "
 "التي ترعاها CodeDevils."
 
-#: codedevils_org/templates/pages/workspace.html:76
+#: codedevils_org/templates/pages/workspace.html:75
 msgid "Pushing project based club environment"
 msgstr "دفع بيئة النادي القائمة على المشروع"
 
-#: codedevils_org/templates/pages/workspace.html:77
+#: codedevils_org/templates/pages/workspace.html:76
 msgid "Get the very best of us by doing the best of you"
 msgstr "احصل على أفضل ما لدينا من خلال بذل قصارى جهدك"
 
-#: codedevils_org/templates/pages/workspace.html:78
+#: codedevils_org/templates/pages/workspace.html:77
 msgid ""
 "Join our contributors and fellow students in our project-based environment."
 msgstr "انضم إلى مساهمينا وزملائنا الطلاب في بيئتنا القائمة على المشاريع."
 
-#: codedevils_org/templates/pages/workspace.html:87
+#: codedevils_org/templates/pages/workspace.html:86
 msgid "Members"
 msgstr "أفراد"
 
-#: codedevils_org/templates/pages/workspace.html:96
+#: codedevils_org/templates/pages/workspace.html:95
 msgid "Contributors"
 msgstr "المساهمون"
 
-#: codedevils_org/templates/pages/workspace.html:105
+#: codedevils_org/templates/pages/workspace.html:104
 msgid "Projects"
 msgstr "المشاريع"
 
-#: codedevils_org/templates/pages/workspace.html:114
+#: codedevils_org/templates/pages/workspace.html:113
 msgid "Cups of Coffee"
 msgstr "كؤوس من القهوة"
 
-#: codedevils_org/templates/pages/workspace.html:137
-#| msgid "Powerful Dashborad"
+#: codedevils_org/templates/pages/workspace.html:136
 msgid "Powerful Dashboard"
 msgstr "لوحة قيادة قوية"
 
-#: codedevils_org/templates/pages/workspace.html:138
+#: codedevils_org/templates/pages/workspace.html:137
 msgid "We will include a fully functional starter dashboard"
 msgstr "سنقوم بتضمين لوحة تحكم للمبتدئين تعمل بكامل طاقتها"
 
-#: codedevils_org/templates/pages/workspace.html:146
+#: codedevils_org/templates/pages/workspace.html:145
 msgid "Powered with fresh air"
 msgstr "تعمل بالهواء النقي"
 
-#: codedevils_org/templates/pages/workspace.html:147
+#: codedevils_org/templates/pages/workspace.html:146
 msgid "It\\"
 msgstr "ذلك \\"
 
-#: codedevils_org/templates/pages/workspace.html:152
+#: codedevils_org/templates/pages/workspace.html:151
 msgid "Inbox"
 msgstr "صندوق الوارد"
 
-#: codedevils_org/templates/pages/workspace.html:156
+#: codedevils_org/templates/pages/workspace.html:155
 msgid "Calendar"
 msgstr "التقويم"
 
-#: codedevils_org/templates/pages/workspace.html:160
+#: codedevils_org/templates/pages/workspace.html:159
 msgid "Invoice"
 msgstr "فاتورة"
 
-#: codedevils_org/templates/pages/workspace.html:168
+#: codedevils_org/templates/pages/workspace.html:167
 msgid "Bring your idea to life"
 msgstr "اجعل فكرتك تنبض بالحياة"
 
-#: codedevils_org/templates/pages/workspace.html:169
+#: codedevils_org/templates/pages/workspace.html:168
 msgid ""
 "CodeDevils includes an outstanding starter for cooking up those fresh apps. "
 "With this feature you can start developing right away your web based "
@@ -1148,62 +1145,62 @@ msgstr ""
 "يتضمن CodeDevils بداية رائعة لطهي تلك التطبيقات الجديدة. باستخدام هذه الميزة"
 " ، يمكنك البدء في تطوير تطبيقك المستند إلى الويب على الفور."
 
-#: codedevils_org/templates/pages/workspace.html:177
+#: codedevils_org/templates/pages/workspace.html:176
 msgid "Clean inbox UI design"
 msgstr "نظف تصميم واجهة المستخدم للبريد الوارد"
 
-#: codedevils_org/templates/pages/workspace.html:183
+#: codedevils_org/templates/pages/workspace.html:182
 msgid "Outstanding calendar UI design"
 msgstr "تصميم رائع لواجهة المستخدم للتقويم"
 
-#: codedevils_org/templates/pages/workspace.html:189
+#: codedevils_org/templates/pages/workspace.html:188
 msgid "Draft purchases with the invoice feature"
 msgstr "مسودة المشتريات مع ميزة الفاتورة"
 
-#: codedevils_org/templates/pages/workspace.html:205
+#: codedevils_org/templates/pages/workspace.html:204
 msgid "CodeDevil API for Workspace"
 msgstr "CodeDevil API لمساحة العمل"
 
-#: codedevils_org/templates/pages/workspace.html:206
+#: codedevils_org/templates/pages/workspace.html:205
 msgid "Easy integrations for your projects"
 msgstr "عمليات دمج سهلة لمشاريعك"
 
-#: codedevils_org/templates/pages/workspace.html:207
+#: codedevils_org/templates/pages/workspace.html:206
 msgid ""
 "Seamlessly integrate your project with hosting options designed for you."
 msgstr "ادمج مشروعك بسلاسة مع خيارات الاستضافة المصممة لك."
 
-#: codedevils_org/templates/pages/workspace.html:214
+#: codedevils_org/templates/pages/workspace.html:213
 msgid "Apache Server"
 msgstr "Apache الخادم"
 
-#: codedevils_org/templates/pages/workspace.html:215
+#: codedevils_org/templates/pages/workspace.html:214
 msgid "Host your web application on an Apache web server."
 msgstr "استضف تطبيق الويب الخاص بك على خادم ويب Apache."
 
-#: codedevils_org/templates/pages/workspace.html:218
-#: codedevils_org/templates/pages/workspace.html:229
-#: codedevils_org/templates/pages/workspace.html:240
-#: codedevils_org/templates/pages/workspace.html:251
+#: codedevils_org/templates/pages/workspace.html:217
+#: codedevils_org/templates/pages/workspace.html:228
+#: codedevils_org/templates/pages/workspace.html:239
+#: codedevils_org/templates/pages/workspace.html:250
 msgid "Integrate"
 msgstr "دمج"
 
-#: codedevils_org/templates/pages/workspace.html:225
+#: codedevils_org/templates/pages/workspace.html:224
 msgid "HTML 5"
 msgstr "HTML 5"
 
-#: codedevils_org/templates/pages/workspace.html:226
+#: codedevils_org/templates/pages/workspace.html:225
 msgid ""
 "Learn HTML and use it to create web pages that bring your project to the "
 "eyes of your consumers."
 msgstr ""
 "تعلم HTML واستخدمه لإنشاء صفحات الويب التي تجذب مشروعك إلى أعين المستهلكين."
 
-#: codedevils_org/templates/pages/workspace.html:236
+#: codedevils_org/templates/pages/workspace.html:235
 msgid "Python"
 msgstr "Python"
 
-#: codedevils_org/templates/pages/workspace.html:237
+#: codedevils_org/templates/pages/workspace.html:236
 msgid ""
 "Python is growing ever-more popular, and is what this website uses! Use "
 "Python and Python-based frameworks for your applications."
@@ -1211,11 +1208,11 @@ msgstr ""
 "Python تزداد شعبية ، وهذا ما يستخدمه هذا الموقع! استخدم الأطر المستندة إلى "
 "Python و Python لتطبيقاتك."
 
-#: codedevils_org/templates/pages/workspace.html:247
+#: codedevils_org/templates/pages/workspace.html:246
 msgid "CodeDevil API"
 msgstr "CodeDevil API"
 
-#: codedevils_org/templates/pages/workspace.html:248
+#: codedevils_org/templates/pages/workspace.html:247
 msgid "Use APIs provided by this website to power your application."
 msgstr "استخدم واجهات برمجة التطبيقات التي يوفرها هذا الموقع لتشغيل تطبيقك."
 
@@ -1230,6 +1227,10 @@ msgstr "تم استرداد أوامر المركز بنجاح"
 #: codedevils_org/users/admin.py:61
 msgid "Rebase order starting at 1"
 msgstr "طلب إعادة البدء يبدأ من واحد"
+
+#: codedevils_org/users/admin.py:71 codedevils_org/users/models.py:161
+msgid "Position"
+msgstr "موضع"
 
 #: codedevils_org/users/apps.py:7
 msgid "Users"
@@ -1284,8 +1285,10 @@ msgid "Slack Username"
 msgstr "اسم المستخدم Slack"
 
 #: codedevils_org/users/models.py:39
-msgid "The user\"s slack user name registered on the CodeDevils slack channel"
-msgstr "اسم مستخدم Slack للمستخدم المسجل على قناة CodeDevils Slack"
+#| msgid ""
+#| "The user\"s slack user name registered on the CodeDevils slack channel"
+msgid "The user's slack user name registered on the CodeDevils slack channel"
+msgstr "اسم المستخدم المتراخي للمستخدم المسجل على قناة CodeDevils Slack"
 
 #: codedevils_org/users/models.py:42
 msgid "Twitter Username"
@@ -1364,20 +1367,6 @@ msgstr "منصب ضابط"
 msgid "Officer positions"
 msgstr "وظائف الضباط"
 
-#: codedevils_org/users/models.py:92
-#, python-brace-format
-msgid "{name}"
-msgstr "{name}"
-
-#: codedevils_org/users/models.py:93
-#, python-brace-format
-msgid "{name} <{email}>"
-msgstr "{name} <{email}>"
-
-#: codedevils_org/users/models.py:161
-msgid "Position"
-msgstr "موضع"
-
 #: codedevils_org/users/models.py:163
 msgid "User"
 msgstr "المستعمل"
@@ -1437,6 +1426,16 @@ msgstr "عربى"
 #: config/settings/base.py:36
 msgid "Dutch"
 msgstr "هولندي"
+
+#: config/settings/base.py:37
+msgid "Hindi"
+msgstr "هندي"
+
+#~ msgid "{name}"
+#~ msgstr "{name}"
+
+#~ msgid "{name} <{email}>"
+#~ msgstr "{name} <{email}>"
 
 #~ msgid "Now that you\\"
 #~ msgstr "الآن بعد أن \\"

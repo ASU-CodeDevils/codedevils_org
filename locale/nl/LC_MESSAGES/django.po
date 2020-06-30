@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-28 23:11+0000\n"
-"PO-Revision-Date: 2020-06-29 00:10+0000\n"
+"POT-Creation-Date: 2020-06-30 02:59+0000\n"
+"PO-Revision-Date: 2020-06-30 03:03+0000\n"
 "Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -57,12 +57,6 @@ msgstr "Maak een CodeDevil-account aan"
 #: codedevils_org/templates/base.html:50
 msgid "Create account"
 msgstr "Account aanmaken"
-
-#: codedevils_org/templates/_index/base.html:70
-#: codedevils_org/templates/base.html:67
-#, python-format
-msgid "%(message)s"
-msgstr "%(message)s"
 
 #: codedevils_org/templates/_index/callout_box.html:10
 msgid "Join as a member"
@@ -180,7 +174,7 @@ msgstr "Huis"
 #: codedevils_org/templates/_index/nav.html:79
 #: codedevils_org/templates/pages/about.html:62
 #: codedevils_org/templates/pages/about.html:187
-#: codedevils_org/templates/pages/workspace.html:11
+#: codedevils_org/templates/pages/workspace.html:10
 msgid "Workspace"
 msgstr "Werkruimte"
 
@@ -211,8 +205,7 @@ msgid "Profile"
 msgstr "Profiel"
 
 #: codedevils_org/templates/_index/nav.html:44
-#: codedevils_org/templates/_index/nav.html:107
-#: codedevils_org/templates/_index/nav.html:109
+#: codedevils_org/templates/_index/nav.html:106
 msgid "Logout"
 msgstr "Uitloggen"
 
@@ -521,6 +514,11 @@ msgstr ""
 "<strong> Opmerking: </strong> u kunt nog steeds <a href=\"%(email_url)s\"> "
 "uw e-mailadres wijzigen </a>."
 
+#: codedevils_org/templates/base.html:67
+#, python-format
+msgid "%(message)s"
+msgstr "%(message)s"
+
 #: codedevils_org/templates/pages/about.html:4
 msgid "About Us"
 msgstr "Over ons"
@@ -589,15 +587,15 @@ msgstr "Club Kalender"
 #: codedevils_org/templates/pages/about.html:42
 #: codedevils_org/templates/pages/about.html:49
 #: codedevils_org/templates/pages/about.html:56
-#: codedevils_org/templates/pages/workspace.html:44
-#: codedevils_org/templates/pages/workspace.html:53
-#: codedevils_org/templates/pages/workspace.html:62
-#: codedevils_org/templates/pages/workspace.html:138
-#: codedevils_org/templates/pages/workspace.html:207
-#: codedevils_org/templates/pages/workspace.html:215
-#: codedevils_org/templates/pages/workspace.html:226
-#: codedevils_org/templates/pages/workspace.html:237
-#: codedevils_org/templates/pages/workspace.html:248
+#: codedevils_org/templates/pages/workspace.html:43
+#: codedevils_org/templates/pages/workspace.html:52
+#: codedevils_org/templates/pages/workspace.html:61
+#: codedevils_org/templates/pages/workspace.html:137
+#: codedevils_org/templates/pages/workspace.html:206
+#: codedevils_org/templates/pages/workspace.html:214
+#: codedevils_org/templates/pages/workspace.html:225
+#: codedevils_org/templates/pages/workspace.html:236
+#: codedevils_org/templates/pages/workspace.html:247
 msgid "Coming soon!"
 msgstr "Komt binnenkort!"
 
@@ -836,9 +834,9 @@ msgstr ""
 #: codedevils_org/templates/pages/home.html:51
 #: codedevils_org/templates/pages/home.html:63
 #: codedevils_org/templates/pages/home.html:77
-#: codedevils_org/templates/pages/workspace.html:45
-#: codedevils_org/templates/pages/workspace.html:54
-#: codedevils_org/templates/pages/workspace.html:63
+#: codedevils_org/templates/pages/workspace.html:44
+#: codedevils_org/templates/pages/workspace.html:53
+#: codedevils_org/templates/pages/workspace.html:62
 msgid "Learn more"
 msgstr "Leer meer"
 
@@ -1061,7 +1059,7 @@ msgstr "SunDevilSYNC"
 msgid "SIGNUP"
 msgstr "INSCHRIJVEN"
 
-#: codedevils_org/templates/pages/workspace.html:26
+#: codedevils_org/templates/pages/workspace.html:25
 msgid ""
 "<p class=\"color-1\"><strong>Coming soon!</strong> We are working hard to "
 "create a New Integration API. <a href=\"#\" class=\"bold d-inline-flex "
@@ -1073,27 +1071,27 @@ msgstr ""
 "d-inline-flex align-items-center color-1 ml-3\"> Meer informatie <i class = "
 "\"pe pe-7s-angle-right\"></i></a></p>"
 
-#: codedevils_org/templates/pages/workspace.html:42
+#: codedevils_org/templates/pages/workspace.html:41
 msgid "Project Requests"
 msgstr "Projectaanvragen"
 
-#: codedevils_org/templates/pages/workspace.html:44
+#: codedevils_org/templates/pages/workspace.html:43
 msgid "In the next update, we\\"
 msgstr "In de volgende update zullen we \\"
 
-#: codedevils_org/templates/pages/workspace.html:51
+#: codedevils_org/templates/pages/workspace.html:50
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: codedevils_org/templates/pages/workspace.html:53
+#: codedevils_org/templates/pages/workspace.html:52
 msgid "View activity related directly to you!"
 msgstr "Bekijk activiteiten die direct aan jou gerelateerd zijn!"
 
-#: codedevils_org/templates/pages/workspace.html:60
+#: codedevils_org/templates/pages/workspace.html:59
 msgid "Introducing API"
 msgstr "Introductie van API"
 
-#: codedevils_org/templates/pages/workspace.html:62
+#: codedevils_org/templates/pages/workspace.html:61
 msgid ""
 "We will have an entire suite of APIs for use on CodeDevils-sponsored "
 "projects."
@@ -1101,70 +1099,70 @@ msgstr ""
 "We zullen een hele reeks API's hebben voor gebruik op door CodeDevils "
 "gesponsorde projecten."
 
-#: codedevils_org/templates/pages/workspace.html:76
+#: codedevils_org/templates/pages/workspace.html:75
 msgid "Pushing project based club environment"
 msgstr "Duwende projectmatige clubomgeving"
 
-#: codedevils_org/templates/pages/workspace.html:77
+#: codedevils_org/templates/pages/workspace.html:76
 msgid "Get the very best of us by doing the best of you"
 msgstr "Haal het beste uit ons door het beste uit jezelf te halen"
 
-#: codedevils_org/templates/pages/workspace.html:78
+#: codedevils_org/templates/pages/workspace.html:77
 msgid ""
 "Join our contributors and fellow students in our project-based environment."
 msgstr ""
 "Sluit je aan bij onze medewerkers en medestudenten in onze projectmatige "
 "omgeving."
 
-#: codedevils_org/templates/pages/workspace.html:87
+#: codedevils_org/templates/pages/workspace.html:86
 msgid "Members"
 msgstr "Leden"
 
-#: codedevils_org/templates/pages/workspace.html:96
+#: codedevils_org/templates/pages/workspace.html:95
 msgid "Contributors"
 msgstr "Bijdragers"
 
-#: codedevils_org/templates/pages/workspace.html:105
+#: codedevils_org/templates/pages/workspace.html:104
 msgid "Projects"
 msgstr "Projecten"
 
-#: codedevils_org/templates/pages/workspace.html:114
+#: codedevils_org/templates/pages/workspace.html:113
 msgid "Cups of Coffee"
 msgstr "Koppen koffie"
 
-#: codedevils_org/templates/pages/workspace.html:137
+#: codedevils_org/templates/pages/workspace.html:136
 msgid "Powerful Dashboard"
 msgstr "Krachtig dashboard"
 
-#: codedevils_org/templates/pages/workspace.html:138
+#: codedevils_org/templates/pages/workspace.html:137
 msgid "We will include a fully functional starter dashboard"
 msgstr "We zullen een volledig functioneel startersdashboard opnemen"
 
-#: codedevils_org/templates/pages/workspace.html:146
+#: codedevils_org/templates/pages/workspace.html:145
 msgid "Powered with fresh air"
 msgstr "Aangedreven door frisse lucht"
 
-#: codedevils_org/templates/pages/workspace.html:147
+#: codedevils_org/templates/pages/workspace.html:146
 msgid "It\\"
 msgstr "Het\\"
 
-#: codedevils_org/templates/pages/workspace.html:152
+#: codedevils_org/templates/pages/workspace.html:151
 msgid "Inbox"
 msgstr "Postvak IN"
 
-#: codedevils_org/templates/pages/workspace.html:156
+#: codedevils_org/templates/pages/workspace.html:155
 msgid "Calendar"
 msgstr "Kalender"
 
-#: codedevils_org/templates/pages/workspace.html:160
+#: codedevils_org/templates/pages/workspace.html:159
 msgid "Invoice"
 msgstr "Factuur"
 
-#: codedevils_org/templates/pages/workspace.html:168
+#: codedevils_org/templates/pages/workspace.html:167
 msgid "Bring your idea to life"
 msgstr "Breng uw idee tot leven"
 
-#: codedevils_org/templates/pages/workspace.html:169
+#: codedevils_org/templates/pages/workspace.html:168
 msgid ""
 "CodeDevils includes an outstanding starter for cooking up those fresh apps. "
 "With this feature you can start developing right away your web based "
@@ -1174,52 +1172,52 @@ msgstr ""
 "Met deze functie kunt u direct beginnen met het ontwikkelen van uw "
 "webapplicatie."
 
-#: codedevils_org/templates/pages/workspace.html:177
+#: codedevils_org/templates/pages/workspace.html:176
 msgid "Clean inbox UI design"
 msgstr "Schoon inbox UI-ontwerp"
 
-#: codedevils_org/templates/pages/workspace.html:183
+#: codedevils_org/templates/pages/workspace.html:182
 msgid "Outstanding calendar UI design"
 msgstr "Uitstekend kalender UI-ontwerp"
 
-#: codedevils_org/templates/pages/workspace.html:189
+#: codedevils_org/templates/pages/workspace.html:188
 msgid "Draft purchases with the invoice feature"
 msgstr "Conceptaankopen met de factuurfunctie"
 
-#: codedevils_org/templates/pages/workspace.html:205
+#: codedevils_org/templates/pages/workspace.html:204
 msgid "CodeDevil API for Workspace"
 msgstr "CodeDevil API voor werkruimte"
 
-#: codedevils_org/templates/pages/workspace.html:206
+#: codedevils_org/templates/pages/workspace.html:205
 msgid "Easy integrations for your projects"
 msgstr "Gemakkelijke integraties voor uw projecten"
 
-#: codedevils_org/templates/pages/workspace.html:207
+#: codedevils_org/templates/pages/workspace.html:206
 msgid ""
 "Seamlessly integrate your project with hosting options designed for you."
 msgstr ""
 "Integreer uw project naadloos met hostingopties die voor u zijn ontworpen."
 
-#: codedevils_org/templates/pages/workspace.html:214
+#: codedevils_org/templates/pages/workspace.html:213
 msgid "Apache Server"
 msgstr "Apache Server"
 
-#: codedevils_org/templates/pages/workspace.html:215
+#: codedevils_org/templates/pages/workspace.html:214
 msgid "Host your web application on an Apache web server."
 msgstr "Host uw webtoepassing op een Apache-webserver."
 
-#: codedevils_org/templates/pages/workspace.html:218
-#: codedevils_org/templates/pages/workspace.html:229
-#: codedevils_org/templates/pages/workspace.html:240
-#: codedevils_org/templates/pages/workspace.html:251
+#: codedevils_org/templates/pages/workspace.html:217
+#: codedevils_org/templates/pages/workspace.html:228
+#: codedevils_org/templates/pages/workspace.html:239
+#: codedevils_org/templates/pages/workspace.html:250
 msgid "Integrate"
 msgstr "Integreren"
 
-#: codedevils_org/templates/pages/workspace.html:225
+#: codedevils_org/templates/pages/workspace.html:224
 msgid "HTML 5"
 msgstr "HTML 5"
 
-#: codedevils_org/templates/pages/workspace.html:226
+#: codedevils_org/templates/pages/workspace.html:225
 msgid ""
 "Learn HTML and use it to create web pages that bring your project to the "
 "eyes of your consumers."
@@ -1227,11 +1225,11 @@ msgstr ""
 "Leer HTML en gebruik het om webpagina's te maken die uw project onder de "
 "ogen van uw consumenten brengen."
 
-#: codedevils_org/templates/pages/workspace.html:236
+#: codedevils_org/templates/pages/workspace.html:235
 msgid "Python"
 msgstr "Python"
 
-#: codedevils_org/templates/pages/workspace.html:237
+#: codedevils_org/templates/pages/workspace.html:236
 msgid ""
 "Python is growing ever-more popular, and is what this website uses! Use "
 "Python and Python-based frameworks for your applications."
@@ -1239,11 +1237,11 @@ msgstr ""
 "Python wordt steeds populairder en dat is wat deze website gebruikt! Gebruik"
 " op Python en Python gebaseerde frameworks voor uw toepassingen."
 
-#: codedevils_org/templates/pages/workspace.html:247
+#: codedevils_org/templates/pages/workspace.html:246
 msgid "CodeDevil API"
 msgstr "CodeDevil API"
 
-#: codedevils_org/templates/pages/workspace.html:248
+#: codedevils_org/templates/pages/workspace.html:247
 msgid "Use APIs provided by this website to power your application."
 msgstr ""
 "Gebruik API's die door deze website worden aangeboden om uw applicatie van "
@@ -1260,6 +1258,10 @@ msgstr "Positieorders zijn succesvol hersteld"
 #: codedevils_org/users/admin.py:61
 msgid "Rebase order starting at 1"
 msgstr "Rebase-bestelling vanaf 1"
+
+#: codedevils_org/users/admin.py:71 codedevils_org/users/models.py:161
+msgid "Position"
+msgstr "Positie"
 
 #: codedevils_org/users/apps.py:7
 msgid "Users"
@@ -1316,10 +1318,12 @@ msgid "Slack Username"
 msgstr "Slack gebruikersnaam"
 
 #: codedevils_org/users/models.py:39
-msgid "The user\"s slack user name registered on the CodeDevils slack channel"
+#| msgid ""
+#| "The user\"s slack user name registered on the CodeDevils slack channel"
+msgid "The user's slack user name registered on the CodeDevils slack channel"
 msgstr ""
-"De slappe gebruikersnaam van de gebruiker die is geregistreerd op het slappe"
-" kanaal van CodeDevils"
+"De slappe gebruikersnaam van de gebruiker geregistreerd op het CodeDevils "
+"Slack-kanaal"
 
 #: codedevils_org/users/models.py:42
 msgid "Twitter Username"
@@ -1400,20 +1404,6 @@ msgstr "Functie van officier"
 msgid "Officer positions"
 msgstr "Functies van officieren"
 
-#: codedevils_org/users/models.py:92
-#, python-brace-format
-msgid "{name}"
-msgstr "{name}"
-
-#: codedevils_org/users/models.py:93
-#, python-brace-format
-msgid "{name} <{email}>"
-msgstr "{name} <{email}>"
-
-#: codedevils_org/users/models.py:161
-msgid "Position"
-msgstr "Positie"
-
 #: codedevils_org/users/models.py:163
 msgid "User"
 msgstr "Gebruiker"
@@ -1473,3 +1463,13 @@ msgstr "Arabisch"
 #: config/settings/base.py:36
 msgid "Dutch"
 msgstr "Nederlands"
+
+#: config/settings/base.py:37
+msgid "Hindi"
+msgstr "Hindi"
+
+#~ msgid "{name}"
+#~ msgstr "{name}"
+
+#~ msgid "{name} <{email}>"
+#~ msgstr "{name} <{email}>"
