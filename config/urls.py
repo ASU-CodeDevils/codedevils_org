@@ -8,18 +8,14 @@ from django.views.generic import TemplateView
 from django_cas_ng import views as cas_views
 from rest_framework.authtoken.views import obtain_auth_token
 
+from codedevils_org import page_views
+
 # locale
 urlpatterns = i18n_patterns(
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path(
-        "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
-    ),
-    path(
-        "contactus/", TemplateView.as_view(template_name="pages/contactus.html"), name="contactus"
-    ),
-    path(
-        "workspace/", TemplateView.as_view(template_name="pages/workspace.html"), name="workspace"
-    ),
+    path("", page_views.home, name="home"),
+    path("about/", page_views.about, name="about"),
+    path("contactus/", page_views.contact_us, name="contactus"),
+    path("workspace/", page_views.workspace, name="workspace"),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # cas log in

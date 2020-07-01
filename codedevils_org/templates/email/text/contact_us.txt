@@ -1,0 +1,5 @@
+Someone has used the website contact page to send a message:
+
+{{ body }}
+
+To reply to this message, simply reply to this message.

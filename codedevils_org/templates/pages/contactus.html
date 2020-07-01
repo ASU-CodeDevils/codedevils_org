@@ -17,16 +17,19 @@ Fill out the form and we’ll be in touch as soon as possible.
                                 {% csrf_token %}
 								<div class="form-group">
 									<label for="contact_email" class="bold mb-0">{% trans 'Email address' %}</label>
-									<small id="emailHelp" class="form-text color-2 mt-0 mb-2 italic">{% trans 'We\'ll never share your email with anyone else.' %}</small>
-									<input type="email" name="Contact[email]" id="contact_email" class="form-control bg-1" placeholder="Valid Email" value="{{ user.email }}" required>
+									<small id="emailHelp" class="form-text color-2 mt-0 mb-2 italic">{% trans 'We will never share your email with anyone else.' %}</small>
+									<input type="email" name="Contact[email]" id="contact_email" class="form-control bg-1" placeholder="{% trans 'Valid Email' %}" value="{% if contact_email %}{{ email }}{% else %}{{ user.email }}{% endif %}" required>
+									{% if email_error %}<span class="small text-danger">{{ email_error }}</span>{% endif %}
 								</div>
 								<div class="form-group">
 									<label for="contact_email" class="bold">{% trans 'Subject' %}</label>
-									<input type="text" name="Contact[subject]" id="contact_subject" class="form-control bg-1" placeholder="Subject" required>
+									<input type="text" name="Contact[subject]" id="contact_subject" class="form-control bg-1" placeholder="{% trans 'Subject' %}" value="{{ subject }}" required>
+									{% if subject_error %}<span class="small text-danger">{{ subject_error }}</span>{% endif %}
 								</div>
 								<div class="form-group">
 									<label for="contact_email" class="bold">{% trans 'Message' %}</label>
-									<textarea name="Contact[message]" id="contact_message" class="form-control bg-1" placeholder="What do you want to let us know?" rows="8" required></textarea>
+									<textarea name="Contact[message]" id="contact_message" class="form-control bg-1" placeholder="{% trans 'What do you want to let us know?' %}" rows="8" value="{{ message }}" required></textarea>
+									{% if message_error %}<span class="small text-danger">{{ message_error }}</span>{% endif %}
 								</div>
 								<div class="form-group">
 									<button id="contact-submit" data-loading-text="Sending..." name="submit" type="submit" class="btn btn-accent btn-rounded">{% trans 'Send Message' %}</button>

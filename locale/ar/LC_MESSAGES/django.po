@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-30 04:42+0000\n"
-"PO-Revision-Date: 2020-06-30 04:49+0000\n"
+"POT-Creation-Date: 2020-07-01 05:59+0000\n"
+"PO-Revision-Date: 2020-07-01 06:01+0000\n"
 "Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Translated-Using: django-rosetta 0.9.4\n"
 
-#: codedevils_org/cd_url/apps.py:7
+#: codedevils_org/contrib/cd_url/apps.py:7
 msgid "CodeDevils URLs"
 msgstr "روابط مخصصة"
 
-#: codedevils_org/cd_url/models.py:14
+#: codedevils_org/contrib/cd_url/models.py:14
 msgid ""
 "The string used to reference the URL from within a Django template. The slug"
 " can only contain letters, numbers, underscores and hyphens."
@@ -31,13 +31,98 @@ msgstr ""
 "السلسلة المستخدمة للإشارة إلى الارتباط من داخل قالب Django. يمكن أن تحتوي "
 "البزاقة فقط على أحرف وأرقام وشرطات سفلية وواصلات."
 
-#: codedevils_org/cd_url/models.py:21
+#: codedevils_org/contrib/cd_url/models.py:21
 msgid "Custom URL"
 msgstr "رابط مخصص"
 
-#: codedevils_org/cd_url/models.py:22
+#: codedevils_org/contrib/cd_url/models.py:22
 msgid "Custom URLs"
 msgstr "روابط مخصصة"
+
+#: codedevils_org/contrib/email/apps.py:7
+#: codedevils_org/contrib/email/models.py:55 codedevils_org/users/models.py:82
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: codedevils_org/contrib/email/models.py:13
+msgid "Is blocked"
+msgstr "تم حظره"
+
+#: codedevils_org/contrib/email/models.py:14
+msgid "Blocks this email from contacting CodeDevils."
+msgstr "يحظر هذا البريد الإلكتروني من الاتصال CodeDevils."
+
+#: codedevils_org/contrib/email/models.py:16
+msgid "Blocked until"
+msgstr "محظور حتى"
+
+#: codedevils_org/contrib/email/models.py:17
+msgid ""
+"The date and time the email is blocked until. If not specified, this email "
+"is blocked indefinitely."
+msgstr ""
+"تاريخ ووقت حظر البريد الإلكتروني حتى. في حالة عدم التحديد ، يتم حظر هذا "
+"البريد الإلكتروني إلى أجل غير مسمى."
+
+#: codedevils_org/contrib/email/models.py:28
+msgid "Domain"
+msgstr "نطاق"
+
+#: codedevils_org/contrib/email/models.py:29
+msgid ""
+"The domain of email addresses to blacklist. This does not include subdomains"
+" as this would inadvertantly block valid domains (see documentation for "
+"more)."
+msgstr ""
+"مجال عناوين البريد الإلكتروني إلى القائمة السوداء. لا يتضمن هذا النطاقات "
+"الفرعية لأن هذا سيؤدي عن غير قصد إلى حظر المجالات الصالحة (راجع الوثائق "
+"للمزيد)."
+
+#: codedevils_org/contrib/email/models.py:37
+msgid "Blacklisted Domain"
+msgstr "المجال المدرج في القائمة السوداء"
+
+#: codedevils_org/contrib/email/models.py:38
+msgid "Blacklisted Domains"
+msgstr "المجالات المدرجة في القائمة السوداء"
+
+#: codedevils_org/contrib/email/models.py:61
+msgid "Blacklisted Email"
+msgstr "البريد الإلكتروني المدرج في القائمة السوداء"
+
+#: codedevils_org/contrib/email/models.py:62
+msgid "Blacklisted Emails"
+msgstr "رسائل البريد الإلكتروني المدرجة في القائمة السوداء"
+
+#: codedevils_org/page_views.py:32 codedevils_org/templates/_index/nav.html:18
+#: codedevils_org/templates/_index/nav.html:72
+#: codedevils_org/templates/pages/contactus.html:4
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+#: codedevils_org/page_views.py:47
+msgid "Please enter your email"
+msgstr "رجاءا أدخل بريدك الإلكتروني"
+
+#: codedevils_org/page_views.py:48
+msgid "Please enter a subject"
+msgstr "يرجى إدخال موضوع"
+
+#: codedevils_org/page_views.py:49
+msgid "Please enter a message"
+msgstr "من فضلك أدخل رسالة"
+
+#: codedevils_org/page_views.py:56
+msgid "Your email is invalid"
+msgstr "بريدك الالكتروني خاطئ"
+
+#: codedevils_org/page_views.py:60
+msgid "There was an issue with this email address"
+msgstr "حدثت مشكلة في عنوان البريد الإلكتروني هذا"
+
+#: codedevils_org/page_views.py:78
+msgid "Your message has been received and we will email you back soon."
+msgstr "تم استلام رسالتك وسنراسلك عبر البريد الإلكتروني قريبًا."
 
 #: codedevils_org/templates/_index/base.html:49
 #: codedevils_org/templates/_index/new_member_footer.html:8
@@ -174,12 +259,6 @@ msgstr "الصفحة الرئيسية"
 #: codedevils_org/templates/pages/workspace.html:10
 msgid "Workspace"
 msgstr "مساحة العمل"
-
-#: codedevils_org/templates/_index/nav.html:18
-#: codedevils_org/templates/_index/nav.html:72
-#: codedevils_org/templates/pages/contactus.html:4
-msgid "Contact Us"
-msgstr "اتصل بنا"
 
 #: codedevils_org/templates/_index/nav.html:20
 #: codedevils_org/templates/_index/nav.html:69
@@ -732,47 +811,56 @@ msgid "Email address"
 msgstr "عنوان البريد الالكترونى"
 
 #: codedevils_org/templates/pages/contactus.html:20
-#: codedevils_org/templates/pages/home.html:217
-msgid "We\\"
-msgstr "نحن\\"
+msgid "We will never share your email with anyone else."
+msgstr "لن نشارك بريدك الإلكتروني مع أي شخص آخر."
 
-#: codedevils_org/templates/pages/contactus.html:24
+#: codedevils_org/templates/pages/contactus.html:21
+#| msgid "Blacklisted Email"
+msgid "Valid Email"
+msgstr "بريد إلكتروني صالح"
+
+#: codedevils_org/templates/pages/contactus.html:25
+#: codedevils_org/templates/pages/contactus.html:26
 msgid "Subject"
 msgstr "موضوع"
 
-#: codedevils_org/templates/pages/contactus.html:28
+#: codedevils_org/templates/pages/contactus.html:30
 msgid "Message"
 msgstr "رسالة"
 
-#: codedevils_org/templates/pages/contactus.html:32
+#: codedevils_org/templates/pages/contactus.html:31
+msgid "What do you want to let us know?"
+msgstr "ماذا تريد أن تخبرنا؟"
+
+#: codedevils_org/templates/pages/contactus.html:35
 msgid "Send Message"
 msgstr "أرسل رسالة"
 
-#: codedevils_org/templates/pages/contactus.html:38
+#: codedevils_org/templates/pages/contactus.html:41
 msgid "Thank you!"
 msgstr "شكرا جزيلا!"
 
-#: codedevils_org/templates/pages/contactus.html:39
+#: codedevils_org/templates/pages/contactus.html:42
 msgid "Your message has been send, we will contact you as soon as possible."
 msgstr "تم إرسال رسالتك ، وسوف نتصل بك في أقرب وقت ممكن."
 
-#: codedevils_org/templates/pages/contactus.html:46
+#: codedevils_org/templates/pages/contactus.html:49
 msgid "Get in touch"
 msgstr "ابقى على تواصل"
 
-#: codedevils_org/templates/pages/contactus.html:50
+#: codedevils_org/templates/pages/contactus.html:53
 msgid "Arizona State University,"
 msgstr "Arizona State University,"
 
-#: codedevils_org/templates/pages/contactus.html:51
+#: codedevils_org/templates/pages/contactus.html:54
 msgid "Tempe, AZ"
 msgstr "Tempe, AZ"
 
-#: codedevils_org/templates/pages/contactus.html:90
+#: codedevils_org/templates/pages/contactus.html:93
 msgid "Project Support"
 msgstr "دعم المشاريع"
 
-#: codedevils_org/templates/pages/contactus.html:93
+#: codedevils_org/templates/pages/contactus.html:96
 msgid ""
 "Looking for a custom quote? need to tell us more about your project? or want"
 " a demonstration? drop us a line to"
@@ -780,11 +868,11 @@ msgstr ""
 "تبحث عن اقتباس مخصص؟ هل تريد أن تخبرنا المزيد عن مشروعك؟ أو تريد مظاهرة؟ "
 "مراسلتنا على الخط"
 
-#: codedevils_org/templates/pages/contactus.html:100
+#: codedevils_org/templates/pages/contactus.html:103
 msgid "Technical Support"
 msgstr "دعم فني"
 
-#: codedevils_org/templates/pages/contactus.html:103
+#: codedevils_org/templates/pages/contactus.html:106
 msgid ""
 "Any question about how to integrate your product?. Don't fret, our geek team"
 " is ready for you at"
@@ -1024,6 +1112,10 @@ msgstr ""
 "يرجى الاشتراك في قناة الركود الخاصة بنا باستخدام البريد الإلكتروني ASU الخاص"
 " بك وتقديم نفسك للمجتمع."
 
+#: codedevils_org/templates/pages/home.html:217
+msgid "We\\"
+msgstr "نحن\\"
+
 #: codedevils_org/templates/pages/home.html:219
 msgid "Slack Signup"
 msgstr "Slack سجل"
@@ -1219,12 +1311,10 @@ msgid "Use APIs provided by this website to power your application."
 msgstr "استخدم واجهات برمجة التطبيقات التي يوفرها هذا الموقع لتشغيل تطبيقك."
 
 #: codedevils_org/templates/users/user_detail.html:7
-#| msgid "CodeDevils"
 msgid "CodeDevils Profile"
 msgstr "ملف تعريف CodeDevils"
 
 #: codedevils_org/templates/users/user_detail.html:9
-#| msgid "Welcome Docs"
 msgid "Welcome Back,"
 msgstr "مرحبا بعودتك،"
 
@@ -1242,17 +1332,14 @@ msgid "User"
 msgstr "المستعمل"
 
 #: codedevils_org/templates/users/user_detail.html:45
-#| msgid "Projects"
 msgid "Current Projects"
 msgstr "المشاريع الحالية"
 
 #: codedevils_org/templates/users/user_detail.html:50
-#| msgid "CodeDevils URLs"
 msgid "CodeDevils Sponsored"
 msgstr "برعاية CodeDevils"
 
 #: codedevils_org/templates/users/user_detail.html:58
-#| msgid "Projects"
 msgid "Project:"
 msgstr "مشروع:"
 
@@ -1265,7 +1352,6 @@ msgid "You can find the work of other CodeDevils and their various projects."
 msgstr "يمكنك العثور على عمل CodeDevils ومشاريعهم المختلفة."
 
 #: codedevils_org/templates/users/user_detail.html:86
-#| msgid "Contributors"
 msgid "Continue to projects"
 msgstr "تابع المشاريع"
 
@@ -1274,12 +1360,10 @@ msgid "My Information"
 msgstr "معلوماتي"
 
 #: codedevils_org/templates/users/user_detail.html:104
-#| msgid "CodeDevils"
 msgid "CodeDevil Since"
 msgstr "CodeDevil منذ"
 
 #: codedevils_org/templates/users/user_detail.html:138
-#| msgid "About"
 msgid "About Me"
 msgstr "عني"
 
@@ -1288,19 +1372,19 @@ msgstr "عني"
 msgid "Users"
 msgstr "المستخدمون"
 
-#: codedevils_org/users/admin.py:49
+#: codedevils_org/users/admin.py:53
 msgid "There are no positions to rebase"
 msgstr "لا توجد مواقف لإعادة القاعدة"
 
-#: codedevils_org/users/admin.py:58
+#: codedevils_org/users/admin.py:62
 msgid "Position orders successfully rebased"
 msgstr "تم استرداد أوامر المركز بنجاح"
 
-#: codedevils_org/users/admin.py:61
+#: codedevils_org/users/admin.py:65
 msgid "Rebase order starting at 1"
 msgstr "طلب إعادة البدء يبدأ من واحد"
 
-#: codedevils_org/users/admin.py:71 codedevils_org/users/models.py:161
+#: codedevils_org/users/admin.py:75 codedevils_org/users/models.py:161
 msgid "Position"
 msgstr "موضع"
 
@@ -1416,10 +1500,6 @@ msgstr "موضع SunDevilSync"
 #: codedevils_org/users/models.py:80
 msgid "The name of the officer position as it is registered on SunDevilSync"
 msgstr "اسم منصب الضابط كما هو مسجل في SunDevilSync"
-
-#: codedevils_org/users/models.py:82
-msgid "Email"
-msgstr "البريد الإلكتروني"
 
 #: codedevils_org/users/models.py:83
 msgid "The email address associated to the Officer position"

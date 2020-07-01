@@ -87,7 +87,8 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "codedevils_org.users.apps.UsersConfig",
-    "codedevils_org.contrib.cd_url.apps.CDUrlConfig"
+    "codedevils_org.contrib.cd_url.apps.CDUrlConfig",
+    "codedevils_org.contrib.email.apps.EmailConfig"
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -235,6 +236,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = env("EMAIL_HOST", default="smtp.dreamhost.com")
 EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="donotreply@codedevils.org")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+EMAIL_INFO = env("EMAIL_INFO", default="info@codedevils.org")
 
 # ADMIN
 # ------------------------------------------------------------------------------
