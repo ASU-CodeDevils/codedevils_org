@@ -1,5 +1,5 @@
-Someone has used the website contact page to send a message:
+{% for paragraph in body %}
+    {{ paragraph }}
 
-{{ body }}
-
-To reply to this message, simply reply to this message.
+{% endfor %}
+The CodeDevils Team

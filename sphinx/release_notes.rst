@@ -17,6 +17,14 @@ Features
 * Language support for Spanish, French, Arabic, Dutch and Hindi
 * GitHub pages documentation
 * Travis CI integration and testing
+* Email and domain blacklisting
+* Redesigned templated emails
+
+Bug Fixes
+^^^^^^^^^
+
+* Contact Us page filtering and POST-request verification
+* 
 
 0.1.0 (2019-10-01)
 ------------------

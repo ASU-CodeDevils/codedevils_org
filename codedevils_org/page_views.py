@@ -1,9 +1,10 @@
 """Used to store any custom view actions or context for pages."""
 import logging
+import requests
 
 from django.contrib import messages
 from django.core.validators import validate_email, ValidationError
-from django.http import HttpResponseForbidden
+from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import render, redirect
 from django.utils.translation import ugettext_lazy as _
 
@@ -19,7 +20,7 @@ def home(request):
 
 def about(request):
     """Provides context to visiting the about page."""
-    return render(request, "pages/about.html")
+    return render(request, "pages/about.html", context={"title": _("About")})
 
 
 def workspace(request):
@@ -80,3 +81,24 @@ def contact_us(request):
 
     # default behavior is to return to the Contact Us page
     return render(request, "pages/contactus.html", context=context)
+
+
+def test_email(request):
+    context = {
+        "title": "Title",
+        "preheader": "This is a subtitle",
+        "body": [
+            "This is the first paragraph",
+            "This is the next",
+        ],
+        "call_to_action": {
+            "link": "https://codedevils.org",
+            "text": "Visit the website",
+        },
+        "post_call_to_action": [
+            "This is another paragraph",
+            "I feel this paragraph",
+        ]
+    }
+
+    return render(request, "email/base.html", context=context)

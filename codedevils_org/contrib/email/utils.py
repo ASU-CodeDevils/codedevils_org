@@ -11,6 +11,7 @@ from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
 
 Attachments: List[str] = None
 EmailList = Union[list, str]
+EmailBody = Union[list, str]
 User = get_user_model()
 logger = logging.getLogger("")
 
@@ -95,8 +96,10 @@ def send_contact_us_email(subject: str, reply_to: str, body: str):
         :param reply_to: The person's email who filled in the contact form.
         :param body: The email body to place in the template.
     """
+    body = ["Someone has contacted CodeDevils from the website:", body]
+    context = {"title": subject, "body": body}
     send_templated_email(subject=subject, to=settings.EMAIL_INFO, reply_to=reply_to,
-                         template="contact_us", template_context={"body": body})
+                         template="contact_us", template_context=context)
 
 
 def email_is_blacklisted(email: str):
