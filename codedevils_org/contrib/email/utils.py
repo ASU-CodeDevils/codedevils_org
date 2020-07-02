@@ -47,11 +47,8 @@ def send_email(subject: str,
     if reply_to and isinstance(reply_to, str):
         reply_to = [reply_to]
 
-    email = EmailMultiAlternatives(subject=subject, body=text_content, from_email=from_email, to=to, reply_to=reply_to)
-
-    # attach html content
-    if html_content:
-        email.attach_alternative(html_content, "text/html")
+    email = EmailMultiAlternatives(subject=subject, body=html_content or text_content, from_email=from_email, to=to,
+                                   reply_to=reply_to)
 
     # attach files
     if attachments:
