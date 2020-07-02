@@ -5,6 +5,7 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 
 from config import celery_app
 from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
@@ -18,7 +19,7 @@ logger = logging.getLogger("")
 
 @celery_app.task()
 def send_email(subject: str,
-               text_content: str,
+               text_content: str = None,
                from_email: str = settings.EMAIL_HOST_USER,
                to: EmailList = None,
                reply_to: EmailList = None,
@@ -78,8 +79,8 @@ def send_templated_email(subject: str,
         :param from_email: The from email address, default is the `EMAIL_HOST_USER`.
     """
     try:
-        text_content = render_to_string(f"email/text/{template}.txt", template_context)
-        html_content = render_to_string(f"email/html/{template}.html", template_context) 
+        html_content = render_to_string(f"email/{template}.html", template_context)
+        text_content = strip_tags(html_content)
     except FileNotFoundError as fnfe:
         logger.error("Email template not found: %s", fnfe)
         raise

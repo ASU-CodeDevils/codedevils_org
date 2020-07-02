@@ -24,7 +24,7 @@ Bug Fixes
 ^^^^^^^^^
 
 * Contact Us page filtering and POST-request verification
-* 
+* Celery worker integration fixed for synchronous tasks
 
 0.1.0 (2019-10-01)
 ------------------

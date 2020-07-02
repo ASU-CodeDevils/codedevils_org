@@ -4,7 +4,6 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
-from django.views.generic import TemplateView
 from django_cas_ng import views as cas_views
 from rest_framework.authtoken.views import obtain_auth_token
 
@@ -16,7 +15,6 @@ urlpatterns = i18n_patterns(
     path("about/", page_views.about, name="about"),
     path("contactus/", page_views.contact_us, name="contactus"),
     path("workspace/", page_views.workspace, name="workspace"),
-    path("test/", page_views.test_email, name="test"),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # cas log in

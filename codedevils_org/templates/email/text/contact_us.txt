@@ -1,5 +1,0 @@
-{% for paragraph in body %}
-    {{ paragraph }}
-
-{% endfor %}
-The CodeDevils Team
