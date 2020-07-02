@@ -81,7 +81,7 @@ def send_templated_email(subject: str,
         :param from_email: The from email address, default is the `EMAIL_HOST_USER`.
     """
     try:
-        text_content = render_to_string(f"email/text/{template}.text", template_context)
+        text_content = render_to_string(f"email/text/{template}.txt", template_context)
         html_content = render_to_string(f"email/html/{template}.html", template_context)
     except FileNotFoundError as fnfe:
         logger.error("Email template not found: %s", fnfe)
