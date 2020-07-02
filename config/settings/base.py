@@ -238,6 +238,13 @@ EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="donotreply@codedevils.org")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 EMAIL_INFO = env("EMAIL_INFO", default="info@codedevils.org")
 
+# EMAIL
+# ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#default-from-email
+DEFAULT_FROM_EMAIL = env(
+    "DJANGO_DEFAULT_FROM_EMAIL", default="CodeDevils <donotreply@codedevils.org>"
+)
+
 # ADMIN
 # ------------------------------------------------------------------------------
 # Django Admin URL.

@@ -19,7 +19,7 @@ logger = logging.getLogger("")
 @celery_app.task()
 def send_email(subject: str,
                text_content: str = None,
-               from_email: str = settings.EMAIL_HOST_USER,
+               from_email: str = settings.DEFAULT_FROM_EMAIL,
                to: EmailList = None,
                reply_to: EmailList = None,
                html_content: str = None,
