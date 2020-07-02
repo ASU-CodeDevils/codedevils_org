@@ -3,9 +3,8 @@ from typing import List, Union
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.core.mail import EmailMultiAlternatives
+from django.core.mail import EmailMultiAlternatives, BadHeaderError
 from django.template.loader import render_to_string
-from django.utils.html import strip_tags
 
 from config import celery_app
 from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
@@ -53,14 +52,17 @@ def send_email(subject: str,
     # attach html content
     if html_content:
         email.attach_alternative(html_content, "text/html")
-        email.content_subtype = "html"
 
     # attach files
     if attachments:
         for attachment in attachments:
             email.attach_file(attachment)
 
-    email.send()
+    try:
+        email.send()
+    except BadHeaderError as bhe:
+        logger.error(f"Header injection attempt: {bhe}")
+        raise
 
 
 def send_templated_email(subject: str,
@@ -79,8 +81,8 @@ def send_templated_email(subject: str,
         :param from_email: The from email address, default is the `EMAIL_HOST_USER`.
     """
     try:
-        html_content = render_to_string(f"email/{template}.html", template_context)
-        text_content = strip_tags(html_content)
+        text_content = render_to_string(f"email/text/{template}.text", template_context)
+        html_content = render_to_string(f"email/html/{template}.html", template_context)
     except FileNotFoundError as fnfe:
         logger.error("Email template not found: %s", fnfe)
         raise
