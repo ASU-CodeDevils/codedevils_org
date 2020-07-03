@@ -11,5 +11,5 @@ class BlacklistDomainSerializer(serializers.ModelSerializer):
 
 class BlacklistEmailSerializer(serializers.ModelSerializer):
     class Meta:
-        model = BlacklistDomain
+        model = BlacklistEmail
         fields = "__all__"
