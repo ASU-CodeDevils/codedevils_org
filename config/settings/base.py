@@ -81,6 +81,7 @@ THIRD_PARTY_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "django_celery_beat",
+    "graphene_django",
     "drf_yasg",
     "rest_framework",
     "rest_framework.authtoken",
@@ -345,3 +346,10 @@ DRF_YASG_DESCRIPTION = "CodeDevils user and organization management"
 DRF_YASG_TERMS_OF_SERVICE = "https://www.asu.edu/aad/manuals/acd/acd125.html"
 DRF_YASG_CONTACT_EMAIL = "webmaster@codedevils.org"
 DRF_YASG_LICENSE = "BSD License"
+
+# graphene
+# https://docs.graphene-python.org/projects/django/en/latest/
+# -------------------------------------------------------------------------------
+GRAPHENE = {
+    'SCHEMA': "config.schema.schema"
+}
