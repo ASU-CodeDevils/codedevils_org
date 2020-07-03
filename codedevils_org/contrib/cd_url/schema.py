@@ -16,6 +16,7 @@ class CustomUrlNode(DjangoObjectType):
             "name": ["exact", "icontains", "istartswith"],
             "slug": ["exact"]
         }
+        description = "Links to CodeDevils different online services"
 
 
 class Query(object):

@@ -21,8 +21,9 @@ class UserNode(DjangoObjectType):
             "receive_notifications": ["exact"],
             "city": ["exact", "icontains", "istartswith"],
             "state": ["exact", "icontains", "istartswith"],
-            "country": ["exact", "icontains", "istartswith"] 
+            "country": ["exact", "icontains", "istartswith"]
         }
+        description = "User relay node"
 
     @classmethod
     def get_queryset(cls, queryset, info):
@@ -48,6 +49,7 @@ class OfficerPositionNode(DjangoObjectType):
             "sds_position": ["exact", "icontains", "istartswith"],
             "email": ["exact", "icontains", "istartswith"],
         }
+        description = "Officer positions (i.e. President, VP, etc)"
 
 
 class OfficerNode(DjangoObjectType):
@@ -57,6 +59,7 @@ class OfficerNode(DjangoObjectType):
         filter_fields = {
             "personal_email": ["exact", "icontains", "istartswith"],
         }
+        description = "CodeDevils officers"
 
 
 class Query(object):
