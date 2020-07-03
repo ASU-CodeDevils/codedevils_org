@@ -23,6 +23,8 @@ urlpatterns = i18n_patterns(
     # User management
     path("users/", include("codedevils_org.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
+    # custom urls
+    path("", include("codedevils_org.contrib.cd_url.urls", namespace="cd_url")),
 )
 
 # API URLS
