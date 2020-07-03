@@ -42,9 +42,6 @@ class CustomUrl(models.Model):
             hours = self.notify_in * 24 if self.notify_interval == "DAYS" else self.notify_in * 720
             return hours
         return self.notify_in
-    
-    def get_absolute_url(self):
-        return reverse("cd_url:shortcut", kwargs={"slug": self.slug})
 
     class Meta:
         managed = True
