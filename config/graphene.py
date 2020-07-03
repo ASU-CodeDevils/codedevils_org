@@ -4,12 +4,10 @@ as used in django rest framework.
 """
 import json
 
-from django.conf import settings
 from django.http import HttpResponse
-from django.shortcuts import redirect
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
-from graphene_django.views import GraphQLView
+from graphene_django.views import GraphQLView  # noqa F401
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
