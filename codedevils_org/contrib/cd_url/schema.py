@@ -8,6 +8,7 @@ from .models import CustomUrl
 
 
 class CustomUrlNode(DjangoObjectType):
+    """Provides links to all CodeDevils custom URLs."""
     class Meta:
         model = CustomUrl
         interfaces = (Node,)
