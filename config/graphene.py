@@ -54,4 +54,4 @@ class AuthenticatedGraphQLView(GraphQLView):
         return super(AuthenticatedGraphQLView, self).dispatch(request, *args, **kwargs)
 
 
-private_graphql_view = AuthenticatedGraphQLView.as_view(graphiql=True, debug=settings.DEBUG)
+private_graphql_view = AuthenticatedGraphQLView.as_view(graphiql=True)
