@@ -2,7 +2,6 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.urls import path, re_path
 from django.views.decorators.csrf import csrf_exempt
-from graphene_django.views import GraphQLView
 from rest_framework.routers import DefaultRouter, SimpleRouter
 
 from codedevils_org.users.api.views import UserViewSet
