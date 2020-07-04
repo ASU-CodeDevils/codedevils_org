@@ -1,6 +1,8 @@
 """Defines the GraphQL schema for custom URLs."""
 
-from graphene import Node, ObjectType
+import graphene
+
+from graphene import Node
 from graphene_django.filter import DjangoFilterConnectionField
 from graphene_django.rest_framework.mutation import SerializerMutation
 from graphene_django.types import DjangoObjectType
@@ -29,10 +31,27 @@ class CustomUrlSerializerMutation(SerializerMutation):
         description = "Change/update a custom link"
 
 
+class DeleteCustomUrlMutation(graphene.Mutation):
+    ok = graphene.Boolean()
+
+    class Meta:
+        description = "Delete a custom link"
+
+    class Arguments:
+        slug = graphene.String()
+
+    @classmethod
+    def mutate(cls, **kwargs):
+        obj = CustomUrl.objects.get(slug=kwargs["slug"])
+        obj.delete()
+        return cls(ok=True)
+
+
 class Query(object):
-    link = Node.Field(CustomUrlNode)
+    link = graphene.Node.Field(CustomUrlNode)
     links = DjangoFilterConnectionField(CustomUrlNode)
 
 
-class Mutation(ObjectType):
+class Mutation(graphene.ObjectType):
     update_link = CustomUrlSerializerMutation.Field()
+    delete_link = DeleteCustomUrlMutation.Field()

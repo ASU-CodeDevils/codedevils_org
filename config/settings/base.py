@@ -326,6 +326,8 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.TokenAuthentication",
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 100
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
@@ -346,10 +348,20 @@ DRF_YASG_DESCRIPTION = "CodeDevils user and organization management"
 DRF_YASG_TERMS_OF_SERVICE = "https://www.asu.edu/aad/manuals/acd/acd125.html"
 DRF_YASG_CONTACT_EMAIL = "webmaster@codedevils.org"
 DRF_YASG_LICENSE = "BSD License"
+# https://drf-yasg.readthedocs.io/en/stable/security.html#describing-authentication-schemes
+SWAGGER_SETTINGS = {
+    "SECURITY_DEFINITIONS": {
+        "Token": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}
 
 # graphene
 # https://docs.graphene-python.org/projects/django/en/latest/
 # -------------------------------------------------------------------------------
 GRAPHENE = {
-    'SCHEMA': "config.schema.schema"
+    "SCHEMA": "config.graphene.schema.schema"
 }

@@ -12,4 +12,4 @@ class CustomUrlSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUrl
         read_only_fields = ["last_updated", ]
-        fields = ["id", "name", "url", "slug", "last_updated", "notify", "last_updated", "acknowledged"]
+        fields = ["id", "name", "url", "slug", "last_updated", "notify", "acknowledged"]

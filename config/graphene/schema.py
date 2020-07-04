@@ -11,7 +11,7 @@ class Query(
         user_schema.Query,
         cdurl_schema.Query,
         email_schema.Query,
-        graphene.ObjectType,
+        graphene.ObjectType
 ):
     debug = graphene.Field(DjangoDebug, name="_debug")
 

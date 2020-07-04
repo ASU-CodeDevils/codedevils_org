@@ -4,11 +4,11 @@ from django.urls import path, re_path
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.routers import DefaultRouter, SimpleRouter
 
-from codedevils_org.users.api.views import UserViewSet
+from codedevils_org.users.api.views import UserViewSet, OfficerViewSet, OfficerPositionViewSet
 from codedevils_org.contrib.cd_url.api.views import CustomUrlViewSet
 from codedevils_org.contrib.email.api.views import BlacklistDomainViewSet, BlacklistEmailViewSet
 from config.drf import schema_view
-from config.graphene import private_graphql_view
+from config.graphene.graphene import private_graphql_view
 
 if settings.DEBUG:
     router = DefaultRouter()
@@ -16,6 +16,8 @@ else:
     router = SimpleRouter()
 
 router.register("users", UserViewSet)
+router.register("officers", OfficerViewSet)
+router.register("positions", OfficerPositionViewSet)
 router.register("links", CustomUrlViewSet)
 router.register("blacklist_domains", BlacklistDomainViewSet)
 router.register("blacklist_emails", BlacklistEmailViewSet)

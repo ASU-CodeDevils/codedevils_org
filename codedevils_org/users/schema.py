@@ -1,15 +1,23 @@
 """Defines the GraphQL schema for custom URLs."""
 
-from graphene import Node, ObjectType
+import graphene
+
+from graphene import Node
 from graphene_django.filter import DjangoFilterConnectionField
 from graphene_django.rest_framework.mutation import SerializerMutation
 from graphene_django.types import DjangoObjectType
 
 from codedevils_org.users.models import User, Officer, OfficerPosition
-from codedevils_org.users.api.serializers import UserSerializer
+from codedevils_org.users.api.serializers import UserSerializer, OfficerSerializer, OfficerPositionSerializer
 
 
 class UserNode(DjangoObjectType):
+    """
+    User information who are not marked anonymous. The actualCount will have the total number of members,
+    and the resulting data will be non-anonymous users.
+    """
+    actual_count = graphene.String()
+
     class Meta:
         model = User
         interfaces = (Node,)
@@ -26,21 +34,14 @@ class UserNode(DjangoObjectType):
             "state": ["exact", "icontains", "istartswith"],
             "country": ["exact", "icontains", "istartswith"]
         }
-        description = "User relay node"
+
+    def resolve_actual_count(self):
+        return User.objects.all().count()
 
     @classmethod
     def get_queryset(cls, queryset, info):
-        """Overrides the default queryset to redact personal info if the user wishes to remain anonymous."""
-        REDACTED = "REDACTED"
-        if queryset.filter(anonymous=True).exists():
-            for user in queryset.filter(anonymous=True):
-                user.username = REDACTED
-                user.first_name = REDACTED
-                user.last_name = REDACTED
-                user.name = REDACTED
-                user.dob = REDACTED
-                user.bio = REDACTED
-        return queryset
+        """Overrides the default queryset to filter anyone who wishes to remain anonymous."""
+        return queryset.filter(anonymous=False)
 
 
 class UserSerializerMutation(SerializerMutation):
@@ -64,6 +65,30 @@ class OfficerPositionNode(DjangoObjectType):
         description = "Officer positions (i.e. President, VP, etc)"
 
 
+class OfficerPositionSerializerMutation(SerializerMutation):
+    class Meta:
+        serializer_class = OfficerPositionSerializer
+        lookup_field = "name"
+        model_operations = ["update", "patch"]
+        description = "Change/update officer position information"
+
+
+class DeleteOfficerPositionMutation(graphene.Mutation):
+    ok = graphene.Boolean()
+
+    class Meta:
+        description = "Delete an officer position"
+
+    class Arguments:
+        name = graphene.String()
+
+    @classmethod
+    def mutate(cls, **kwargs):
+        obj = OfficerPosition.objects.get(name=kwargs["name"])
+        obj.delete()
+        return cls(ok=True)
+
+
 class OfficerNode(DjangoObjectType):
     class Meta:
         model = Officer
@@ -74,7 +99,14 @@ class OfficerNode(DjangoObjectType):
         description = "CodeDevils officers"
 
 
-class Query(object):
+class OfficerSerializerMutation(SerializerMutation):
+    class Meta:
+        serializer_class = OfficerSerializer
+        model_operations = ["update", "patch"]
+        description = "Change/update officer information"
+
+
+class Query(graphene.ObjectType):
     user = Node.Field(UserNode)
     users = DjangoFilterConnectionField(UserNode)
 
@@ -85,5 +117,8 @@ class Query(object):
     officer_positions = DjangoFilterConnectionField(OfficerNode)
 
 
-class Mutation(ObjectType):
+class Mutation(graphene.ObjectType):
     update_user = UserSerializerMutation.Field()
+    update_officer = OfficerSerializerMutation.Field()
+    update_officer_position = OfficerPositionSerializerMutation.Field()
+    delete_officer_position = DeleteOfficerPositionMutation.Field()

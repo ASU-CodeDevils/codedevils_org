@@ -1,4 +1,6 @@
-from graphene import Node, ObjectType
+import graphene
+
+from graphene import Node
 from graphene_django.filter import DjangoFilterConnectionField
 from graphene_django.rest_framework.mutation import SerializerMutation
 from graphene_django.types import DjangoObjectType
@@ -23,6 +25,22 @@ class BlacklistDomainSerializerMutation(SerializerMutation):
         description = "Change/update a blacklisted domain"
 
 
+class DeleteBlacklistDomainMutation(graphene.Mutation):
+    ok = graphene.Boolean()
+
+    class Meta:
+        description = "Delete a blacklisted domain"
+
+    class Arguments:
+        domain = graphene.String()
+
+    @classmethod
+    def mutate(cls, **kwargs):
+        obj = BlacklistDomain.objects.get(domain=kwargs["domain"])
+        obj.delete()
+        return cls(ok=True)
+
+
 class BlacklistEmailNode(DjangoObjectType):
     class Meta:
         model = BlacklistEmail
@@ -39,6 +57,22 @@ class BlacklistEmailSerializerMutation(SerializerMutation):
         description = "Change/update a blacklisted email"
 
 
+class DeleteBlacklistEmailMutation(graphene.Mutation):
+    ok = graphene.Boolean()
+
+    class Meta:
+        description = "Delete a blacklisted email"
+
+    class Arguments:
+        email = graphene.String()
+
+    @classmethod
+    def mutate(cls, **kwargs):
+        obj = BlacklistEmail.objects.get(email=kwargs["email"])
+        obj.delete()
+        return cls(ok=True)
+
+
 class Query(object):
     domain = Node.Field(BlacklistDomainNode)
     domains = DjangoFilterConnectionField(BlacklistDomainNode)
@@ -47,6 +81,8 @@ class Query(object):
     emails = DjangoFilterConnectionField(BlacklistEmailNode)
 
 
-class Mutation(ObjectType):
+class Mutation(graphene.ObjectType):
     update_domain = BlacklistDomainSerializerMutation.Field()
     update_email = BlacklistEmailSerializerMutation.Field()
+    delete_blacklist_domain = DeleteBlacklistDomainMutation.Field()
+    delete_blacklist_email = DeleteBlacklistEmailMutation.Field()
