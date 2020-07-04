@@ -18,9 +18,9 @@ Supported Languages
 Translating the Project
 -----------------------
 
-Languages are defined as locales in the project 
-`base settings module <https://github.com/ASU-CodeDevils/codedevils_org/blob/master/config/settings/base.py>`.
-The default is set to `en-us`:
+Languages are defined as locales in the project `base settings module`_. The default is set to `en-us`:
+
+.. _`base settings module`: https://github.com/ASU-CodeDevils/codedevils_org/blob/master/config/settings/base.py
 
 .. code:: python
 

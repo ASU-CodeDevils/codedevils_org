@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-30 04:42+0000\n"
-"PO-Revision-Date: 2020-06-30 04:51+0000\n"
+"POT-Creation-Date: 2020-07-02 06:34+0000\n"
+"PO-Revision-Date: 2020-07-02 06:49+0000\n"
 "Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.4\n"
 
-#: codedevils_org/cd_url/apps.py:7
+#: codedevils_org/contrib/cd_url/apps.py:7
 msgid "CodeDevils URLs"
 msgstr "CodeDevils-koppelingen"
 
-#: codedevils_org/cd_url/models.py:14
+#: codedevils_org/contrib/cd_url/models.py:14
 msgid ""
 "The string used to reference the URL from within a Django template. The slug"
 " can only contain letters, numbers, underscores and hyphens."
@@ -32,13 +32,106 @@ msgstr ""
 "Django-sjabloon. De slak mag alleen letters, cijfers, onderstrepingstekens "
 "en koppeltekens bevatten."
 
-#: codedevils_org/cd_url/models.py:21
+#: codedevils_org/contrib/cd_url/models.py:21
 msgid "Custom URL"
 msgstr "Aangepaste link"
 
-#: codedevils_org/cd_url/models.py:22
+#: codedevils_org/contrib/cd_url/models.py:22
 msgid "Custom URLs"
 msgstr "Aangepaste links"
+
+#: codedevils_org/contrib/email/apps.py:7
+#: codedevils_org/contrib/email/models.py:55 codedevils_org/users/models.py:82
+msgid "Email"
+msgstr "E-mail"
+
+#: codedevils_org/contrib/email/models.py:13
+msgid "Is blocked"
+msgstr "Is geblokkeerd"
+
+#: codedevils_org/contrib/email/models.py:14
+msgid "Blocks this email from contacting CodeDevils."
+msgstr "Blokkeert deze e-mail om contact op te nemen met CodeDevils."
+
+#: codedevils_org/contrib/email/models.py:16
+msgid "Blocked until"
+msgstr "Geblokkeerd tot"
+
+#: codedevils_org/contrib/email/models.py:17
+msgid ""
+"The date and time the email is blocked until. If not specified, this email "
+"is blocked indefinitely."
+msgstr ""
+"De datum en tijd waarop de e-mail wordt geblokkeerd tot. Indien niet "
+"gespecificeerd, wordt deze e-mail voor onbepaalde tijd geblokkeerd."
+
+#: codedevils_org/contrib/email/models.py:28
+msgid "Domain"
+msgstr "Domein"
+
+#: codedevils_org/contrib/email/models.py:29
+msgid ""
+"The domain of email addresses to blacklist. This does not include subdomains"
+" as this would inadvertantly block valid domains (see documentation for "
+"more)."
+msgstr ""
+"Het domein van e-mailadressen op de zwarte lijst. Dit omvat geen subdomeinen"
+" omdat dit onbedoeld geldige domeinen zou blokkeren (zie documentatie voor "
+"meer)."
+
+#: codedevils_org/contrib/email/models.py:37
+msgid "Blacklisted Domain"
+msgstr "Domein op de zwarte lijst"
+
+#: codedevils_org/contrib/email/models.py:38
+msgid "Blacklisted Domains"
+msgstr "Op de zwarte lijst geplaatste domeinen"
+
+#: codedevils_org/contrib/email/models.py:61
+msgid "Blacklisted Email"
+msgstr "E-mail op zwarte lijst"
+
+#: codedevils_org/contrib/email/models.py:62
+msgid "Blacklisted Emails"
+msgstr "E-mails op de zwarte lijst"
+
+#: codedevils_org/page_views.py:22
+#: codedevils_org/templates/_index/footer.html:14
+#: codedevils_org/templates/_index/nav.html:14
+#: codedevils_org/templates/_index/nav.html:62
+#: codedevils_org/users/models.py:22
+msgid "About"
+msgstr "Over"
+
+#: codedevils_org/page_views.py:32 codedevils_org/templates/_index/nav.html:18
+#: codedevils_org/templates/_index/nav.html:72
+#: codedevils_org/templates/pages/contactus.html:4
+msgid "Contact Us"
+msgstr "Neem contact op"
+
+#: codedevils_org/page_views.py:47
+msgid "Please enter your email"
+msgstr "Vul alstublieft uw e-mailadres in"
+
+#: codedevils_org/page_views.py:48
+msgid "Please enter a subject"
+msgstr "Voer een onderwerp in"
+
+#: codedevils_org/page_views.py:49
+msgid "Please enter a message"
+msgstr "Voer een bericht in"
+
+#: codedevils_org/page_views.py:56
+msgid "Your email is invalid"
+msgstr "Uw e-mailadres is ongeldig"
+
+#: codedevils_org/page_views.py:60
+msgid "There was an issue with this email address"
+msgstr "Er is een probleem met dit e-mailadres"
+
+#: codedevils_org/page_views.py:78
+msgid "Your message has been received and we will email you back soon."
+msgstr "Uw bericht is ontvangen en we zullen u binnenkort een e-mail sturen."
 
 #: codedevils_org/templates/_index/base.html:49
 #: codedevils_org/templates/_index/new_member_footer.html:8
@@ -108,13 +201,6 @@ msgstr ""
 msgid "Organization"
 msgstr "Organisatie"
 
-#: codedevils_org/templates/_index/footer.html:14
-#: codedevils_org/templates/_index/nav.html:14
-#: codedevils_org/templates/_index/nav.html:62
-#: codedevils_org/users/models.py:22
-msgid "About"
-msgstr "Over"
-
 #: codedevils_org/templates/_index/footer.html:15
 msgid "Leadership"
 msgstr "Leiderschap"
@@ -177,12 +263,6 @@ msgstr "Huis"
 #: codedevils_org/templates/pages/workspace.html:10
 msgid "Workspace"
 msgstr "Werkruimte"
-
-#: codedevils_org/templates/_index/nav.html:18
-#: codedevils_org/templates/_index/nav.html:72
-#: codedevils_org/templates/pages/contactus.html:4
-msgid "Contact Us"
-msgstr "Neem contact op"
 
 #: codedevils_org/templates/_index/nav.html:20
 #: codedevils_org/templates/_index/nav.html:69
@@ -520,6 +600,35 @@ msgstr ""
 msgid "%(message)s"
 msgstr "%(message)s"
 
+#: codedevils_org/templates/email/base.html:7
+#| msgid "CodeDevils - Develop. Network. Create."
+msgid "CodeDevils - Develop. Network. Create"
+msgstr "CodeDevils - Ontwikkelen. Netwerk. Creëer"
+
+#: codedevils_org/templates/email/base.html:401
+#| msgid "CodeDevils"
+msgid "The CodeDevils Team"
+msgstr "Het CodeDevils-team"
+
+#: codedevils_org/templates/email/base.html:416
+#| msgid ""
+#| "Welcome to CodeDevils - We are An ASU student run organization"
+msgid "CodeDevils - An Arizona State University student organization"
+msgstr "CodeDevils - Een studentenorganisatie van de Arizona State University"
+
+#: codedevils_org/templates/email/base.html:417
+#| msgid "Receive notifications"
+msgid "To stop these notifications, "
+msgstr "Om deze meldingen te stoppen,"
+
+#: codedevils_org/templates/email/base.html:417
+msgid "unsubscribe"
+msgstr "Afmelden"
+
+#: codedevils_org/templates/email/base.html:422
+msgid "Visit our website"
+msgstr "Bezoek onze website"
+
 #: codedevils_org/templates/pages/about.html:4
 msgid "About Us"
 msgstr "Over ons"
@@ -745,48 +854,56 @@ msgid "Email address"
 msgstr "E-mailadres"
 
 #: codedevils_org/templates/pages/contactus.html:20
-#: codedevils_org/templates/pages/home.html:217
-msgid "We\\"
-msgstr "Wij\\"
+msgid "We will never share your email with anyone else."
+msgstr "We zullen uw e-mail nooit met iemand anders delen."
 
-#: codedevils_org/templates/pages/contactus.html:24
+#: codedevils_org/templates/pages/contactus.html:21
+msgid "Valid Email"
+msgstr "Geldige email"
+
+#: codedevils_org/templates/pages/contactus.html:25
+#: codedevils_org/templates/pages/contactus.html:26
 msgid "Subject"
 msgstr "Onderwerpen"
 
-#: codedevils_org/templates/pages/contactus.html:28
+#: codedevils_org/templates/pages/contactus.html:30
 msgid "Message"
 msgstr "Bericht"
 
-#: codedevils_org/templates/pages/contactus.html:32
+#: codedevils_org/templates/pages/contactus.html:31
+msgid "What do you want to let us know?"
+msgstr "Wat wil je ons laten weten?"
+
+#: codedevils_org/templates/pages/contactus.html:35
 msgid "Send Message"
 msgstr "Bericht versturen"
 
-#: codedevils_org/templates/pages/contactus.html:38
+#: codedevils_org/templates/pages/contactus.html:41
 msgid "Thank you!"
 msgstr "Dank u!"
 
-#: codedevils_org/templates/pages/contactus.html:39
+#: codedevils_org/templates/pages/contactus.html:42
 msgid "Your message has been send, we will contact you as soon as possible."
 msgstr ""
 "Uw bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op."
 
-#: codedevils_org/templates/pages/contactus.html:46
+#: codedevils_org/templates/pages/contactus.html:49
 msgid "Get in touch"
 msgstr "Kom in contact"
 
-#: codedevils_org/templates/pages/contactus.html:50
+#: codedevils_org/templates/pages/contactus.html:53
 msgid "Arizona State University,"
 msgstr "Staatsuniversiteit van Arizona,"
 
-#: codedevils_org/templates/pages/contactus.html:51
+#: codedevils_org/templates/pages/contactus.html:54
 msgid "Tempe, AZ"
 msgstr "Tempe, AZ"
 
-#: codedevils_org/templates/pages/contactus.html:90
+#: codedevils_org/templates/pages/contactus.html:93
 msgid "Project Support"
 msgstr "Projectondersteuning"
 
-#: codedevils_org/templates/pages/contactus.html:93
+#: codedevils_org/templates/pages/contactus.html:96
 msgid ""
 "Looking for a custom quote? need to tell us more about your project? or want"
 " a demonstration? drop us a line to"
@@ -794,11 +911,11 @@ msgstr ""
 "Op zoek naar een offerte op maat? wilt u ons meer vertellen over uw project?"
 " of wil je een demonstratie? stuur ons een bericht naar"
 
-#: codedevils_org/templates/pages/contactus.html:100
+#: codedevils_org/templates/pages/contactus.html:103
 msgid "Technical Support"
 msgstr "Technische ondersteuning"
 
-#: codedevils_org/templates/pages/contactus.html:103
+#: codedevils_org/templates/pages/contactus.html:106
 msgid ""
 "Any question about how to integrate your product?. Don't fret, our geek team"
 " is ready for you at"
@@ -1048,6 +1165,10 @@ msgstr ""
 "Meld u aan voor ons slappe kanaal met uw ASU-e-mail en stel uzelf voor aan "
 "de gemeenschap."
 
+#: codedevils_org/templates/pages/home.html:217
+msgid "We\\"
+msgstr "Wij\\"
+
 #: codedevils_org/templates/pages/home.html:219
 msgid "Slack Signup"
 msgstr "Slack Aanmelden"
@@ -1250,12 +1371,10 @@ msgstr ""
 "stroom te voorzien."
 
 #: codedevils_org/templates/users/user_detail.html:7
-#| msgid "CodeDevils"
 msgid "CodeDevils Profile"
 msgstr "CodeDevils-profiel"
 
 #: codedevils_org/templates/users/user_detail.html:9
-#| msgid "Welcome Docs"
 msgid "Welcome Back,"
 msgstr "Welkom terug,"
 
@@ -1273,17 +1392,14 @@ msgid "User"
 msgstr "Gebruiker"
 
 #: codedevils_org/templates/users/user_detail.html:45
-#| msgid "Projects"
 msgid "Current Projects"
 msgstr "Huidige projecten"
 
 #: codedevils_org/templates/users/user_detail.html:50
-#| msgid "CodeDevils URLs"
 msgid "CodeDevils Sponsored"
 msgstr "CodeDevils gesponsord"
 
 #: codedevils_org/templates/users/user_detail.html:58
-#| msgid "Projects"
 msgid "Project:"
 msgstr "Project:"
 
@@ -1298,7 +1414,6 @@ msgstr ""
 "vinden."
 
 #: codedevils_org/templates/users/user_detail.html:86
-#| msgid "Contributors"
 msgid "Continue to projects"
 msgstr "Ga door naar projecten"
 
@@ -1307,12 +1422,10 @@ msgid "My Information"
 msgstr "Mijn informatie"
 
 #: codedevils_org/templates/users/user_detail.html:104
-#| msgid "CodeDevils"
 msgid "CodeDevil Since"
 msgstr "CodeDevil Sinds"
 
 #: codedevils_org/templates/users/user_detail.html:138
-#| msgid "About"
 msgid "About Me"
 msgstr "Over mij"
 
@@ -1321,19 +1434,19 @@ msgstr "Over mij"
 msgid "Users"
 msgstr "Gebruikers"
 
-#: codedevils_org/users/admin.py:49
+#: codedevils_org/users/admin.py:53
 msgid "There are no positions to rebase"
 msgstr "Er zijn geen posities om te rebasen"
 
-#: codedevils_org/users/admin.py:58
+#: codedevils_org/users/admin.py:62
 msgid "Position orders successfully rebased"
 msgstr "Positieorders zijn succesvol hersteld"
 
-#: codedevils_org/users/admin.py:61
+#: codedevils_org/users/admin.py:65
 msgid "Rebase order starting at 1"
 msgstr "Rebase-bestelling vanaf 1"
 
-#: codedevils_org/users/admin.py:71 codedevils_org/users/models.py:161
+#: codedevils_org/users/admin.py:75 codedevils_org/users/models.py:161
 msgid "Position"
 msgstr "Positie"
 
@@ -1456,10 +1569,6 @@ msgid "The name of the officer position as it is registered on SunDevilSync"
 msgstr ""
 "De naam van de officiersfunctie zoals deze is geregistreerd op SunDevilSync"
 
-#: codedevils_org/users/models.py:82
-msgid "Email"
-msgstr "E-mail"
-
 #: codedevils_org/users/models.py:83
 msgid "The email address associated to the Officer position"
 msgstr "Het e-mailadres dat is gekoppeld aan de functie van officier"
@@ -1507,6 +1616,14 @@ msgstr "Officieren"
 #: codedevils_org/users/views.py:34
 msgid "Infos successfully updated"
 msgstr "Infos succesvol bijgewerkt"
+
+#: codedevils_org/users/views.py:61
+msgid ""
+"Email notifications have been turned off. Turn them back on by editing your "
+"profile."
+msgstr ""
+"E-mailmeldingen zijn uitgeschakeld. Schakel ze weer in door uw profiel te "
+"bewerken."
 
 #: config/settings/base.py:32
 msgid "Spanish"

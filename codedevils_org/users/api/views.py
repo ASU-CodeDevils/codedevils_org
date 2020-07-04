@@ -1,11 +1,12 @@
 from django.contrib.auth import get_user_model
 from rest_framework import status
 from rest_framework.decorators import action
-from rest_framework.mixins import ListModelMixin, RetrieveModelMixin, UpdateModelMixin
+from rest_framework.mixins import ListModelMixin, RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
-from .serializers import UserSerializer
+from codedevils_org.users.models import Officer, OfficerPosition
+from .serializers import UserSerializer, OfficerSerializer, OfficerPositionSerializer
 
 User = get_user_model()
 
@@ -15,10 +16,27 @@ class UserViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMixin, GenericV
     queryset = User.objects.all()
     lookup_field = "username"
 
-    def get_queryset(self, *args, **kwargs):
-        return self.queryset.filter(id=self.request.user.id)
+    def get_queryset(self):
+        return self.queryset.filter(anonymous=True)
 
     @action(detail=False, methods=["GET"])
     def me(self, request):
         serializer = UserSerializer(request.user, context={"request": request})
         return Response(status=status.HTTP_200_OK, data=serializer.data)
+
+
+class OfficerViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMixin, DestroyModelMixin, GenericViewSet):
+    serializer_class = OfficerSerializer
+    queryset = Officer.objects.all()
+
+    def get_queryset(self):
+        return self.queryset
+
+
+class OfficerPositionViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMixin, DestroyModelMixin, GenericViewSet):
+    serializer_class = OfficerPositionSerializer
+    queryset = OfficerPosition.objects.all()
+    lookup_field = "name"
+
+    def get_queryset(self):
+        return self.queryset

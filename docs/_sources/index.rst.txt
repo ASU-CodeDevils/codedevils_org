@@ -62,7 +62,7 @@ Support
 
 Our webmasters develop and maintain the website and can be reached via `email`_.
 For general information, including questions about the website, the organization, or how to become a member,
-reach out to .. `our officers directly`_.
+reach out to `our officers directly`_.
 
 .. _`our officers directly`: mailto:info@codedevils.org
 
@@ -74,8 +74,12 @@ reach out to .. `our officers directly`_.
    :caption: Contents:
 
    installation
+   custom_urls
+   emails
    languages
    release_notes
+   versioning
+   api/index
 
 Indices and tables
 ==================

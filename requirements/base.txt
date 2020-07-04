@@ -20,9 +20,13 @@ django-redis==4.11.0  # https://github.com/jazzband/django-redis
 django-countries==6.1.2
 # Django REST Framework
 djangorestframework==3.11.0  # https://github.com/encode/django-rest-framework
+# Django Graphene
+django-filter==2.3.0  # https://django-filter.readthedocs.io/en/stable
+graphene-django==2.11.0  # https://github.com/graphql-python/graphene-django
 
 # Custom
 # ------------------------------------------------------------------------------
 django-localflavor==3.0.1  # https://pypi.org/project/django-localflavor/
 django-countries==6.1.2  # https://github.com/SmileyChris/django-countries
 django-cas-ng==4.1.1  # https://djangocas.dev/
+drf-yasg==1.17.1  # https://drf-yasg.readthedocs.io/en/stable/index.html

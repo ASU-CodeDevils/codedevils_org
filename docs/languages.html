@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Release Notes" href="release_notes.html" />
-    <link rel="prev" title="Installation" href="installation.html" /> 
+    <link rel="prev" title="Custom URLs" href="custom_urls.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,6 +85,7 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_urls.html">Custom URLs</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Languages</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#supported-languages">Supported Languages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#translating-the-project">Translating the Project</a></li>
@@ -96,6 +97,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a></li>
 </ul>
 
             
@@ -177,9 +179,7 @@ website where ever possible to make communication easier.</p>
 </div>
 <div class="section" id="translating-the-project">
 <h2>Translating the Project<a class="headerlink" href="#translating-the-project" title="Permalink to this headline">¶</a></h2>
-<p>Languages are defined as locales in the project
-<cite>base settings module &lt;https://github.com/ASU-CodeDevils/codedevils_org/blob/master/config/settings/base.py&gt;</cite>.
-The default is set to <cite>en-us</cite>:</p>
+<p>Languages are defined as locales in the project <a class="reference external" href="https://github.com/ASU-CodeDevils/codedevils_org/blob/master/config/settings/base.py">base settings module</a>. The default is set to <cite>en-us</cite>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="s2">&quot;DJANGO_LANGUAGE_CODE&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;en-us&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -252,6 +252,24 @@ for use:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./manage.py compilemessages -l de
 </pre></div>
 </div>
+<p>The language will also need to be added to the <cite>public/js/site.js</cite> file <cite>TYPED_LANGUAGES</cite> object
+with the translation. The translations (in order) are <em>Network. Develop. Create</em>:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">TYPED_LAGUAGES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;en-us&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Network.&#39;</span><span class="p">,</span> <span class="s1">&#39;Develop.&#39;</span><span class="p">,</span> <span class="s1">&#39;Create&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;ar&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;شبكة الاتصال.&#39;</span><span class="p">,</span> <span class="s1">&#39;طور.&#39;</span><span class="p">,</span> <span class="s1">&#39;خلق.&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;cmn&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;網絡。&#39;</span><span class="p">,</span> <span class="s1">&#39;發展。&#39;</span><span class="p">,</span> <span class="s1">&#39;創造。&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;es&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Red.&#39;</span><span class="p">,</span> <span class="s1">&#39;Desarrollar.&#39;</span><span class="p">,</span> <span class="s1">&#39;Crear.&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;fr&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Réseau.&#39;</span><span class="p">,</span> <span class="s1">&#39;Développer.&#39;</span><span class="p">,</span> <span class="s1">&#39;Créer.&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;nl&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Netwerk.&#39;</span><span class="p">,</span> <span class="s1">&#39;Ontwikkelen.&#39;</span><span class="p">,</span> <span class="s1">&#39;Creëer.&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;hi&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;नेटवर्क।&#39;</span><span class="p">,</span> <span class="s1">&#39;का विकास करना।&#39;</span><span class="p">,</span> <span class="s1">&#39;सृजन करना।&#39;</span><span class="p">],</span>
+
+    <span class="c1">// add languages</span>
+    <span class="s1">&#39;de&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Netzwerk.&#39;</span><span class="p">,</span> <span class="s1">&#39;Sich entwickeln.&#39;</span><span class="p">,</span> <span class="s1">&#39;Erstellen.&#39;</span><span class="p">]</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Note that the language code needs to be the same as the locale. The typed sequence on the
+home page should now reflect the tranlsation.</p>
 </div>
 </div>
 </div>
@@ -267,7 +285,7 @@ for use:</p>
         <a href="release_notes.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="custom_urls.html" class="btn btn-neutral float-left" title="Custom URLs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

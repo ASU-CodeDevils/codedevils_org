@@ -81,13 +81,16 @@ THIRD_PARTY_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "django_celery_beat",
+    "graphene_django",
+    "drf_yasg",
     "rest_framework",
     "rest_framework.authtoken",
 ]
 
 LOCAL_APPS = [
     "codedevils_org.users.apps.UsersConfig",
-    "codedevils_org.cd_url.apps.CDUrlConfig"
+    "codedevils_org.contrib.cd_url.apps.CDUrlConfig",
+    "codedevils_org.contrib.email.apps.EmailConfig"
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -235,6 +238,14 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = env("EMAIL_HOST", default="smtp.dreamhost.com")
 EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="donotreply@codedevils.org")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+EMAIL_INFO = env("EMAIL_INFO", default="info@codedevils.org")
+
+# EMAIL
+# ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#default-from-email
+DEFAULT_FROM_EMAIL = env(
+    "DJANGO_DEFAULT_FROM_EMAIL", default="CodeDevils <donotreply@codedevils.org>"
+)
 
 # ADMIN
 # ------------------------------------------------------------------------------
@@ -256,7 +267,7 @@ LOGGING = {
     "formatters": {
         "verbose": {
             "format": "%(levelname)s %(asctime)s %(module)s "
-            "%(process)d %(thread)d %(message)s"
+                      "%(process)d %(thread)d %(message)s"
         }
     },
     "handlers": {
@@ -311,10 +322,12 @@ SOCIALACCOUNT_ADAPTER = "codedevils_org.users.adapters.SocialAccountAdapter"
 # django-rest-framework - https://www.django-rest-framework.org/api-guide/settings/
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework.authentication.SessionAuthentication",
+        # "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 100
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
@@ -324,3 +337,31 @@ INSTALLED_APPS += ["django_cas_ng"]
 MIDDLEWARE += ["django_cas_ng.middleware.CASMiddleware"]
 AUTHENTICATION_BACKENDS += ["django_cas_ng.backends.CASBackend"]
 CAS_VERSION = "3"
+
+# drf-yasg
+# https://drf-yasg.readthedocs.io/en/stable/readme.html#usage
+# -------------------------------------------------------------------------------
+DRF_YASG_TITLE = "CodeDevils SSO API"
+DRF_YASG_LOGO = STATIC_URL + "img/logo-light.png"
+DRF_YASG_DEFAULT_VERSION = "v1"
+DRF_YASG_DESCRIPTION = "CodeDevils user and organization management"
+DRF_YASG_TERMS_OF_SERVICE = "https://www.asu.edu/aad/manuals/acd/acd125.html"
+DRF_YASG_CONTACT_EMAIL = "webmaster@codedevils.org"
+DRF_YASG_LICENSE = "BSD License"
+# https://drf-yasg.readthedocs.io/en/stable/security.html#describing-authentication-schemes
+SWAGGER_SETTINGS = {
+    "SECURITY_DEFINITIONS": {
+        "Token": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}
+
+# graphene
+# https://docs.graphene-python.org/projects/django/en/latest/
+# -------------------------------------------------------------------------------
+GRAPHENE = {
+    "SCHEMA": "config.graphene.schema.schema"
+}

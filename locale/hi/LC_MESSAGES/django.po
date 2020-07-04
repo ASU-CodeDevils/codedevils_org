@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-30 04:42+0000\n"
-"PO-Revision-Date: 2020-06-30 04:52+0000\n"
+"POT-Creation-Date: 2020-07-02 06:34+0000\n"
+"PO-Revision-Date: 2020-07-02 06:51+0000\n"
 "Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.4\n"
 
-#: codedevils_org/cd_url/apps.py:7
+#: codedevils_org/contrib/cd_url/apps.py:7
 msgid "CodeDevils URLs"
 msgstr "कोडडिविल्स लिंक"
 
-#: codedevils_org/cd_url/models.py:14
+#: codedevils_org/contrib/cd_url/models.py:14
 msgid ""
 "The string used to reference the URL from within a Django template. The slug"
 " can only contain letters, numbers, underscores and hyphens."
@@ -32,13 +32,106 @@ msgstr ""
 "किया जाता है। स्लग में केवल अक्षर, संख्या, अंडरस्कोर और हाइफ़न शामिल हो सकते"
 " हैं।"
 
-#: codedevils_org/cd_url/models.py:21
+#: codedevils_org/contrib/cd_url/models.py:21
 msgid "Custom URL"
 msgstr "विशिष्ट संबंध"
 
-#: codedevils_org/cd_url/models.py:22
+#: codedevils_org/contrib/cd_url/models.py:22
 msgid "Custom URLs"
 msgstr "कस्टम लिंक"
+
+#: codedevils_org/contrib/email/apps.py:7
+#: codedevils_org/contrib/email/models.py:55 codedevils_org/users/models.py:82
+msgid "Email"
+msgstr "ईमेल"
+
+#: codedevils_org/contrib/email/models.py:13
+msgid "Is blocked"
+msgstr "बंद किया गया है"
+
+#: codedevils_org/contrib/email/models.py:14
+msgid "Blocks this email from contacting CodeDevils."
+msgstr "इस ईमेल को CodeDevils से संपर्क करने से रोकता है।"
+
+#: codedevils_org/contrib/email/models.py:16
+msgid "Blocked until"
+msgstr "तक रोक दिया गया"
+
+#: codedevils_org/contrib/email/models.py:17
+msgid ""
+"The date and time the email is blocked until. If not specified, this email "
+"is blocked indefinitely."
+msgstr ""
+"ईमेल को दिनांक और समय तक अवरुद्ध कर दिया जाता है। यदि निर्दिष्ट नहीं है, तो "
+"यह ईमेल अनिश्चित काल तक अवरुद्ध है।"
+
+#: codedevils_org/contrib/email/models.py:28
+msgid "Domain"
+msgstr "डोमेन"
+
+#: codedevils_org/contrib/email/models.py:29
+msgid ""
+"The domain of email addresses to blacklist. This does not include subdomains"
+" as this would inadvertantly block valid domains (see documentation for "
+"more)."
+msgstr ""
+"ईमेल का डोमेन ब्लैकलिस्ट करने के लिए संबोधित करता है। इसमें उप-डोमेन शामिल "
+"नहीं हैं क्योंकि यह अनजाने में मान्य डोमेन को ब्लॉक करेगा (अधिक के लिए "
+"प्रलेखन देखें)।"
+
+#: codedevils_org/contrib/email/models.py:37
+msgid "Blacklisted Domain"
+msgstr "ब्लैक लिस्टेड डोमेन"
+
+#: codedevils_org/contrib/email/models.py:38
+msgid "Blacklisted Domains"
+msgstr "ब्लैक लिस्टेड डोमेन"
+
+#: codedevils_org/contrib/email/models.py:61
+msgid "Blacklisted Email"
+msgstr "ब्लैक लिस्टेड ईमेल"
+
+#: codedevils_org/contrib/email/models.py:62
+msgid "Blacklisted Emails"
+msgstr "ब्लैक लिस्टेड ईमेल"
+
+#: codedevils_org/page_views.py:22
+#: codedevils_org/templates/_index/footer.html:14
+#: codedevils_org/templates/_index/nav.html:14
+#: codedevils_org/templates/_index/nav.html:62
+#: codedevils_org/users/models.py:22
+msgid "About"
+msgstr "के बारे में"
+
+#: codedevils_org/page_views.py:32 codedevils_org/templates/_index/nav.html:18
+#: codedevils_org/templates/_index/nav.html:72
+#: codedevils_org/templates/pages/contactus.html:4
+msgid "Contact Us"
+msgstr "संपर्क करें"
+
+#: codedevils_org/page_views.py:47
+msgid "Please enter your email"
+msgstr "अपना ईमेल दर्ज करें"
+
+#: codedevils_org/page_views.py:48
+msgid "Please enter a subject"
+msgstr "कृपया एक विषय दर्ज करें"
+
+#: codedevils_org/page_views.py:49
+msgid "Please enter a message"
+msgstr "कृपया एक संदेश दर्ज करें"
+
+#: codedevils_org/page_views.py:56
+msgid "Your email is invalid"
+msgstr "आपका ईमेल अमान्य है"
+
+#: codedevils_org/page_views.py:60
+msgid "There was an issue with this email address"
+msgstr "इस ईमेल पते के साथ एक समस्या थी"
+
+#: codedevils_org/page_views.py:78
+msgid "Your message has been received and we will email you back soon."
+msgstr "आपका संदेश प्राप्त हो गया है और हम आपको जल्द ही वापस ईमेल करेंगे।"
 
 #: codedevils_org/templates/_index/base.html:49
 #: codedevils_org/templates/_index/new_member_footer.html:8
@@ -108,13 +201,6 @@ msgstr ""
 msgid "Organization"
 msgstr "संगठन"
 
-#: codedevils_org/templates/_index/footer.html:14
-#: codedevils_org/templates/_index/nav.html:14
-#: codedevils_org/templates/_index/nav.html:62
-#: codedevils_org/users/models.py:22
-msgid "About"
-msgstr "के बारे में"
-
 #: codedevils_org/templates/_index/footer.html:15
 msgid "Leadership"
 msgstr "नेतृत्व"
@@ -177,12 +263,6 @@ msgstr "घर"
 #: codedevils_org/templates/pages/workspace.html:10
 msgid "Workspace"
 msgstr "कार्यस्थान"
-
-#: codedevils_org/templates/_index/nav.html:18
-#: codedevils_org/templates/_index/nav.html:72
-#: codedevils_org/templates/pages/contactus.html:4
-msgid "Contact Us"
-msgstr "संपर्क करें"
 
 #: codedevils_org/templates/_index/nav.html:20
 #: codedevils_org/templates/_index/nav.html:69
@@ -522,6 +602,35 @@ msgstr ""
 msgid "%(message)s"
 msgstr "%(message)s"
 
+#: codedevils_org/templates/email/base.html:7
+#| msgid "CodeDevils - Develop. Network. Create."
+msgid "CodeDevils - Develop. Network. Create"
+msgstr "CodeDevils - विकसित करें। नेटवर्क। सृजन करना"
+
+#: codedevils_org/templates/email/base.html:401
+#| msgid "CodeDevils"
+msgid "The CodeDevils Team"
+msgstr "CodeDevils टीम"
+
+#: codedevils_org/templates/email/base.html:416
+#| msgid ""
+#| "Welcome to CodeDevils - We are An ASU student run organization"
+msgid "CodeDevils - An Arizona State University student organization"
+msgstr "CodeDevils - एक एरिजोना राज्य विश्वविद्यालय के छात्र संगठन"
+
+#: codedevils_org/templates/email/base.html:417
+#| msgid "Receive notifications"
+msgid "To stop these notifications, "
+msgstr "इन सूचनाओं को रोकने के लिए,"
+
+#: codedevils_org/templates/email/base.html:417
+msgid "unsubscribe"
+msgstr "सदस्यता समाप्त"
+
+#: codedevils_org/templates/email/base.html:422
+msgid "Visit our website"
+msgstr "हमारी वेबसाइट पर पधारें"
+
 #: codedevils_org/templates/pages/about.html:4
 msgid "About Us"
 msgstr "हमारे बारे में"
@@ -745,47 +854,55 @@ msgid "Email address"
 msgstr "ईमेल पता"
 
 #: codedevils_org/templates/pages/contactus.html:20
-#: codedevils_org/templates/pages/home.html:217
-msgid "We\\"
-msgstr "हम \\"
+msgid "We will never share your email with anyone else."
+msgstr "हम कभी भी आपके ईमेल को किसी और के साथ साझा नहीं करेंगे।"
 
-#: codedevils_org/templates/pages/contactus.html:24
+#: codedevils_org/templates/pages/contactus.html:21
+msgid "Valid Email"
+msgstr "वैध ईमेल"
+
+#: codedevils_org/templates/pages/contactus.html:25
+#: codedevils_org/templates/pages/contactus.html:26
 msgid "Subject"
 msgstr "विषय"
 
-#: codedevils_org/templates/pages/contactus.html:28
+#: codedevils_org/templates/pages/contactus.html:30
 msgid "Message"
 msgstr "संदेश"
 
-#: codedevils_org/templates/pages/contactus.html:32
+#: codedevils_org/templates/pages/contactus.html:31
+msgid "What do you want to let us know?"
+msgstr "आप हमें क्या बताना चाहते हैं?"
+
+#: codedevils_org/templates/pages/contactus.html:35
 msgid "Send Message"
 msgstr "मेसेज भेजें"
 
-#: codedevils_org/templates/pages/contactus.html:38
+#: codedevils_org/templates/pages/contactus.html:41
 msgid "Thank you!"
 msgstr "धन्यवाद!"
 
-#: codedevils_org/templates/pages/contactus.html:39
+#: codedevils_org/templates/pages/contactus.html:42
 msgid "Your message has been send, we will contact you as soon as possible."
 msgstr "आपका संदेश भेज दिया गया है, हम आपसे जल्द से जल्द संपर्क करेंगे।"
 
-#: codedevils_org/templates/pages/contactus.html:46
+#: codedevils_org/templates/pages/contactus.html:49
 msgid "Get in touch"
 msgstr "संपर्क में रहो"
 
-#: codedevils_org/templates/pages/contactus.html:50
+#: codedevils_org/templates/pages/contactus.html:53
 msgid "Arizona State University,"
 msgstr "Arizona State University,"
 
-#: codedevils_org/templates/pages/contactus.html:51
+#: codedevils_org/templates/pages/contactus.html:54
 msgid "Tempe, AZ"
 msgstr "Tempe, AZ"
 
-#: codedevils_org/templates/pages/contactus.html:90
+#: codedevils_org/templates/pages/contactus.html:93
 msgid "Project Support"
 msgstr "परियोजना का समर्थन"
 
-#: codedevils_org/templates/pages/contactus.html:93
+#: codedevils_org/templates/pages/contactus.html:96
 msgid ""
 "Looking for a custom quote? need to tell us more about your project? or want"
 " a demonstration? drop us a line to"
@@ -794,11 +911,11 @@ msgstr ""
 "बताने की आवश्यकता है? या एक प्रदर्शन चाहते हैं? हमें एक पंक्ति के लिए छोड़ "
 "दें"
 
-#: codedevils_org/templates/pages/contactus.html:100
+#: codedevils_org/templates/pages/contactus.html:103
 msgid "Technical Support"
 msgstr "तकनीकी सहायता"
 
-#: codedevils_org/templates/pages/contactus.html:103
+#: codedevils_org/templates/pages/contactus.html:106
 msgid ""
 "Any question about how to integrate your product?. Don't fret, our geek team"
 " is ready for you at"
@@ -1046,6 +1163,10 @@ msgstr ""
 "कृपया अपने ASU ई-मेल का उपयोग करके हमारे सुस्त चैनल के लिए साइन अप करें और "
 "समुदाय में अपना परिचय दें।"
 
+#: codedevils_org/templates/pages/home.html:217
+msgid "We\\"
+msgstr "हम \\"
+
 #: codedevils_org/templates/pages/home.html:219
 msgid "Slack Signup"
 msgstr "Slack साइन अप करें"
@@ -1249,12 +1370,10 @@ msgstr ""
 "करें।"
 
 #: codedevils_org/templates/users/user_detail.html:7
-#| msgid "CodeDevils"
 msgid "CodeDevils Profile"
 msgstr "CodeDevils प्रोफाइल"
 
 #: codedevils_org/templates/users/user_detail.html:9
-#| msgid "Welcome Docs"
 msgid "Welcome Back,"
 msgstr "वापसी पर स्वागत है,"
 
@@ -1272,17 +1391,14 @@ msgid "User"
 msgstr "उपयोगकर्ता"
 
 #: codedevils_org/templates/users/user_detail.html:45
-#| msgid "Projects"
 msgid "Current Projects"
 msgstr "ताज़ा परियोजनाएं"
 
 #: codedevils_org/templates/users/user_detail.html:50
-#| msgid "CodeDevils URLs"
 msgid "CodeDevils Sponsored"
 msgstr "CodeDevils प्रायोजित"
 
 #: codedevils_org/templates/users/user_detail.html:58
-#| msgid "Projects"
 msgid "Project:"
 msgstr "परियोजना:"
 
@@ -1295,7 +1411,6 @@ msgid "You can find the work of other CodeDevils and their various projects."
 msgstr "आप अन्य कोडडविल्स और उनकी विभिन्न परियोजनाओं का काम देख सकते हैं।"
 
 #: codedevils_org/templates/users/user_detail.html:86
-#| msgid "Contributors"
 msgid "Continue to projects"
 msgstr "परियोजनाओं के लिए जारी रखें"
 
@@ -1304,12 +1419,10 @@ msgid "My Information"
 msgstr "मेरी जानकारी"
 
 #: codedevils_org/templates/users/user_detail.html:104
-#| msgid "CodeDevils"
 msgid "CodeDevil Since"
 msgstr "CodeDevil के बाद से"
 
 #: codedevils_org/templates/users/user_detail.html:138
-#| msgid "About"
 msgid "About Me"
 msgstr "मेरे बारे में"
 
@@ -1318,19 +1431,19 @@ msgstr "मेरे बारे में"
 msgid "Users"
 msgstr "उपयोगकर्ता"
 
-#: codedevils_org/users/admin.py:49
+#: codedevils_org/users/admin.py:53
 msgid "There are no positions to rebase"
 msgstr "रिबेस करने के लिए कोई पोजीशन नहीं हैं"
 
-#: codedevils_org/users/admin.py:58
+#: codedevils_org/users/admin.py:62
 msgid "Position orders successfully rebased"
 msgstr "स्थिति के आदेश सफलतापूर्वक छूट दिए गए"
 
-#: codedevils_org/users/admin.py:61
+#: codedevils_org/users/admin.py:65
 msgid "Rebase order starting at 1"
 msgstr "1 से शुरू होने पर रिबेस का क्रम"
 
-#: codedevils_org/users/admin.py:71 codedevils_org/users/models.py:161
+#: codedevils_org/users/admin.py:75 codedevils_org/users/models.py:161
 msgid "Position"
 msgstr "स्थान"
 
@@ -1451,10 +1564,6 @@ msgstr "SunDevilSync स्थिति"
 msgid "The name of the officer position as it is registered on SunDevilSync"
 msgstr "SunDevilSync पर पंजीकृत के रूप में अधिकारी की स्थिति का नाम"
 
-#: codedevils_org/users/models.py:82
-msgid "Email"
-msgstr "ईमेल"
-
 #: codedevils_org/users/models.py:83
 msgid "The email address associated to the Officer position"
 msgstr "अधिकारी पद से संबंधित ईमेल पता"
@@ -1501,6 +1610,14 @@ msgstr "अधिकारी"
 #: codedevils_org/users/views.py:34
 msgid "Infos successfully updated"
 msgstr "Infos सफलतापूर्वक अपडेट किया गया"
+
+#: codedevils_org/users/views.py:61
+msgid ""
+"Email notifications have been turned off. Turn them back on by editing your "
+"profile."
+msgstr ""
+"ईमेल सूचनाएं बंद कर दी गई हैं। अपनी प्रोफ़ाइल संपादित करके उन्हें वापस चालू "
+"करें।"
 
 #: config/settings/base.py:32
 msgid "Spanish"

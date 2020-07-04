@@ -4,35 +4,16 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
-from django.views.generic import TemplateView
 from django_cas_ng import views as cas_views
-from rest_framework.authtoken.views import obtain_auth_token
 
-urlpatterns = [
-    # Your stuff: custom urls includes go here
-    path("rosetta/", include("rosetta.urls"))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-# API URLS
-urlpatterns += [
-    # API base url
-    path("api/", include("config.api_router")),
-    # DRF auth token
-    path("auth-token/", obtain_auth_token),
-]
+from codedevils_org import page_views
 
 # locale
-urlpatterns += i18n_patterns(
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path(
-        "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
-    ),
-    path(
-        "contactus/", TemplateView.as_view(template_name="pages/contactus.html"), name="contactus"
-    ),
-    path(
-        "workspace/", TemplateView.as_view(template_name="pages/workspace.html"), name="workspace"
-    ),
+urlpatterns = i18n_patterns(
+    path("", page_views.home, name="home"),
+    path("about/", page_views.about, name="about"),
+    path("contactus/", page_views.contact_us, name="contactus"),
+    path("workspace/", page_views.workspace, name="workspace"),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # cas log in
@@ -41,12 +22,25 @@ urlpatterns += i18n_patterns(
     # User management
     path("users/", include("codedevils_org.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
+    # custom urls
+    path("", include("codedevils_org.contrib.cd_url.urls", namespace="cd_url")),
 )
+
+# API URLS
+urlpatterns += [
+    # API base url
+    path("api/", include("config.api_router"))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
     # these url in browser to see how these error pages look like.
+
     urlpatterns += [
+        # rosetta translation page
+        path("rosetta/", include("rosetta.urls")),
+        # custom error pages for debugging in development
+        # these will be replaced by the server's error pages
         path(
             "400/",
             default_views.bad_request,

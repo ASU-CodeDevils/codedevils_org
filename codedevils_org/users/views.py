@@ -48,3 +48,19 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 
 
 user_redirect_view = UserRedirectView.as_view()
+
+
+class UserUnsubscribeRedirectView(LoginRequiredMixin, RedirectView):
+
+    permanent = False
+
+    def get_redirect_url(self):
+        user = self.request.user
+        user.receive_notifications = False
+        user.save()
+        messages.success(self.request, message=_("Email notifications have been turned off. Turn them back on by "
+                                                 "editing your profile."))
+        return reverse("users:detail", kwargs={"username": user.username})
+
+
+user_unsubscribe_redirect_view = UserUnsubscribeRedirectView.as_view()
