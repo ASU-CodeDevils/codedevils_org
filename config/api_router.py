@@ -1,6 +1,5 @@
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
 from django.urls import path, re_path
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import authentication, permissions
@@ -26,6 +25,7 @@ router.register("positions", OfficerPositionViewSet)
 router.register("links", CustomUrlViewSet)
 router.register("blacklist_domains", BlacklistDomainViewSet)
 router.register("blacklist_emails", BlacklistEmailViewSet)
+
 
 # test API view
 class TestView(APIView):
