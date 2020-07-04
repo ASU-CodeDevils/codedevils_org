@@ -9,4 +9,5 @@
         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
     "python.formatting.provider": "black",
+    "restructuredtext.confPath": "${workspaceFolder}/sphinx",
 }

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Release Notes &mdash; codedevils.org  documentation</title>
+  <title>Versioning &mdash; codedevils.org  documentation</title>
   
 
   
@@ -36,7 +36,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Languages" href="languages.html" /> 
+    <link rel="next" title="API" href="api/index.html" />
+    <link rel="prev" title="Release Notes" href="release_notes.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,19 +85,12 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_urls.html">Custom URLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emails.html">Emails</a></li>
 <li class="toctree-l1"><a class="reference internal" href="languages.html">Languages</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">1.0.1 (2020-07-01)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#features">Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bug-fixes">Bug Fixes</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">0.1.0 (2019-10-01)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Features</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a></li>
 </ul>
 
             
@@ -143,13 +137,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Release Notes</li>
+      <li>Versioning</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/release_notes.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/versioning.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -162,43 +156,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="release-notes">
-<h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>1.0.1 (2020-07-01)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Initial version of the official website.</p>
-<div class="section" id="features">
-<h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+  <div class="section" id="versioning">
+<h1>Versioning<a class="headerlink" href="#versioning" title="Permalink to this headline">¶</a></h1>
+<p>The latest version is available at the top of <a class="reference internal" href="release_notes.html"><span class="doc">Release Notes</span></a> as uses the
+<a class="reference external" href="https://semver.org/">Semantic Versioning 2.0.0</a> schema:</p>
+<p>Given a version number MAJOR.MINOR.PATCH, increment the:</p>
 <ul class="simple">
-<li><p>User authentication using SSO login</p></li>
-<li><p>Member registration with Slack and SunDevilSync enrollment automation</p></li>
-<li><p>Color palette updated to match CodeDevils new color scheme</p></li>
-<li><p>Language support for Spanish, French, Arabic, Dutch and Hindi</p></li>
-<li><p>GitHub pages documentation</p></li>
-<li><p>Travis CI integration and testing</p></li>
-<li><p>Email and domain blacklisting</p></li>
-<li><p>Redesigned templated emails</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MAJOR</span></code> - Incompatible API changes,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MINOR</span></code> - Added functionality in a backwards compatible manner.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PATCH</span></code> - Backwards compatible bug fixes.</p></li>
 </ul>
-</div>
-<div class="section" id="bug-fixes">
-<h3>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Contact Us page filtering and POST-request verification</p></li>
-<li><p>Celery worker integration fixed for synchronous tasks</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="id2">
-<h2>0.1.0 (2019-10-01)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id3">
-<h3>Features<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Reimagined UI/UX design from the original 2018 website</p></li>
-<li><p>Multi-page navigation</p></li>
-<li><p><strong>Contact Us</strong> page for contacting officers directly</p></li>
-</ul>
-</div>
-</div>
+<p>Additional labels for pre-release and build metadata are available as extensions to the <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.PATCH</span></code> format.</p>
 </div>
 
 
@@ -209,8 +177,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="api/index.html" class="btn btn-neutral float-right" title="API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="languages.html" class="btn btn-neutral float-left" title="Languages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="release_notes.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

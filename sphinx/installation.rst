@@ -61,14 +61,11 @@ Configure the Database
 .. note::
 
     These instructions do not detail how to install MySQL, but the requirements for
-    configuring your MySQL server for the website. To install, visit 
-    `this link <https://tecadmin.net/install-mysql-server-on-debian9-stretch/>` for
-    Debian Stretch and `this link <https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/osx-installation-pkg.html>` 
-    for Mac.
+    configuring your MySQL server for the website. See instructions on how to `install on Debian Stretch`_
+    or `install on Mac`_.
 
-.. warning::
-
-    TODO
+.. _`install on Debian Stretch`: https://tecadmin.net/install-mysql-server-on-debian9-stretch/
+.. _`install on Mac`: https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/osx-installation-pkg.html
 
 In MySQL create a database called `cdwebtest` and a user on that database named `test`. You
 can do so using the command-line, but it may be easier if you use the MySQL workbench. In this
