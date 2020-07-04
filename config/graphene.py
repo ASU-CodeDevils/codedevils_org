@@ -4,6 +4,7 @@ as used in django rest framework.
 """
 import json
 
+from rest_framework.authtoken.models import Token
 from django.http import HttpResponse
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
@@ -29,20 +30,26 @@ class AuthenticatedGraphQLView(GraphQLView):
         for permission_class in self.permission_classes:
             if not permission_class().has_permission(request, self):
                 return False
-        return True
 
+        # check the user has a token
+        try:
+            Token.objects.get(user=request.user)
+        except Token.DoesNotExist:
+            return False
+
+        return True
+    
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         try:
             self.authenticate_request(request)
             has_permission = self.check_permissions(request)
             if not has_permission:
-                if request.method == "POST":
-                    return HttpResponse(
-                        json.dumps({"errors": ["permission denied"]}),
-                        status=status.HTTP_403_FORBIDDEN,
-                        content_type="application/json",
-                    )
+                return HttpResponse(
+                    json.dumps({"errors": ["permission denied"]}),
+                    status=status.HTTP_403_FORBIDDEN,
+                    content_type="application/json",
+                )
         except AuthenticationFailed as auth_failed_error:
             return HttpResponse(
                 json.dumps({"errors": [str(auth_failed_error)]}),

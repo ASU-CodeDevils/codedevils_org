@@ -2,18 +2,26 @@
 import graphene
 from graphene_django.debug import DjangoDebug
 
-import codedevils_org.users.schema
-import codedevils_org.contrib.cd_url.schema
-import codedevils_org.contrib.email.schema
+from codedevils_org.users import schema as user_schema
+from codedevils_org.contrib.cd_url import schema as cdurl_schema
+from codedevils_org.contrib.email import schema as email_schema
 
 
 class Query(
-        codedevils_org.users.schema.Query,
-        codedevils_org.contrib.cd_url.schema.Query,
-        codedevils_org.contrib.email.schema.Query,
+        user_schema.Query,
+        cdurl_schema.Query,
+        email_schema.Query,
         graphene.ObjectType,
 ):
     debug = graphene.Field(DjangoDebug, name="_debug")
 
 
-schema = graphene.Schema(query=Query)
+class Mutation(
+        user_schema.Mutation,
+        cdurl_schema.Mutation,
+        email_schema.Mutation,
+        graphene.ObjectType,
+):
+    debug = graphene.Field(DjangoDebug, name="_debug")
+
+schema = graphene.Schema(query=Query, mutation=Mutation)

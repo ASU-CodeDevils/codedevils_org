@@ -1,8 +1,10 @@
-from graphene import Node
+from graphene import Node, ObjectType
 from graphene_django.filter import DjangoFilterConnectionField
+from graphene_django.rest_framework.mutation import SerializerMutation
 from graphene_django.types import DjangoObjectType
 
-from .models import BlacklistDomain, BlacklistEmail
+from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
+from codedevils_org.contrib.email.api.serializers import BlacklistDomainSerializer, BlacklistEmailSerializer
 
 
 class BlacklistDomainNode(DjangoObjectType):
@@ -13,6 +15,14 @@ class BlacklistDomainNode(DjangoObjectType):
         description = "Domains that are blacklisted from contacting CodeDevils or using CodeDevils' services"
 
 
+class BlacklistDomainSerializerMutation(SerializerMutation):
+    class Meta:
+        serializer_class = BlacklistDomainSerializer
+        lookup_field = "domain"
+        model_operations = ["update", "patch"]
+        description = "Change/update a blacklisted domain"
+
+
 class BlacklistEmailNode(DjangoObjectType):
     class Meta:
         model = BlacklistEmail
@@ -21,9 +31,22 @@ class BlacklistEmailNode(DjangoObjectType):
         description = "Emails that are blacklisted from contacting CodeDevils or using CodeDevils' services"
 
 
+class BlacklistEmailSerializerMutation(SerializerMutation):
+    class Meta:
+        serializer_class = BlacklistEmailSerializer
+        lookup_field = "email"
+        model_operations = ["update", "patch"]
+        description = "Change/update a blacklisted email"
+
+
 class Query(object):
     domain = Node.Field(BlacklistDomainNode)
     domains = DjangoFilterConnectionField(BlacklistDomainNode)
 
     email = Node.Field(BlacklistEmailNode)
     emails = DjangoFilterConnectionField(BlacklistEmailNode)
+
+
+class Mutation(ObjectType):
+    update_domain = BlacklistDomainSerializerMutation.Field()
+    update_email = BlacklistEmailSerializerMutation.Field()

@@ -1,16 +1,19 @@
 """Defines the GraphQL schema for custom URLs."""
 
-from graphene import Node
+from graphene import Node, ObjectType
 from graphene_django.filter import DjangoFilterConnectionField
+from graphene_django.rest_framework.mutation import SerializerMutation
 from graphene_django.types import DjangoObjectType
 
-from .models import User, Officer, OfficerPosition
+from codedevils_org.users.models import User, Officer, OfficerPosition
+from codedevils_org.users.api.serializers import UserSerializer
 
 
 class UserNode(DjangoObjectType):
     class Meta:
         model = User
         interfaces = (Node,)
+        lookup_field = "username"
         filter_fields = {
             "username": ["exact"],
             "first_name": ["exact", "icontains", "istartswith"],
@@ -40,10 +43,19 @@ class UserNode(DjangoObjectType):
         return queryset
 
 
+class UserSerializerMutation(SerializerMutation):
+    class Meta:
+        serializer_class = UserSerializer
+        lookup_field = "username"
+        model_operations = ["update", "patch"]
+        description = "Change/update user information"
+
+
 class OfficerPositionNode(DjangoObjectType):
     class Meta:
         model = OfficerPosition
         interfaces = (Node,)
+        lookup_field = "name"
         filter_fields = {
             "name": ["exact", "icontains", "istartswith"],
             "sds_position": ["exact", "icontains", "istartswith"],
@@ -71,3 +83,7 @@ class Query(object):
 
     officer_position = Node.Field(OfficerNode)
     officer_positions = DjangoFilterConnectionField(OfficerNode)
+
+
+class Mutation(ObjectType):
+    update_user = UserSerializerMutation.Field()
