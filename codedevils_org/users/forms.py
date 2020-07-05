@@ -31,6 +31,6 @@ class UserCreationForm(forms.UserCreationForm):
 
 
 class StudentRegistrationForm(UserCreationForm):
-    
+
     class Meta(UserCreationForm.Meta):
         fields = ("github_username", "receive_notifications", "anonymous")

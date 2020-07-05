@@ -57,6 +57,7 @@ class OfficerPositionFactory(DjangoModelFactory):
         model = OfficerPosition
         django_get_or_create = ["name"]
 
+
 class OfficerFactory(DjangoModelFactory):
 
     position = SubFactory(factory=OfficerPositionFactory)

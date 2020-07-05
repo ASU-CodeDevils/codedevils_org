@@ -4,6 +4,7 @@ from factory import DjangoModelFactory, Faker
 
 from codedevils_org.contrib.cd_url.models import CustomUrl
 
+
 def _get_interval_choice():
     """Returns a random interval choice."""
     interval = [f[0] for f in CustomUrl.INTERVALS]

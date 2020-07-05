@@ -49,7 +49,7 @@ EMAIL_BACKEND = "django.core.mail.backends.locmem.EmailBackend"
 
 # Logger
 # ------------------------------------------------------------------------------
-LOGGING.update(
+LOGGING.update(  # noqa F405
     {
         "loggers": {
             "factory": {
