@@ -1,7 +1,22 @@
+import random
+
 from typing import Any, Sequence
 
+import factory
 from django.contrib.auth import get_user_model
-from factory import DjangoModelFactory, Faker, post_generation
+from factory import (
+    DjangoModelFactory,
+    Faker,
+    post_generation,
+    SubFactory,
+)
+
+from codedevils_org.users.models import Officer, OfficerPosition
+
+
+def _get_position():
+    choices = ["President", "Vice President", "Secretary", "Webmaster", "Events Coordinator"]
+    return random.choice(choices)
 
 
 class UserFactory(DjangoModelFactory):
@@ -29,3 +44,27 @@ class UserFactory(DjangoModelFactory):
     class Meta:
         model = get_user_model()
         django_get_or_create = ["username"]
+
+
+class OfficerPositionFactory(DjangoModelFactory):
+
+    name = Faker("name")
+    order = Faker("pyint")
+    sds_position = factory.LazyFunction(_get_position)
+    email = Faker("email")
+
+    class Meta:
+        model = OfficerPosition
+        django_get_or_create = ["name"]
+
+
+class OfficerFactory(DjangoModelFactory):
+
+    position = SubFactory(factory=OfficerPositionFactory)
+    user = SubFactory(factory=UserFactory)
+    personal_email = Faker("email")
+    quote = Faker("text")
+
+    class Meta:
+        model = Officer
+        django_get_or_create = ["user", "position"]

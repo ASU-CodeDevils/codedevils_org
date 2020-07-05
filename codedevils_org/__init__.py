@@ -5,3 +5,8 @@ __version_info__ = tuple(
         for num in __version__.replace("-", ".", 1).split(".")
     ]
 )
+
+__title__ = 'CodeDevils Website'
+__author__ = 'CodeDevils'
+__license__ = 'MIT'
+__copyright__ = 'Copyright 2020 CodeDevils'
