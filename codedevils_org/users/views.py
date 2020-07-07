@@ -4,6 +4,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import DetailView, RedirectView, UpdateView
+from django.views.generic.edit import FormView
+
+from codedevils_org.users.forms import StudentRegistrationForm
 
 User = get_user_model()
 
@@ -64,3 +67,15 @@ class UserUnsubscribeRedirectView(LoginRequiredMixin, RedirectView):
 
 
 user_unsubscribe_redirect_view = UserUnsubscribeRedirectView.as_view()
+
+
+class UserRegistrationFormView(FormView):
+    template_name = "account/register/student_registration.html"
+    form_class = StudentRegistrationForm
+    success_url = "/"  # TODO change this to registration status page
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+
+student_registration_view = UserRegistrationFormView.as_view()
