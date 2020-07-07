@@ -1,7 +1,6 @@
 from django.urls import path
 
 from codedevils_org.users.views import (
-    student_registration_view,
     user_detail_view,
     user_redirect_view,
     user_update_view,
