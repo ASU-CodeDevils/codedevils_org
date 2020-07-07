@@ -14,7 +14,4 @@ urlpatterns = [
     path("~update/", view=user_update_view, name="update"),
     path("<str:username>/", view=user_detail_view, name="detail"),
     path("~unsubscribe/", view=user_unsubscribe_redirect_view, name="unsubscribe"),
-
-    # registration
-    path("join/student/", view=student_registration_view, name="student-registration"),
 ]
