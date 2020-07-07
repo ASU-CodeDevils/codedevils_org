@@ -22,8 +22,10 @@ urlpatterns = i18n_patterns(
     # User management
     path("users/", include("codedevils_org.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
+    # rosetta translation page
+    path("rosetta/", include("rosetta.urls")),
     # custom urls
-    path("", include("codedevils_org.contrib.cd_url.urls", namespace="cd_url")),
+    path("", include("codedevils_org.contrib.cd_url.urls", namespace="cd_url"))
 )
 
 # API URLS
@@ -37,8 +39,6 @@ if settings.DEBUG:
     # these url in browser to see how these error pages look like.
 
     urlpatterns += [
-        # rosetta translation page
-        path("rosetta/", include("rosetta.urls")),
         # custom error pages for debugging in development
         # these will be replaced by the server's error pages
         path(
