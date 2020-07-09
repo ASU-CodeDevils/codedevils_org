@@ -64,8 +64,6 @@ CELERY_TASK_EAGER_PROPAGATES = True
 
 # Your stuff...
 # ------------------------------------------------------------------------------
-INSTALLED_APPS += ["rosetta"]
-
 # django-cas-ng
 # https://djangocas.dev/docs/latest/
 CAS_SERVER_URL = env("DJANGO_CAS_SERVER_URL", default="http://127.0.0.1:9000/cas/")

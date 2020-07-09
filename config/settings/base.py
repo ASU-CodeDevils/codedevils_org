@@ -85,6 +85,7 @@ THIRD_PARTY_APPS = [
     "drf_yasg",
     "rest_framework",
     "rest_framework.authtoken",
+    "rosetta"
 ]
 
 LOCAL_APPS = [
@@ -363,5 +364,6 @@ SWAGGER_SETTINGS = {
 # https://docs.graphene-python.org/projects/django/en/latest/
 # -------------------------------------------------------------------------------
 GRAPHENE = {
+    "DJANGO_CHOICE_FIELD_ENUM_V3_NAMING": True,
     "SCHEMA": "config.graphene.schema.schema"
 }

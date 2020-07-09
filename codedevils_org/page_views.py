@@ -77,6 +77,16 @@ def contact_us(request):
         logger.info(f"Contact message sent from {contact_email} to contact email")
         messages.info(request, message=_("Your message has been received and we will email you back soon."))
         return redirect("home")
+    else:
+        # if a get request, support passing of form fields
+        email = request.GET.get("email", None)
+        subject = request.GET.get("subject", None)
+        message = request.GET.get("message", None)
+        context.update({
+            "email": email,
+            "subject": subject,
+            "message": message
+        })
 
     # default behavior is to return to the Contact Us page
     return render(request, "pages/contactus.html", context=context)
