@@ -8,7 +8,12 @@ from graphene_django.rest_framework.mutation import SerializerMutation
 from graphene_django.types import DjangoObjectType
 
 from codedevils_org.users.models import User, Officer, OfficerPosition
-from codedevils_org.users.api.serializers import UserSerializer, OfficerSerializer, OfficerPositionSerializer
+from codedevils_org.users.api.serializers import (
+    OfficerSerializer,
+    OfficerPositionSerializer,
+    UserSerializer,
+    USER_EXCLUDE_FIELDS
+)
 
 
 class UserNode(DjangoObjectType):
@@ -16,11 +21,10 @@ class UserNode(DjangoObjectType):
     User information who are not marked anonymous. The actualCount will have the total number of members,
     and the resulting data will be non-anonymous users.
     """
-    actual_count = graphene.String()
-
     class Meta:
         model = User
         interfaces = (Node,)
+        exclude = USER_EXCLUDE_FIELDS
         lookup_field = "username"
         filter_fields = {
             "username": ["exact"],
@@ -29,14 +33,8 @@ class UserNode(DjangoObjectType):
             "email": ["exact", "icontains", "istartswith"],
             "name": ["icontains", "istartswith"],
             "anonymous": ["exact"],
-            "receive_notifications": ["exact"],
-            "city": ["exact", "icontains", "istartswith"],
-            "state": ["exact", "icontains", "istartswith"],
-            "country": ["exact", "icontains", "istartswith"]
+            "receive_notifications": ["exact"]
         }
-
-    def resolve_actual_count(self):
-        return User.objects.all().count()
 
     @classmethod
     def get_queryset(cls, queryset, info):
