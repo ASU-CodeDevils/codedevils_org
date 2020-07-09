@@ -35,7 +35,6 @@ class TestUserViewSet:
             "username": user.username,
             "email": user.email,
             "name": user.name,
-            "url": f"http://testserver/api/users/{user.username}/",
             "anonymous": user.anonymous,
             "bio": user.bio,
             "date_joined": date_joined,
