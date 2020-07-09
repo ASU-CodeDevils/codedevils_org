@@ -26,7 +26,7 @@ class TestUserViewSet:
         view.request = request
 
         response = view.me(request)
-        
+
         # set dates in advance to avoid NoneType exceptions when converting
         last_login = None if not user.last_login else user.last_login.strftime(DATE_FORMAT)
         date_joined = None if not user.date_joined else user.date_joined.strftime(DATE_FORMAT)
