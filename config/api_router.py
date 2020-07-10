@@ -1,9 +1,7 @@
 from django.conf import settings
-from django.contrib.auth.decorators import login_required
 from django.urls import path, re_path
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import authentication, permissions
-from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework.response import Response
 from rest_framework.routers import DefaultRouter, SimpleRouter
 from rest_framework.views import APIView
@@ -40,11 +38,9 @@ class TestView(APIView):
 app_name = "api"
 urlpatterns = [
     re_path(r"^swagger(?P<format>\.json|\.yaml)$", schema_view.without_ui(cache_timeout=0), name="schema-json"),
-    path("docs/", login_required(schema_view.with_ui("redoc", cache_timeout=0)), name="schema-redoc"),
+    path("docs/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
     # GraphQL
     path("graphql/", csrf_exempt(private_graphql_view)),
-    # DRF auth token
-    path("auth-token/", obtain_auth_token),
     # test endpoint
     path("test/", TestView.as_view(), name="test")
 ] + router.urls
