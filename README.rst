@@ -30,6 +30,9 @@ Website Status
 Production
 ^^^^^^^^^^
 
+.. image:: https://travis-ci.com/ASU-CodeDevils/codedevils_org.svg?token=FhsGC7ZUMb7rskmp3jDy&branch=master
+    :target: https://travis-ci.com/ASU-CodeDevils/codedevils_org
+    :alt: Build
 .. image:: https://img.shields.io/uptimerobot/status/m784417521-1b9dcabb76b05ae6fdc099b3
     :target: https://codedevils.org
     :alt: Status (prod)
@@ -40,6 +43,9 @@ Production
 QA
 ^^
 
+.. image:: https://travis-ci.com/ASU-CodeDevils/codedevils_org.svg?token=FhsGC7ZUMb7rskmp3jDy&branch=dev
+    :target: https://travis-ci.com/ASU-CodeDevils/codedevils_org
+    :alt: Build
 .. image:: https://img.shields.io/uptimerobot/status/m784417527-57e543ec1e2e0752a9ba2228
     :target: https://qa.codedevils.org
     :alt: Status (QA)
