@@ -364,6 +364,5 @@ SWAGGER_SETTINGS = {
 # https://docs.graphene-python.org/projects/django/en/latest/
 # -------------------------------------------------------------------------------
 GRAPHENE = {
-    "DJANGO_CHOICE_FIELD_ENUM_V3_NAMING": True,
     "SCHEMA": "config.graphene.schema.schema"
 }
