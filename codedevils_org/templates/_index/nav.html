@@ -1,4 +1,4 @@
-{% load i18n static %}
+{% load i18n static custom_urls %}
 <nav class="st-nav navbar main-nav navigation fixed-top">
     <div class="container">
         <ul class="st-nav-menu nav navbar-nav">
@@ -22,7 +22,7 @@
             </li>
             {% if not user.is_authenticated %}
                 <li class="st-nav-section st-nav-secondary nav-item">
-                    <a class="btn btn-rounded btn-outline mr-3 px-3" href="{% url 'account_signup' %}">
+                    <a class="btn btn-rounded btn-outline mr-3 px-3" href="{% custom_url 'join' %}">
                         <i class="fas fa-user-plus d-none d-md-inline mr-md-0 mr-lg-2"></i>
                         <span class="d-md-none d-lg-inline">{% trans 'Register' %}</span>
                     </a>
@@ -87,7 +87,7 @@
                         {% endif %}
                         {% if not user.is_authenticated %}
                             <div class="st-dropdown-content-group bg-6 b-t">
-                                <a href="#">{% trans 'Register' %}
+                                <a href="{% custom_url 'join' %}">{% trans 'Register' %}
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -98,7 +98,7 @@
                             </div>
                         {% else %}
                             <div class="st-dropdown-content-group bg-6 b-t">
-                                <a href="#">{% trans 'Profile' %}
+                                <a href="{% url 'users:detail' username=user.username %}">{% trans 'Profile' %}
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>

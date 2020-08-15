@@ -1,5 +1,4 @@
-{% load static %}
-{% load i18n %}
+{% load i18n static custom_urls %}
 <!doctype html>
 <html lang="en">
 
@@ -47,7 +46,7 @@
 						        <p class="light mb-0 accent lead">{% trans 'Ready to join?' %}</p>
 						        <h2 class="mt-0">{% trans 'Create a CodeDevil account' %}</h2>
 					        </div>
-					        <a href="{% url 'users:register' %}" class="btn btn-accent btn-rounded mt-3 mt-md-0 ml-md-auto">{% trans 'Create account' %}</a>
+					        <a href="{% custom_url 'join' %}" class="btn btn-accent btn-rounded mt-3 mt-md-0 ml-md-auto">{% trans 'Create account' %}</a>
 				        </div>
 			        </div>
 		        </section>

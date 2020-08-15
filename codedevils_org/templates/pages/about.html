@@ -193,7 +193,7 @@
 									<span class="bold">like collaboration.</span> Login to take advantage of our all new workspace</p>
 								{% endblocktrans %}
                                 {% if not user.is_authenticated %}
-								    <a href="{% url 'account_login' %}" class="btn btn-accent btn-rounded mt-4">{% trans 'Login' %}</a>
+								    <a href="{% url 'cas_ng_login' %}" class="btn btn-accent btn-rounded mt-4">{% trans 'Login' %}</a>
                                 {% else %}
                                     <a href="#" class="btn btn-accent btn-rounded mt-4">{% trans 'View Workspace' %}</a>
                                 {% endif %}

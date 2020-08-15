@@ -21,7 +21,6 @@ urlpatterns = i18n_patterns(
     path("logout/", cas_views.LogoutView.as_view(), name="cas_ng_logout"),
     # User management
     path("users/", include("codedevils_org.users.urls", namespace="users")),
-    path("accounts/", include("allauth.urls")),
     # rosetta translation page
     path("rosetta/", include("rosetta.urls")),
     # custom urls
