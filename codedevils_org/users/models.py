@@ -75,15 +75,12 @@ class User(AbstractUser):
         verbose_name=_("GitHub Username"),
         help_text=_("We use this to automatically enroll you in our GitHub projects."),
     )
-    slack_username = models.CharField(
-        db_column="SlackUsername",
+    slack_id = models.CharField(
+        db_column="SlackId",
+        max_length=12,
         blank=True,
         null=True,
-        max_length=30,
-        verbose_name=_("Slack Username"),
-        help_text=_(
-            "The user's slack user name registered on the CodeDevils slack" " channel"
-        ),
+        help_text=_("ID assigned to this user on Slack")
     )
     twitter_username = models.CharField(
         db_column="TwitterUsername",

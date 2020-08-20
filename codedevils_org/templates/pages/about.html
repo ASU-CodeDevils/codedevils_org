@@ -95,20 +95,30 @@
                                                 {% endif %}
                                                 <hr class="w-25 mt-5">
                                                 <nav class="nav">
-                                                    {% if officer.user.facebook_url %}
-                                                        <a href="{{ officer.user.facebook_url }}"
+                                                    {% if officer.user.github_username %}
+                                                        <a href="https://github.com/{{ officer.user.github_username }}"
+												           target="_blank"
                                                            class="nav-item nav-link pb-0">
-                                                            <i class="fab fa-facebook color-2"></i>
+                                                            <i class="fab fa-github color-2"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if officer.user.slack_id %}
+                                                        <a href="https://codedevils.slack.com/team/{{ officer.user.slack_id }}"
+												           target="_blank"
+                                                           class="nav-item nav-link pb-0">
+                                                            <i class="fab fa-slack color-2"></i>
                                                         </a>
                                                     {% endif %}
                                                     {% if officer.user.twitter_username %}
                                                         <a href="https://twitter.com/{{ officer.user.twitter_username }}"
+												           target="_blank"
                                                            class="nav-item nav-link pb-0">
                                                             <i class="fab fa-twitter color-2"></i>
                                                         </a>
                                                     {% endif %}
                                                     {% if officer.user.linkedin_url %}
                                                         <a href="{{ officer.user.linkedin_url }}"
+												           target="_blank"
                                                            class="nav-item nav-link pb-0">
                                                             <i class="fab fa-linkedin color-2"></i>
                                                         </a>

@@ -28,7 +28,7 @@ class UserAdmin(auth_admin.UserAdmin):
                     "image_24",
                     "image_512",
                     "github_username",
-                    "slack_username",
+                    "slack_id",
                     "twitter_username",
                     "instagram_url",
                     "facebook_url",
