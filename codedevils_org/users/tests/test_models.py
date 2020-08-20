@@ -18,6 +18,10 @@ def test_user_str(user: User):
     assert str(user) == user.username
 
 
+def test_user_image_default(user: User):
+    assert user.image() == user.image_512
+
+
 def test_officer_position_str(position: OfficerPosition):
     assert str(position) == f"{position.name} <{position.email}>"
     position.email = None
