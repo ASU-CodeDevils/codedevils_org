@@ -17,6 +17,20 @@ class User(AbstractUser):
     # First Name and Last Name do not cover name patterns
     # around the globe.
     name = CharField(_("Name of User"), blank=True, max_length=255)
+    image_24 = models.URLField(
+        db_column="Image24",
+        verbose_name=_("Image 24"),
+        blank=True,
+        null=True,
+        help_text=_("User 24px profile image")
+    )
+    image_512 = models.URLField(
+        db_column="Image512",
+        verbose_name=_("Image 512"),
+        blank=True,
+        null=True,
+        help_text=_("User 512px profile image")
+    )
 
     # student information
     bio = models.TextField(db_column="Bio", blank=True, null=True, verbose_name=_("About"))
@@ -55,6 +69,10 @@ class User(AbstractUser):
                                     help_text=_("You have the option of keeping your account anonymous with CD. "
                                                 "Selectingthis will ensure your account stays private and supported "
                                                 "applications don't have access to your data"))
+
+    def image(self):
+        """Returns the 512px image by default."""
+        return self.image_512
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
