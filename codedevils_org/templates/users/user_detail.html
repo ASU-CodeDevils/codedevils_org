@@ -96,8 +96,8 @@
                                 <div class="media d-block text-center d-sm-flex text-sm-left">
                                     <a class="mr-sm-4" href="javascript:;">
                                         <img class="rounded-circle account-img"
-                                             src="{{ object.profile.image.url }}"
-                                             alt="{{ object.profile.image }}"
+                                             src="{{ object.image }}"
+                                             alt="{{ object.username }}"
                                              style="max-width: 80px">
                                     </a>
                                     <div class="media-body">
@@ -108,7 +108,7 @@
                                                class="text-darker mr-auto">
                                                 {% if object.first_name and object.last_name %}
                                                     {{ object.get_full_name }}{% else %}
-                                                    {{ object.objectname }}{% endif %}</a>
+                                                    {{ object.name }}{% endif %}</a>
                                         </h6>
                                         <div class="text-primary light mt-3">
                                             <p><a href="mailto:{{ object.email }}">{{ object.email }}</a>
