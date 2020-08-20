@@ -8,6 +8,7 @@ from django.shortcuts import render, redirect
 from django.utils.translation import ugettext_lazy as _
 
 from codedevils_org.contrib.email.utils import send_contact_us_email, email_is_blacklisted
+from codedevils_org.users.models import Officer
 
 logger = logging.getLogger("")
 
@@ -19,7 +20,8 @@ def home(request):
 
 def about(request):
     """Provides context to visiting the about page."""
-    return render(request, "pages/about.html", context={"title": _("About")})
+    officers = Officer.objects.all()
+    return render(request, "pages/about.html", context={"title": _("About"), "officers": officers})
 
 
 def workspace(request):
