@@ -7,40 +7,105 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='BlacklistDomain',
+            name="BlacklistDomain",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('is_blocked', models.BooleanField(db_column='Blocked', default=True, help_text='Blocks this email from contacting CodeDevils.', verbose_name='Is blocked')),
-                ('blocked_until', models.DateTimeField(blank=True, db_column='BlockedUntil', help_text='The date and time the email is blocked until. If not specified, this email is blocked indefinitely.', null=True, verbose_name='Blocked until')),
-                ('domain', models.CharField(db_column='Domain', help_text='The domain of email addresses to blacklist. This does not include subdomains as this would inadvertantly block valid domains (see documentation for more.', max_length=253, verbose_name='Domain')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "is_blocked",
+                    models.BooleanField(
+                        db_column="Blocked",
+                        default=True,
+                        help_text="Blocks this email from contacting CodeDevils.",
+                        verbose_name="Is blocked",
+                    ),
+                ),
+                (
+                    "blocked_until",
+                    models.DateTimeField(
+                        blank=True,
+                        db_column="BlockedUntil",
+                        help_text="The date and time the email is blocked until. If not specified, this email is blocked indefinitely.",
+                        null=True,
+                        verbose_name="Blocked until",
+                    ),
+                ),
+                (
+                    "domain",
+                    models.CharField(
+                        db_column="Domain",
+                        help_text="The domain of email addresses to blacklist. This does not include subdomains as this would inadvertantly block valid domains (see documentation for more.",
+                        max_length=253,
+                        verbose_name="Domain",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Blacklisted Domain',
-                'verbose_name_plural': 'Blacklisted Domains',
-                'db_table': 'blacklist_domain',
-                'ordering': ['domain'],
-                'managed': True,
+                "verbose_name": "Blacklisted Domain",
+                "verbose_name_plural": "Blacklisted Domains",
+                "db_table": "blacklist_domain",
+                "ordering": ["domain"],
+                "managed": True,
             },
         ),
         migrations.CreateModel(
-            name='BlacklistEmail',
+            name="BlacklistEmail",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('is_blocked', models.BooleanField(db_column='Blocked', default=True, help_text='Blocks this email from contacting CodeDevils.', verbose_name='Is blocked')),
-                ('blocked_until', models.DateTimeField(blank=True, db_column='BlockedUntil', help_text='The date and time the email is blocked until. If not specified, this email is blocked indefinitely.', null=True, verbose_name='Blocked until')),
-                ('email', models.EmailField(db_column='Email', max_length=254, unique=True, verbose_name='Email')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "is_blocked",
+                    models.BooleanField(
+                        db_column="Blocked",
+                        default=True,
+                        help_text="Blocks this email from contacting CodeDevils.",
+                        verbose_name="Is blocked",
+                    ),
+                ),
+                (
+                    "blocked_until",
+                    models.DateTimeField(
+                        blank=True,
+                        db_column="BlockedUntil",
+                        help_text="The date and time the email is blocked until. If not specified, this email is blocked indefinitely.",
+                        null=True,
+                        verbose_name="Blocked until",
+                    ),
+                ),
+                (
+                    "email",
+                    models.EmailField(
+                        db_column="Email",
+                        max_length=254,
+                        unique=True,
+                        verbose_name="Email",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Blacklisted Email',
-                'verbose_name_plural': 'Blacklisted Emails',
-                'db_table': 'blacklist_email',
-                'ordering': ['email'],
-                'managed': True,
+                "verbose_name": "Blacklisted Email",
+                "verbose_name_plural": "Blacklisted Emails",
+                "db_table": "blacklist_email",
+                "ordering": ["email"],
+                "managed": True,
             },
         ),
     ]

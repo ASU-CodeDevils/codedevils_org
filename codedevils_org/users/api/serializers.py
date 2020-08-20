@@ -2,8 +2,16 @@ from rest_framework import serializers
 
 from codedevils_org.users.models import Officer, OfficerPosition, User
 
-USER_EXCLUDE_FIELDS = ("password", "groups", "user_permissions", "is_staff", "is_superuser", "city",
-                       "state", "country")
+USER_EXCLUDE_FIELDS = (
+    "password",
+    "groups",
+    "user_permissions",
+    "is_staff",
+    "is_superuser",
+    "city",
+    "state",
+    "country",
+)
 
 
 class UserSerializer(serializers.ModelSerializer):

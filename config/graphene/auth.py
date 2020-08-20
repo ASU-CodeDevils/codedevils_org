@@ -15,7 +15,11 @@ class AuthToken(DjangoObjectType):
 
 
 class Query(graphene.ObjectType):
-    token = graphene.Field(AuthToken, username=graphene.String(required=True), password=graphene.String(required=True))
+    token = graphene.Field(
+        AuthToken,
+        username=graphene.String(required=True),
+        password=graphene.String(required=True),
+    )
 
     def resolve_token(self, info, username, password):
         user = User.objects.get(username__exact=username)

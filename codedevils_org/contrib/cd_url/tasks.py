@@ -28,7 +28,9 @@ def notify_of_expired_links():
 
     if links_to_check:
         url_list = ", ".join(links_to_check)
-        mail_managers(subject="Notification of Expired Links",
-                      message="The following links may require updating. To update, visit "
-                              "https://www.qa.codedevils.org/en-us/admin/cd_url/customurl/ "
-                              " and update the list: " + url_list)
+        mail_managers(
+            subject="Notification of Expired Links",
+            message="The following links may require updating. To update, visit "
+            "https://www.qa.codedevils.org/en-us/admin/cd_url/customurl/ "
+            " and update the list: " + url_list,
+        )

@@ -77,9 +77,7 @@ TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa F405
 # https://docs.djangoproject.com/en/dev/ref/settings/#server-email
 SERVER_EMAIL = env("DJANGO_SERVER_EMAIL", default=DEFAULT_FROM_EMAIL)  # noqa F405
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-subject-prefix
-EMAIL_SUBJECT_PREFIX = env(
-    "DJANGO_EMAIL_SUBJECT_PREFIX", default="[CodeDevils]"
-)
+EMAIL_SUBJECT_PREFIX = env("DJANGO_EMAIL_SUBJECT_PREFIX", default="[CodeDevils]")
 
 # ADMIN
 # ------------------------------------------------------------------------------
@@ -131,7 +129,7 @@ LOGGING = {
             "maxBytes": 1024 * 1024 * 5,  # 5 MB
             "backupCount": 7,
             "formatter": "verbose",
-        }
+        },
     },
     "root": {"level": "INFO", "handlers": ["console"]},
     "loggers": {
@@ -145,10 +143,7 @@ LOGGING = {
             "handlers": ["console", "mail_admins"],
             "propagate": True,
         },
-        "": {
-            "handlers": ["console", "production_file"],
-            "level": "DEBUG",
-        }
+        "": {"handlers": ["console", "production_file"], "level": "DEBUG",},
     },
 }
 

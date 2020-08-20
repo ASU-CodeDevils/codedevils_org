@@ -19,4 +19,4 @@ def custom_url(slug):
     try:
         return CustomUrl.objects.get(slug=slug).url
     except CustomUrl.DoesNotExist:
-        return '#'
+        return "#"

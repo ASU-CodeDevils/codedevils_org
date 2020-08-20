@@ -12,10 +12,7 @@ def update_site_forward(apps, schema_editor):
     Site = apps.get_model("sites", "Site")
     Site.objects.update_or_create(
         id=settings.SITE_ID,
-        defaults={
-            "domain": "codedevils.org",
-            "name": "codedevils.org",
-        },
+        defaults={"domain": "codedevils.org", "name": "codedevils.org",},
     )
 
 

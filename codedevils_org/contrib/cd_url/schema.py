@@ -13,12 +13,13 @@ from codedevils_org.contrib.cd_url.api.serializers import CustomUrlSerializer
 
 class CustomUrlNode(DjangoObjectType):
     """Provides links to all CodeDevils custom URLs."""
+
     class Meta:
         model = CustomUrl
         interfaces = (Node,)
         filter_fields = {
             "name": ["exact", "icontains", "istartswith"],
-            "slug": ["exact"]
+            "slug": ["exact"],
         }
         description = "Links to CodeDevils different online services"
 

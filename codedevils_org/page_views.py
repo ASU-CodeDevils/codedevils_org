@@ -7,7 +7,10 @@ from django.http import HttpResponseForbidden
 from django.shortcuts import render, redirect
 from django.utils.translation import ugettext_lazy as _
 
-from codedevils_org.contrib.email.utils import send_contact_us_email, email_is_blacklisted
+from codedevils_org.contrib.email.utils import (
+    send_contact_us_email,
+    email_is_blacklisted,
+)
 from codedevils_org.users.models import Officer
 
 logger = logging.getLogger("")
@@ -21,7 +24,9 @@ def home(request):
 def about(request):
     """Provides context to visiting the about page."""
     officers = Officer.objects.all()
-    return render(request, "pages/about.html", context={"title": _("About"), "officers": officers})
+    return render(
+        request, "pages/about.html", context={"title": _("About"), "officers": officers}
+    )
 
 
 def workspace(request):
@@ -62,33 +67,38 @@ def contact_us(request):
             email_error = _("There was an issue with this email address")
 
         if email_error or subject_error or message_error:
-            context.update({
-                "email_error": email_error,
-                "subject_error": subject_error,
-                "message_error": message_error,
-                "email": contact_email,
-                "subject": contact_subject,
-                "message": contact_message
-            })
+            context.update(
+                {
+                    "email_error": email_error,
+                    "subject_error": subject_error,
+                    "message_error": message_error,
+                    "email": contact_email,
+                    "subject": contact_subject,
+                    "message": contact_message,
+                }
+            )
             return render(request, "pages/contactus.html", context=context)
 
         # no error, send email
-        send_contact_us_email(subject=contact_subject, reply_to=contact_email, body=contact_message)
+        send_contact_us_email(
+            subject=contact_subject, reply_to=contact_email, body=contact_message
+        )
 
         # log the contact
         logger.info(f"Contact message sent from {contact_email} to contact email")
-        messages.info(request, message=_("Your message has been received and we will email you back soon."))
+        messages.info(
+            request,
+            message=_(
+                "Your message has been received and we will email you back soon."
+            ),
+        )
         return redirect("home")
     else:
         # if a get request, support passing of form fields
         email = request.GET.get("email", None)
         subject = request.GET.get("subject", None)
         message = request.GET.get("message", None)
-        context.update({
-            "email": email,
-            "subject": subject,
-            "message": message
-        })
+        context.update({"email": email, "subject": subject, "message": message})
 
     # default behavior is to return to the Contact Us page
     return render(request, "pages/contactus.html", context=context)

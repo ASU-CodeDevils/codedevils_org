@@ -4,7 +4,7 @@ from codedevils_org.users.views import (
     user_detail_view,
     user_redirect_view,
     user_update_view,
-    user_unsubscribe_redirect_view
+    user_unsubscribe_redirect_view,
 )
 
 app_name = "users"

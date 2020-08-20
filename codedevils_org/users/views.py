@@ -58,8 +58,13 @@ class UserUnsubscribeRedirectView(LoginRequiredMixin, RedirectView):
         self.request.user.receive_notifications = False
         self.request.user.save()
         print(f"User: {self.request.user}")
-        messages.success(self.request, message=_("Email notifications have been turned off. Turn them back on by "
-                                                 "editing your profile."))
+        messages.success(
+            self.request,
+            message=_(
+                "Email notifications have been turned off. Turn them back on by "
+                "editing your profile."
+            ),
+        )
         return reverse("users:detail", kwargs={"username": self.request.user.username})
 
 

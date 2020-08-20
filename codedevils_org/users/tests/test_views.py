@@ -7,7 +7,7 @@ from codedevils_org.users.tests.factories import UserFactory
 from codedevils_org.users.views import (
     UserRedirectView,
     UserUpdateView,
-    user_detail_view
+    user_detail_view,
 )
 
 pytestmark = pytest.mark.django_db

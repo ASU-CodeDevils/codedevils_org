@@ -1,7 +1,12 @@
 from django.contrib.auth import get_user_model
 from rest_framework import status
 from rest_framework.decorators import action
-from rest_framework.mixins import ListModelMixin, RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin
+from rest_framework.mixins import (
+    ListModelMixin,
+    RetrieveModelMixin,
+    UpdateModelMixin,
+    DestroyModelMixin,
+)
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
@@ -25,7 +30,13 @@ class UserViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMixin, GenericV
         return Response(status=status.HTTP_200_OK, data=serializer.data)
 
 
-class OfficerViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMixin, DestroyModelMixin, GenericViewSet):
+class OfficerViewSet(
+    RetrieveModelMixin,
+    ListModelMixin,
+    UpdateModelMixin,
+    DestroyModelMixin,
+    GenericViewSet,
+):
     serializer_class = OfficerSerializer
     queryset = Officer.objects.all()
 
@@ -33,7 +44,13 @@ class OfficerViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMixin, Destr
         return self.queryset
 
 
-class OfficerPositionViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMixin, DestroyModelMixin, GenericViewSet):
+class OfficerPositionViewSet(
+    RetrieveModelMixin,
+    ListModelMixin,
+    UpdateModelMixin,
+    DestroyModelMixin,
+    GenericViewSet,
+):
     serializer_class = OfficerPositionSerializer
     queryset = OfficerPosition.objects.all()
     lookup_field = "name"

@@ -12,7 +12,7 @@ from codedevils_org.users.api.serializers import (
     OfficerSerializer,
     OfficerPositionSerializer,
     UserSerializer,
-    USER_EXCLUDE_FIELDS
+    USER_EXCLUDE_FIELDS,
 )
 
 
@@ -21,6 +21,7 @@ class UserNode(DjangoObjectType):
     User information who are not marked anonymous. The actualCount will have the total number of members,
     and the resulting data will be non-anonymous users.
     """
+
     class Meta:
         model = User
         interfaces = (Node,)
@@ -33,7 +34,7 @@ class UserNode(DjangoObjectType):
             "email": ["exact", "icontains", "istartswith"],
             "name": ["icontains", "istartswith"],
             "anonymous": ["exact"],
-            "receive_notifications": ["exact"]
+            "receive_notifications": ["exact"],
         }
 
     @classmethod

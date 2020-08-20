@@ -34,7 +34,7 @@ LANGUAGES = [
     ("fr", _("French")),
     ("ar", _("Arabic")),
     ("nl", _("Dutch")),
-    ("hi", _("Hindi"))
+    ("hi", _("Hindi")),
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1
@@ -51,9 +51,7 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-DATABASES = {
-    "default": env.db("DATABASE_URL", default="mysql:///codedevils_org")
-}
+DATABASES = {"default": env.db("DATABASE_URL", default="mysql:///codedevils_org")}
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 # URLS
@@ -85,13 +83,13 @@ THIRD_PARTY_APPS = [
     "drf_yasg",
     "rest_framework",
     "rest_framework.authtoken",
-    "rosetta"
+    "rosetta",
 ]
 
 LOCAL_APPS = [
     "codedevils_org.users.apps.UsersConfig",
     "codedevils_org.contrib.cd_url.apps.CDUrlConfig",
-    "codedevils_org.contrib.email.apps.EmailConfig"
+    "codedevils_org.contrib.email.apps.EmailConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -253,7 +251,10 @@ DEFAULT_FROM_EMAIL = env(
 # Django Admin URL.
 ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
-ADMINS = [("""Kevin Shelley""", "kevin.shelley@pm.me"), ("""Abraham Cifuentes""", "acifuen1@asu.edu")]
+ADMINS = [
+    ("""Kevin Shelley""", "kevin.shelley@pm.me"),
+    ("""Abraham Cifuentes""", "acifuen1@asu.edu"),
+]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
@@ -268,7 +269,7 @@ LOGGING = {
     "formatters": {
         "verbose": {
             "format": "%(levelname)s %(asctime)s %(module)s "
-                      "%(process)d %(thread)d %(message)s"
+            "%(process)d %(thread)d %(message)s"
         }
     },
     "handlers": {
@@ -315,7 +316,7 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
-    "PAGE_SIZE": 100
+    "PAGE_SIZE": 100,
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
@@ -339,17 +340,11 @@ DRF_YASG_LICENSE = "BSD License"
 # https://drf-yasg.readthedocs.io/en/stable/security.html#describing-authentication-schemes
 SWAGGER_SETTINGS = {
     "SECURITY_DEFINITIONS": {
-        "Token": {
-            "type": "apiKey",
-            "name": "Authorization",
-            "in": "header"
-        }
+        "Token": {"type": "apiKey", "name": "Authorization", "in": "header"}
     }
 }
 
 # graphene
 # https://docs.graphene-python.org/projects/django/en/latest/
 # -------------------------------------------------------------------------------
-GRAPHENE = {
-    "SCHEMA": "config.graphene.schema.schema"
-}
+GRAPHENE = {"SCHEMA": "config.graphene.schema.schema"}

@@ -6,13 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('email', '0001_initial'),
+        ("email", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='blacklistdomain',
-            name='domain',
-            field=models.CharField(db_column='Domain', help_text='The domain of email addresses to blacklist. This does not include subdomains as this would inadvertantly block valid domains (see documentation for more).', max_length=253, verbose_name='Domain'),
+            model_name="blacklistdomain",
+            name="domain",
+            field=models.CharField(
+                db_column="Domain",
+                help_text="The domain of email addresses to blacklist. This does not include subdomains as this would inadvertantly block valid domains (see documentation for more).",
+                max_length=253,
+                verbose_name="Domain",
+            ),
         ),
     ]

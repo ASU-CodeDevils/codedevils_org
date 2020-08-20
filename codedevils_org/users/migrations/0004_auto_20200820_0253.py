@@ -6,18 +6,30 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('users', '0003_auto_20200820_0243'),
+        ("users", "0003_auto_20200820_0243"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='user',
-            name='image_24',
-            field=models.URLField(blank=True, db_column='Image24', help_text='User 24px profile image', null=True, verbose_name='Image 24'),
+            model_name="user",
+            name="image_24",
+            field=models.URLField(
+                blank=True,
+                db_column="Image24",
+                help_text="User 24px profile image",
+                null=True,
+                verbose_name="Image 24",
+            ),
         ),
         migrations.AlterField(
-            model_name='user',
-            name='image_512',
-            field=models.URLField(blank=True, db_column='Image512', help_text='User 512px profile image', null=True, verbose_name='Image 512'),
+            model_name="user",
+            name="image_512",
+            field=models.URLField(
+                blank=True,
+                db_column="Image512",
+                help_text="User 512px profile image",
+                null=True,
+                verbose_name="Image 512",
+            ),
         ),
     ]

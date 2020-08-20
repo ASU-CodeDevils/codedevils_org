@@ -24,7 +24,7 @@ urlpatterns = i18n_patterns(
     # rosetta translation page
     path("rosetta/", include("rosetta.urls")),
     # custom urls
-    path("", include("codedevils_org.contrib.cd_url.urls", namespace="cd_url"))
+    path("", include("codedevils_org.contrib.cd_url.urls", namespace="cd_url")),
 )
 
 # API URLS
