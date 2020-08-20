@@ -80,7 +80,7 @@ class User(AbstractUser):
         max_length=12,
         blank=True,
         null=True,
-        help_text=_("ID assigned to this user on Slack")
+        help_text=_("ID assigned to this user on Slack"),
     )
     twitter_username = models.CharField(
         db_column="TwitterUsername",
