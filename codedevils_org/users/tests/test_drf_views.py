@@ -55,6 +55,6 @@ class TestUserViewSet:
             "last_name": user.last_name,
             "linkedin_url": user.linkedin_url,
             "receive_notifications": user.receive_notifications,
-            "slack_id": user.slack_username,
+            "slack_id": user.slack_id,
             "twitter_username": user.twitter_username,
         }
