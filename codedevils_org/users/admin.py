@@ -17,8 +17,8 @@ class UserAdmin(auth_admin.UserAdmin):
     add_form = UserCreationForm
     fieldsets = (("User", {"fields": ("name",)}),
                  ("About", {"fields": ("city", "state", "country", "bio"), "classes": ("collapse",)}),
-                 ("Links", {"fields": ("github_username", "slack_username", "twitter_username", "instagram_url",
-                                       "facebook_url", "linkedin_url")}),
+                 ("Links", {"fields": ("image_24", "image_512", "github_username", "slack_username",
+                                       "twitter_username", "instagram_url", "facebook_url", "linkedin_url")}),
                  ("Preferences", {"fields": ("anonymous", "receive_notifications")})) + auth_admin.UserAdmin.fieldsets
     list_display = ["username", "name", "is_superuser"]
     search_fields = ["name"]
