@@ -35,7 +35,7 @@
                 <li class="st-nav-section st-nav-secondary nav-item">
                     <a class="btn btn-rounded btn-solid mr-3 px-3" href="{% url 'users:detail' username=user.username %}"
                        target="_blank">
-                        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="" height="20px"
+                        <img class="rounded-circle account-img" src="{{ user.image_24 }}" alt="" height="20px"
                              width="20px">
                         <span class="d-md-none d-lg-inline">{% trans 'Profile' %}</span>
                     </a>
