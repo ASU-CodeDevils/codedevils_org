@@ -152,3 +152,6 @@ LOGGING = {
 # django-cas-ng
 # https://djangocas.dev/docs/latest/
 CAS_SERVER_URL = env("DJANGO_CAS_SERVER_URL", default="https://sso.codedevils.org/cas/")
+
+# custom
+GOOGLE_ANALYTICS_TAG = env("GOOGLE_ANALYTICS_TRACKING_ID")
