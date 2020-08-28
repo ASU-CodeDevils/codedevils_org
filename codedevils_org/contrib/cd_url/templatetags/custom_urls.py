@@ -1,4 +1,5 @@
 from django import template
+from ..models import CustomUrl
 
 register = template.Library()
 
