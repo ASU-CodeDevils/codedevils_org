@@ -348,3 +348,6 @@ SWAGGER_SETTINGS = {
 # https://docs.graphene-python.org/projects/django/en/latest/
 # -------------------------------------------------------------------------------
 GRAPHENE = {"SCHEMA": "config.graphene.schema.schema"}
+
+# custom
+GOOGLE_ANALYTICS_TRACKING_ID = env("GOOGLE_ANALYTICS_TRACKING_ID", default=None)
