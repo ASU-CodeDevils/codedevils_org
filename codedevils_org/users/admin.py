@@ -15,11 +15,29 @@ class UserAdmin(auth_admin.UserAdmin):
 
     form = UserChangeForm
     add_form = UserCreationForm
-    fieldsets = (("User", {"fields": ("name",)}),
-                 ("About", {"fields": ("city", "state", "country", "bio"), "classes": ("collapse",)}),
-                 ("Links", {"fields": ("github_username", "slack_username", "twitter_username", "instagram_url",
-                                       "facebook_url", "linkedin_url")}),
-                 ("Preferences", {"fields": ("anonymous", "receive_notifications")})) + auth_admin.UserAdmin.fieldsets
+    fieldsets = (
+        ("User", {"fields": ("name",)}),
+        (
+            "About",
+            {"fields": ("city", "state", "country", "bio"), "classes": ("collapse",)},
+        ),
+        (
+            "Links",
+            {
+                "fields": (
+                    "image_24",
+                    "image_512",
+                    "github_username",
+                    "slack_id",
+                    "twitter_username",
+                    "instagram_url",
+                    "facebook_url",
+                    "linkedin_url",
+                )
+            },
+        ),
+        ("Preferences", {"fields": ("anonymous", "receive_notifications")}),
+    ) + auth_admin.UserAdmin.fieldsets
     list_display = ["username", "name", "is_superuser"]
     search_fields = ["name"]
 
@@ -35,7 +53,7 @@ class OfficerPositionAdmin(admin.ModelAdmin):
         Overwrites the changelist view to allow custom actions to be deleted when no items in the
         list are selected.
         """
-        if 'action' in request.POST and request.POST['action'] in self.actions:
+        if "action" in request.POST and request.POST["action"] in self.actions:
             if not request.POST.getlist(admin.ACTION_CHECKBOX_NAME):
                 post = request.POST.copy()
                 post.update({admin.ACTION_CHECKBOX_NAME: 0})
@@ -49,18 +67,22 @@ class OfficerPositionAdmin(admin.ModelAdmin):
         """
         positions = OfficerPosition.objects.all()
         if not positions:
-            self.message_user(request=request,
-                              message=_("There are no positions to rebase"),
-                              level=messages.WARNING)
+            self.message_user(
+                request=request,
+                message=_("There are no positions to rebase"),
+                level=messages.WARNING,
+            )
         else:
             order = 1
             for position in positions.order_by("order"):
                 position.order = order
                 position.save(stop_reorder=True)
                 order = order + 1
-            self.message_user(request=request,
-                              message=_("Position orders successfully rebased"),
-                              level=messages.SUCCESS)
+            self.message_user(
+                request=request,
+                message=_("Position orders successfully rebased"),
+                level=messages.SUCCESS,
+            )
 
     rebase_order.short_description = _("Rebase order starting at 1")
 
@@ -72,6 +94,7 @@ class OfficerAdmin(admin.ModelAdmin):
 
     def get_position(self, officer):
         return officer.position.name
+
     get_position.short_description = _("Position")
     get_position.admin_order_field = "position__name"
 

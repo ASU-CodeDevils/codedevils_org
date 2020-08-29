@@ -2618,6 +2618,34 @@ select[multiple].form-control.form-control-rounded, textarea.form-control.form-c
     -webkit-box-shadow: 0 1px 10px rgba(234, 76, 137, 0.4) !important;
             box-shadow: 0 1px 10px rgba(234, 76, 137, 0.4) !important; }
 
+.brand-slack {
+  color: #fff;
+  background-color: #4A154B;
+  border-color: #4A154B; }
+  .brand-slack:hover {
+    color: #fff;
+    background-color: #431344;
+    border-color: #571958; }
+  .brand-slack:focus, .brand-slack.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(74, 21, 75, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(74, 21, 75, 0.5); }
+  .brand-slack.disabled, .brand-slack:disabled {
+    color: #fff;
+    background-color: #4A154B;
+    border-color: #4A154B; }
+  .brand-slack:not(:disabled):not(.disabled):active, .brand-slack:not(:disabled):not(.disabled).active,
+  .show > .brand-slack.dropdown-toggle {
+    color: #fff;
+    background-color: #e51e6b;
+    border-color: #dc1a65; }
+    .brand-slack:not(:disabled):not(.disabled):active:focus, .brand-slack:not(:disabled):not(.disabled).active:focus,
+    .show > .brand-slack.dropdown-toggle:focus {
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(237, 103, 155, 0.5);
+              box-shadow: 0 0 0 0.2rem rgba(237, 103, 155, 0.5); }
+  .brand-slack:hover {
+    -webkit-box-shadow: 0 1px 10px rgba(234, 76, 137, 0.4) !important;
+            box-shadow: 0 1px 10px rgba(234, 76, 137, 0.4) !important; }
+
 .brand-skype {
   color: #fff;
   background-color: #00aff0;

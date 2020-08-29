@@ -7,24 +7,39 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='CustomUrl',
+            name="CustomUrl",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(db_column='Name', max_length=50)),
-                ('url', models.URLField(db_column='Url')),
-                ('slug', models.SlugField(db_column='Slug', help_text='The string used to reference the URL from within a Django template. The slug can only contain letters, numbers, underscores and hyphens.', max_length=20, unique=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(db_column="Name", max_length=50)),
+                ("url", models.URLField(db_column="Url")),
+                (
+                    "slug",
+                    models.SlugField(
+                        db_column="Slug",
+                        help_text="The string used to reference the URL from within a Django template. The slug can only contain letters, numbers, underscores and hyphens.",
+                        max_length=20,
+                        unique=True,
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Custom URL',
-                'verbose_name_plural': 'Custom URLs',
-                'db_table': 'custom_url',
-                'ordering': ['name'],
-                'managed': True,
+                "verbose_name": "Custom URL",
+                "verbose_name_plural": "Custom URLs",
+                "db_table": "custom_url",
+                "ordering": ["name"],
+                "managed": True,
             },
         ),
     ]

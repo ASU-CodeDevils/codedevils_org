@@ -1,8 +1,8 @@
-{% load i18n static %}
+{% load i18n static custom_urls %}
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
-<title>{%trans 'CodeDevils - Develop. Network. Create.' %}</title>
-<meta name="description" content="CodeDevils is an inclusive virtual club that aims to bring ASU students together.">
+    <title>{%trans 'CodeDevils - Develop. Network. Create.' %}</title>
+    <meta name="description" content="CodeDevils is an inclusive virtual club that aims to bring ASU students together.">
     <meta name="author" content="Abraham Cifuentes (Front-End Developer), Kevin Shelley (Back-End Developer)">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -30,6 +30,13 @@
     <!--Main Style Sheet-->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-<!--LogRocket monitoring-->
-<script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
-<script>window.LogRocket && window.LogRocket.init('i7zabk/codedevils-qa-website');</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ settings.GOOGLE_ANALYTICS_TRACKING_ID|upper }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '{{ settings.GOOGLE_ANALYTICS_TRACKING_ID|upper }}');
+    </script>

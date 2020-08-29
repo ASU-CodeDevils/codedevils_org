@@ -4,7 +4,7 @@ from codedevils_org.users.models import User, Officer, OfficerPosition
 from codedevils_org.users.tests.factories import (
     UserFactory,
     OfficerFactory,
-    OfficerPositionFactory
+    OfficerPositionFactory,
 )
 from codedevils_org.contrib.cd_url.models import CustomUrl
 from codedevils_org.contrib.cd_url.test.factories import CustomUrlFactory

@@ -17,44 +17,113 @@ class User(AbstractUser):
     # First Name and Last Name do not cover name patterns
     # around the globe.
     name = CharField(_("Name of User"), blank=True, max_length=255)
+    image_24 = models.URLField(
+        db_column="Image24",
+        verbose_name=_("Image 24"),
+        blank=True,
+        null=True,
+        help_text=_("User 24px profile image"),
+    )
+    image_512 = models.URLField(
+        db_column="Image512",
+        verbose_name=_("Image 512"),
+        blank=True,
+        null=True,
+        help_text=_("User 512px profile image"),
+    )
 
     # student information
-    bio = models.TextField(db_column="Bio", blank=True, null=True, verbose_name=_("About"))
-    dob = models.DateField(db_column="DateOfBirth", blank=True, null=True, verbose_name=_("Date of birth"))
+    bio = models.TextField(
+        db_column="Bio", blank=True, null=True, verbose_name=_("About")
+    )
+    dob = models.DateField(
+        db_column="DateOfBirth", blank=True, null=True, verbose_name=_("Date of birth")
+    )
 
     # locale
-    city = models.CharField(db_column="City", blank=True, null=True, max_length=30, verbose_name=_("City"),
-                            help_text=_("The city that the user currently resides in"))
-    state = USStateField(db_column="State", blank=True, null=True, default="NA", verbose_name=_("State"),
-                         help_text=_("The state the city resides in (for inside the US only)"))
-    country = CountryField(db_column="Country", blank=True, null=True, default="--", verbose_name=_("Country"),
-                           help_text=_("The country the city resides in"))
+    city = models.CharField(
+        db_column="City",
+        blank=True,
+        null=True,
+        max_length=30,
+        verbose_name=_("City"),
+        help_text=_("The city that the user currently resides in"),
+    )
+    state = USStateField(
+        db_column="State",
+        blank=True,
+        null=True,
+        default="NA",
+        verbose_name=_("State"),
+        help_text=_("The state the city resides in (for inside the US only)"),
+    )
+    country = CountryField(
+        db_column="Country",
+        blank=True,
+        null=True,
+        default="--",
+        verbose_name=_("Country"),
+        help_text=_("The country the city resides in"),
+    )
 
     # user names/social media links
-    github_username = models.CharField(db_column="GithubUsername", blank=True, null=True, max_length=30,
-                                       verbose_name=_("GitHub Username"),
-                                       help_text=_("We use this to automatically enroll you in our GitHub projects."))
-    slack_username = models.CharField(db_column="SlackUsername", blank=True, null=True, max_length=30,
-                                      verbose_name=_("Slack Username"),
-                                      help_text=_("The user's slack user name registered on the CodeDevils slack"
-                                                  " channel"))
-    twitter_username = models.CharField(db_column="TwitterUsername", blank=True, null=True, max_length=15,
-                                        verbose_name=_("Twitter Username"),
-                                        help_text="Just the username. This username will be appended to the Twitter"
-                                                  " URL.")
-    instagram_url = models.URLField(db_column="InstagramUrl", blank=True, null=True, verbose_name=_("Instagram URL"))
-    facebook_url = models.URLField(db_column="FacebookUrl", blank=True, null=True, verbose_name=_("Facebook URL"))
-    linkedin_url = models.URLField(db_column="LinkedInUrl", blank=True, null=True, verbose_name=_("LinkedIn URL"))
+    github_username = models.CharField(
+        db_column="GithubUsername",
+        blank=True,
+        null=True,
+        max_length=30,
+        verbose_name=_("GitHub Username"),
+        help_text=_("We use this to automatically enroll you in our GitHub projects."),
+    )
+    slack_id = models.CharField(
+        db_column="SlackId",
+        max_length=12,
+        blank=True,
+        null=True,
+        help_text=_("ID assigned to this user on Slack"),
+    )
+    twitter_username = models.CharField(
+        db_column="TwitterUsername",
+        blank=True,
+        null=True,
+        max_length=15,
+        verbose_name=_("Twitter Username"),
+        help_text="Just the username. This username will be appended to the Twitter"
+        " URL.",
+    )
+    instagram_url = models.URLField(
+        db_column="InstagramUrl", blank=True, null=True, verbose_name=_("Instagram URL")
+    )
+    facebook_url = models.URLField(
+        db_column="FacebookUrl", blank=True, null=True, verbose_name=_("Facebook URL")
+    )
+    linkedin_url = models.URLField(
+        db_column="LinkedInUrl", blank=True, null=True, verbose_name=_("LinkedIn URL")
+    )
 
     # user preferences
-    receive_notifications = models.BooleanField(db_column="ReceiveNotifications", default=False,
-                                                verbose_name=_("Receive notifications"),
-                                                help_text="Receive emails about the latest and greatest at CodeDevils!")
-    anonymous = models.BooleanField(db_column="IsAnonymous", default=True, blank=False, null=False,
-                                    verbose_name=_("Anonymous"),
-                                    help_text=_("You have the option of keeping your account anonymous with CD. "
-                                                "Selectingthis will ensure your account stays private and supported "
-                                                "applications don't have access to your data"))
+    receive_notifications = models.BooleanField(
+        db_column="ReceiveNotifications",
+        default=False,
+        verbose_name=_("Receive notifications"),
+        help_text="Receive emails about the latest and greatest at CodeDevils!",
+    )
+    anonymous = models.BooleanField(
+        db_column="IsAnonymous",
+        default=True,
+        blank=False,
+        null=False,
+        verbose_name=_("Anonymous"),
+        help_text=_(
+            "You have the option of keeping your account anonymous with CD. "
+            "Selectingthis will ensure your account stays private and supported "
+            "applications don't have access to your data"
+        ),
+    )
+
+    def image(self):
+        """Returns the 512px image by default."""
+        return self.image_512
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
@@ -69,18 +138,40 @@ class OfficerPosition(models.Model):
     """
     Officer positions and their relative emails.
     """
-    name = models.CharField(db_column="Name", max_length=40, help_text=_("Name of the position"),
-                            unique=True, verbose_name=_("Name"))
-    order = models.PositiveSmallIntegerField(db_column="Order", null=False,
-                                             verbose_name=_("Order"),
-                                             help_text=_("The order of precedence of the position. For example, the "
-                                                         "President is 1, Vice President is 2, and so on."))
-    sds_position = models.CharField(db_column="SDSPosition", blank=True, null=True, max_length=32,
-                                    verbose_name=_("SunDevilSync Position"),
-                                    help_text=_("The name of the officer position as it is registered on SunDevilSync"))
-    email = models.EmailField(db_column="OfficerEmail", blank=True, null=True,
-                              verbose_name=_("Email"),
-                              help_text=_("The email address associated to the Officer position"))
+
+    name = models.CharField(
+        db_column="Name",
+        max_length=40,
+        help_text=_("Name of the position"),
+        unique=True,
+        verbose_name=_("Name"),
+    )
+    order = models.PositiveSmallIntegerField(
+        db_column="Order",
+        null=False,
+        verbose_name=_("Order"),
+        help_text=_(
+            "The order of precedence of the position. For example, the "
+            "President is 1, Vice President is 2, and so on."
+        ),
+    )
+    sds_position = models.CharField(
+        db_column="SDSPosition",
+        blank=True,
+        null=True,
+        max_length=32,
+        verbose_name=_("SunDevilSync Position"),
+        help_text=_(
+            "The name of the officer position as it is registered on SunDevilSync"
+        ),
+    )
+    email = models.EmailField(
+        db_column="OfficerEmail",
+        blank=True,
+        null=True,
+        verbose_name=_("Email"),
+        help_text=_("The email address associated to the Officer position"),
+    )
 
     class Meta:
         ordering = ["order"]
@@ -110,7 +201,9 @@ class OfficerPosition(models.Model):
         name = self.name
         order_max_to_check = self.order + len(positions)
 
-        log.debug(f"Analyzing {len(positions)} positions: {list(positions.values_list('name', 'order'))}")
+        log.debug(
+            f"Analyzing {len(positions)} positions: {list(positions.values_list('name', 'order'))}"
+        )
         for order in range(self.order, order_max_to_check):
 
             # performs a check for the next order in the list of positions. The filter works by:
@@ -120,10 +213,11 @@ class OfficerPosition(models.Model):
             # If there is a position at that order, the position's order is incremented and the
             # loop continues
             try:
-                current_position = positions\
-                    .exclude(name__exact=name)\
-                    .exclude(name__exact=self.name)\
+                current_position = (
+                    positions.exclude(name__exact=name)
+                    .exclude(name__exact=self.name)
                     .get(order__exact=order)
+                )
                 current_position.order = order + 1
                 current_position.save(stop_reorder=True)
                 name = current_position.name
@@ -157,17 +251,39 @@ class Officer(models.Model):
     ticketing and communication to disconnect the requirement for an officer to
     use their personal email to conduct CodeDevils" business.
     """
-    position = models.ForeignKey(OfficerPosition, db_column="Position", null=True, on_delete=models.SET_NULL,
-                                 verbose_name=_("Position"))
-    user = models.ForeignKey(User, db_column="UserID", null=True, on_delete=models.CASCADE,
-                             verbose_name=_("User"),
-                             help_text=_("The holder the position"))
-    personal_email = models.EmailField(db_column="PersonalEmail", blank=True, null=True,
-                                       verbose_name=_("Personal email"),
-                                       help_text=_("The email address belonging to the student (generally <first name>."
-                                                   "<last name>@codedevils.org)"))
-    quote = models.TextField(db_column="Quote", blank=True, null=True, verbose_name=_("Quote"),
-                             help_text=_("A cliche quote that truly defines who this being is"))
+
+    position = models.ForeignKey(
+        OfficerPosition,
+        db_column="Position",
+        null=True,
+        on_delete=models.SET_NULL,
+        verbose_name=_("Position"),
+    )
+    user = models.ForeignKey(
+        User,
+        db_column="UserID",
+        null=True,
+        on_delete=models.CASCADE,
+        verbose_name=_("User"),
+        help_text=_("The holder the position"),
+    )
+    personal_email = models.EmailField(
+        db_column="PersonalEmail",
+        blank=True,
+        null=True,
+        verbose_name=_("Personal email"),
+        help_text=_(
+            "The email address belonging to the student (generally <first name>."
+            "<last name>@codedevils.org)"
+        ),
+    )
+    quote = models.TextField(
+        db_column="Quote",
+        blank=True,
+        null=True,
+        verbose_name=_("Quote"),
+        help_text=_("A cliche quote that truly defines who this being is"),
+    )
 
     class Meta:
         managed = True
@@ -183,7 +299,9 @@ class Officer(models.Model):
         user changes, then the correct privileges are administered to both the old and new position holder.
         """
         super().__init__(*args, **kwargs)
-        self.__original_user = None  # used to track transition between position from one user to another
+        self.__original_user = (
+            None  # used to track transition between position from one user to another
+        )
 
     def __str__(self):
         """
@@ -229,7 +347,9 @@ class Officer(models.Model):
             self._add_user_to_officers()
 
         if self.__original_user and self.user != self.__original_user:
-            log.debug(f"Removing officer {self.__original_user.username} privileges, adding {self.user.username}")
+            log.debug(
+                f"Removing officer {self.__original_user.username} privileges, adding {self.user.username}"
+            )
             self.remove_original_user_priv()
             self.__original_user = self.user
             self._add_user_to_officers()

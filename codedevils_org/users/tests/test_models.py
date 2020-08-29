@@ -18,6 +18,10 @@ def test_user_str(user: User):
     assert str(user) == user.username
 
 
+def test_user_image_default(user: User):
+    assert user.image() == user.image_512
+
+
 def test_officer_position_str(position: OfficerPosition):
     assert str(position) == f"{position.name} <{position.email}>"
     position.email = None
@@ -28,14 +32,17 @@ def test_officer_str(officer: Officer):
     assert str(officer) == f"{officer.position.name}"
     officer.user.first_name = "Sandy"
     officer.user.last_name = "Cheeks"
-    assert str(officer) == f"{officer.position.name} - {officer.user.first_name} {officer.user.last_name}"
+    assert (
+        str(officer)
+        == f"{officer.position.name} - {officer.user.first_name} {officer.user.last_name}"
+    )
 
 
 def test_officer_position_list_ordering():
     # create 5 officer positions
     positions = []
     for i in range(5):
-        positions.append(OfficerPositionFactory(order=i+1))
+        positions.append(OfficerPositionFactory(order=i + 1))
 
     assert len(positions) == 5
 

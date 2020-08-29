@@ -6,7 +6,7 @@ __version_info__ = tuple(
     ]
 )
 
-__title__ = 'CodeDevils Website'
-__author__ = 'CodeDevils'
-__license__ = 'MIT'
-__copyright__ = 'Copyright 2020 CodeDevils'
+__title__ = "CodeDevils Website"
+__author__ = "CodeDevils"
+__license__ = "MIT"
+__copyright__ = "Copyright 2020 CodeDevils"

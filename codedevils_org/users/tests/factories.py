@@ -15,7 +15,13 @@ from codedevils_org.users.models import Officer, OfficerPosition
 
 
 def _get_position():
-    choices = ["President", "Vice President", "Secretary", "Webmaster", "Events Coordinator"]
+    choices = [
+        "President",
+        "Vice President",
+        "Secretary",
+        "Webmaster",
+        "Events Coordinator",
+    ]
     return random.choice(choices)
 
 

@@ -69,7 +69,7 @@
 			</div>
 		</section>
 		<!--LEADERSHIP-->
-		<section id="Leadership" style="padding-top: 50px;" class="section bg-6">
+		<section id="leadership" style="padding-top: 50px;" class="section bg-6">
 			<div class="container bring-to-front pt-0 pb-5">
 				<div class="section-heading text-center">
 					<h2>{% trans 'CodeDevils Leadership' %}</h2>
@@ -83,32 +83,42 @@
 							<div class="card shadow">
 								<div class="container-fluid py-0">
 									<div class="row">
-										<div class="col-md-5 py-9 py-sm-7 overlay overlay-5 alpha-2 image-background cover center-top" style="background-image: url('{{ officer.user.profile.image.url }}')"></div>
+										<div class="col-md-5 py-9 py-sm-7 overlay overlay-5 alpha-2 image-background cover center-top" style="background-image: url('{{ officer.user.image }}')"></div>
 										<div class="col-md-7">
 											<div class="p-4">
-												<h6 class="bold font-l">{{ officer.user.first_name }} {{ officer.user.last_name }}</h6>
-												<p class="small mt-0 accent text-uppercase mb-5">{{ officer.get_position_display }}</p>
+												<h6 class="bold font-l">{{ officer.user.name }}</h6>
+												<p class="small mt-0 accent text-uppercase mb-5">{{ officer.position.name }}</p>
                                                 {% if officer.quote %}
 												<blockquote class="team-quote pt-1">
-													<p class="italic pl-4">{% blocktrans %}{{ officer.quote }}{% endblocktrans %}</p>
+													<p class="italic pl-4">{{ officer.quote }}</p>
 												</blockquote>
                                                 {% endif %}
                                                 <hr class="w-25 mt-5">
                                                 <nav class="nav">
-                                                    {% if officer.user.profile.facebook_url %}
-                                                        <a href="{{ officer.user.profile.facebook_url }}"
+                                                    {% if officer.user.github_username %}
+                                                        <a href="https://github.com/{{ officer.user.github_username }}"
+												           target="_blank"
                                                            class="nav-item nav-link pb-0">
-                                                            <i class="fab fa-facebook color-2"></i>
+                                                            <i class="fab fa-github color-2"></i>
                                                         </a>
                                                     {% endif %}
-                                                    {% if officer.user.profile.twitter_username %}
-                                                        <a href="https://twitter.com/{{ officer.user.profile.twitter_username }}"
+                                                    {% if officer.user.slack_id %}
+                                                        <a href="https://codedevils.slack.com/team/{{ officer.user.slack_id }}"
+												           target="_blank"
+                                                           class="nav-item nav-link pb-0">
+                                                            <i class="fab fa-slack color-2"></i>
+                                                        </a>
+                                                    {% endif %}
+                                                    {% if officer.user.twitter_username %}
+                                                        <a href="https://twitter.com/{{ officer.user.twitter_username }}"
+												           target="_blank"
                                                            class="nav-item nav-link pb-0">
                                                             <i class="fab fa-twitter color-2"></i>
                                                         </a>
                                                     {% endif %}
-                                                    {% if officer.user.profile.linkedin_url %}
-                                                        <a href="{{ officer.user.profile.linkedin_url }}"
+                                                    {% if officer.user.linkedin_url %}
+                                                        <a href="{{ officer.user.linkedin_url }}"
+												           target="_blank"
                                                            class="nav-item nav-link pb-0">
                                                             <i class="fab fa-linkedin color-2"></i>
                                                         </a>
@@ -139,7 +149,7 @@
 							<h2 class="color-1">{% trans 'Our Meetings are held online' %}</h2>
 						</div>
 						<p class="handwritten highlight font-md">{% trans 'Join In' %}</p>
-                        <a href="{% custom_url 'gbm' %}"
+                        <a href="{% custom_url 'meet' %}"
                            class="modal-popup mfp-iframe btn btn-circle btn-lg btn-accent" data-effect="mfp-fade">
 							<i class="pe pe-7s-play pe-2x ml-2"></i>
 						</a>
@@ -193,7 +203,7 @@
 									<span class="bold">like collaboration.</span> Login to take advantage of our all new workspace</p>
 								{% endblocktrans %}
                                 {% if not user.is_authenticated %}
-								    <a href="{% url 'account_login' %}" class="btn btn-accent btn-rounded mt-4">{% trans 'Login' %}</a>
+								    <a href="{% url 'cas_ng_login' %}" class="btn btn-accent btn-rounded mt-4">{% trans 'Login' %}</a>
                                 {% else %}
                                     <a href="#" class="btn btn-accent btn-rounded mt-4">{% trans 'View Workspace' %}</a>
                                 {% endif %}

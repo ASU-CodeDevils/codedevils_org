@@ -17,13 +17,15 @@ logger = logging.getLogger("")
 
 
 @celery_app.task()
-def send_email(subject: str,
-               text_content: str = None,
-               from_email: str = settings.DEFAULT_FROM_EMAIL,
-               to: EmailList = None,
-               reply_to: EmailList = None,
-               html_content: str = None,
-               attachments: Attachments = None) -> None:
+def send_email(
+    subject: str,
+    text_content: str = None,
+    from_email: str = settings.DEFAULT_FROM_EMAIL,
+    to: EmailList = None,
+    reply_to: EmailList = None,
+    html_content: str = None,
+    attachments: Attachments = None,
+) -> None:
     """
     Wrapper for the built-in django send_mail util.
 
@@ -39,7 +41,11 @@ def send_email(subject: str,
 
     # set the list of recipients if not already set
     if not to:
-        to = list(User.objects.filter(is_active=True, receieve_notifications=True).values_list("email", flat=True))
+        to = list(
+            User.objects.filter(
+                is_active=True, receieve_notifications=True
+            ).values_list("email", flat=True)
+        )
     elif isinstance(to, str):
         to = [to]
 
@@ -47,8 +53,13 @@ def send_email(subject: str,
     if reply_to and isinstance(reply_to, str):
         reply_to = [reply_to]
 
-    email = EmailMultiAlternatives(subject=subject, body=html_content if html_content else text_content,
-                                   from_email=from_email, to=to, reply_to=reply_to)
+    email = EmailMultiAlternatives(
+        subject=subject,
+        body=html_content if html_content else text_content,
+        from_email=from_email,
+        to=to,
+        reply_to=reply_to,
+    )
 
     # attach files
     if attachments:
@@ -62,13 +73,15 @@ def send_email(subject: str,
         raise
 
 
-def send_templated_email(subject: str,
-                         template: str,
-                         template_context: dict = None,
-                         from_email: str = settings.EMAIL_HOST_USER,
-                         to: EmailList = None,
-                         reply_to: EmailList = None,
-                         attachments: Attachments = None):
+def send_templated_email(
+    subject: str,
+    template: str,
+    template_context: dict = None,
+    from_email: str = settings.EMAIL_HOST_USER,
+    to: EmailList = None,
+    reply_to: EmailList = None,
+    attachments: Attachments = None,
+):
     """
     Sends a templated email message.
 
@@ -84,8 +97,15 @@ def send_templated_email(subject: str,
         logger.error("Email template not found: %s", fnfe)
         raise
 
-    send_email.delay(subject=subject, from_email=from_email, to=to, reply_to=reply_to,
-                     text_content=text_content, html_content=html_content, attachments=attachments)
+    send_email.delay(
+        subject=subject,
+        from_email=from_email,
+        to=to,
+        reply_to=reply_to,
+        text_content=text_content,
+        html_content=html_content,
+        attachments=attachments,
+    )
 
 
 def send_contact_us_email(subject: str, reply_to: str, body: str):
@@ -98,8 +118,13 @@ def send_contact_us_email(subject: str, reply_to: str, body: str):
     """
     body = ["Someone has contacted CodeDevils from the website:", body]
     context = {"title": subject, "body": body}
-    send_templated_email(subject=subject, to=settings.EMAIL_INFO, reply_to=reply_to,
-                         template="contact_us", template_context=context)
+    send_templated_email(
+        subject=subject,
+        to=settings.EMAIL_INFO,
+        reply_to=reply_to,
+        template="contact_us",
+        template_context=context,
+    )
 
 
 def email_is_blacklisted(email: str):

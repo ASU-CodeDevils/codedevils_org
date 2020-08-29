@@ -28,8 +28,12 @@ class TestUserViewSet:
         response = view.me(request)
 
         # set dates in advance to avoid NoneType exceptions when converting
-        last_login = None if not user.last_login else user.last_login.strftime(DATE_FORMAT)
-        date_joined = None if not user.date_joined else user.date_joined.strftime(DATE_FORMAT)
+        last_login = (
+            None if not user.last_login else user.last_login.strftime(DATE_FORMAT)
+        )
+        date_joined = (
+            None if not user.date_joined else user.date_joined.strftime(DATE_FORMAT)
+        )
 
         assert response.data == {
             "username": user.username,
@@ -43,12 +47,14 @@ class TestUserViewSet:
             "first_name": user.first_name,
             "github_username": user.github_username,
             "id": user.id,
+            "image_24": user.image_24,
+            "image_512": user.image_512,
             "instagram_url": user.instagram_url,
             "is_active": user.is_active,
             "last_login": last_login,
             "last_name": user.last_name,
             "linkedin_url": user.linkedin_url,
             "receive_notifications": user.receive_notifications,
-            "slack_username": user.slack_username,
-            "twitter_username": user.twitter_username
+            "slack_id": user.slack_id,
+            "twitter_username": user.twitter_username,
         }

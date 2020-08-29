@@ -9,13 +9,24 @@ logger = logging.getLogger("")
 
 class BlacklistAbstract(models.Model):
     """Provides an abstract base model for blacklisted models."""
-    is_blocked = models.BooleanField(db_column="Blocked", null=False, default=True,
-                                     verbose_name=_("Is blocked"),
-                                     help_text=_("Blocks this email from contacting CodeDevils."))
-    blocked_until = models.DateTimeField(db_column="BlockedUntil", blank=True, null=True,
-                                         verbose_name=_("Blocked until"),
-                                         help_text=_("The date and time the email is blocked until. If not specified, "
-                                                     "this email is blocked indefinitely."))
+
+    is_blocked = models.BooleanField(
+        db_column="Blocked",
+        null=False,
+        default=True,
+        verbose_name=_("Is blocked"),
+        help_text=_("Blocks this email from contacting CodeDevils."),
+    )
+    blocked_until = models.DateTimeField(
+        db_column="BlockedUntil",
+        blank=True,
+        null=True,
+        verbose_name=_("Blocked until"),
+        help_text=_(
+            "The date and time the email is blocked until. If not specified, "
+            "this email is blocked indefinitely."
+        ),
+    )
 
     class Meta:
         abstract = True
@@ -24,11 +35,18 @@ class BlacklistAbstract(models.Model):
 class BlacklistDomain(BlacklistAbstract):
     """All blacklisted email domains."""
 
-    domain = models.CharField(db_column="Domain", blank=False, null=False, max_length=253,
-                              verbose_name=_("Domain"),
-                              help_text=_("The domain of email addresses to blacklist. This does not include "
-                                          "subdomains as this would inadvertantly block valid domains (see "
-                                          "documentation for more)."))
+    domain = models.CharField(
+        db_column="Domain",
+        blank=False,
+        null=False,
+        max_length=253,
+        verbose_name=_("Domain"),
+        help_text=_(
+            "The domain of email addresses to blacklist. This does not include "
+            "subdomains as this would inadvertantly block valid domains (see "
+            "documentation for more)."
+        ),
+    )
 
     class Meta:
         managed = True
@@ -51,8 +69,9 @@ class BlacklistDomain(BlacklistAbstract):
 class BlacklistEmail(BlacklistAbstract):
     """Blacklist of emails to be blocked from the Contact Us page."""
 
-    email = models.EmailField(db_column="Email", blank=False, null=False, unique=True,
-                              verbose_name=_("Email"))
+    email = models.EmailField(
+        db_column="Email", blank=False, null=False, unique=True, verbose_name=_("Email")
+    )
 
     class Meta:
         managed = True

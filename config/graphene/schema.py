@@ -9,20 +9,20 @@ from config.graphene import auth as auth_schema
 
 
 class Query(
-        user_schema.Query,
-        cdurl_schema.Query,
-        email_schema.Query,
-        auth_schema.Query,
-        graphene.ObjectType
+    user_schema.Query,
+    cdurl_schema.Query,
+    email_schema.Query,
+    auth_schema.Query,
+    graphene.ObjectType,
 ):
     debug = graphene.Field(DjangoDebug, name="_debug")
 
 
 class Mutation(
-        user_schema.Mutation,
-        cdurl_schema.Mutation,
-        email_schema.Mutation,
-        graphene.ObjectType,
+    user_schema.Mutation,
+    cdurl_schema.Mutation,
+    email_schema.Mutation,
+    graphene.ObjectType,
 ):
     debug = graphene.Field(DjangoDebug, name="_debug")
 

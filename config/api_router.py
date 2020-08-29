@@ -6,9 +6,16 @@ from rest_framework.response import Response
 from rest_framework.routers import DefaultRouter, SimpleRouter
 from rest_framework.views import APIView
 
-from codedevils_org.users.api.views import UserViewSet, OfficerViewSet, OfficerPositionViewSet
+from codedevils_org.users.api.views import (
+    UserViewSet,
+    OfficerViewSet,
+    OfficerPositionViewSet,
+)
 from codedevils_org.contrib.cd_url.api.views import CustomUrlViewSet
-from codedevils_org.contrib.email.api.views import BlacklistDomainViewSet, BlacklistEmailViewSet
+from codedevils_org.contrib.email.api.views import (
+    BlacklistDomainViewSet,
+    BlacklistEmailViewSet,
+)
 from config.drf import schema_view
 from config.graphene.graphene import private_graphql_view
 
@@ -28,6 +35,7 @@ router.register("blacklist_emails", BlacklistEmailViewSet)
 # test API view
 class TestView(APIView):
     """Test API endpoint view."""
+
     authentication_classes = [authentication.TokenAuthentication]
     permissions_classes = [permissions.IsAuthenticated]
 
@@ -37,10 +45,14 @@ class TestView(APIView):
 
 app_name = "api"
 urlpatterns = [
-    re_path(r"^swagger(?P<format>\.json|\.yaml)$", schema_view.without_ui(cache_timeout=0), name="schema-json"),
+    re_path(
+        r"^swagger(?P<format>\.json|\.yaml)$",
+        schema_view.without_ui(cache_timeout=0),
+        name="schema-json",
+    ),
     path("docs/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
     # GraphQL
     path("graphql/", csrf_exempt(private_graphql_view)),
     # test endpoint
-    path("test/", TestView.as_view(), name="test")
+    path("test/", TestView.as_view(), name="test"),
 ] + router.urls

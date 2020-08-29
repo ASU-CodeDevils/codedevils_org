@@ -11,7 +11,7 @@ ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 APPS_DIR = ROOT_DIR / "codedevils_org"
 env = environ.Env()
 
-READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
+READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=True)
 if READ_DOT_ENV_FILE:
     # OS environment variables take precedence over variables from .env
     env.read_env(str(ROOT_DIR / ".env"))
@@ -34,7 +34,7 @@ LANGUAGES = [
     ("fr", _("French")),
     ("ar", _("Arabic")),
     ("nl", _("Dutch")),
-    ("hi", _("Hindi"))
+    ("hi", _("Hindi")),
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1
@@ -51,9 +51,7 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-DATABASES = {
-    "default": env.db("DATABASE_URL", default="mysql:///codedevils_org")
-}
+DATABASES = {"default": env.db("DATABASE_URL", default="mysql:///codedevils_org")}
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 # URLS
@@ -85,13 +83,13 @@ THIRD_PARTY_APPS = [
     "drf_yasg",
     "rest_framework",
     "rest_framework.authtoken",
-    "rosetta"
+    "rosetta",
 ]
 
 LOCAL_APPS = [
     "codedevils_org.users.apps.UsersConfig",
     "codedevils_org.contrib.cd_url.apps.CDUrlConfig",
-    "codedevils_org.contrib.email.apps.EmailConfig"
+    "codedevils_org.contrib.email.apps.EmailConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -113,7 +111,7 @@ AUTH_USER_MODEL = "users.User"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
 LOGIN_REDIRECT_URL = "users:redirect"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-url
-LOGIN_URL = "account_login"
+LOGIN_URL = "cas_ng_login"
 
 # PASSWORDS
 # ------------------------------------------------------------------------------
@@ -253,7 +251,10 @@ DEFAULT_FROM_EMAIL = env(
 # Django Admin URL.
 ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
-ADMINS = [("""Kevin Shelley""", "kevin.shelley@pm.me"), ("""Abraham Cifuentes""", "acifuen1@asu.edu")]
+ADMINS = [
+    ("""Kevin Shelley""", "kevin.shelley@pm.me"),
+    ("""Abraham Cifuentes""", "acifuen1@asu.edu"),
+]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
@@ -268,7 +269,7 @@ LOGGING = {
     "formatters": {
         "verbose": {
             "format": "%(levelname)s %(asctime)s %(module)s "
-                      "%(process)d %(thread)d %(message)s"
+            "%(process)d %(thread)d %(message)s"
         }
     },
     "handlers": {
@@ -304,19 +305,6 @@ CELERY_TASK_TIME_LIMIT = 5 * 60
 CELERY_TASK_SOFT_TIME_LIMIT = 60
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#beat-scheduler
 CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
-# django-allauth
-# ------------------------------------------------------------------------------
-ACCOUNT_ALLOW_REGISTRATION = env.bool("DJANGO_ACCOUNT_ALLOW_REGISTRATION", True)
-# https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_AUTHENTICATION_METHOD = "username"
-# https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_EMAIL_REQUIRED = True
-# https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-# https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_ADAPTER = "codedevils_org.users.adapters.AccountAdapter"
-# https://django-allauth.readthedocs.io/en/latest/configuration.html
-SOCIALACCOUNT_ADAPTER = "codedevils_org.users.adapters.SocialAccountAdapter"
 
 # django-rest-framework
 # -------------------------------------------------------------------------------
@@ -328,7 +316,7 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
-    "PAGE_SIZE": 100
+    "PAGE_SIZE": 100,
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
@@ -352,17 +340,14 @@ DRF_YASG_LICENSE = "BSD License"
 # https://drf-yasg.readthedocs.io/en/stable/security.html#describing-authentication-schemes
 SWAGGER_SETTINGS = {
     "SECURITY_DEFINITIONS": {
-        "Token": {
-            "type": "apiKey",
-            "name": "Authorization",
-            "in": "header"
-        }
+        "Token": {"type": "apiKey", "name": "Authorization", "in": "header"}
     }
 }
 
 # graphene
 # https://docs.graphene-python.org/projects/django/en/latest/
 # -------------------------------------------------------------------------------
-GRAPHENE = {
-    "SCHEMA": "config.graphene.schema.schema"
-}
+GRAPHENE = {"SCHEMA": "config.graphene.schema.schema"}
+
+# custom
+GOOGLE_ANALYTICS_TRACKING_ID = env("GOOGLE_ANALYTICS_TRACKING_ID", default=None)
