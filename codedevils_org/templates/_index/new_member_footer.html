@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n custom_urls %}
 <!--CREATE ACCOUNT-->
 {% if not user.is_authenticated %}
 <section class="section bg-1{% block new_member_edge %} edge top-left b-b{% endblock new_member_edge %}">
@@ -8,7 +8,7 @@
                 <p class="light mb-0 accent lead">{% blocktrans %}Ready to join?{% endblocktrans %}</p>
                 <h2 class="mt-0">{% blocktrans %}Create a CodeDevil account{% endblocktrans %}</h2>
             </div>
-            <a href="#" class="btn btn-accent btn-rounded mt-3 mt-md-0 ml-md-auto">{% blocktrans %}Create account{% endblocktrans %}</a>
+            <a href="{% custom_url 'join' %}" class="btn btn-accent btn-rounded mt-3 mt-md-0 ml-md-auto">{% blocktrans %}Create account{% endblocktrans %}</a>
         </div>
     </div>
 </section>

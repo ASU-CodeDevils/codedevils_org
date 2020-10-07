@@ -1,7 +1,5 @@
 {% extends "_index/base.html" %}
-{% load i18n %}
-{% load static %}
-{% load custom_urls %}
+{% load i18n static custom_urls %}
 {% block header %}
     <!--HEADER-->
     <header class="header section parallax image-background overlay gradient gradient-53 alpha-8 color-1" style="background-image: url({% static 'img/bg/code-grid.png' %})">
@@ -226,7 +224,7 @@
 						</div>
                         <a href="{% custom_url 'sundevilsync' %}" class="btn btn-rounded btn-outline-3 bw-2 mr-3"
                            target="_blank">{% trans 'SunDevilSYNC' %}</a>
-                        <a href="#"
+                        <a href="{% custom_url 'join' %}"
                            class="btn btn-rounded btn-outline-1 bw-2 bold gradient gradient-43 color-1">{% trans 'SIGNUP' %}</a>
 					</div>
 					<div class="col-lg-6">
