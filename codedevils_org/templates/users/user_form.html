@@ -1,6 +1,5 @@
 {% extends "_index/base.html" %}
-{% load crispy_forms_tags %}
-{% load static %}
+{% load crispy_forms_tags i18n static %}
 {% block header %}{% endblock header %}
 {% block content %}
     <section class="checkout-header page header bg-dark section">
@@ -10,7 +9,7 @@
                 <p class="mb-0 text-muted">Welcome Back, {{ user.first_name }}!</p>
             </div>
             <nav class="nav navbar mt-4">
-                <a href="{% url 'user_detail' username=user.username %}" class="nav-item nav-link">
+                <a href="{% url 'users:detail' username=user.username %}" class="nav-item nav-link">
                     <i class="far fa-user mr-2"></i>
                     <span class="d-none d-md-inline">Overview</span>
                 </a>
@@ -36,35 +35,24 @@
     <!-- Address -->
     <section class="section">
         <form type="submit" method="post" class="bg-white">
+            {{ form.non_field_errors }}
             {% csrf_token %}
             <div class="container pt-2">
                 <div class="row form-group">
                     <div class="col-sm mt-4">
-                        <h5>About Me</h5>
                         <div class="card">
                             <div class="card-body">
-                                {{ u_form|crispy }}
-                                {{ image_form|crispy }}
-                            </div>
-                        </div>
-                        <h5 class="mt-4 mb-2">Additional Info</h5>
-                        <div class="card">
-                            <div class="card-body">
-                                {{ update_form|crispy }}
+                                {{ form | crispy }}
                             </div>
                         </div>
                     </div>
                     <div class="col-sm mt-4">
-                        <h5>Public Info</h5>
-                        <div class="card">
-                            <div class="card-body">
-                                {{ usernames_form|crispy }}
-                            </div>
-                        </div>
-                        <h5 class="mt-4 mb-2">Preferences</h5>
-                        <div class="card">
-                            <div class="card-body">
-                                {{ preferences_form|crispy }}
+                        <div class="alert alert-primary mb-4">
+                            <div class="media">
+                                <i class="fas fa-info-circle font-l mr-3"></i>
+                                <div class="media-body">
+                                    {% trans 'We are working on making this easier to read. For now, you can edit your information and select Update at the bottom.' %}
+                                </div>
                             </div>
                         </div>
                     </div>
