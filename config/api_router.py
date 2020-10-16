@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from django.urls import path, re_path
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import authentication, permissions
@@ -52,7 +53,7 @@ urlpatterns = [
     ),
     path("docs/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
     # GraphQL
-    path("graphql/", csrf_exempt(private_graphql_view)),
+    path("graphql/", login_required(csrf_exempt(private_graphql_view))),
     # test endpoint
     path("test/", TestView.as_view(), name="test"),
 ] + router.urls
