@@ -59,6 +59,13 @@ class TestUserDetailView:
 
         response = user_detail_view(request, username=user.username)
 
+        # initially will be forbidden since users are anonymous by default
+        assert response.status_code == 403
+
+        # check that the profile can be accessed once anonymity is removed
+        user.anonymous = False
+        user.save()
+        response = user_detail_view(request, username=user.username)
         assert response.status_code == 200
 
     def test_not_authenticated(self, user: User, rf: RequestFactory):
