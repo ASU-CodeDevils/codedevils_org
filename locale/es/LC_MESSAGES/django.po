@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-02 06:34+0000\n"
-"PO-Revision-Date: 2020-07-02 06:46+0000\n"
-"Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
+"POT-Creation-Date: 2020-10-18 02:02+0000\n"
+"PO-Revision-Date: 2020-10-18 02:04+0000\n"
+"Last-Translator: b'Kevin Shelley <kevin.shelley@pm.me>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "CodeDevils URLs"
 msgstr "CodeDevils URLs"
 
-#: codedevils_org/contrib/cd_url/models.py:14
+#: codedevils_org/contrib/cd_url/models.py:22
 msgid ""
 "The string used to reference the URL from within a Django template. The slug"
 " can only contain letters, numbers, underscores and hyphens."
@@ -32,32 +32,82 @@ msgstr ""
 "Django. La babosa solo puede contener letras, números, guiones bajos y "
 "guiones."
 
-#: codedevils_org/contrib/cd_url/models.py:21
+#: codedevils_org/contrib/cd_url/models.py:29
+msgid "Last Updated"
+msgstr "Última actualización"
+
+#: codedevils_org/contrib/cd_url/models.py:31
+msgid ""
+"Used to send notifications to administrators when the link needs to be "
+"updated"
+msgstr ""
+"Se utiliza para enviar notificaciones a los administradores cuando es "
+"necesario actualizar el enlace."
+
+#: codedevils_org/contrib/cd_url/models.py:40
+msgid "Notify in"
+msgstr "Notificar en"
+
+#: codedevils_org/contrib/cd_url/models.py:42
+msgid ""
+"The number of hours, days or months until managers are notified to update "
+"the link."
+msgstr ""
+"La cantidad de horas, días o meses hasta que se notifique a los gerentes que"
+" actualicen el enlace."
+
+#: codedevils_org/contrib/cd_url/models.py:53
+msgid "Notify interval"
+msgstr "Notificar intervalo"
+
+#: codedevils_org/contrib/cd_url/models.py:55
+msgid ""
+"The interval (hours, days months) of ``notify_in``. Note that months are "
+"assumed to be 30 days."
+msgstr ""
+"El intervalo (horas, días meses) de `` notificar_en ''. Tenga en cuenta que "
+"se supone que los meses son 30 días."
+
+#: codedevils_org/contrib/cd_url/models.py:63
+msgid "Acknowledged"
+msgstr "Admitida"
+
+#: codedevils_org/contrib/cd_url/models.py:65
+msgid ""
+"Used to flag if this link has been acknowledged as up-to-date. If not, "
+"managers are notified that the links need to be updated."
+msgstr ""
+"Se utiliza para marcar si este enlace ha sido reconocido como actualizado. "
+"De lo contrario, se notifica a los administradores que los enlaces deben "
+"actualizarse."
+
+#: codedevils_org/contrib/cd_url/models.py:85
 msgid "Custom URL"
 msgstr "URL personalizada"
 
-#: codedevils_org/contrib/cd_url/models.py:22
+#: codedevils_org/contrib/cd_url/models.py:86
 msgid "Custom URLs"
 msgstr "URLs personalizada"
 
 #: codedevils_org/contrib/email/apps.py:7
-#: codedevils_org/contrib/email/models.py:55 codedevils_org/users/models.py:82
+#: codedevils_org/contrib/email/models.py:73
+#: codedevils_org/users/models.py:172
 msgid "Email"
 msgstr "Email"
 
-#: codedevils_org/contrib/email/models.py:13
+#: codedevils_org/contrib/email/models.py:17
 msgid "Is blocked"
 msgstr "Está bloqueado"
 
-#: codedevils_org/contrib/email/models.py:14
+#: codedevils_org/contrib/email/models.py:18
 msgid "Blocks this email from contacting CodeDevils."
 msgstr "Impide que este correo electrónico se comunique con CodeDevils."
 
-#: codedevils_org/contrib/email/models.py:16
+#: codedevils_org/contrib/email/models.py:24
 msgid "Blocked until"
 msgstr "Bloqueada hasta"
 
-#: codedevils_org/contrib/email/models.py:17
+#: codedevils_org/contrib/email/models.py:26
 msgid ""
 "The date and time the email is blocked until. If not specified, this email "
 "is blocked indefinitely."
@@ -65,11 +115,11 @@ msgstr ""
 "La fecha y hora en que el correo electrónico está bloqueado hasta. Si no se "
 "especifica, este correo electrónico se bloquea indefinidamente."
 
-#: codedevils_org/contrib/email/models.py:28
+#: codedevils_org/contrib/email/models.py:43
 msgid "Domain"
 msgstr "Dominio"
 
-#: codedevils_org/contrib/email/models.py:29
+#: codedevils_org/contrib/email/models.py:45
 msgid ""
 "The domain of email addresses to blacklist. This does not include subdomains"
 " as this would inadvertantly block valid domains (see documentation for "
@@ -79,75 +129,75 @@ msgstr ""
 "no incluye subdominios ya que inadvertidamente bloquearía dominios válidos "
 "(consulte la documentación para obtener más información)."
 
-#: codedevils_org/contrib/email/models.py:37
+#: codedevils_org/contrib/email/models.py:55
 msgid "Blacklisted Domain"
 msgstr "Dominio en la lista negra"
 
-#: codedevils_org/contrib/email/models.py:38
+#: codedevils_org/contrib/email/models.py:56
 msgid "Blacklisted Domains"
 msgstr "Dominios en la lista negra"
 
-#: codedevils_org/contrib/email/models.py:61
+#: codedevils_org/contrib/email/models.py:80
 msgid "Blacklisted Email"
 msgstr "Correo electrónico en la lista negra"
 
-#: codedevils_org/contrib/email/models.py:62
+#: codedevils_org/contrib/email/models.py:81
 msgid "Blacklisted Emails"
 msgstr "Correos electrónicos en la lista negra"
 
-#: codedevils_org/page_views.py:22
+#: codedevils_org/page_views.py:28
 #: codedevils_org/templates/_index/footer.html:14
 #: codedevils_org/templates/_index/nav.html:14
 #: codedevils_org/templates/_index/nav.html:62
-#: codedevils_org/users/models.py:22
+#: codedevils_org/users/models.py:37
 msgid "About"
 msgstr "Acerca de"
 
-#: codedevils_org/page_views.py:32 codedevils_org/templates/_index/nav.html:18
+#: codedevils_org/page_views.py:39 codedevils_org/templates/_index/nav.html:18
 #: codedevils_org/templates/_index/nav.html:72
 #: codedevils_org/templates/pages/contactus.html:4
 msgid "Contact Us"
 msgstr "Contacta con nosotras"
 
-#: codedevils_org/page_views.py:47
+#: codedevils_org/page_views.py:54
 msgid "Please enter your email"
 msgstr "Por favor introduzca su correo electrónico"
 
-#: codedevils_org/page_views.py:48
+#: codedevils_org/page_views.py:55
 msgid "Please enter a subject"
 msgstr "Por favor ingrese un asunto"
 
-#: codedevils_org/page_views.py:49
+#: codedevils_org/page_views.py:56
 msgid "Please enter a message"
 msgstr "Por favor ingrese un mensaje"
 
-#: codedevils_org/page_views.py:56
+#: codedevils_org/page_views.py:63
 msgid "Your email is invalid"
 msgstr "Tu Correo Electrónico es Inválido"
 
-#: codedevils_org/page_views.py:60
+#: codedevils_org/page_views.py:67
 msgid "There was an issue with this email address"
 msgstr "Hubo un problema con esta dirección de correo electrónico."
 
-#: codedevils_org/page_views.py:78
+#: codedevils_org/page_views.py:92
 msgid "Your message has been received and we will email you back soon."
 msgstr "Su mensaje ha sido recibido y le responderemos pronto."
 
 #: codedevils_org/templates/_index/base.html:49
 #: codedevils_org/templates/_index/new_member_footer.html:8
-#: codedevils_org/templates/base.html:47
+#: codedevils_org/templates/base.html:46
 msgid "Ready to join?"
 msgstr "¿Lista para unirte?"
 
 #: codedevils_org/templates/_index/base.html:50
 #: codedevils_org/templates/_index/new_member_footer.html:9
-#: codedevils_org/templates/base.html:48
+#: codedevils_org/templates/base.html:47
 msgid "Create a CodeDevil account"
 msgstr "Crea una cuenta CodeDevil"
 
 #: codedevils_org/templates/_index/base.html:52
 #: codedevils_org/templates/_index/new_member_footer.html:11
-#: codedevils_org/templates/base.html:50
+#: codedevils_org/templates/base.html:49
 msgid "Create account"
 msgstr "Crear una cuenta"
 
@@ -206,7 +256,7 @@ msgid "Leadership"
 msgstr "Liderazgo"
 
 #: codedevils_org/templates/_index/footer.html:16
-#: codedevils_org/templates/pages/home.html:194
+#: codedevils_org/templates/pages/home.html:193
 msgid "SunDevilSync"
 msgstr "SunDevilSync"
 
@@ -259,7 +309,7 @@ msgstr "Hogar"
 #: codedevils_org/templates/_index/nav.html:65
 #: codedevils_org/templates/_index/nav.html:79
 #: codedevils_org/templates/pages/about.html:62
-#: codedevils_org/templates/pages/about.html:187
+#: codedevils_org/templates/pages/about.html:197
 #: codedevils_org/templates/pages/workspace.html:10
 msgid "Workspace"
 msgstr "Espacio de trabajo"
@@ -275,13 +325,12 @@ msgid "Register"
 msgstr "Registrarse"
 
 #: codedevils_org/templates/_index/nav.html:31
-#: codedevils_org/templates/pages/about.html:196
+#: codedevils_org/templates/pages/about.html:206
 msgid "Login"
 msgstr "Iniciar sesión"
 
 #: codedevils_org/templates/_index/nav.html:40
 #: codedevils_org/templates/_index/nav.html:101
-#: codedevils_org/templates/users/user_detail.html:29
 msgid "Profile"
 msgstr "Perfil"
 
@@ -310,329 +359,34 @@ msgstr "Solicitud de proyecto"
 msgid "Sign in"
 msgstr "Registrarse"
 
-#: codedevils_org/templates/account/account_inactive.html:5
-#: codedevils_org/templates/account/account_inactive.html:8
-msgid "Account Inactive"
-msgstr "Cuenta inactiva"
-
-#: codedevils_org/templates/account/account_inactive.html:10
-msgid "This account is inactive."
-msgstr "Esta cuenta está inactiva."
-
-#: codedevils_org/templates/account/email.html:7
-msgid "Account"
-msgstr "Cuenta"
-
-#: codedevils_org/templates/account/email.html:10
-msgid "E-mail Addresses"
-msgstr "Correos electrónicos"
-
-#: codedevils_org/templates/account/email.html:13
-msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
-"Las siguientes direcciones de correo electrónico están asociadas con su "
-"cuenta:"
-
-#: codedevils_org/templates/account/email.html:27
-msgid "Verified"
-msgstr "Verificada"
-
-#: codedevils_org/templates/account/email.html:29
-msgid "Unverified"
-msgstr "Inconfirmado"
-
-#: codedevils_org/templates/account/email.html:31
-msgid "Primary"
-msgstr "Primaria"
-
-#: codedevils_org/templates/account/email.html:37
-msgid "Make Primary"
-msgstr "Hacer primaria"
-
-#: codedevils_org/templates/account/email.html:38
-msgid "Re-send Verification"
-msgstr "Reenviar verificación"
-
-#: codedevils_org/templates/account/email.html:39
-msgid "Remove"
-msgstr "Eliminar"
-
-#: codedevils_org/templates/account/email.html:46
-msgid "Warning:"
-msgstr "Advertencia:"
-
-#: codedevils_org/templates/account/email.html:46
-msgid ""
-"You currently do not have any e-mail address set up. You should really add "
-"an e-mail address so you can receive notifications, reset your password, "
-"etc."
-msgstr ""
-"Actualmente no tiene ninguna dirección de correo electrónico configurada. "
-"Realmente debe agregar una dirección de correo electrónico para que pueda "
-"recibir notificaciones, restablecer su contraseña, etc."
-
-#: codedevils_org/templates/account/email.html:51
-msgid "Add E-mail Address"
-msgstr "Agregar dirección de correo electrónico"
-
-#: codedevils_org/templates/account/email.html:56
-msgid "Add E-mail"
-msgstr "Agregar correo electrónico"
-
-#: codedevils_org/templates/account/email.html:66
-msgid "Do you really want to remove the selected e-mail address?"
-msgstr ""
-"¿Realmente desea eliminar la dirección de correo electrónico seleccionada?"
-
-#: codedevils_org/templates/account/email_confirm.html:6
-#: codedevils_org/templates/account/email_confirm.html:10
-msgid "Confirm E-mail Address"
-msgstr "Confirmar el correo"
-
-#: codedevils_org/templates/account/email_confirm.html:16
-#, python-format
-msgid ""
-"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
-"address for user %(user_display)s."
-msgstr ""
-"Confirme que <a href=\"mailto:%(email)s\">%(email)s</a> es una dirección de "
-"correo electrónico para el usuario%(user_display)s."
-
-#: codedevils_org/templates/account/email_confirm.html:20
-msgid "Confirm"
-msgstr "Confirmar"
-
-#: codedevils_org/templates/account/email_confirm.html:27
-#, python-format
-msgid ""
-"This e-mail confirmation link expired or is invalid. Please <a "
-"href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
-msgstr ""
-"Este enlace de confirmación de correo electrónico expiró o no es válido. <a "
-"href=\"%(email_url)s\"> emita una nueva solicitud de confirmación por correo"
-" electrónico </a>."
-
-#: codedevils_org/templates/account/login.html:7
-#: codedevils_org/templates/account/login.html:11
-#: codedevils_org/templates/account/login.html:44
-msgid "Sign In"
-msgstr "Registrarse"
-
-#: codedevils_org/templates/account/login.html:16
-#, python-format
-msgid ""
-"Please sign in with one\n"
-"of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign up</a>\n"
-"for a %(site_name)s account and sign in below:"
-msgstr ""
-"Inicia sesión con uno\n"
-"De sus cuentas de terceros existentes. O, <a href=\"%(signup_url)s\"> regístrate </a>\n"
-"para una cuenta %(site_name)s e inicie sesión a continuación:"
-
-#: codedevils_org/templates/account/login.html:26
-msgid "or"
-msgstr "o"
-
-#: codedevils_org/templates/account/login.html:33
-#, python-format
-msgid ""
-"If you have not created an account yet, then please\n"
-"<a href=\"%(signup_url)s\">sign up</a> first."
-msgstr ""
-"Si aún no ha creado una cuenta, por favor\n"
-"<a href=\"%(signup_url)s\"> regístrate </a> primero."
-
-#: codedevils_org/templates/account/login.html:43
-msgid "Forgot Password?"
-msgstr "¿Se te olvidó tu contraseña?"
-
-#: codedevils_org/templates/account/logout.html:5
-#: codedevils_org/templates/account/logout.html:8
-#: codedevils_org/templates/account/logout.html:17
-msgid "Sign Out"
-msgstr "Desconectar"
-
-#: codedevils_org/templates/account/logout.html:10
-msgid "Are you sure you want to sign out?"
-msgstr "¿Estás segura de que quieres cerrar sesión?"
-
-#: codedevils_org/templates/account/password_change.html:6
-#: codedevils_org/templates/account/password_change.html:9
-#: codedevils_org/templates/account/password_change.html:14
-#: codedevils_org/templates/account/password_reset_from_key.html:5
-#: codedevils_org/templates/account/password_reset_from_key.html:8
-#: codedevils_org/templates/account/password_reset_from_key_done.html:4
-#: codedevils_org/templates/account/password_reset_from_key_done.html:7
-msgid "Change Password"
-msgstr "Cambia la contraseña"
-
-#: codedevils_org/templates/account/password_reset.html:7
-#: codedevils_org/templates/account/password_reset.html:11
-#: codedevils_org/templates/account/password_reset_done.html:6
-#: codedevils_org/templates/account/password_reset_done.html:9
-msgid "Password Reset"
-msgstr "Restablecimiento de contraseña"
-
-#: codedevils_org/templates/account/password_reset.html:16
-msgid ""
-"Forgotten your password? Enter your e-mail address below, and we'll send you"
-" an e-mail allowing you to reset it."
-msgstr ""
-"¿Olvidaste tu contraseña? Ingrese su dirección de correo electrónico a "
-"continuación y le enviaremos un correo electrónico que le permitirá "
-"restablecerla."
-
-#: codedevils_org/templates/account/password_reset.html:21
-msgid "Reset My Password"
-msgstr "Restablecer mi contraseña"
-
-#: codedevils_org/templates/account/password_reset.html:24
-msgid "Please contact us if you have any trouble resetting your password."
-msgstr "Contáctanos si tienes problemas para restablecer tu contraseña."
-
-#: codedevils_org/templates/account/password_reset_done.html:15
-msgid ""
-"We have sent you an e-mail. Please contact us if you do not receive it "
-"within a few minutes."
-msgstr ""
-"Te hemos enviado un correo electrónico. Póngase en contacto con nosotros si "
-"no lo recibe en unos minutos."
-
-#: codedevils_org/templates/account/password_reset_from_key.html:8
-msgid "Bad Token"
-msgstr "Token malo"
-
-#: codedevils_org/templates/account/password_reset_from_key.html:12
-#, python-format
-msgid ""
-"The password reset link was invalid, possibly because it has already been "
-"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password "
-"reset</a>."
-msgstr ""
-"El enlace de restablecimiento de contraseña no era válido, posiblemente "
-"porque ya se ha utilizado. Solicite un <a href=\"%(passwd_reset_url)s\"> "
-"restablecimiento de contraseña nueva</a>."
-
-#: codedevils_org/templates/account/password_reset_from_key.html:18
-msgid "change password"
-msgstr "cambia la contraseña"
-
-#: codedevils_org/templates/account/password_reset_from_key.html:21
-#: codedevils_org/templates/account/password_reset_from_key_done.html:8
-msgid "Your password is now changed."
-msgstr "Su contraseña ahora ha cambiado."
-
-#: codedevils_org/templates/account/password_set.html:6
-#: codedevils_org/templates/account/password_set.html:9
-#: codedevils_org/templates/account/password_set.html:14
-msgid "Set Password"
-msgstr "Configurar la clave"
-
-#: codedevils_org/templates/account/signup.html:6
-msgid "Signup"
-msgstr "Regístrate"
-
-#: codedevils_org/templates/account/signup.html:9
-#: codedevils_org/templates/account/signup.html:19
-msgid "Sign Up"
-msgstr "Regístrate"
-
-#: codedevils_org/templates/account/signup.html:11
-#, python-format
-msgid ""
-"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
-msgstr ""
-"¿Ya tienes una cuenta? Luego, por favor, <a href=\"%(login_url)s\"> inicie "
-"sesión </a>."
-
-#: codedevils_org/templates/account/signup_closed.html:5
-#: codedevils_org/templates/account/signup_closed.html:8
-msgid "Sign Up Closed"
-msgstr "Inscripción cerrada"
-
-#: codedevils_org/templates/account/signup_closed.html:10
-msgid "We are sorry, but the sign up is currently closed."
-msgstr "Lo sentimos, pero el registro está actualmente cerrado."
-
-#: codedevils_org/templates/account/verification_sent.html:5
-#: codedevils_org/templates/account/verification_sent.html:8
-#: codedevils_org/templates/account/verified_email_required.html:5
-#: codedevils_org/templates/account/verified_email_required.html:8
-msgid "Verify Your E-mail Address"
-msgstr "Verifique su dirección de correo electrónico"
-
-#: codedevils_org/templates/account/verification_sent.html:10
-msgid ""
-"We have sent an e-mail to you for verification. Follow the link provided to "
-"finalize the signup process. Please contact us if you do not receive it "
-"within a few minutes."
-msgstr ""
-"Le hemos enviado un correo electrónico para su verificación. Siga el enlace "
-"proporcionado para finalizar el proceso de registro. Póngase en contacto con"
-" nosotros si no lo recibe en unos minutos."
-
-#: codedevils_org/templates/account/verified_email_required.html:12
-msgid ""
-"This part of the site requires us to verify that\n"
-"you are who you claim to be. For this purpose, we require that you\n"
-"verify ownership of your e-mail address. "
-msgstr ""
-"Esta parte del sitio requiere que verifiquemos que\n"
-"eres quien dices ser. Para este propósito, requerimos que usted\n"
-"verificar la propiedad de su dirección de correo electrónico."
-
-#: codedevils_org/templates/account/verified_email_required.html:16
-msgid ""
-"We have sent an e-mail to you for\n"
-"verification. Please click on the link inside this e-mail. Please\n"
-"contact us if you do not receive it within a few minutes."
-msgstr ""
-"Le hemos enviado un correo electrónico para\n"
-"verificación. Haga clic en el enlace dentro de este correo electrónico. Por favor\n"
-"contáctenos si no lo recibe en unos minutos."
-
-#: codedevils_org/templates/account/verified_email_required.html:20
-#, python-format
-msgid ""
-"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
-"e-mail address</a>."
-msgstr ""
-"<strong> Nota: </strong> todavía puede <a href=\"%(email_url)s\"> cambiar su"
-" dirección de correo electrónico </a>."
-
-#: codedevils_org/templates/base.html:67
+#: codedevils_org/templates/base.html:66
 #, python-format
 msgid "%(message)s"
 msgstr "%(message)s"
 
-#: codedevils_org/templates/email/base.html:7
-#| msgid "CodeDevils - Develop. Network. Create."
+#: codedevils_org/templates/email/base.html:9
 msgid "CodeDevils - Develop. Network. Create"
 msgstr "CodeDevils - Desarrollar. Red. Crear"
 
-#: codedevils_org/templates/email/base.html:401
-#| msgid "CodeDevils"
+#: codedevils_org/templates/email/base.html:403
 msgid "The CodeDevils Team"
 msgstr "El equipo de CodeDevils"
 
-#: codedevils_org/templates/email/base.html:416
-#| msgid ""
-#| "Welcome to CodeDevils - We are An ASU student run organization"
+#: codedevils_org/templates/email/base.html:418
 msgid "CodeDevils - An Arizona State University student organization"
 msgstr ""
 "CodeDevils - Una organización estudiantil de la Universidad Estatal de "
 "Arizona"
 
-#: codedevils_org/templates/email/base.html:417
-#| msgid "Receive notifications"
+#: codedevils_org/templates/email/base.html:419
 msgid "To stop these notifications, "
 msgstr "Para detener estas notificaciones,"
 
-#: codedevils_org/templates/email/base.html:417
+#: codedevils_org/templates/email/base.html:419
 msgid "unsubscribe"
 msgstr "darse de baja"
 
-#: codedevils_org/templates/email/base.html:422
+#: codedevils_org/templates/email/base.html:424
 msgid "Visit our website"
 msgstr "Visite nuestro sitio web"
 
@@ -771,24 +525,19 @@ msgstr "Liderazgo de CodeDevils"
 msgid "The driving force behind everything CodeDevils"
 msgstr "La fuerza impulsora detrás de todo CodeDevils"
 
-#: codedevils_org/templates/pages/about.html:93
-#, python-format
-msgid "%(officer.quote)s"
-msgstr "%(officer.quote)s"
-
-#: codedevils_org/templates/pages/about.html:139
+#: codedevils_org/templates/pages/about.html:149
 msgid "Our Meetings are held online"
 msgstr "Nuestras reuniones se llevan a cabo en línea."
 
-#: codedevils_org/templates/pages/about.html:141
+#: codedevils_org/templates/pages/about.html:151
 msgid "Join In"
 msgstr "Participar"
 
-#: codedevils_org/templates/pages/about.html:154
+#: codedevils_org/templates/pages/about.html:164
 msgid "We promote collaboration"
 msgstr "Nosotras promovemos la colaboración"
 
-#: codedevils_org/templates/pages/about.html:155
+#: codedevils_org/templates/pages/about.html:165
 msgid ""
 "Collaborate with students on projects and course work while developing both "
 "your skills as a developer and your network."
@@ -796,19 +545,19 @@ msgstr ""
 "Colabore con los estudiantes en proyectos y cursos mientras desarrolla sus "
 "habilidades como desarrollador y su red."
 
-#: codedevils_org/templates/pages/about.html:163
+#: codedevils_org/templates/pages/about.html:173
 msgid "Network"
 msgstr "Red"
 
-#: codedevils_org/templates/pages/about.html:164
+#: codedevils_org/templates/pages/about.html:174
 msgid "Meet other members of CodeDevils."
 msgstr "Conoce a otras miembros de CodeDevils."
 
-#: codedevils_org/templates/pages/about.html:170
+#: codedevils_org/templates/pages/about.html:180
 msgid "Develop"
 msgstr "Desarrollar"
 
-#: codedevils_org/templates/pages/about.html:171
+#: codedevils_org/templates/pages/about.html:181
 msgid ""
 "Enhance your skills and grow as a developer through projects, webinars, and "
 "team collaboration."
@@ -816,16 +565,16 @@ msgstr ""
 "Mejore sus habilidades y crezca como desarrollador a través de proyectos, "
 "seminarios web y colaboración en equipo."
 
-#: codedevils_org/templates/pages/about.html:177
+#: codedevils_org/templates/pages/about.html:187
 msgid "Create"
 msgstr "Crear"
 
-#: codedevils_org/templates/pages/about.html:178
+#: codedevils_org/templates/pages/about.html:188
 msgid "Have a great idea? Start your own project or join one today!"
 msgstr ""
 "¿Tienes una gran idea? ¡Comience su propio proyecto o únase a uno hoy!"
 
-#: codedevils_org/templates/pages/about.html:191
+#: codedevils_org/templates/pages/about.html:201
 msgid ""
 "<p>Our club is packed full of things <span class=\"bold\">like "
 "collaboration.</span> Login to take advantage of our all new workspace</p>"
@@ -834,15 +583,15 @@ msgstr ""
 "colaboración. </span> Inicie sesión para aprovechar nuestro nuevo espacio de"
 " trabajo </p>"
 
-#: codedevils_org/templates/pages/about.html:198
+#: codedevils_org/templates/pages/about.html:208
 msgid "View Workspace"
 msgstr "Ver espacio de trabajo"
 
-#: codedevils_org/templates/pages/about.html:212
+#: codedevils_org/templates/pages/about.html:222
 msgid "Sponsored Projects"
 msgstr "Proyectos patrocinados"
 
-#: codedevils_org/templates/pages/about.html:213
+#: codedevils_org/templates/pages/about.html:223
 msgid ""
 "CodeDevils sponsors projects developed by club members by providing "
 "assistance and insight. <br>Check out some of our projects. "
@@ -936,25 +685,25 @@ msgstr ""
 "¿Alguna pregunta sobre cómo integrar su producto? No te preocupes, nuestro "
 "equipo geek está listo para ti en"
 
-#: codedevils_org/templates/pages/home.html:14
+#: codedevils_org/templates/pages/home.html:12
 msgid " An ASU<br> Student Organization"
 msgstr "Una ASU<br> Organización estudiantil"
 
-#: codedevils_org/templates/pages/home.html:32
+#: codedevils_org/templates/pages/home.html:30
 msgid "Stay posted on new website integrations and updates."
 msgstr ""
 "Manténgase publicado en las nuevas integraciones y actualizaciones del sitio"
 " web."
 
-#: codedevils_org/templates/pages/home.html:33
+#: codedevils_org/templates/pages/home.html:31
 msgid "Update Log"
 msgstr "Actualizar registro"
 
-#: codedevils_org/templates/pages/home.html:46
+#: codedevils_org/templates/pages/home.html:44
 msgid "Community"
 msgstr "Comunidad"
 
-#: codedevils_org/templates/pages/home.html:48
+#: codedevils_org/templates/pages/home.html:46
 msgid ""
 "Be part of an amazing group of individuals who have a passion for coding.<br><br>\n"
 "                                            Network with fellow students, faculty members, and guest speakers.<br><br>\n"
@@ -964,24 +713,24 @@ msgstr ""
 "Conéctese con otros estudiantes, miembros de la facultad y oradores invitados. <br> <br>\n"
 "¡Incluso tenemos canales dedicados de Slack para las clases SER / CSE!"
 
-#: codedevils_org/templates/pages/home.html:51
-#: codedevils_org/templates/pages/home.html:63
-#: codedevils_org/templates/pages/home.html:77
+#: codedevils_org/templates/pages/home.html:49
+#: codedevils_org/templates/pages/home.html:61
+#: codedevils_org/templates/pages/home.html:75
 #: codedevils_org/templates/pages/workspace.html:44
 #: codedevils_org/templates/pages/workspace.html:53
 #: codedevils_org/templates/pages/workspace.html:62
 msgid "Learn more"
 msgstr "Aprende más"
 
-#: codedevils_org/templates/pages/home.html:57
+#: codedevils_org/templates/pages/home.html:55
 msgid "Code"
 msgstr "Código"
 
-#: codedevils_org/templates/pages/home.html:59
+#: codedevils_org/templates/pages/home.html:57
 msgid "Work on exclusive CodeDevils projects!"
 msgstr "¡Trabaja en proyectos exclusivos de CodeDevils!"
 
-#: codedevils_org/templates/pages/home.html:60
+#: codedevils_org/templates/pages/home.html:58
 msgid ""
 "Projects are an opportunity for members to collaborate on coding projects.\n"
 "                                            Anyone can propose an idea for a project, and a project can be anything that\n"
@@ -991,11 +740,11 @@ msgstr ""
 "Cualquiera puede proponer una idea para un proyecto, y un proyecto puede ser cualquier cosa que\n"
 "implica la codificación de alguna manera (independientemente del idioma o la plataforma)."
 
-#: codedevils_org/templates/pages/home.html:69
+#: codedevils_org/templates/pages/home.html:67
 msgid "Compete"
 msgstr "Competir"
 
-#: codedevils_org/templates/pages/home.html:71
+#: codedevils_org/templates/pages/home.html:69
 msgid ""
 "Coding competitions are hosted each semester on HackerRank.<br><br>\n"
 "                                Challenges range from easy to hard problems that may be solved using any supported\n"
@@ -1011,55 +760,60 @@ msgstr ""
 "están tratando de aprender o mostrar sus habilidades! Al final del plazo puedes ganar\n"
 "un poco de botín!"
 
-#: codedevils_org/templates/pages/home.html:89
+#: codedevils_org/templates/pages/home.html:87
 msgid "Welcome to CodeDevils"
 msgstr "Bienvenido a CodeDevils"
 
-#: codedevils_org/templates/pages/home.html:90
+#: codedevils_org/templates/pages/home.html:88
 msgid "Welcome to CodeDevils - We are An ASU student run organization"
 msgstr ""
 "Bienvenido a CodeDevils - Somos una organización dirigida por estudiantes de"
 " ASU"
 
-#: codedevils_org/templates/pages/home.html:94
+#: codedevils_org/templates/pages/home.html:92
 msgid "What\\"
 msgstr "Qué\\"
 
-#: codedevils_org/templates/pages/home.html:96
+#: codedevils_org/templates/pages/home.html:94
 msgid "Events"
 msgstr "Eventos"
 
-#: codedevils_org/templates/pages/home.html:101
-msgid "Our Operation Bat Signal"
-msgstr "Nuestra operación Bat Signal"
+#: codedevils_org/templates/pages/home.html:99
+#| msgid "CodeDevils"
+msgid "CodeDevils Hackathon"
+msgstr "CodeDevils Hackathon"
 
-#: codedevils_org/templates/pages/home.html:102
+#: codedevils_org/templates/pages/home.html:100
 msgid ""
-"Do you have any general questions or assistance finding resources since the "
-"move to remote learning. Reach out with any inquiries."
+"\n"
+"\t\t\t\t\t\t\t\t\tHone your skills and prepare for interviews with our very first CodeDevils Hackathon! Join us during the next meeting to learn more.\n"
+"\t\t\t\t\t\t\t\t"
 msgstr ""
-"¿Tiene alguna pregunta general o ayuda para encontrar recursos desde el paso"
-" al aprendizaje remoto? Póngase en contacto con cualquier consulta."
+"\n"
+"¡Perfeccione sus habilidades y prepárese para las entrevistas con nuestro primer CodeDevils Hackathon! Únase a nosotros durante la próxima reunión para obtener más información."
 
-#: codedevils_org/templates/pages/home.html:114
-#: codedevils_org/templates/pages/home.html:149
+#: codedevils_org/templates/pages/home.html:113
+#: codedevils_org/templates/pages/home.html:148
 msgid "Virtual Study Hall"
 msgstr "Virtual Study Hall"
 
-#: codedevils_org/templates/pages/home.html:116
+#: codedevils_org/templates/pages/home.html:114
+#| msgid ""
+#| "Join us for a virtual study session! Find your study buddies, conquer that "
+#| "homework, and enjoy the nerdiest study breaks at ASU!"
 msgid ""
-"Join us for a virtual study session! Find your study buddies, conquer that "
-"homework, and enjoy the nerdiest study breaks at ASU!"
+"\n"
+"\t\t\t\t\t\t\t\t\tJoin us for a virtual study session! Find your study buddies, conquer that homework, and enjoy the nerdiest study breaks at ASU!\n"
+"                                "
 msgstr ""
-"¡Únete a nosotros para una sesión de estudio virtual! ¡Encuentra a tus "
-"compañeros de estudio, conquista esa tarea y disfruta de los descansos de "
-"estudio más nerd en ASU!"
+"\n"
+"¡Únete a nosotros para una sesión de estudio virtual! ¡Encuentra a tus compañeros de estudio, conquista esa tarea y disfruta de los descansos de estudio más nerd en ASU!"
 
-#: codedevils_org/templates/pages/home.html:134
+#: codedevils_org/templates/pages/home.html:133
 msgid "OUR MISSION"
 msgstr "NUESTRA MISIÓN"
 
-#: codedevils_org/templates/pages/home.html:135
+#: codedevils_org/templates/pages/home.html:134
 msgid ""
 "Create a community of students in the online setting to provide the "
 "opportunity to meet and mingle with other students."
@@ -1067,7 +821,7 @@ msgstr ""
 "Cree una comunidad de estudiantes en el entorno en línea para brindar la "
 "oportunidad de reunirse y mezclarse con otros estudiantes."
 
-#: codedevils_org/templates/pages/home.html:136
+#: codedevils_org/templates/pages/home.html:135
 msgid ""
 "With weekly coding challenges, peer mentorship, guest speakers, and big "
 "projects like moble applications, all completely online, there are plenty of"
@@ -1077,7 +831,7 @@ msgstr ""
 "invitados y grandes proyectos como aplicaciones móviles, todo completamente "
 "en línea, ¡hay muchas maneras de involucrarse y mantenerse involucrado!"
 
-#: codedevils_org/templates/pages/home.html:151
+#: codedevils_org/templates/pages/home.html:150
 msgid ""
 "An online coworking environment where you can get that\n"
 "                                    experience of working alongside your peers and create good study habits!"
@@ -1085,11 +839,11 @@ msgstr ""
 "Un entorno de coworking en línea donde puedes conseguir eso\n"
 "¡Experiencia de trabajar junto a tus compañeros y crear buenos hábitos de estudio!"
 
-#: codedevils_org/templates/pages/home.html:160
+#: codedevils_org/templates/pages/home.html:159
 msgid "Hackathons"
 msgstr "Hackatones"
 
-#: codedevils_org/templates/pages/home.html:161
+#: codedevils_org/templates/pages/home.html:160
 msgid ""
 "Compete alongside fellow students and test your abilities on complex coding "
 "problems."
@@ -1097,35 +851,38 @@ msgstr ""
 "Compite junto a otros estudiantes y prueba tus habilidades en problemas de "
 "codificación complejos."
 
-#: codedevils_org/templates/pages/home.html:175
+#: codedevils_org/templates/pages/home.html:174
 msgid "TOOLS TO DEVELOP"
 msgstr "HERRAMIENTAS PARA DESARROLLAR"
 
-#: codedevils_org/templates/pages/home.html:176
+#: codedevils_org/templates/pages/home.html:175
 msgid "BECOME A CODEDEVIL"
 msgstr "Conviértete en una CodeDevils"
 
-#: codedevils_org/templates/pages/home.html:181
+#: codedevils_org/templates/pages/home.html:180
 msgid "REGISTER"
 msgstr "REGISTRARSE"
 
-#: codedevils_org/templates/pages/home.html:183
+#: codedevils_org/templates/pages/home.html:182
 msgid "SLACK"
 msgstr "SLACK"
 
-#: codedevils_org/templates/pages/home.html:185
+#: codedevils_org/templates/pages/home.html:184
 msgid "CLUB DOCS"
 msgstr "DOCUMENTOS DEL CLUB"
 
-#: codedevils_org/templates/pages/home.html:188
+#: codedevils_org/templates/pages/home.html:187
 msgid "Officially register your membership as a CodeDevil on SunDevilSync."
 msgstr "Registra oficialmente tu membresía como CodeDevil en SunDevilSync."
 
-#: codedevils_org/templates/pages/home.html:190
-msgid "SunDevilSync is Arizona State University\\"
-msgstr "SunDevilSync es la Universidad Estatal de Arizona \\"
+#: codedevils_org/templates/pages/home.html:189
+msgid ""
+"SunDevilSync is the official online registrar for Arizona State University"
+msgstr ""
+"SunDevilSync es el registrador en línea oficial de la Universidad Estatal de"
+" Arizona"
 
-#: codedevils_org/templates/pages/home.html:192
+#: codedevils_org/templates/pages/home.html:191
 msgid ""
 "It connects students with student organizations and student organizations "
 "with their members and Administrative Advisors in a customizable, online "
@@ -1135,7 +892,7 @@ msgstr ""
 "estudiantiles con sus miembros y asesores administrativos en una comunidad "
 "de campus en línea personalizable."
 
-#: codedevils_org/templates/pages/home.html:198
+#: codedevils_org/templates/pages/home.html:197
 msgid ""
 "Now that you're registered, take a look at the CodeDevils Constitution \n"
 "\t\t\t\t\t\t\t\tso you are aware how the organization is run."
@@ -1143,11 +900,11 @@ msgstr ""
 "Ahora que está registrado, eche un vistazo a la Constitución de CodeDevils\n"
 "para que sepa cómo se ejecuta la organización."
 
-#: codedevils_org/templates/pages/home.html:201
+#: codedevils_org/templates/pages/home.html:200
 msgid "View Welcome Docs"
 msgstr "Ver documentos de bienvenida"
 
-#: codedevils_org/templates/pages/home.html:204
+#: codedevils_org/templates/pages/home.html:203
 msgid ""
 "Afterwards, check out our welcome letter to get some information, tips, and "
 "rules as you get involved in the club."
@@ -1155,11 +912,11 @@ msgstr ""
 "Luego, consulte nuestra carta de bienvenida para obtener información, "
 "consejos y reglas a medida que se involucra en el club."
 
-#: codedevils_org/templates/pages/home.html:206
+#: codedevils_org/templates/pages/home.html:205
 msgid "View Constitution"
 msgstr "Ver Constitución"
 
-#: codedevils_org/templates/pages/home.html:211
+#: codedevils_org/templates/pages/home.html:210
 msgid ""
 "After completing the previous steps, you are now an official CodeDevils "
 "member!"
@@ -1167,12 +924,12 @@ msgstr ""
 "Después de completar los pasos anteriores, ¡ahora eres miembro oficial de "
 "CodeDevils!"
 
-#: codedevils_org/templates/pages/home.html:213
+#: codedevils_org/templates/pages/home.html:212
 #, python-format
 msgid "It's time to join a discussion with %(member_count)s members!"
 msgstr "¡Es hora de unirse a una discusión con %(member_count)s miembros!"
 
-#: codedevils_org/templates/pages/home.html:215
+#: codedevils_org/templates/pages/home.html:214
 msgid ""
 "Please sign up for our slack channel using your ASU e-mail and introduce "
 "yourself to the community."
@@ -1180,19 +937,19 @@ msgstr ""
 "Regístrese en nuestro canal slack utilizando su correo electrónico de ASU y "
 "preséntese a la comunidad."
 
-#: codedevils_org/templates/pages/home.html:217
+#: codedevils_org/templates/pages/home.html:216
 msgid "We\\"
 msgstr "Nosotras\\"
 
-#: codedevils_org/templates/pages/home.html:219
+#: codedevils_org/templates/pages/home.html:218
 msgid "Slack Signup"
 msgstr "Registro Slack"
 
-#: codedevils_org/templates/pages/home.html:228
+#: codedevils_org/templates/pages/home.html:227
 msgid "SunDevilSYNC"
 msgstr "SunDevilSYNC"
 
-#: codedevils_org/templates/pages/home.html:230
+#: codedevils_org/templates/pages/home.html:229
 msgid "SIGNUP"
 msgstr "REGÍSTRATE"
 
@@ -1260,7 +1017,7 @@ msgid "Contributors"
 msgstr "Contribuyentes"
 
 #: codedevils_org/templates/pages/workspace.html:104
-#: codedevils_org/templates/users/user_detail.html:154
+#: codedevils_org/templates/users/user_detail.html:86
 msgid "Projects"
 msgstr "Proyectos"
 
@@ -1386,82 +1143,52 @@ msgstr ""
 "Utilice las API proporcionadas por este sitio web para potenciar su "
 "aplicación."
 
-#: codedevils_org/templates/users/user_detail.html:7
-msgid "CodeDevils Profile"
-msgstr "Perfil de CodeDevils"
-
-#: codedevils_org/templates/users/user_detail.html:9
-msgid "Welcome Back,"
-msgstr "Dar una buena acogida,"
-
-#: codedevils_org/templates/users/user_detail.html:16
-msgid "Overview"
-msgstr "Visión general"
-
 #: codedevils_org/templates/users/user_detail.html:20
-msgid "My Details"
-msgstr "Mis detalles"
-
-#: codedevils_org/templates/users/user_detail.html:28
-#: codedevils_org/users/models.py:163
-msgid "User"
-msgstr "Usuaria"
-
-#: codedevils_org/templates/users/user_detail.html:45
-msgid "Current Projects"
-msgstr "Proyectos actuales"
-
-#: codedevils_org/templates/users/user_detail.html:50
-msgid "CodeDevils Sponsored"
-msgstr "CodeDevils patrocinado"
-
-#: codedevils_org/templates/users/user_detail.html:58
-msgid "Project:"
-msgstr "Proyecto:"
-
-#: codedevils_org/templates/users/user_detail.html:84
-msgid "Discover"
-msgstr "Descubrir"
-
-#: codedevils_org/templates/users/user_detail.html:85
-msgid "You can find the work of other CodeDevils and their various projects."
-msgstr ""
-"Puede encontrar el trabajo de otros CodeDevils y sus diversos proyectos."
-
-#: codedevils_org/templates/users/user_detail.html:86
-msgid "Continue to projects"
-msgstr "Continuar a proyectos"
-
-#: codedevils_org/templates/users/user_detail.html:94
 msgid "My Information"
 msgstr "Mi informacion"
 
-#: codedevils_org/templates/users/user_detail.html:104
+#: codedevils_org/templates/users/user_detail.html:39
 msgid "CodeDevil Since"
 msgstr "CodeDevil Desde"
 
-#: codedevils_org/templates/users/user_detail.html:138
+#: codedevils_org/templates/users/user_detail.html:70
 msgid "About Me"
 msgstr "Sobre mí"
 
-#: codedevils_org/templates/users/user_detail.html:166
+#: codedevils_org/templates/users/user_detail.html:98
 #: codedevils_org/users/apps.py:7
 msgid "Users"
 msgstr "Los usuarios"
 
-#: codedevils_org/users/admin.py:53
+#: codedevils_org/templates/users/user_detail.html:158
+msgid ""
+"Stay tuned! Here you will soon be able to see everything you are involved "
+"with at CodeDevils."
+msgstr ""
+"¡Manténganse al tanto! Aquí pronto podrá ver todo en lo que está involucrado"
+" en CodeDevils."
+
+#: codedevils_org/templates/users/user_form.html:54
+msgid ""
+"We are working on making this easier to read. For now, you can edit your "
+"information and select Update at the bottom."
+msgstr ""
+"Estamos trabajando para que sea más fácil de leer. Por ahora, puede editar "
+"su información y seleccionar Actualizar en la parte inferior."
+
+#: codedevils_org/users/admin.py:72
 msgid "There are no positions to rebase"
 msgstr "No hay posiciones para rebase"
 
-#: codedevils_org/users/admin.py:62
+#: codedevils_org/users/admin.py:83
 msgid "Position orders successfully rebased"
 msgstr "Las órdenes de posición se han modificado correctamente"
 
-#: codedevils_org/users/admin.py:65
+#: codedevils_org/users/admin.py:87
 msgid "Rebase order starting at 1"
 msgstr "Rebase orden a partir de 1"
 
-#: codedevils_org/users/admin.py:75 codedevils_org/users/models.py:161
+#: codedevils_org/users/admin.py:98 codedevils_org/users/models.py:260
 msgid "Position"
 msgstr "Posición"
 
@@ -1473,80 +1200,90 @@ msgstr "Este nombre de usuario ya ha sido tomado."
 msgid "Name of User"
 msgstr "Nombre de la usuaria"
 
-#: codedevils_org/users/models.py:23
+#: codedevils_org/users/models.py:22
+msgid "Image 24"
+msgstr "Imagen 24"
+
+#: codedevils_org/users/models.py:25
+msgid "User 24px profile image"
+msgstr "Imagen de perfil de usuario de 24 píxeles"
+
+#: codedevils_org/users/models.py:29
+msgid "Image 512"
+msgstr "Imagen 512"
+
+#: codedevils_org/users/models.py:32
+msgid "User 512px profile image"
+msgstr "Imagen de perfil de usuario de 512 píxeles"
+
+#: codedevils_org/users/models.py:40
 msgid "Date of birth"
 msgstr "Fecha de nacimiento"
 
-#: codedevils_org/users/models.py:26
+#: codedevils_org/users/models.py:49
 msgid "City"
 msgstr "Ciudad"
 
-#: codedevils_org/users/models.py:27
+#: codedevils_org/users/models.py:50
 msgid "The city that the user currently resides in"
 msgstr "La ciudad en la que reside actualmente el usuario"
 
-#: codedevils_org/users/models.py:28
+#: codedevils_org/users/models.py:57
 msgid "State"
 msgstr "Estado"
 
-#: codedevils_org/users/models.py:29
+#: codedevils_org/users/models.py:58
 msgid "The state the city resides in (for inside the US only)"
 msgstr ""
 "El estado en el que reside la ciudad (solo dentro de los Estados Unidos)"
 
-#: codedevils_org/users/models.py:30
+#: codedevils_org/users/models.py:65
 msgid "Country"
 msgstr "País"
 
-#: codedevils_org/users/models.py:31
+#: codedevils_org/users/models.py:66
 msgid "The country the city resides in"
 msgstr "El país donde reside la ciudad"
 
-#: codedevils_org/users/models.py:35
+#: codedevils_org/users/models.py:75
 msgid "GitHub Username"
 msgstr "Nombre de usuario de GitHub"
 
-#: codedevils_org/users/models.py:36
+#: codedevils_org/users/models.py:76
 msgid "We use this to automatically enroll you in our GitHub projects."
 msgstr ""
 "Usamos esto para inscribirlo automáticamente en nuestros proyectos de "
 "GitHub."
 
-#: codedevils_org/users/models.py:38
-msgid "Slack Username"
-msgstr "Nombre de usuario flojo"
+#: codedevils_org/users/models.py:83
+msgid "ID assigned to this user on Slack"
+msgstr "ID asignada a esta usuario en Slack"
 
-#: codedevils_org/users/models.py:39
-msgid "The user's slack user name registered on the CodeDevils slack channel"
-msgstr ""
-"El nombre de usuario slack del usuario registrado en el canal slack de "
-"CodeDevils"
-
-#: codedevils_org/users/models.py:42
+#: codedevils_org/users/models.py:90
 msgid "Twitter Username"
 msgstr "Nombre de usuario de Twitter"
 
-#: codedevils_org/users/models.py:45
+#: codedevils_org/users/models.py:95
 msgid "Instagram URL"
 msgstr "URL de Instagram"
 
-#: codedevils_org/users/models.py:46
+#: codedevils_org/users/models.py:98
 msgid "Facebook URL"
 msgstr "Facebook URL"
 
-#: codedevils_org/users/models.py:47
+#: codedevils_org/users/models.py:101
 msgid "LinkedIn URL"
 msgstr "LinkedIn URL"
 
-#: codedevils_org/users/models.py:51
+#: codedevils_org/users/models.py:108
 msgid "Receive notifications"
 msgstr "Recibir notificaciones"
 
-#: codedevils_org/users/models.py:54
+#: codedevils_org/users/models.py:116
 msgid "Anonymous"
 msgstr "Anónima"
 
-#: codedevils_org/users/models.py:55
+#: codedevils_org/users/models.py:118
 msgid ""
 "You have the option of keeping your account anonymous with CD. Selectingthis"
 " will ensure your account stays private and supported applications don't "
@@ -1556,19 +1293,19 @@ msgstr ""
 "se asegurará de que su cuenta permanezca privada y las aplicaciones "
 "compatibles no tengan acceso a sus datos"
 
-#: codedevils_org/users/models.py:72
+#: codedevils_org/users/models.py:145
 msgid "Name of the position"
 msgstr "Nombre del puesto"
 
-#: codedevils_org/users/models.py:73
+#: codedevils_org/users/models.py:147
 msgid "Name"
 msgstr "Nombre"
 
-#: codedevils_org/users/models.py:75
+#: codedevils_org/users/models.py:152
 msgid "Order"
 msgstr "Orden"
 
-#: codedevils_org/users/models.py:76
+#: codedevils_org/users/models.py:154
 msgid ""
 "The order of precedence of the position. For example, the President is 1, "
 "Vice President is 2, and so on."
@@ -1576,36 +1313,40 @@ msgstr ""
 "El orden de precedencia de la posición. Por ejemplo, el presidente es 1, el "
 "vicepresidente es 2, y así sucesivamente."
 
-#: codedevils_org/users/models.py:79
+#: codedevils_org/users/models.py:163
 msgid "SunDevilSync Position"
 msgstr "Posición SunDevilSync"
 
-#: codedevils_org/users/models.py:80
+#: codedevils_org/users/models.py:165
 msgid "The name of the officer position as it is registered on SunDevilSync"
 msgstr ""
 "El nombre del puesto de oficial tal como está registrado en SunDevilSync"
 
-#: codedevils_org/users/models.py:83
+#: codedevils_org/users/models.py:173
 msgid "The email address associated to the Officer position"
 msgstr "La dirección de correo electrónico asociada al puesto de Oficial"
 
-#: codedevils_org/users/models.py:87
+#: codedevils_org/users/models.py:178
 msgid "Officer position"
 msgstr "Puesto de oficial"
 
-#: codedevils_org/users/models.py:88
+#: codedevils_org/users/models.py:179
 msgid "Officer positions"
 msgstr "Puestos de oficial"
 
-#: codedevils_org/users/models.py:164
+#: codedevils_org/users/models.py:267
+msgid "User"
+msgstr "Usuaria"
+
+#: codedevils_org/users/models.py:268
 msgid "The holder the position"
 msgstr "La titular de la posición"
 
-#: codedevils_org/users/models.py:166
+#: codedevils_org/users/models.py:274
 msgid "Personal email"
 msgstr "Email personal"
 
-#: codedevils_org/users/models.py:167
+#: codedevils_org/users/models.py:276
 msgid ""
 "The email address belonging to the student (generally <first name>.<last "
 "name>@codedevils.org)"
@@ -1613,27 +1354,27 @@ msgstr ""
 "La dirección de correo electrónico que pertenece al alumno (generalmente "
 "<nombre>.<Apellido>@codedevils.org)"
 
-#: codedevils_org/users/models.py:169
+#: codedevils_org/users/models.py:284
 msgid "Quote"
 msgstr "Citar"
 
-#: codedevils_org/users/models.py:170
+#: codedevils_org/users/models.py:285
 msgid "A cliche quote that truly defines who this being is"
 msgstr "Una cita cliché que realmente define quién es este ser"
 
-#: codedevils_org/users/models.py:176
+#: codedevils_org/users/models.py:292
 msgid "Officer"
 msgstr "Oficial"
 
-#: codedevils_org/users/models.py:177
+#: codedevils_org/users/models.py:293
 msgid "Officers"
 msgstr "Oficiales"
 
-#: codedevils_org/users/views.py:34
-msgid "Infos successfully updated"
-msgstr "Información actualizada con éxito"
+#: codedevils_org/users/views.py:44
+msgid "Profile successfully updated"
+msgstr "Perfil actualizado correctamente"
 
-#: codedevils_org/users/views.py:61
+#: codedevils_org/users/views.py:74
 msgid ""
 "Email notifications have been turned off. Turn them back on by editing your "
 "profile."
@@ -1662,8 +1403,280 @@ msgid "Dutch"
 msgstr "Holandesa"
 
 #: config/settings/base.py:37
+msgid "German"
+msgstr "Alemana"
+
+#: config/settings/base.py:38
+msgid "Japanese"
+msgstr "Japonesa"
+
+#: config/settings/base.py:39
 msgid "Hindi"
 msgstr "Hindi"
+
+#~ msgid "Our Operation Bat Signal"
+#~ msgstr "Nuestra operación Bat Signal"
+
+#~ msgid ""
+#~ "Do you have any general questions or assistance finding resources since the "
+#~ "move to remote learning. Reach out with any inquiries."
+#~ msgstr ""
+#~ "¿Tiene alguna pregunta general o ayuda para encontrar recursos desde el paso"
+#~ " al aprendizaje remoto? Póngase en contacto con cualquier consulta."
+
+#~ msgid "Account Inactive"
+#~ msgstr "Cuenta inactiva"
+
+#~ msgid "This account is inactive."
+#~ msgstr "Esta cuenta está inactiva."
+
+#~ msgid "Account"
+#~ msgstr "Cuenta"
+
+#~ msgid "E-mail Addresses"
+#~ msgstr "Correos electrónicos"
+
+#~ msgid "The following e-mail addresses are associated with your account:"
+#~ msgstr ""
+#~ "Las siguientes direcciones de correo electrónico están asociadas con su "
+#~ "cuenta:"
+
+#~ msgid "Verified"
+#~ msgstr "Verificada"
+
+#~ msgid "Unverified"
+#~ msgstr "Inconfirmado"
+
+#~ msgid "Primary"
+#~ msgstr "Primaria"
+
+#~ msgid "Make Primary"
+#~ msgstr "Hacer primaria"
+
+#~ msgid "Re-send Verification"
+#~ msgstr "Reenviar verificación"
+
+#~ msgid "Remove"
+#~ msgstr "Eliminar"
+
+#~ msgid "Warning:"
+#~ msgstr "Advertencia:"
+
+#~ msgid ""
+#~ "You currently do not have any e-mail address set up. You should really add "
+#~ "an e-mail address so you can receive notifications, reset your password, "
+#~ "etc."
+#~ msgstr ""
+#~ "Actualmente no tiene ninguna dirección de correo electrónico configurada. "
+#~ "Realmente debe agregar una dirección de correo electrónico para que pueda "
+#~ "recibir notificaciones, restablecer su contraseña, etc."
+
+#~ msgid "Add E-mail Address"
+#~ msgstr "Agregar dirección de correo electrónico"
+
+#~ msgid "Add E-mail"
+#~ msgstr "Agregar correo electrónico"
+
+#~ msgid "Do you really want to remove the selected e-mail address?"
+#~ msgstr ""
+#~ "¿Realmente desea eliminar la dirección de correo electrónico seleccionada?"
+
+#~ msgid "Confirm E-mail Address"
+#~ msgstr "Confirmar el correo"
+
+#~ msgid ""
+#~ "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+#~ "address for user %(user_display)s."
+#~ msgstr ""
+#~ "Confirme que <a href=\"mailto:%(email)s\">%(email)s</a> es una dirección de "
+#~ "correo electrónico para el usuario%(user_display)s."
+
+#~ msgid "Confirm"
+#~ msgstr "Confirmar"
+
+#~ msgid ""
+#~ "This e-mail confirmation link expired or is invalid. Please <a "
+#~ "href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+#~ msgstr ""
+#~ "Este enlace de confirmación de correo electrónico expiró o no es válido. <a "
+#~ "href=\"%(email_url)s\"> emita una nueva solicitud de confirmación por correo"
+#~ " electrónico </a>."
+
+#~ msgid "Sign In"
+#~ msgstr "Registrarse"
+
+#~ msgid ""
+#~ "Please sign in with one\n"
+#~ "of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign up</a>\n"
+#~ "for a %(site_name)s account and sign in below:"
+#~ msgstr ""
+#~ "Inicia sesión con uno\n"
+#~ "De sus cuentas de terceros existentes. O, <a href=\"%(signup_url)s\"> regístrate </a>\n"
+#~ "para una cuenta %(site_name)s e inicie sesión a continuación:"
+
+#~ msgid "or"
+#~ msgstr "o"
+
+#~ msgid ""
+#~ "If you have not created an account yet, then please\n"
+#~ "<a href=\"%(signup_url)s\">sign up</a> first."
+#~ msgstr ""
+#~ "Si aún no ha creado una cuenta, por favor\n"
+#~ "<a href=\"%(signup_url)s\"> regístrate </a> primero."
+
+#~ msgid "Forgot Password?"
+#~ msgstr "¿Se te olvidó tu contraseña?"
+
+#~ msgid "Sign Out"
+#~ msgstr "Desconectar"
+
+#~ msgid "Are you sure you want to sign out?"
+#~ msgstr "¿Estás segura de que quieres cerrar sesión?"
+
+#~ msgid "Change Password"
+#~ msgstr "Cambia la contraseña"
+
+#~ msgid "Password Reset"
+#~ msgstr "Restablecimiento de contraseña"
+
+#~ msgid ""
+#~ "Forgotten your password? Enter your e-mail address below, and we'll send you"
+#~ " an e-mail allowing you to reset it."
+#~ msgstr ""
+#~ "¿Olvidaste tu contraseña? Ingrese su dirección de correo electrónico a "
+#~ "continuación y le enviaremos un correo electrónico que le permitirá "
+#~ "restablecerla."
+
+#~ msgid "Reset My Password"
+#~ msgstr "Restablecer mi contraseña"
+
+#~ msgid "Please contact us if you have any trouble resetting your password."
+#~ msgstr "Contáctanos si tienes problemas para restablecer tu contraseña."
+
+#~ msgid ""
+#~ "We have sent you an e-mail. Please contact us if you do not receive it "
+#~ "within a few minutes."
+#~ msgstr ""
+#~ "Te hemos enviado un correo electrónico. Póngase en contacto con nosotros si "
+#~ "no lo recibe en unos minutos."
+
+#~ msgid "Bad Token"
+#~ msgstr "Token malo"
+
+#~ msgid ""
+#~ "The password reset link was invalid, possibly because it has already been "
+#~ "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password "
+#~ "reset</a>."
+#~ msgstr ""
+#~ "El enlace de restablecimiento de contraseña no era válido, posiblemente "
+#~ "porque ya se ha utilizado. Solicite un <a href=\"%(passwd_reset_url)s\"> "
+#~ "restablecimiento de contraseña nueva</a>."
+
+#~ msgid "change password"
+#~ msgstr "cambia la contraseña"
+
+#~ msgid "Your password is now changed."
+#~ msgstr "Su contraseña ahora ha cambiado."
+
+#~ msgid "Set Password"
+#~ msgstr "Configurar la clave"
+
+#~ msgid "Signup"
+#~ msgstr "Regístrate"
+
+#~ msgid "Sign Up"
+#~ msgstr "Regístrate"
+
+#~ msgid ""
+#~ "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+#~ msgstr ""
+#~ "¿Ya tienes una cuenta? Luego, por favor, <a href=\"%(login_url)s\"> inicie "
+#~ "sesión </a>."
+
+#~ msgid "Sign Up Closed"
+#~ msgstr "Inscripción cerrada"
+
+#~ msgid "We are sorry, but the sign up is currently closed."
+#~ msgstr "Lo sentimos, pero el registro está actualmente cerrado."
+
+#~ msgid "Verify Your E-mail Address"
+#~ msgstr "Verifique su dirección de correo electrónico"
+
+#~ msgid ""
+#~ "We have sent an e-mail to you for verification. Follow the link provided to "
+#~ "finalize the signup process. Please contact us if you do not receive it "
+#~ "within a few minutes."
+#~ msgstr ""
+#~ "Le hemos enviado un correo electrónico para su verificación. Siga el enlace "
+#~ "proporcionado para finalizar el proceso de registro. Póngase en contacto con"
+#~ " nosotros si no lo recibe en unos minutos."
+
+#~ msgid ""
+#~ "This part of the site requires us to verify that\n"
+#~ "you are who you claim to be. For this purpose, we require that you\n"
+#~ "verify ownership of your e-mail address. "
+#~ msgstr ""
+#~ "Esta parte del sitio requiere que verifiquemos que\n"
+#~ "eres quien dices ser. Para este propósito, requerimos que usted\n"
+#~ "verificar la propiedad de su dirección de correo electrónico."
+
+#~ msgid ""
+#~ "We have sent an e-mail to you for\n"
+#~ "verification. Please click on the link inside this e-mail. Please\n"
+#~ "contact us if you do not receive it within a few minutes."
+#~ msgstr ""
+#~ "Le hemos enviado un correo electrónico para\n"
+#~ "verificación. Haga clic en el enlace dentro de este correo electrónico. Por favor\n"
+#~ "contáctenos si no lo recibe en unos minutos."
+
+#~ msgid ""
+#~ "<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
+#~ "e-mail address</a>."
+#~ msgstr ""
+#~ "<strong> Nota: </strong> todavía puede <a href=\"%(email_url)s\"> cambiar su"
+#~ " dirección de correo electrónico </a>."
+
+#~ msgid "%(officer.quote)s"
+#~ msgstr "%(officer.quote)s"
+
+#~ msgid "CodeDevils Profile"
+#~ msgstr "Perfil de CodeDevils"
+
+#~ msgid "Welcome Back,"
+#~ msgstr "Dar una buena acogida,"
+
+#~ msgid "Overview"
+#~ msgstr "Visión general"
+
+#~ msgid "My Details"
+#~ msgstr "Mis detalles"
+
+#~ msgid "Current Projects"
+#~ msgstr "Proyectos actuales"
+
+#~ msgid "CodeDevils Sponsored"
+#~ msgstr "CodeDevils patrocinado"
+
+#~ msgid "Project:"
+#~ msgstr "Proyecto:"
+
+#~ msgid "Discover"
+#~ msgstr "Descubrir"
+
+#~ msgid "You can find the work of other CodeDevils and their various projects."
+#~ msgstr ""
+#~ "Puede encontrar el trabajo de otros CodeDevils y sus diversos proyectos."
+
+#~ msgid "Continue to projects"
+#~ msgstr "Continuar a proyectos"
+
+#~ msgid "Slack Username"
+#~ msgstr "Nombre de usuario flojo"
+
+#~ msgid "The user's slack user name registered on the CodeDevils slack channel"
+#~ msgstr ""
+#~ "El nombre de usuario slack del usuario registrado en el canal slack de "
+#~ "CodeDevils"
 
 #~ msgid "{name}"
 #~ msgstr "{name}"

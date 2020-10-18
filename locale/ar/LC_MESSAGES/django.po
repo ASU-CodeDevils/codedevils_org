@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-02 06:34+0000\n"
-"PO-Revision-Date: 2020-07-02 06:48+0000\n"
-"Last-Translator: b'Kevin Shelley <kevin.shelley@asu.edu>'\n"
+"POT-Creation-Date: 2020-10-18 02:02+0000\n"
+"PO-Revision-Date: 2020-10-18 02:05+0000\n"
+"Last-Translator: b'Kevin Shelley <kevin.shelley@pm.me>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "CodeDevils URLs"
 msgstr "روابط مخصصة"
 
-#: codedevils_org/contrib/cd_url/models.py:14
+#: codedevils_org/contrib/cd_url/models.py:22
 msgid ""
 "The string used to reference the URL from within a Django template. The slug"
 " can only contain letters, numbers, underscores and hyphens."
@@ -31,32 +31,77 @@ msgstr ""
 "السلسلة المستخدمة للإشارة إلى الارتباط من داخل قالب Django. يمكن أن تحتوي "
 "البزاقة فقط على أحرف وأرقام وشرطات سفلية وواصلات."
 
-#: codedevils_org/contrib/cd_url/models.py:21
+#: codedevils_org/contrib/cd_url/models.py:29
+msgid "Last Updated"
+msgstr "التحديث الاخير"
+
+#: codedevils_org/contrib/cd_url/models.py:31
+msgid ""
+"Used to send notifications to administrators when the link needs to be "
+"updated"
+msgstr "يُستخدم لإرسال إشعارات إلى المسؤولين عندما يحتاج الرابط إلى التحديث"
+
+#: codedevils_org/contrib/cd_url/models.py:40
+msgid "Notify in"
+msgstr "يخطر في"
+
+#: codedevils_org/contrib/cd_url/models.py:42
+msgid ""
+"The number of hours, days or months until managers are notified to update "
+"the link."
+msgstr "عدد الساعات أو الأيام أو الأشهر حتى يتم إخطار المديرين بتحديث الرابط."
+
+#: codedevils_org/contrib/cd_url/models.py:53
+msgid "Notify interval"
+msgstr "الفاصل الزمني للإعلام"
+
+#: codedevils_org/contrib/cd_url/models.py:55
+msgid ""
+"The interval (hours, days months) of ``notify_in``. Note that months are "
+"assumed to be 30 days."
+msgstr ""
+"الفاصل الزمني (ساعات ، أيام وشهور) من \"notify_in\". لاحظ أنه من المفترض أن "
+"تكون الأشهر 30 يومًا."
+
+#: codedevils_org/contrib/cd_url/models.py:63
+msgid "Acknowledged"
+msgstr "أقر"
+
+#: codedevils_org/contrib/cd_url/models.py:65
+msgid ""
+"Used to flag if this link has been acknowledged as up-to-date. If not, "
+"managers are notified that the links need to be updated."
+msgstr ""
+"يستخدم للإشارة إلى ما إذا تم الاعتراف بهذا الارتباط على أنه محدث. إذا لم يكن"
+" الأمر كذلك ، يتم إخطار المديرين بضرورة تحديث الروابط."
+
+#: codedevils_org/contrib/cd_url/models.py:85
 msgid "Custom URL"
 msgstr "رابط مخصص"
 
-#: codedevils_org/contrib/cd_url/models.py:22
+#: codedevils_org/contrib/cd_url/models.py:86
 msgid "Custom URLs"
 msgstr "روابط مخصصة"
 
 #: codedevils_org/contrib/email/apps.py:7
-#: codedevils_org/contrib/email/models.py:55 codedevils_org/users/models.py:82
+#: codedevils_org/contrib/email/models.py:73
+#: codedevils_org/users/models.py:172
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
-#: codedevils_org/contrib/email/models.py:13
+#: codedevils_org/contrib/email/models.py:17
 msgid "Is blocked"
 msgstr "تم حظره"
 
-#: codedevils_org/contrib/email/models.py:14
+#: codedevils_org/contrib/email/models.py:18
 msgid "Blocks this email from contacting CodeDevils."
 msgstr "يحظر هذا البريد الإلكتروني من الاتصال CodeDevils."
 
-#: codedevils_org/contrib/email/models.py:16
+#: codedevils_org/contrib/email/models.py:24
 msgid "Blocked until"
 msgstr "محظور حتى"
 
-#: codedevils_org/contrib/email/models.py:17
+#: codedevils_org/contrib/email/models.py:26
 msgid ""
 "The date and time the email is blocked until. If not specified, this email "
 "is blocked indefinitely."
@@ -64,11 +109,11 @@ msgstr ""
 "تاريخ ووقت حظر البريد الإلكتروني حتى. في حالة عدم التحديد ، يتم حظر هذا "
 "البريد الإلكتروني إلى أجل غير مسمى."
 
-#: codedevils_org/contrib/email/models.py:28
+#: codedevils_org/contrib/email/models.py:43
 msgid "Domain"
 msgstr "نطاق"
 
-#: codedevils_org/contrib/email/models.py:29
+#: codedevils_org/contrib/email/models.py:45
 msgid ""
 "The domain of email addresses to blacklist. This does not include subdomains"
 " as this would inadvertantly block valid domains (see documentation for "
@@ -78,75 +123,75 @@ msgstr ""
 "الفرعية لأن هذا سيؤدي عن غير قصد إلى حظر المجالات الصالحة (راجع الوثائق "
 "للمزيد)."
 
-#: codedevils_org/contrib/email/models.py:37
+#: codedevils_org/contrib/email/models.py:55
 msgid "Blacklisted Domain"
 msgstr "المجال المدرج في القائمة السوداء"
 
-#: codedevils_org/contrib/email/models.py:38
+#: codedevils_org/contrib/email/models.py:56
 msgid "Blacklisted Domains"
 msgstr "المجالات المدرجة في القائمة السوداء"
 
-#: codedevils_org/contrib/email/models.py:61
+#: codedevils_org/contrib/email/models.py:80
 msgid "Blacklisted Email"
 msgstr "البريد الإلكتروني المدرج في القائمة السوداء"
 
-#: codedevils_org/contrib/email/models.py:62
+#: codedevils_org/contrib/email/models.py:81
 msgid "Blacklisted Emails"
 msgstr "رسائل البريد الإلكتروني المدرجة في القائمة السوداء"
 
-#: codedevils_org/page_views.py:22
+#: codedevils_org/page_views.py:28
 #: codedevils_org/templates/_index/footer.html:14
 #: codedevils_org/templates/_index/nav.html:14
 #: codedevils_org/templates/_index/nav.html:62
-#: codedevils_org/users/models.py:22
+#: codedevils_org/users/models.py:37
 msgid "About"
 msgstr "حول"
 
-#: codedevils_org/page_views.py:32 codedevils_org/templates/_index/nav.html:18
+#: codedevils_org/page_views.py:39 codedevils_org/templates/_index/nav.html:18
 #: codedevils_org/templates/_index/nav.html:72
 #: codedevils_org/templates/pages/contactus.html:4
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
-#: codedevils_org/page_views.py:47
+#: codedevils_org/page_views.py:54
 msgid "Please enter your email"
 msgstr "رجاءا أدخل بريدك الإلكتروني"
 
-#: codedevils_org/page_views.py:48
+#: codedevils_org/page_views.py:55
 msgid "Please enter a subject"
 msgstr "يرجى إدخال موضوع"
 
-#: codedevils_org/page_views.py:49
+#: codedevils_org/page_views.py:56
 msgid "Please enter a message"
 msgstr "من فضلك أدخل رسالة"
 
-#: codedevils_org/page_views.py:56
+#: codedevils_org/page_views.py:63
 msgid "Your email is invalid"
 msgstr "بريدك الالكتروني خاطئ"
 
-#: codedevils_org/page_views.py:60
+#: codedevils_org/page_views.py:67
 msgid "There was an issue with this email address"
 msgstr "حدثت مشكلة في عنوان البريد الإلكتروني هذا"
 
-#: codedevils_org/page_views.py:78
+#: codedevils_org/page_views.py:92
 msgid "Your message has been received and we will email you back soon."
 msgstr "تم استلام رسالتك وسنراسلك عبر البريد الإلكتروني قريبًا."
 
 #: codedevils_org/templates/_index/base.html:49
 #: codedevils_org/templates/_index/new_member_footer.html:8
-#: codedevils_org/templates/base.html:47
+#: codedevils_org/templates/base.html:46
 msgid "Ready to join?"
 msgstr "جاهز للانضمام؟"
 
 #: codedevils_org/templates/_index/base.html:50
 #: codedevils_org/templates/_index/new_member_footer.html:9
-#: codedevils_org/templates/base.html:48
+#: codedevils_org/templates/base.html:47
 msgid "Create a CodeDevil account"
 msgstr "قم بإنشاء حساب CodeDevil"
 
 #: codedevils_org/templates/_index/base.html:52
 #: codedevils_org/templates/_index/new_member_footer.html:11
-#: codedevils_org/templates/base.html:50
+#: codedevils_org/templates/base.html:49
 msgid "Create account"
 msgstr "إصنع حساب"
 
@@ -203,7 +248,7 @@ msgid "Leadership"
 msgstr "القيادة"
 
 #: codedevils_org/templates/_index/footer.html:16
-#: codedevils_org/templates/pages/home.html:194
+#: codedevils_org/templates/pages/home.html:193
 msgid "SunDevilSync"
 msgstr "SunDevilSync"
 
@@ -256,7 +301,7 @@ msgstr "الصفحة الرئيسية"
 #: codedevils_org/templates/_index/nav.html:65
 #: codedevils_org/templates/_index/nav.html:79
 #: codedevils_org/templates/pages/about.html:62
-#: codedevils_org/templates/pages/about.html:187
+#: codedevils_org/templates/pages/about.html:197
 #: codedevils_org/templates/pages/workspace.html:10
 msgid "Workspace"
 msgstr "مساحة العمل"
@@ -272,13 +317,12 @@ msgid "Register"
 msgstr "تسجيل"
 
 #: codedevils_org/templates/_index/nav.html:31
-#: codedevils_org/templates/pages/about.html:196
+#: codedevils_org/templates/pages/about.html:206
 msgid "Login"
 msgstr "تسجيل الدخول"
 
 #: codedevils_org/templates/_index/nav.html:40
 #: codedevils_org/templates/_index/nav.html:101
-#: codedevils_org/templates/users/user_detail.html:29
 msgid "Profile"
 msgstr "الملف الشخصي"
 
@@ -307,316 +351,32 @@ msgstr "طلب المشروع"
 msgid "Sign in"
 msgstr "تسجيل الدخول"
 
-#: codedevils_org/templates/account/account_inactive.html:5
-#: codedevils_org/templates/account/account_inactive.html:8
-msgid "Account Inactive"
-msgstr "الحساب غير نشط"
-
-#: codedevils_org/templates/account/account_inactive.html:10
-msgid "This account is inactive."
-msgstr "هذا الحساب غير نشط."
-
-#: codedevils_org/templates/account/email.html:7
-msgid "Account"
-msgstr "الحساب"
-
-#: codedevils_org/templates/account/email.html:10
-msgid "E-mail Addresses"
-msgstr "عناوين البريد الإلكتروني"
-
-#: codedevils_org/templates/account/email.html:13
-msgid "The following e-mail addresses are associated with your account:"
-msgstr "ترتبط عناوين البريد الإلكتروني التالية بحسابك:"
-
-#: codedevils_org/templates/account/email.html:27
-msgid "Verified"
-msgstr "تم التحقق"
-
-#: codedevils_org/templates/account/email.html:29
-msgid "Unverified"
-msgstr "لم يتم التحقق منه"
-
-#: codedevils_org/templates/account/email.html:31
-msgid "Primary"
-msgstr "ابتدائي"
-
-#: codedevils_org/templates/account/email.html:37
-msgid "Make Primary"
-msgstr "اتخذ الاولويه"
-
-#: codedevils_org/templates/account/email.html:38
-msgid "Re-send Verification"
-msgstr "إعادة التحقق"
-
-#: codedevils_org/templates/account/email.html:39
-msgid "Remove"
-msgstr "إزالة"
-
-#: codedevils_org/templates/account/email.html:46
-msgid "Warning:"
-msgstr "تحذير:"
-
-#: codedevils_org/templates/account/email.html:46
-msgid ""
-"You currently do not have any e-mail address set up. You should really add "
-"an e-mail address so you can receive notifications, reset your password, "
-"etc."
-msgstr ""
-"ليس لديك حاليًا أي عنوان بريد إلكتروني تم إعداده. يجب عليك حقًا إضافة عنوان "
-"بريد إلكتروني حتى تتمكن من تلقي الإخطارات وإعادة تعيين كلمة المرور الخاصة بك"
-" ، إلخ."
-
-#: codedevils_org/templates/account/email.html:51
-msgid "Add E-mail Address"
-msgstr "إضافة عنوان البريد الإلكتروني"
-
-#: codedevils_org/templates/account/email.html:56
-msgid "Add E-mail"
-msgstr "إضافة بريد إلكتروني"
-
-#: codedevils_org/templates/account/email.html:66
-msgid "Do you really want to remove the selected e-mail address?"
-msgstr "هل تريد حقًا إزالة عنوان البريد الإلكتروني المحدد؟"
-
-#: codedevils_org/templates/account/email_confirm.html:6
-#: codedevils_org/templates/account/email_confirm.html:10
-msgid "Confirm E-mail Address"
-msgstr "أكد عنوانك الإلكتروني"
-
-#: codedevils_org/templates/account/email_confirm.html:16
-#, python-format
-msgid ""
-"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
-"address for user %(user_display)s."
-msgstr ""
-"الرجاء التأكد من أن <a href=\"mailto:%(email)s\">%(email)s</a> هو عنوان بريد"
-" إلكتروني للمستخدم %(user_display)s."
-
-#: codedevils_org/templates/account/email_confirm.html:20
-msgid "Confirm"
-msgstr "تؤكد"
-
-#: codedevils_org/templates/account/email_confirm.html:27
-#, python-format
-msgid ""
-"This e-mail confirmation link expired or is invalid. Please <a "
-"href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
-msgstr ""
-"انتهت صلاحية رابط تأكيد البريد الإلكتروني هذا أو أنه غير صالح. رجاء<a "
-"href=\"%(email_url)s\">إصدار طلب تأكيد بريد إلكتروني جديد</a>."
-
-#: codedevils_org/templates/account/login.html:7
-#: codedevils_org/templates/account/login.html:11
-#: codedevils_org/templates/account/login.html:44
-msgid "Sign In"
-msgstr "تؤكد"
-
-#: codedevils_org/templates/account/login.html:16
-#, python-format
-msgid ""
-"Please sign in with one\n"
-"of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign up</a>\n"
-"for a %(site_name)s account and sign in below:"
-msgstr ""
-"يرجى تسجيل الدخول باستخدام واحد\n"
-"من حسابات الطرف الثالث الموجودة لديك. أو، <a href=\"%(signup_url)s\">سجل أ %(site_name)s الحساب وتسجيل الدخول أدناه:"
-
-#: codedevils_org/templates/account/login.html:26
-msgid "or"
-msgstr "أو"
-
-#: codedevils_org/templates/account/login.html:33
-#, python-format
-msgid ""
-"If you have not created an account yet, then please\n"
-"<a href=\"%(signup_url)s\">sign up</a> first."
-msgstr "إذا لم تقم بإنشاء حساب بعد ، فالرجاء<\"a href=\"%(signup_url)s>سجل</a>"
-
-#: codedevils_org/templates/account/login.html:43
-msgid "Forgot Password?"
-msgstr "هل نسيت كلمة المرور؟"
-
-#: codedevils_org/templates/account/logout.html:5
-#: codedevils_org/templates/account/logout.html:8
-#: codedevils_org/templates/account/logout.html:17
-msgid "Sign Out"
-msgstr "خروج"
-
-#: codedevils_org/templates/account/logout.html:10
-msgid "Are you sure you want to sign out?"
-msgstr "هل أنت متأكد أنك تريد الخروج؟"
-
-#: codedevils_org/templates/account/password_change.html:6
-#: codedevils_org/templates/account/password_change.html:9
-#: codedevils_org/templates/account/password_change.html:14
-#: codedevils_org/templates/account/password_reset_from_key.html:5
-#: codedevils_org/templates/account/password_reset_from_key.html:8
-#: codedevils_org/templates/account/password_reset_from_key_done.html:4
-#: codedevils_org/templates/account/password_reset_from_key_done.html:7
-msgid "Change Password"
-msgstr "غير كلمة السر"
-
-#: codedevils_org/templates/account/password_reset.html:7
-#: codedevils_org/templates/account/password_reset.html:11
-#: codedevils_org/templates/account/password_reset_done.html:6
-#: codedevils_org/templates/account/password_reset_done.html:9
-msgid "Password Reset"
-msgstr "إعادة تعيين كلمة المرور"
-
-#: codedevils_org/templates/account/password_reset.html:16
-msgid ""
-"Forgotten your password? Enter your e-mail address below, and we'll send you"
-" an e-mail allowing you to reset it."
-msgstr ""
-"هل نسيت كلمة المرور؟ أدخل عنوان بريدك الإلكتروني أدناه ، وسنرسل لك بريدًا "
-"إلكترونيًا يسمح لك بإعادة تعيينه."
-
-#: codedevils_org/templates/account/password_reset.html:21
-msgid "Reset My Password"
-msgstr "إعادة تعيين كلمة المرور الخاصة بي"
-
-#: codedevils_org/templates/account/password_reset.html:24
-msgid "Please contact us if you have any trouble resetting your password."
-msgstr ""
-"يرجى الاتصال بنا إذا كان لديك أي مشكلة في إعادة تعيين كلمة المرور الخاصة بك."
-
-#: codedevils_org/templates/account/password_reset_done.html:15
-msgid ""
-"We have sent you an e-mail. Please contact us if you do not receive it "
-"within a few minutes."
-msgstr ""
-"لقد أرسلنا لك بريدًا إلكترونيًا. يرجى الاتصال بنا إذا لم تتلقها خلال بضع "
-"دقائق."
-
-#: codedevils_org/templates/account/password_reset_from_key.html:8
-msgid "Bad Token"
-msgstr "رمز سيئة"
-
-#: codedevils_org/templates/account/password_reset_from_key.html:12
-#, python-format
-msgid ""
-"The password reset link was invalid, possibly because it has already been "
-"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password "
-"reset</a>."
-msgstr ""
-"رابط إعادة تعيين كلمة المرور غير صالح ، ربما لأنه تم استخدامه بالفعل. يرجى "
-"طلب أ<a href=\"%(passwd_reset_url)s\">إعادة تعيين كلمة المرور الجديدة</a>."
-
-#: codedevils_org/templates/account/password_reset_from_key.html:18
-msgid "change password"
-msgstr "غير كلمة السر"
-
-#: codedevils_org/templates/account/password_reset_from_key.html:21
-#: codedevils_org/templates/account/password_reset_from_key_done.html:8
-msgid "Your password is now changed."
-msgstr "تم تغيير كلمة المرور الخاصة بك الآن."
-
-#: codedevils_org/templates/account/password_set.html:6
-#: codedevils_org/templates/account/password_set.html:9
-#: codedevils_org/templates/account/password_set.html:14
-msgid "Set Password"
-msgstr "ضبط كلمة السر"
-
-#: codedevils_org/templates/account/signup.html:6
-msgid "Signup"
-msgstr "سجل"
-
-#: codedevils_org/templates/account/signup.html:9
-#: codedevils_org/templates/account/signup.html:19
-msgid "Sign Up"
-msgstr "سجل"
-
-#: codedevils_org/templates/account/signup.html:11
-#, python-format
-msgid ""
-"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
-msgstr "هل لديك حساب؟ ثم الرجاء<a href=\"%(login_url)s\">تسجيل الدخول</a>."
-
-#: codedevils_org/templates/account/signup_closed.html:5
-#: codedevils_org/templates/account/signup_closed.html:8
-msgid "Sign Up Closed"
-msgstr "الاشتراك مغلق"
-
-#: codedevils_org/templates/account/signup_closed.html:10
-msgid "We are sorry, but the sign up is currently closed."
-msgstr "عذرًا ، ولكن الاشتراك مغلق حاليًا."
-
-#: codedevils_org/templates/account/verification_sent.html:5
-#: codedevils_org/templates/account/verification_sent.html:8
-#: codedevils_org/templates/account/verified_email_required.html:5
-#: codedevils_org/templates/account/verified_email_required.html:8
-msgid "Verify Your E-mail Address"
-msgstr "تحقق من عنوان بريدك الإلكتروني"
-
-#: codedevils_org/templates/account/verification_sent.html:10
-msgid ""
-"We have sent an e-mail to you for verification. Follow the link provided to "
-"finalize the signup process. Please contact us if you do not receive it "
-"within a few minutes."
-msgstr ""
-"لقد أرسلنا لك بريدًا إلكترونيًا للتحقق. اتبع الرابط المقدم لإنهاء عملية "
-"الاشتراك. يرجى الاتصال بنا إذا لم تتلقها خلال بضع دقائق."
-
-#: codedevils_org/templates/account/verified_email_required.html:12
-msgid ""
-"This part of the site requires us to verify that\n"
-"you are who you claim to be. For this purpose, we require that you\n"
-"verify ownership of your e-mail address. "
-msgstr ""
-"هذا الجزء من الموقع يتطلب منا التحقق من ذلك\n"
-"أنت من تدعي أنك. لهذا الغرض ، نطلب منك\n"
-"التحقق من ملكية عنوان بريدك الإلكتروني."
-
-#: codedevils_org/templates/account/verified_email_required.html:16
-msgid ""
-"We have sent an e-mail to you for\n"
-"verification. Please click on the link inside this e-mail. Please\n"
-"contact us if you do not receive it within a few minutes."
-msgstr ""
-"لقد أرسلنا لك رسالة بريد إلكتروني من أجل\n"
-"التحقق. الرجاء الضغط على الرابط داخل هذا البريد الإلكتروني. رجاء\n"
-"اتصل بنا إذا لم تتلقها خلال بضع دقائق."
-
-#: codedevils_org/templates/account/verified_email_required.html:20
-#, python-format
-msgid ""
-"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
-"e-mail address</a>."
-msgstr ""
-"<strong> ملاحظة: </strong> لا يزال بإمكانك <a href=\"%(email_url)s\"> تغيير "
-"عنوان بريدك الإلكتروني </a>."
-
-#: codedevils_org/templates/base.html:67
+#: codedevils_org/templates/base.html:66
 #, python-format
 msgid "%(message)s"
 msgstr "%(message)s"
 
-#: codedevils_org/templates/email/base.html:7
-#| msgid "CodeDevils - Develop. Network. Create."
+#: codedevils_org/templates/email/base.html:9
 msgid "CodeDevils - Develop. Network. Create"
 msgstr "CodeDevils - تطوير. شبكة الاتصال. خلق"
 
-#: codedevils_org/templates/email/base.html:401
-#| msgid "CodeDevils"
+#: codedevils_org/templates/email/base.html:403
 msgid "The CodeDevils Team"
 msgstr "فريق CodeDevils"
 
-#: codedevils_org/templates/email/base.html:416
-#| msgid ""
-#| "Welcome to CodeDevils - We are An ASU student run organization"
+#: codedevils_org/templates/email/base.html:418
 msgid "CodeDevils - An Arizona State University student organization"
 msgstr "CodeDevils - منظمة طلابية بجامعة ولاية أريزونا"
 
-#: codedevils_org/templates/email/base.html:417
-#| msgid "Receive notifications"
+#: codedevils_org/templates/email/base.html:419
 msgid "To stop these notifications, "
 msgstr "لإيقاف هذه الإخطارات ،"
 
-#: codedevils_org/templates/email/base.html:417
+#: codedevils_org/templates/email/base.html:419
 msgid "unsubscribe"
 msgstr "إلغاء الاشتراك"
 
-#: codedevils_org/templates/email/base.html:422
+#: codedevils_org/templates/email/base.html:424
 msgid "Visit our website"
 msgstr "قم بزيارة موقعنا على الإنترنت"
 
@@ -749,24 +509,19 @@ msgstr "CodeDevils القيادة"
 msgid "The driving force behind everything CodeDevils"
 msgstr "القوة الدافعة وراء كل شيء CodeDevils"
 
-#: codedevils_org/templates/pages/about.html:93
-#, python-format
-msgid "%(officer.quote)s"
-msgstr "%(officer.quote)s"
-
-#: codedevils_org/templates/pages/about.html:139
+#: codedevils_org/templates/pages/about.html:149
 msgid "Our Meetings are held online"
 msgstr "تعقد اجتماعاتنا على الإنترنت"
 
-#: codedevils_org/templates/pages/about.html:141
+#: codedevils_org/templates/pages/about.html:151
 msgid "Join In"
 msgstr "إنضم إلى"
 
-#: codedevils_org/templates/pages/about.html:154
+#: codedevils_org/templates/pages/about.html:164
 msgid "We promote collaboration"
 msgstr "نحن نشجع التعاون"
 
-#: codedevils_org/templates/pages/about.html:155
+#: codedevils_org/templates/pages/about.html:165
 msgid ""
 "Collaborate with students on projects and course work while developing both "
 "your skills as a developer and your network."
@@ -774,19 +529,19 @@ msgstr ""
 "تعاون مع الطلاب في المشاريع وعمل الدورة التدريبية أثناء تطوير كل من مهاراتك "
 "كمطور وشبكتك."
 
-#: codedevils_org/templates/pages/about.html:163
+#: codedevils_org/templates/pages/about.html:173
 msgid "Network"
 msgstr "شبكة الاتصال"
 
-#: codedevils_org/templates/pages/about.html:164
+#: codedevils_org/templates/pages/about.html:174
 msgid "Meet other members of CodeDevils."
 msgstr "يجتمع أعضاء آخرين من CodeDevils."
 
-#: codedevils_org/templates/pages/about.html:170
+#: codedevils_org/templates/pages/about.html:180
 msgid "Develop"
 msgstr "طور"
 
-#: codedevils_org/templates/pages/about.html:171
+#: codedevils_org/templates/pages/about.html:181
 msgid ""
 "Enhance your skills and grow as a developer through projects, webinars, and "
 "team collaboration."
@@ -794,15 +549,15 @@ msgstr ""
 "عزّز مهاراتك وتطور كمطور من خلال المشاريع والندوات عبر الإنترنت وتعاون "
 "الفريق."
 
-#: codedevils_org/templates/pages/about.html:177
+#: codedevils_org/templates/pages/about.html:187
 msgid "Create"
 msgstr "خلق"
 
-#: codedevils_org/templates/pages/about.html:178
+#: codedevils_org/templates/pages/about.html:188
 msgid "Have a great idea? Start your own project or join one today!"
 msgstr "هل لديك فكرة عظيمة؟ ابدأ مشروعك الخاص أو انضم إلى واحد اليوم!"
 
-#: codedevils_org/templates/pages/about.html:191
+#: codedevils_org/templates/pages/about.html:201
 msgid ""
 "<p>Our club is packed full of things <span class=\"bold\">like "
 "collaboration.</span> Login to take advantage of our all new workspace</p>"
@@ -810,15 +565,15 @@ msgstr ""
 "<p> نادينا مليء بالأشياء <span class = \"bold\"> مثل التعاون. </ span> سجل "
 "الدخول للاستفادة من جميع مساحات العمل الجديدة لدينا </ p>"
 
-#: codedevils_org/templates/pages/about.html:198
+#: codedevils_org/templates/pages/about.html:208
 msgid "View Workspace"
 msgstr "عرض مساحة العمل"
 
-#: codedevils_org/templates/pages/about.html:212
+#: codedevils_org/templates/pages/about.html:222
 msgid "Sponsored Projects"
 msgstr "مشاريع برعاية"
 
-#: codedevils_org/templates/pages/about.html:213
+#: codedevils_org/templates/pages/about.html:223
 msgid ""
 "CodeDevils sponsors projects developed by club members by providing "
 "assistance and insight. <br>Check out some of our projects. "
@@ -907,23 +662,23 @@ msgid ""
 " is ready for you at"
 msgstr "أي سؤال حول كيفية دمج منتجك ؟. لا تقلق ، فريقنا المهووس جاهز لك في"
 
-#: codedevils_org/templates/pages/home.html:14
+#: codedevils_org/templates/pages/home.html:12
 msgid " An ASU<br> Student Organization"
 msgstr "منظمة طلابية بجامعة ولاية أريزونا"
 
-#: codedevils_org/templates/pages/home.html:32
+#: codedevils_org/templates/pages/home.html:30
 msgid "Stay posted on new website integrations and updates."
 msgstr "ابق على اطلاع على عمليات دمج وتحديثات مواقع الويب الجديدة."
 
-#: codedevils_org/templates/pages/home.html:33
+#: codedevils_org/templates/pages/home.html:31
 msgid "Update Log"
 msgstr "سجل التحديث"
 
-#: codedevils_org/templates/pages/home.html:46
+#: codedevils_org/templates/pages/home.html:44
 msgid "Community"
 msgstr "تواصل اجتماعي"
 
-#: codedevils_org/templates/pages/home.html:48
+#: codedevils_org/templates/pages/home.html:46
 msgid ""
 "Be part of an amazing group of individuals who have a passion for coding.<br><br>\n"
 "                                            Network with fellow students, faculty members, and guest speakers.<br><br>\n"
@@ -933,24 +688,24 @@ msgstr ""
 "التواصل مع الطلاب الزملاء وأعضاء هيئة التدريس والمتحدثين الضيوف. <br> <br>\n"
 "لدينا حتى قنوات سلاك مخصصة لفصول SER / CSE!"
 
-#: codedevils_org/templates/pages/home.html:51
-#: codedevils_org/templates/pages/home.html:63
-#: codedevils_org/templates/pages/home.html:77
+#: codedevils_org/templates/pages/home.html:49
+#: codedevils_org/templates/pages/home.html:61
+#: codedevils_org/templates/pages/home.html:75
 #: codedevils_org/templates/pages/workspace.html:44
 #: codedevils_org/templates/pages/workspace.html:53
 #: codedevils_org/templates/pages/workspace.html:62
 msgid "Learn more"
 msgstr "أعرف أكثر"
 
-#: codedevils_org/templates/pages/home.html:57
+#: codedevils_org/templates/pages/home.html:55
 msgid "Code"
 msgstr "الشفرة"
 
-#: codedevils_org/templates/pages/home.html:59
+#: codedevils_org/templates/pages/home.html:57
 msgid "Work on exclusive CodeDevils projects!"
 msgstr "اعمل على مشاريع CodeDevils الحصرية!"
 
-#: codedevils_org/templates/pages/home.html:60
+#: codedevils_org/templates/pages/home.html:58
 msgid ""
 "Projects are an opportunity for members to collaborate on coding projects.\n"
 "                                            Anyone can propose an idea for a project, and a project can be anything that\n"
@@ -960,11 +715,11 @@ msgstr ""
 "يمكن لأي شخص أن يقترح فكرة لمشروع ، ويمكن أن يكون المشروع أي شيء\n"
 "ينطوي على الترميز بطريقة ما (بغض النظر عن اللغة أو النظام الأساسي)."
 
-#: codedevils_org/templates/pages/home.html:69
+#: codedevils_org/templates/pages/home.html:67
 msgid "Compete"
 msgstr "تنافس"
 
-#: codedevils_org/templates/pages/home.html:71
+#: codedevils_org/templates/pages/home.html:69
 msgid ""
 "Coding competitions are hosted each semester on HackerRank.<br><br>\n"
 "                                Challenges range from easy to hard problems that may be solved using any supported\n"
@@ -980,52 +735,58 @@ msgstr ""
 "تحاول تعلم مهاراتك أو التباهي بها! في نهاية المدة يمكنك الفوز\n"
 "بعض غنيمة!"
 
-#: codedevils_org/templates/pages/home.html:89
+#: codedevils_org/templates/pages/home.html:87
 msgid "Welcome to CodeDevils"
 msgstr "مرحبًا بك في CodeDevils"
 
-#: codedevils_org/templates/pages/home.html:90
+#: codedevils_org/templates/pages/home.html:88
 msgid "Welcome to CodeDevils - We are An ASU student run organization"
 msgstr "مرحبًا بكم في CodeDevils - نحن منظمة تديرها جامعة ولاية أريزونا"
 
-#: codedevils_org/templates/pages/home.html:94
+#: codedevils_org/templates/pages/home.html:92
 msgid "What\\"
 msgstr "ماذا\\"
 
-#: codedevils_org/templates/pages/home.html:96
+#: codedevils_org/templates/pages/home.html:94
 msgid "Events"
 msgstr "الأحداث"
 
-#: codedevils_org/templates/pages/home.html:101
-msgid "Our Operation Bat Signal"
-msgstr "عمليتنا إشارة الخفافيش"
+#: codedevils_org/templates/pages/home.html:99
+#| msgid "CodeDevils"
+msgid "CodeDevils Hackathon"
+msgstr "CodeDevils Hackathon"
 
-#: codedevils_org/templates/pages/home.html:102
+#: codedevils_org/templates/pages/home.html:100
 msgid ""
-"Do you have any general questions or assistance finding resources since the "
-"move to remote learning. Reach out with any inquiries."
+"\n"
+"\t\t\t\t\t\t\t\t\tHone your skills and prepare for interviews with our very first CodeDevils Hackathon! Join us during the next meeting to learn more.\n"
+"\t\t\t\t\t\t\t\t"
 msgstr ""
-"هل لديك أي أسئلة عامة أو مساعدة في العثور على الموارد منذ الانتقال إلى "
-"التعلم عن بعد. تواصل مع أي استفسارات."
+"\n"
+"صقل مهاراتك واستعد للمقابلات مع أول لعبة CodeDevils Hackathon! انضم إلينا خلال الاجتماع القادم لمعرفة المزيد."
 
-#: codedevils_org/templates/pages/home.html:114
-#: codedevils_org/templates/pages/home.html:149
+#: codedevils_org/templates/pages/home.html:113
+#: codedevils_org/templates/pages/home.html:148
 msgid "Virtual Study Hall"
 msgstr "Virtual Study Hall"
 
-#: codedevils_org/templates/pages/home.html:116
+#: codedevils_org/templates/pages/home.html:114
+#| msgid ""
+#| "Join us for a virtual study session! Find your study buddies, conquer that "
+#| "homework, and enjoy the nerdiest study breaks at ASU!"
 msgid ""
-"Join us for a virtual study session! Find your study buddies, conquer that "
-"homework, and enjoy the nerdiest study breaks at ASU!"
+"\n"
+"\t\t\t\t\t\t\t\t\tJoin us for a virtual study session! Find your study buddies, conquer that homework, and enjoy the nerdiest study breaks at ASU!\n"
+"                                "
 msgstr ""
-"انضم إلينا في جلسة دراسة افتراضية! اعثر على رفاق الدراسة ، واهزم تلك "
-"الواجبات المنزلية ، واستمتع بأروع فترات الدراسة في ASU!"
+"\n"
+"انضم إلينا في جلسة دراسة افتراضية! اعثر على رفاق الدراسة ، واهزم تلك الواجبات المنزلية ، واستمتع بأروع فترات الدراسة في ASU!"
 
-#: codedevils_org/templates/pages/home.html:134
+#: codedevils_org/templates/pages/home.html:133
 msgid "OUR MISSION"
 msgstr "مهمتنا"
 
-#: codedevils_org/templates/pages/home.html:135
+#: codedevils_org/templates/pages/home.html:134
 msgid ""
 "Create a community of students in the online setting to provide the "
 "opportunity to meet and mingle with other students."
@@ -1033,7 +794,7 @@ msgstr ""
 "إنشاء مجتمع من الطلاب في الإعداد عبر الإنترنت لإتاحة الفرصة للقاء والاختلاط "
 "مع الطلاب الآخرين."
 
-#: codedevils_org/templates/pages/home.html:136
+#: codedevils_org/templates/pages/home.html:135
 msgid ""
 "With weekly coding challenges, peer mentorship, guest speakers, and big "
 "projects like moble applications, all completely online, there are plenty of"
@@ -1043,7 +804,7 @@ msgstr ""
 " الكبيرة مثل تطبيقات الهاتف المحمول ، وكلها عبر الإنترنت تمامًا ، هناك "
 "العديد من الطرق للمشاركة والمشاركة!"
 
-#: codedevils_org/templates/pages/home.html:151
+#: codedevils_org/templates/pages/home.html:150
 msgid ""
 "An online coworking environment where you can get that\n"
 "                                    experience of working alongside your peers and create good study habits!"
@@ -1051,45 +812,46 @@ msgstr ""
 "بيئة عمل جماعية عبر الإنترنت حيث يمكنك الحصول على ذلك\n"
 "تجربة العمل جنبًا إلى جنب مع زملائك وخلق عادات دراسية جيدة!"
 
-#: codedevils_org/templates/pages/home.html:160
+#: codedevils_org/templates/pages/home.html:159
 msgid "Hackathons"
 msgstr "الهاكاثون"
 
-#: codedevils_org/templates/pages/home.html:161
+#: codedevils_org/templates/pages/home.html:160
 msgid ""
 "Compete alongside fellow students and test your abilities on complex coding "
 "problems."
 msgstr "تنافس مع زملائك الطلاب واختبر قدراتك على مشاكل الترميز المعقدة."
 
-#: codedevils_org/templates/pages/home.html:175
+#: codedevils_org/templates/pages/home.html:174
 msgid "TOOLS TO DEVELOP"
 msgstr "أدوات للتطوير"
 
-#: codedevils_org/templates/pages/home.html:176
+#: codedevils_org/templates/pages/home.html:175
 msgid "BECOME A CODEDEVIL"
 msgstr "اصبح ال CODEDEVIL"
 
-#: codedevils_org/templates/pages/home.html:181
+#: codedevils_org/templates/pages/home.html:180
 msgid "REGISTER"
 msgstr "تسجيل"
 
-#: codedevils_org/templates/pages/home.html:183
+#: codedevils_org/templates/pages/home.html:182
 msgid "SLACK"
 msgstr "SLACK"
 
-#: codedevils_org/templates/pages/home.html:185
+#: codedevils_org/templates/pages/home.html:184
 msgid "CLUB DOCS"
 msgstr "مستندات النادي"
 
-#: codedevils_org/templates/pages/home.html:188
+#: codedevils_org/templates/pages/home.html:187
 msgid "Officially register your membership as a CodeDevil on SunDevilSync."
 msgstr "تسجيل عضويتك رسميًا بصفتك CodeDevil على SunDevilSync."
 
-#: codedevils_org/templates/pages/home.html:190
-msgid "SunDevilSync is Arizona State University\\"
-msgstr "SunDevilSync هي جامعة ولاية أريزونا \\"
+#: codedevils_org/templates/pages/home.html:189
+msgid ""
+"SunDevilSync is the official online registrar for Arizona State University"
+msgstr "SunDevilSync هو المسجل الرسمي عبر الإنترنت لجامعة ولاية أريزونا"
 
-#: codedevils_org/templates/pages/home.html:192
+#: codedevils_org/templates/pages/home.html:191
 msgid ""
 "It connects students with student organizations and student organizations "
 "with their members and Administrative Advisors in a customizable, online "
@@ -1098,7 +860,7 @@ msgstr ""
 "يربط الطلاب مع المنظمات الطلابية والمنظمات الطلابية مع أعضائهم والمستشارين "
 "الإداريين في مجتمع حرم جامعي قابل للتخصيص عبر الإنترنت."
 
-#: codedevils_org/templates/pages/home.html:198
+#: codedevils_org/templates/pages/home.html:197
 msgid ""
 "Now that you're registered, take a look at the CodeDevils Constitution \n"
 "\t\t\t\t\t\t\t\tso you are aware how the organization is run."
@@ -1106,11 +868,11 @@ msgstr ""
 "الآن بعد أن سجلت ، ألق نظرة على دستور CodeDevils\n"
 "لذلك أنت على دراية بكيفية تشغيل المنظمة."
 
-#: codedevils_org/templates/pages/home.html:201
+#: codedevils_org/templates/pages/home.html:200
 msgid "View Welcome Docs"
 msgstr "عرض مستندات الترحيب"
 
-#: codedevils_org/templates/pages/home.html:204
+#: codedevils_org/templates/pages/home.html:203
 msgid ""
 "Afterwards, check out our welcome letter to get some information, tips, and "
 "rules as you get involved in the club."
@@ -1118,22 +880,22 @@ msgstr ""
 "بعد ذلك ، تحقق من رسالة الترحيب للحصول على بعض المعلومات والنصائح والقواعد "
 "أثناء مشاركتك في النادي."
 
-#: codedevils_org/templates/pages/home.html:206
+#: codedevils_org/templates/pages/home.html:205
 msgid "View Constitution"
 msgstr "عرض الدستور"
 
-#: codedevils_org/templates/pages/home.html:211
+#: codedevils_org/templates/pages/home.html:210
 msgid ""
 "After completing the previous steps, you are now an official CodeDevils "
 "member!"
 msgstr "بعد إكمال الخطوات السابقة ، أصبحت الآن عضوًا رسميًا في CodeDevils!"
 
-#: codedevils_org/templates/pages/home.html:213
+#: codedevils_org/templates/pages/home.html:212
 #, python-format
 msgid "It's time to join a discussion with %(member_count)s members!"
 msgstr "حان الوقت للانضمام إلى مناقشة مع أعضاء %(member_count)s!"
 
-#: codedevils_org/templates/pages/home.html:215
+#: codedevils_org/templates/pages/home.html:214
 msgid ""
 "Please sign up for our slack channel using your ASU e-mail and introduce "
 "yourself to the community."
@@ -1141,19 +903,19 @@ msgstr ""
 "يرجى الاشتراك في قناة الركود الخاصة بنا باستخدام البريد الإلكتروني ASU الخاص"
 " بك وتقديم نفسك للمجتمع."
 
-#: codedevils_org/templates/pages/home.html:217
+#: codedevils_org/templates/pages/home.html:216
 msgid "We\\"
 msgstr "نحن\\"
 
-#: codedevils_org/templates/pages/home.html:219
+#: codedevils_org/templates/pages/home.html:218
 msgid "Slack Signup"
 msgstr "Slack سجل"
 
-#: codedevils_org/templates/pages/home.html:228
+#: codedevils_org/templates/pages/home.html:227
 msgid "SunDevilSYNC"
 msgstr "SunDevilSYNC"
 
-#: codedevils_org/templates/pages/home.html:230
+#: codedevils_org/templates/pages/home.html:229
 msgid "SIGNUP"
 msgstr "سجل"
 
@@ -1219,7 +981,7 @@ msgid "Contributors"
 msgstr "المساهمون"
 
 #: codedevils_org/templates/pages/workspace.html:104
-#: codedevils_org/templates/users/user_detail.html:154
+#: codedevils_org/templates/users/user_detail.html:86
 msgid "Projects"
 msgstr "المشاريع"
 
@@ -1339,81 +1101,50 @@ msgstr "CodeDevil API"
 msgid "Use APIs provided by this website to power your application."
 msgstr "استخدم واجهات برمجة التطبيقات التي يوفرها هذا الموقع لتشغيل تطبيقك."
 
-#: codedevils_org/templates/users/user_detail.html:7
-msgid "CodeDevils Profile"
-msgstr "ملف تعريف CodeDevils"
-
-#: codedevils_org/templates/users/user_detail.html:9
-msgid "Welcome Back,"
-msgstr "مرحبا بعودتك،"
-
-#: codedevils_org/templates/users/user_detail.html:16
-msgid "Overview"
-msgstr "نظرة عامة"
-
 #: codedevils_org/templates/users/user_detail.html:20
-msgid "My Details"
-msgstr "تفاصيلي"
-
-#: codedevils_org/templates/users/user_detail.html:28
-#: codedevils_org/users/models.py:163
-msgid "User"
-msgstr "المستعمل"
-
-#: codedevils_org/templates/users/user_detail.html:45
-msgid "Current Projects"
-msgstr "المشاريع الحالية"
-
-#: codedevils_org/templates/users/user_detail.html:50
-msgid "CodeDevils Sponsored"
-msgstr "برعاية CodeDevils"
-
-#: codedevils_org/templates/users/user_detail.html:58
-msgid "Project:"
-msgstr "مشروع:"
-
-#: codedevils_org/templates/users/user_detail.html:84
-msgid "Discover"
-msgstr "اكتشف"
-
-#: codedevils_org/templates/users/user_detail.html:85
-msgid "You can find the work of other CodeDevils and their various projects."
-msgstr "يمكنك العثور على عمل CodeDevils ومشاريعهم المختلفة."
-
-#: codedevils_org/templates/users/user_detail.html:86
-msgid "Continue to projects"
-msgstr "تابع المشاريع"
-
-#: codedevils_org/templates/users/user_detail.html:94
 msgid "My Information"
 msgstr "معلوماتي"
 
-#: codedevils_org/templates/users/user_detail.html:104
+#: codedevils_org/templates/users/user_detail.html:39
 msgid "CodeDevil Since"
 msgstr "CodeDevil منذ"
 
-#: codedevils_org/templates/users/user_detail.html:138
+#: codedevils_org/templates/users/user_detail.html:70
 msgid "About Me"
 msgstr "عني"
 
-#: codedevils_org/templates/users/user_detail.html:166
+#: codedevils_org/templates/users/user_detail.html:98
 #: codedevils_org/users/apps.py:7
 msgid "Users"
 msgstr "المستخدمون"
 
-#: codedevils_org/users/admin.py:53
+#: codedevils_org/templates/users/user_detail.html:158
+msgid ""
+"Stay tuned! Here you will soon be able to see everything you are involved "
+"with at CodeDevils."
+msgstr "ترقب! هنا ستتمكن قريبًا من رؤية كل ما تشارك فيه في CodeDevils."
+
+#: codedevils_org/templates/users/user_form.html:54
+msgid ""
+"We are working on making this easier to read. For now, you can edit your "
+"information and select Update at the bottom."
+msgstr ""
+"نحن نعمل على جعل هذا أسهل للقراءة. في الوقت الحالي ، يمكنك تعديل معلوماتك "
+"وتحديد تحديث في الجزء السفلي."
+
+#: codedevils_org/users/admin.py:72
 msgid "There are no positions to rebase"
 msgstr "لا توجد مواقف لإعادة القاعدة"
 
-#: codedevils_org/users/admin.py:62
+#: codedevils_org/users/admin.py:83
 msgid "Position orders successfully rebased"
 msgstr "تم استرداد أوامر المركز بنجاح"
 
-#: codedevils_org/users/admin.py:65
+#: codedevils_org/users/admin.py:87
 msgid "Rebase order starting at 1"
 msgstr "طلب إعادة البدء يبدأ من واحد"
 
-#: codedevils_org/users/admin.py:75 codedevils_org/users/models.py:161
+#: codedevils_org/users/admin.py:98 codedevils_org/users/models.py:260
 msgid "Position"
 msgstr "موضع"
 
@@ -1425,75 +1156,87 @@ msgstr "وقد تم بالفعل اتخاذ هذا المستخدم."
 msgid "Name of User"
 msgstr "اسم المستخدم"
 
-#: codedevils_org/users/models.py:23
+#: codedevils_org/users/models.py:22
+msgid "Image 24"
+msgstr "صورة 24"
+
+#: codedevils_org/users/models.py:25
+msgid "User 24px profile image"
+msgstr "صورة الملف الشخصي للمستخدم 24 بكسل"
+
+#: codedevils_org/users/models.py:29
+msgid "Image 512"
+msgstr "صورة 512"
+
+#: codedevils_org/users/models.py:32
+msgid "User 512px profile image"
+msgstr "صورة الملف الشخصي للمستخدم 512 بكسل"
+
+#: codedevils_org/users/models.py:40
 msgid "Date of birth"
 msgstr "تاريخ الولادة"
 
-#: codedevils_org/users/models.py:26
+#: codedevils_org/users/models.py:49
 msgid "City"
 msgstr "مدينة"
 
-#: codedevils_org/users/models.py:27
+#: codedevils_org/users/models.py:50
 msgid "The city that the user currently resides in"
 msgstr "المدينة التي يقيم بها المستخدم حاليًا"
 
-#: codedevils_org/users/models.py:28
+#: codedevils_org/users/models.py:57
 msgid "State"
 msgstr "حالة"
 
-#: codedevils_org/users/models.py:29
+#: codedevils_org/users/models.py:58
 msgid "The state the city resides in (for inside the US only)"
 msgstr "الدولة التي تقيم بها المدينة (داخل الولايات المتحدة فقط)"
 
-#: codedevils_org/users/models.py:30
+#: codedevils_org/users/models.py:65
 msgid "Country"
 msgstr "بلد"
 
-#: codedevils_org/users/models.py:31
+#: codedevils_org/users/models.py:66
 msgid "The country the city resides in"
 msgstr "البلد الذي تقيم فيه المدينة"
 
-#: codedevils_org/users/models.py:35
+#: codedevils_org/users/models.py:75
 msgid "GitHub Username"
 msgstr "اسم مستخدم GitHub"
 
-#: codedevils_org/users/models.py:36
+#: codedevils_org/users/models.py:76
 msgid "We use this to automatically enroll you in our GitHub projects."
 msgstr "نستخدم هذا لتسجيلك تلقائيًا في مشاريع GitHub."
 
-#: codedevils_org/users/models.py:38
-msgid "Slack Username"
-msgstr "اسم المستخدم Slack"
+#: codedevils_org/users/models.py:83
+msgid "ID assigned to this user on Slack"
+msgstr "المعرف المعين لهذا المستخدم على Slack"
 
-#: codedevils_org/users/models.py:39
-msgid "The user's slack user name registered on the CodeDevils slack channel"
-msgstr "اسم المستخدم المتراخي للمستخدم المسجل على قناة CodeDevils Slack"
-
-#: codedevils_org/users/models.py:42
+#: codedevils_org/users/models.py:90
 msgid "Twitter Username"
 msgstr "اسم المستخدم Twitter"
 
-#: codedevils_org/users/models.py:45
+#: codedevils_org/users/models.py:95
 msgid "Instagram URL"
 msgstr "رابط Instagram"
 
-#: codedevils_org/users/models.py:46
+#: codedevils_org/users/models.py:98
 msgid "Facebook URL"
 msgstr "رابط الفيسبوك"
 
-#: codedevils_org/users/models.py:47
+#: codedevils_org/users/models.py:101
 msgid "LinkedIn URL"
 msgstr "لينكدين لينك"
 
-#: codedevils_org/users/models.py:51
+#: codedevils_org/users/models.py:108
 msgid "Receive notifications"
 msgstr "تلقي الإخطارات"
 
-#: codedevils_org/users/models.py:54
+#: codedevils_org/users/models.py:116
 msgid "Anonymous"
 msgstr "مجهول"
 
-#: codedevils_org/users/models.py:55
+#: codedevils_org/users/models.py:118
 msgid ""
 "You have the option of keeping your account anonymous with CD. Selectingthis"
 " will ensure your account stays private and supported applications don't "
@@ -1502,19 +1245,19 @@ msgstr ""
 "لديك خيار الاحتفاظ بحسابك مجهول الهوية مع CodeDevils. سيؤدي اختيار هذا إلى "
 "التأكد من أن حسابك سيظل خاصًا ولا يمكن للتطبيقات المدعومة الوصول إلى بياناتك"
 
-#: codedevils_org/users/models.py:72
+#: codedevils_org/users/models.py:145
 msgid "Name of the position"
 msgstr "اسم المنصب"
 
-#: codedevils_org/users/models.py:73
+#: codedevils_org/users/models.py:147
 msgid "Name"
 msgstr "اسم"
 
-#: codedevils_org/users/models.py:75
+#: codedevils_org/users/models.py:152
 msgid "Order"
 msgstr "طلب"
 
-#: codedevils_org/users/models.py:76
+#: codedevils_org/users/models.py:154
 msgid ""
 "The order of precedence of the position. For example, the President is 1, "
 "Vice President is 2, and so on."
@@ -1522,35 +1265,39 @@ msgstr ""
 "ترتيب أسبقية المنصب. على سبيل المثال ، الرئيس واحد ، ونائب الرئيس اثنان ، "
 "وهكذا."
 
-#: codedevils_org/users/models.py:79
+#: codedevils_org/users/models.py:163
 msgid "SunDevilSync Position"
 msgstr "موضع SunDevilSync"
 
-#: codedevils_org/users/models.py:80
+#: codedevils_org/users/models.py:165
 msgid "The name of the officer position as it is registered on SunDevilSync"
 msgstr "اسم منصب الضابط كما هو مسجل في SunDevilSync"
 
-#: codedevils_org/users/models.py:83
+#: codedevils_org/users/models.py:173
 msgid "The email address associated to the Officer position"
 msgstr "عنوان البريد الإلكتروني المرتبط بمنصب الضابط"
 
-#: codedevils_org/users/models.py:87
+#: codedevils_org/users/models.py:178
 msgid "Officer position"
 msgstr "منصب ضابط"
 
-#: codedevils_org/users/models.py:88
+#: codedevils_org/users/models.py:179
 msgid "Officer positions"
 msgstr "وظائف الضباط"
 
-#: codedevils_org/users/models.py:164
+#: codedevils_org/users/models.py:267
+msgid "User"
+msgstr "المستعمل"
+
+#: codedevils_org/users/models.py:268
 msgid "The holder the position"
 msgstr "صاحب المنصب"
 
-#: codedevils_org/users/models.py:166
+#: codedevils_org/users/models.py:274
 msgid "Personal email"
 msgstr "البريد الإلكتروني الشخصي"
 
-#: codedevils_org/users/models.py:167
+#: codedevils_org/users/models.py:276
 msgid ""
 "The email address belonging to the student (generally <first name>.<last "
 "name>@codedevils.org)"
@@ -1558,27 +1305,27 @@ msgstr ""
 "عنوان البريد الإلكتروني الخاص بالطالب (بشكل عام <الاسم الأول>. <اسم العائلة>"
 " @ codedevils.org)"
 
-#: codedevils_org/users/models.py:169
+#: codedevils_org/users/models.py:284
 msgid "Quote"
 msgstr "اقتبس"
 
-#: codedevils_org/users/models.py:170
+#: codedevils_org/users/models.py:285
 msgid "A cliche quote that truly defines who this being is"
 msgstr "اقتباس مبتكر يحدد حقًا من هو هذا الكائن"
 
-#: codedevils_org/users/models.py:176
+#: codedevils_org/users/models.py:292
 msgid "Officer"
 msgstr "ضابط"
 
-#: codedevils_org/users/models.py:177
+#: codedevils_org/users/models.py:293
 msgid "Officers"
 msgstr "الضباط"
 
-#: codedevils_org/users/views.py:34
-msgid "Infos successfully updated"
-msgstr "تم تحديث معلومات المقال بنجاح"
+#: codedevils_org/users/views.py:44
+msgid "Profile successfully updated"
+msgstr "تم تحديث الملف الشخصي بنجاح"
 
-#: codedevils_org/users/views.py:61
+#: codedevils_org/users/views.py:74
 msgid ""
 "Email notifications have been turned off. Turn them back on by editing your "
 "profile."
@@ -1607,8 +1354,266 @@ msgid "Dutch"
 msgstr "هولندي"
 
 #: config/settings/base.py:37
+msgid "German"
+msgstr "ألمانية"
+
+#: config/settings/base.py:38
+msgid "Japanese"
+msgstr "اليابانية"
+
+#: config/settings/base.py:39
 msgid "Hindi"
 msgstr "هندي"
+
+#~ msgid "Our Operation Bat Signal"
+#~ msgstr "عمليتنا إشارة الخفافيش"
+
+#~ msgid ""
+#~ "Do you have any general questions or assistance finding resources since the "
+#~ "move to remote learning. Reach out with any inquiries."
+#~ msgstr ""
+#~ "هل لديك أي أسئلة عامة أو مساعدة في العثور على الموارد منذ الانتقال إلى "
+#~ "التعلم عن بعد. تواصل مع أي استفسارات."
+
+#~ msgid "Account Inactive"
+#~ msgstr "الحساب غير نشط"
+
+#~ msgid "This account is inactive."
+#~ msgstr "هذا الحساب غير نشط."
+
+#~ msgid "Account"
+#~ msgstr "الحساب"
+
+#~ msgid "E-mail Addresses"
+#~ msgstr "عناوين البريد الإلكتروني"
+
+#~ msgid "The following e-mail addresses are associated with your account:"
+#~ msgstr "ترتبط عناوين البريد الإلكتروني التالية بحسابك:"
+
+#~ msgid "Verified"
+#~ msgstr "تم التحقق"
+
+#~ msgid "Unverified"
+#~ msgstr "لم يتم التحقق منه"
+
+#~ msgid "Primary"
+#~ msgstr "ابتدائي"
+
+#~ msgid "Make Primary"
+#~ msgstr "اتخذ الاولويه"
+
+#~ msgid "Re-send Verification"
+#~ msgstr "إعادة التحقق"
+
+#~ msgid "Remove"
+#~ msgstr "إزالة"
+
+#~ msgid "Warning:"
+#~ msgstr "تحذير:"
+
+#~ msgid ""
+#~ "You currently do not have any e-mail address set up. You should really add "
+#~ "an e-mail address so you can receive notifications, reset your password, "
+#~ "etc."
+#~ msgstr ""
+#~ "ليس لديك حاليًا أي عنوان بريد إلكتروني تم إعداده. يجب عليك حقًا إضافة عنوان "
+#~ "بريد إلكتروني حتى تتمكن من تلقي الإخطارات وإعادة تعيين كلمة المرور الخاصة بك"
+#~ " ، إلخ."
+
+#~ msgid "Add E-mail Address"
+#~ msgstr "إضافة عنوان البريد الإلكتروني"
+
+#~ msgid "Add E-mail"
+#~ msgstr "إضافة بريد إلكتروني"
+
+#~ msgid "Do you really want to remove the selected e-mail address?"
+#~ msgstr "هل تريد حقًا إزالة عنوان البريد الإلكتروني المحدد؟"
+
+#~ msgid "Confirm E-mail Address"
+#~ msgstr "أكد عنوانك الإلكتروني"
+
+#~ msgid ""
+#~ "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+#~ "address for user %(user_display)s."
+#~ msgstr ""
+#~ "الرجاء التأكد من أن <a href=\"mailto:%(email)s\">%(email)s</a> هو عنوان بريد"
+#~ " إلكتروني للمستخدم %(user_display)s."
+
+#~ msgid "Confirm"
+#~ msgstr "تؤكد"
+
+#~ msgid ""
+#~ "This e-mail confirmation link expired or is invalid. Please <a "
+#~ "href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+#~ msgstr ""
+#~ "انتهت صلاحية رابط تأكيد البريد الإلكتروني هذا أو أنه غير صالح. رجاء<a "
+#~ "href=\"%(email_url)s\">إصدار طلب تأكيد بريد إلكتروني جديد</a>."
+
+#~ msgid "Sign In"
+#~ msgstr "تؤكد"
+
+#~ msgid ""
+#~ "Please sign in with one\n"
+#~ "of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign up</a>\n"
+#~ "for a %(site_name)s account and sign in below:"
+#~ msgstr ""
+#~ "يرجى تسجيل الدخول باستخدام واحد\n"
+#~ "من حسابات الطرف الثالث الموجودة لديك. أو، <a href=\"%(signup_url)s\">سجل أ %(site_name)s الحساب وتسجيل الدخول أدناه:"
+
+#~ msgid "or"
+#~ msgstr "أو"
+
+#~ msgid ""
+#~ "If you have not created an account yet, then please\n"
+#~ "<a href=\"%(signup_url)s\">sign up</a> first."
+#~ msgstr "إذا لم تقم بإنشاء حساب بعد ، فالرجاء<\"a href=\"%(signup_url)s>سجل</a>"
+
+#~ msgid "Forgot Password?"
+#~ msgstr "هل نسيت كلمة المرور؟"
+
+#~ msgid "Sign Out"
+#~ msgstr "خروج"
+
+#~ msgid "Are you sure you want to sign out?"
+#~ msgstr "هل أنت متأكد أنك تريد الخروج؟"
+
+#~ msgid "Change Password"
+#~ msgstr "غير كلمة السر"
+
+#~ msgid "Password Reset"
+#~ msgstr "إعادة تعيين كلمة المرور"
+
+#~ msgid ""
+#~ "Forgotten your password? Enter your e-mail address below, and we'll send you"
+#~ " an e-mail allowing you to reset it."
+#~ msgstr ""
+#~ "هل نسيت كلمة المرور؟ أدخل عنوان بريدك الإلكتروني أدناه ، وسنرسل لك بريدًا "
+#~ "إلكترونيًا يسمح لك بإعادة تعيينه."
+
+#~ msgid "Reset My Password"
+#~ msgstr "إعادة تعيين كلمة المرور الخاصة بي"
+
+#~ msgid "Please contact us if you have any trouble resetting your password."
+#~ msgstr ""
+#~ "يرجى الاتصال بنا إذا كان لديك أي مشكلة في إعادة تعيين كلمة المرور الخاصة بك."
+
+#~ msgid ""
+#~ "We have sent you an e-mail. Please contact us if you do not receive it "
+#~ "within a few minutes."
+#~ msgstr ""
+#~ "لقد أرسلنا لك بريدًا إلكترونيًا. يرجى الاتصال بنا إذا لم تتلقها خلال بضع "
+#~ "دقائق."
+
+#~ msgid "Bad Token"
+#~ msgstr "رمز سيئة"
+
+#~ msgid ""
+#~ "The password reset link was invalid, possibly because it has already been "
+#~ "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password "
+#~ "reset</a>."
+#~ msgstr ""
+#~ "رابط إعادة تعيين كلمة المرور غير صالح ، ربما لأنه تم استخدامه بالفعل. يرجى "
+#~ "طلب أ<a href=\"%(passwd_reset_url)s\">إعادة تعيين كلمة المرور الجديدة</a>."
+
+#~ msgid "change password"
+#~ msgstr "غير كلمة السر"
+
+#~ msgid "Your password is now changed."
+#~ msgstr "تم تغيير كلمة المرور الخاصة بك الآن."
+
+#~ msgid "Set Password"
+#~ msgstr "ضبط كلمة السر"
+
+#~ msgid "Signup"
+#~ msgstr "سجل"
+
+#~ msgid "Sign Up"
+#~ msgstr "سجل"
+
+#~ msgid ""
+#~ "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+#~ msgstr "هل لديك حساب؟ ثم الرجاء<a href=\"%(login_url)s\">تسجيل الدخول</a>."
+
+#~ msgid "Sign Up Closed"
+#~ msgstr "الاشتراك مغلق"
+
+#~ msgid "We are sorry, but the sign up is currently closed."
+#~ msgstr "عذرًا ، ولكن الاشتراك مغلق حاليًا."
+
+#~ msgid "Verify Your E-mail Address"
+#~ msgstr "تحقق من عنوان بريدك الإلكتروني"
+
+#~ msgid ""
+#~ "We have sent an e-mail to you for verification. Follow the link provided to "
+#~ "finalize the signup process. Please contact us if you do not receive it "
+#~ "within a few minutes."
+#~ msgstr ""
+#~ "لقد أرسلنا لك بريدًا إلكترونيًا للتحقق. اتبع الرابط المقدم لإنهاء عملية "
+#~ "الاشتراك. يرجى الاتصال بنا إذا لم تتلقها خلال بضع دقائق."
+
+#~ msgid ""
+#~ "This part of the site requires us to verify that\n"
+#~ "you are who you claim to be. For this purpose, we require that you\n"
+#~ "verify ownership of your e-mail address. "
+#~ msgstr ""
+#~ "هذا الجزء من الموقع يتطلب منا التحقق من ذلك\n"
+#~ "أنت من تدعي أنك. لهذا الغرض ، نطلب منك\n"
+#~ "التحقق من ملكية عنوان بريدك الإلكتروني."
+
+#~ msgid ""
+#~ "We have sent an e-mail to you for\n"
+#~ "verification. Please click on the link inside this e-mail. Please\n"
+#~ "contact us if you do not receive it within a few minutes."
+#~ msgstr ""
+#~ "لقد أرسلنا لك رسالة بريد إلكتروني من أجل\n"
+#~ "التحقق. الرجاء الضغط على الرابط داخل هذا البريد الإلكتروني. رجاء\n"
+#~ "اتصل بنا إذا لم تتلقها خلال بضع دقائق."
+
+#~ msgid ""
+#~ "<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
+#~ "e-mail address</a>."
+#~ msgstr ""
+#~ "<strong> ملاحظة: </strong> لا يزال بإمكانك <a href=\"%(email_url)s\"> تغيير "
+#~ "عنوان بريدك الإلكتروني </a>."
+
+#~ msgid "%(officer.quote)s"
+#~ msgstr "%(officer.quote)s"
+
+#~ msgid "CodeDevils Profile"
+#~ msgstr "ملف تعريف CodeDevils"
+
+#~ msgid "Welcome Back,"
+#~ msgstr "مرحبا بعودتك،"
+
+#~ msgid "Overview"
+#~ msgstr "نظرة عامة"
+
+#~ msgid "My Details"
+#~ msgstr "تفاصيلي"
+
+#~ msgid "Current Projects"
+#~ msgstr "المشاريع الحالية"
+
+#~ msgid "CodeDevils Sponsored"
+#~ msgstr "برعاية CodeDevils"
+
+#~ msgid "Project:"
+#~ msgstr "مشروع:"
+
+#~ msgid "Discover"
+#~ msgstr "اكتشف"
+
+#~ msgid "You can find the work of other CodeDevils and their various projects."
+#~ msgstr "يمكنك العثور على عمل CodeDevils ومشاريعهم المختلفة."
+
+#~ msgid "Continue to projects"
+#~ msgstr "تابع المشاريع"
+
+#~ msgid "Slack Username"
+#~ msgstr "اسم المستخدم Slack"
+
+#~ msgid "The user's slack user name registered on the CodeDevils slack channel"
+#~ msgstr "اسم المستخدم المتراخي للمستخدم المسجل على قناة CodeDevils Slack"
 
 #~ msgid "{name}"
 #~ msgstr "{name}"
