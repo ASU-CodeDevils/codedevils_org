@@ -1,15 +1,8 @@
 import random
-
 from typing import Any, Sequence
 
 import factory
 from django.contrib.auth import get_user_model
-from factory import (
-    DjangoModelFactory,
-    Faker,
-    post_generation,
-    SubFactory,
-)
 
 from codedevils_org.users.models import Officer, OfficerPosition
 
@@ -25,18 +18,18 @@ def _get_position():
     return random.choice(choices)
 
 
-class UserFactory(DjangoModelFactory):
+class UserFactory(factory.DjangoModelFactory):
 
-    username = Faker("user_name")
-    email = Faker("email")
-    name = Faker("name")
+    username = factory.Faker("user_name")
+    email = factory.Faker("email")
+    name = factory.Faker("name")
 
-    @post_generation
+    @factory.post_generation
     def password(self, create: bool, extracted: Sequence[Any], **kwargs):
         password = (
             extracted
             if extracted
-            else Faker(
+            else factory.Faker(
                 "password",
                 length=42,
                 special_chars=True,
@@ -52,24 +45,24 @@ class UserFactory(DjangoModelFactory):
         django_get_or_create = ["username"]
 
 
-class OfficerPositionFactory(DjangoModelFactory):
+class OfficerPositionFactory(factory.DjangoModelFactory):
 
-    name = Faker("name")
-    order = Faker("pyint")
+    name = factory.Faker("name")
+    order = factory.Faker("pyint")
     sds_position = factory.LazyFunction(_get_position)
-    email = Faker("email")
+    email = factory.Faker("email")
 
     class Meta:
         model = OfficerPosition
         django_get_or_create = ["name"]
 
 
-class OfficerFactory(DjangoModelFactory):
+class OfficerFactory(factory.DjangoModelFactory):
 
-    position = SubFactory(factory=OfficerPositionFactory)
-    user = SubFactory(factory=UserFactory)
-    personal_email = Faker("email")
-    quote = Faker("text")
+    position = factory.SubFactory(factory=OfficerPositionFactory)
+    user = factory.SubFactory(factory=UserFactory)
+    personal_email = factory.Faker("email")
+    quote = factory.Faker("text")
 
     class Meta:
         model = Officer

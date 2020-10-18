@@ -1,14 +1,13 @@
 """Defines the GraphQL schema for custom URLs."""
 
 import graphene
-
 from graphene import Node
 from graphene_django.filter import DjangoFilterConnectionField
 from graphene_django.rest_framework.mutation import SerializerMutation
 from graphene_django.types import DjangoObjectType
 
-from codedevils_org.contrib.cd_url.models import CustomUrl
 from codedevils_org.contrib.cd_url.api.serializers import CustomUrlSerializer
+from codedevils_org.contrib.cd_url.models import CustomUrl
 
 
 class CustomUrlNode(DjangoObjectType):

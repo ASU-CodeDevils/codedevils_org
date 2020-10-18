@@ -1,13 +1,13 @@
 import pytest
 
-from codedevils_org.users.models import User, Officer, OfficerPosition
-from codedevils_org.users.tests.factories import (
-    UserFactory,
-    OfficerFactory,
-    OfficerPositionFactory,
-)
 from codedevils_org.contrib.cd_url.models import CustomUrl
 from codedevils_org.contrib.cd_url.test.factories import CustomUrlFactory
+from codedevils_org.users.models import Officer, OfficerPosition, User
+from codedevils_org.users.tests.factories import (
+    OfficerFactory,
+    OfficerPositionFactory,
+    UserFactory,
+)
 
 
 @pytest.fixture(autouse=True)

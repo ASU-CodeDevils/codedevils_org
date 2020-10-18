@@ -2,9 +2,9 @@
 import graphene
 from graphene_django.debug import DjangoDebug
 
-from codedevils_org.users import schema as user_schema
 from codedevils_org.contrib.cd_url import schema as cdurl_schema
 from codedevils_org.contrib.email import schema as email_schema
+from codedevils_org.users import schema as user_schema
 from config.graphene import auth as auth_schema
 
 

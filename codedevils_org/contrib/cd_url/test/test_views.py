@@ -1,5 +1,4 @@
 import pytest
-
 from django.test import RequestFactory
 
 from codedevils_org.contrib.cd_url.models import CustomUrl

@@ -2,16 +2,17 @@ from django.contrib.auth import get_user_model
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.mixins import (
+    DestroyModelMixin,
     ListModelMixin,
     RetrieveModelMixin,
     UpdateModelMixin,
-    DestroyModelMixin,
 )
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
 from codedevils_org.users.models import Officer, OfficerPosition
-from .serializers import UserSerializer, OfficerSerializer, OfficerPositionSerializer
+
+from .serializers import OfficerPositionSerializer, OfficerSerializer, UserSerializer
 
 User = get_user_model()
 

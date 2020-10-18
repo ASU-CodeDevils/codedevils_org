@@ -2,9 +2,9 @@
 Base settings to build other settings files upon.
 """
 from pathlib import Path
-from django.utils.translation import ugettext_lazy as _
 
 import environ
+from django.utils.translation import ugettext_lazy as _
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # codedevils_org/
@@ -34,6 +34,8 @@ LANGUAGES = [
     ("fr", _("French")),
     ("ar", _("Arabic")),
     ("nl", _("Dutch")),
+    ("ge", _("German")),
+    ("ja", _("Japanese")),
     ("hi", _("Hindi")),
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
@@ -197,6 +199,7 @@ TEMPLATES = [
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
                 "codedevils_org.utils.context_processors.settings_context",
+                "codedevils_org.utils.context_processors.language_path_context",
             ],
         },
     }

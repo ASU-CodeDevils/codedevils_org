@@ -1,19 +1,18 @@
 """Defines the GraphQL schema for custom URLs."""
 
 import graphene
-
 from graphene import Node
 from graphene_django.filter import DjangoFilterConnectionField
 from graphene_django.rest_framework.mutation import SerializerMutation
 from graphene_django.types import DjangoObjectType
 
-from codedevils_org.users.models import User, Officer, OfficerPosition
 from codedevils_org.users.api.serializers import (
-    OfficerSerializer,
-    OfficerPositionSerializer,
-    UserSerializer,
     USER_EXCLUDE_FIELDS,
+    OfficerPositionSerializer,
+    OfficerSerializer,
+    UserSerializer,
 )
+from codedevils_org.users.models import Officer, OfficerPosition, User
 
 
 class UserNode(DjangoObjectType):

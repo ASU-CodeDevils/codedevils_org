@@ -1,13 +1,14 @@
 from rest_framework.mixins import (
+    DestroyModelMixin,
     ListModelMixin,
     RetrieveModelMixin,
     UpdateModelMixin,
-    DestroyModelMixin,
 )
 from rest_framework.viewsets import GenericViewSet
 
-from .serializers import CustomUrlSerializer
 from codedevils_org.contrib.cd_url.models import CustomUrl
+
+from .serializers import CustomUrlSerializer
 
 
 class CustomUrlViewSet(

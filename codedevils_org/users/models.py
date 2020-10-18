@@ -1,11 +1,10 @@
 import logging
 
+from django.contrib.auth.models import AbstractUser, Group
 from django.db import models
 from django.db.models import CharField
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
-from django.contrib.auth.models import AbstractUser, Group
-
 from django_countries.fields import CountryField
 from localflavor.us.models import USStateField
 
