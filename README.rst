@@ -5,7 +5,7 @@ The official CodeDevils website. Check out our `Documentation`_ for more informa
 
 .. _`Documentation`: https://asu-codedevils.github.io/codedevils_org/
 
-.. image:: https://travis-ci.com/ASU-CodeDevils/codedevils_org.svg?token=FhsGC7ZUMb7rskmp3jDy&branch=master
+.. image:: https://travis-ci.com/ASU-CodeDevils/codedevils.org.svg?branch=master
     :target: https://travis-ci.com/ASU-CodeDevils/codedevils_org
     :alt: Build
 .. image:: https://codecov.io/gh/ASU-CodeDevils/codedevils_org/branch/master/graph/badge.svg?token=FF94MF9N4M
@@ -30,7 +30,7 @@ Website Status
 Production
 ^^^^^^^^^^
 
-.. image:: https://travis-ci.com/ASU-CodeDevils/codedevils_org.svg?token=FhsGC7ZUMb7rskmp3jDy&branch=master
+.. image:: https://travis-ci.com/ASU-CodeDevils/codedevils.org.svg?branch=master
     :target: https://travis-ci.com/ASU-CodeDevils/codedevils_org
     :alt: Build
 .. image:: https://img.shields.io/uptimerobot/status/m784417521-1b9dcabb76b05ae6fdc099b3
@@ -43,7 +43,7 @@ Production
 QA
 ^^
 
-.. image:: https://travis-ci.com/ASU-CodeDevils/codedevils_org.svg?token=FhsGC7ZUMb7rskmp3jDy&branch=dev
+.. image:: https://travis-ci.com/ASU-CodeDevils/codedevils_org.svg?branch=dev
     :target: https://travis-ci.com/ASU-CodeDevils/codedevils_org
     :alt: Build
 .. image:: https://img.shields.io/uptimerobot/status/m784417527-57e543ec1e2e0752a9ba2228
