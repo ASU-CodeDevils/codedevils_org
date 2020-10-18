@@ -34,6 +34,8 @@ LANGUAGES = [
     ("fr", _("French")),
     ("ar", _("Arabic")),
     ("nl", _("Dutch")),
+    ("ge", _("German")),
+    ("ja", _("Japanese")),
     ("hi", _("Hindi")),
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
