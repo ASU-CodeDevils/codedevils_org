@@ -2,14 +2,14 @@
 import logging
 
 from django.contrib import messages
-from django.core.validators import validate_email, ValidationError
+from django.core.validators import ValidationError, validate_email
 from django.http import HttpResponseForbidden
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
 from django.utils.translation import ugettext_lazy as _
 
 from codedevils_org.contrib.email.utils import (
-    send_contact_us_email,
     email_is_blacklisted,
+    send_contact_us_email,
 )
 from codedevils_org.users.models import Officer
 

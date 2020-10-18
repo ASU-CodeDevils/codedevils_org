@@ -1,15 +1,14 @@
 import graphene
-
 from graphene import Node
 from graphene_django.filter import DjangoFilterConnectionField
 from graphene_django.rest_framework.mutation import SerializerMutation
 from graphene_django.types import DjangoObjectType
 
-from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
 from codedevils_org.contrib.email.api.serializers import (
     BlacklistDomainSerializer,
     BlacklistEmailSerializer,
 )
+from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
 
 
 class BlacklistDomainNode(DjangoObjectType):

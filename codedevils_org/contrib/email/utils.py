@@ -3,11 +3,11 @@ from typing import List, Union
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.core.mail import EmailMultiAlternatives, BadHeaderError
+from django.core.mail import BadHeaderError, EmailMultiAlternatives
 from django.template.loader import render_to_string
 
-from config import celery_app
 from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
+from config import celery_app
 
 Attachments: List[str] = None
 EmailList = Union[list, str]

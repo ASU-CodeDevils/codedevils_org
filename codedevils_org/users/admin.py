@@ -1,11 +1,11 @@
 from django.contrib import admin, messages
-from django.contrib.auth import get_user_model
 from django.contrib.auth import admin as auth_admin
+from django.contrib.auth import get_user_model
 from django.core.exceptions import PermissionDenied
 from django.utils.translation import ugettext_lazy as _
 
-from codedevils_org.users.models import Officer, OfficerPosition
 from codedevils_org.users.forms import UserChangeForm, UserCreationForm
+from codedevils_org.users.models import Officer, OfficerPosition
 
 User = get_user_model()
 

@@ -1,7 +1,9 @@
 import logging
+
 import pytest
 
-from codedevils_org.users.models import User, Officer, OfficerPosition
+from codedevils_org.users.models import Officer, OfficerPosition, User
+
 from .factories import OfficerPositionFactory
 
 pytestmark = pytest.mark.django_db

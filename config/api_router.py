@@ -6,15 +6,15 @@ from rest_framework.response import Response
 from rest_framework.routers import DefaultRouter, SimpleRouter
 from rest_framework.views import APIView
 
-from codedevils_org.users.api.views import (
-    UserViewSet,
-    OfficerViewSet,
-    OfficerPositionViewSet,
-)
 from codedevils_org.contrib.cd_url.api.views import CustomUrlViewSet
 from codedevils_org.contrib.email.api.views import (
     BlacklistDomainViewSet,
     BlacklistEmailViewSet,
+)
+from codedevils_org.users.api.views import (
+    OfficerPositionViewSet,
+    OfficerViewSet,
+    UserViewSet,
 )
 from config.drf import schema_view
 from config.graphene.graphene import private_graphql_view

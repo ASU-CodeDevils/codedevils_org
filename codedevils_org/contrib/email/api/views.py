@@ -1,13 +1,14 @@
 from rest_framework.mixins import (
+    DestroyModelMixin,
     ListModelMixin,
     RetrieveModelMixin,
     UpdateModelMixin,
-    DestroyModelMixin,
 )
 from rest_framework.viewsets import GenericViewSet
 
-from .serializers import BlacklistDomainSerializer, BlacklistEmailSerializer
 from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
+
+from .serializers import BlacklistDomainSerializer, BlacklistEmailSerializer
 
 
 class BlacklistDomainViewSet(

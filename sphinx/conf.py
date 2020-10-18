@@ -15,6 +15,7 @@ import sys
 from datetime import datetime
 
 import django
+
 sys.path.insert(0, os.path.abspath('..'))
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
 django.setup()

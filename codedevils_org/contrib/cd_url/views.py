@@ -1,5 +1,5 @@
-from django.shortcuts import redirect
 from django.http import HttpResponseNotFound
+from django.shortcuts import redirect
 
 from codedevils_org.contrib.cd_url.models import CustomUrl
 

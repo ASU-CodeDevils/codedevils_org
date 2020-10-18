@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
 
 
