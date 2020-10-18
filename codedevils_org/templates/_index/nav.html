@@ -1,4 +1,5 @@
 {% load i18n static custom_urls %}
+{% get_current_language as LANGUAGE_CODE %}
 <nav class="st-nav navbar main-nav navigation fixed-top">
     <div class="container">
         <ul class="st-nav-menu nav navbar-nav">
@@ -20,31 +21,34 @@
                     <a class="st-root-link nav-link" href="{% url 'admin:index' %}" target="_blank">{% trans 'Admin' %}</a>
                 {% endif %}
             </li>
+            <li class="st-nav-section st-nav-secondary nav-item">
             {% if not user.is_authenticated %}
-                <li class="st-nav-section st-nav-secondary nav-item">
-                    <a class="btn btn-rounded btn-outline mr-3 px-3" href="{% custom_url 'join' %}">
-                        <i class="fas fa-user-plus d-none d-md-inline mr-md-0 mr-lg-2"></i>
-                        <span class="d-md-none d-lg-inline">{% trans 'Register' %}</span>
-                    </a>
-                    <a class="btn btn-rounded btn-solid px-3" href="{% url 'cas_ng_login' %}">
-                        <i class="fas fa-sign-in-alt d-none d-md-inline mr-md-0 mr-lg-2"></i>
-                        <span class="d-md-none d-lg-inline">{% trans 'Login' %}</span>
-                    </a>
-                </li>
+                <a class="btn btn-rounded btn-outline mr-3 px-3" href="{% custom_url 'join' %}">
+                    <i class="fas fa-user-plus d-none d-md-inline mr-md-0 mr-lg-2"></i>
+                    <span class="d-md-none d-lg-inline">{% trans 'Register' %}</span>
+                </a>
+                <a class="btn btn-rounded btn-solid px-3" href="{% url 'cas_ng_login' %}">
+                    <i class="fas fa-sign-in-alt d-none d-md-inline mr-md-0 mr-lg-2"></i>
+                    <span class="d-md-none d-lg-inline">{% trans 'Login' %}</span>
+                </a>
             {% else %}
-                <li class="st-nav-section st-nav-secondary nav-item">
-                    <a class="btn btn-rounded btn-solid mr-3 px-3" href="{% url 'users:detail' username=user.username %}"
-                       target="_blank">
-                        <img class="rounded-circle account-img" src="{{ user.image_24 }}" alt="" height="20px"
-                             width="20px">
-                        <span class="d-md-none d-lg-inline">{% trans 'Profile' %}</span>
-                    </a>
-                    <a class="btn btn-rounded btn-outline px-3" href="{% url 'cas_ng_logout' %}">
-                        <i class="fas fa-sign-in-alt d-none d-md-inline mr-md-0 mr-lg-2"></i>
-                        <span class="d-md-none d-lg-inline">{% trans 'Logout' %}</span>
-                    </a>
-                </li>
+                <a class="btn btn-rounded btn-solid mr-3 px-3" href="{% url 'users:detail' username=user.username %}"
+                    target="_blank">
+                    <img class="rounded-circle account-img" src="{{ user.image_24 }}" alt="" height="20px"
+                            width="20px">
+                    <span class="d-md-none d-lg-inline">{% trans 'Profile' %}</span>
+                </a>
+                <a class="btn btn-rounded btn-outline px-3" href="{% url 'cas_ng_logout' %}">
+                    <i class="fas fa-sign-in-alt d-none d-md-inline mr-md-0 mr-lg-2"></i>
+                    <span class="d-md-none d-lg-inline">{% trans 'Logout' %}</span>
+                </a>
             {% endif %}
+            </li>
+            <li class="ml-2 st-nav-section st-nav-primary nav-item">
+                <a class="btn btn-rounded btn-solid px-3 st-has-dropdown dropdown-toggle" data-dropdown="languages" title="{% trans 'Language' %}" href="#">
+                    <i class="fas fa-language d-none d-md-inline"></i>
+                </a>
+            </li>
             <li class="st-nav-section st-nav-mobile nav-item">
                 <button class="st-root-link navbar-toggler" type="button">
                     <span class="icon-bar"></span>
@@ -60,6 +64,7 @@
                                 <i class="far fa-building icon"></i> {% trans 'Home' %} </a>
                             <a class="regular text-success" href="{% url 'about' %}">
                                 <i class="far fa-envelope icon"></i> {% trans 'About' %} </a>
+                            </a>
                             {% if user.is_authenticated %}
                                 <a class="regular text-warning" href="{% url 'workspace' %}">
                                     <i class="fas fa-hand-holding-usd icon"></i> {% trans 'Workspace' %} </a>
@@ -124,6 +129,17 @@
                     <div class="st-dropdown-section" data-dropdown="pages">
                         <div class="st-dropdown-content">
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="st-dropdown-section" data-dropdown="languages" id="collapseLanguages">
+                <div class="st-dropdown-content">
+                    <div class="st-dropdown-content-group">
+                        {% for code, lang in LANGUAGES %}
+                            <a class="dropdown-item{% if LANGUAGE_CODE == code %} active{% endif %}" href="/{{ code }}/{{ no_lang_path }}">
+                                {% language code %}{{ lang }}{% endlanguage %}
+                            </a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

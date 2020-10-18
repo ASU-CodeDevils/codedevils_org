@@ -55,7 +55,20 @@
 		        </section>
             {% endif %}
         {% endblock create_account_footer %}
-
+        <!-- mobile language button -->
+        <div class="btn-group dropleft dot">
+            <a type="button" class="dropdown-toggle dot-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                <i class="fas fa-language dot-icon"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-bottom bring-to-front">
+                {% for code, lang in LANGUAGES %}
+                    <a class="dropdown-item{% if LANGUAGE_CODE == code %} active{% endif %}" href="/{{ code }}/{{ no_lang_path }}">
+                        {% language code %}{{ lang }}{% endlanguage %}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+            
 	</main>
     <!--FOOTER-->
     {% include '_index/footer.html' %}
