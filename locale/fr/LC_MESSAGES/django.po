@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-18 02:02+0000\n"
-"PO-Revision-Date: 2020-10-18 02:05+0000\n"
+"POT-Creation-Date: 2020-10-18 09:52+0000\n"
+"PO-Revision-Date: 2020-10-18 09:55+0000\n"
 "Last-Translator: b'Kevin Shelley <kevin.shelley@pm.me>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -91,7 +91,7 @@ msgstr "Liens personnalisés"
 
 #: codedevils_org/contrib/email/apps.py:7
 #: codedevils_org/contrib/email/models.py:73
-#: codedevils_org/users/models.py:172
+#: codedevils_org/users/models.py:171
 msgid "Email"
 msgstr "Email"
 
@@ -147,14 +147,14 @@ msgstr "Emails sur liste noire"
 
 #: codedevils_org/page_views.py:28
 #: codedevils_org/templates/_index/footer.html:14
-#: codedevils_org/templates/_index/nav.html:14
-#: codedevils_org/templates/_index/nav.html:62
-#: codedevils_org/users/models.py:37
+#: codedevils_org/templates/_index/nav.html:15
+#: codedevils_org/templates/_index/nav.html:66
+#: codedevils_org/users/models.py:36
 msgid "About"
 msgstr "À propos"
 
-#: codedevils_org/page_views.py:39 codedevils_org/templates/_index/nav.html:18
-#: codedevils_org/templates/_index/nav.html:72
+#: codedevils_org/page_views.py:39 codedevils_org/templates/_index/nav.html:19
+#: codedevils_org/templates/_index/nav.html:77
 #: codedevils_org/templates/pages/contactus.html:4
 msgid "Contact Us"
 msgstr "Nous contacter"
@@ -300,62 +300,66 @@ msgstr ""
 msgid "CodeDevils - Develop. Network. Create."
 msgstr "CodeDevils - Développer. Réseau. Créer."
 
-#: codedevils_org/templates/_index/nav.html:13
-#: codedevils_org/templates/_index/nav.html:60
+#: codedevils_org/templates/_index/nav.html:14
+#: codedevils_org/templates/_index/nav.html:64
 msgid "Home"
 msgstr "Accueil"
 
-#: codedevils_org/templates/_index/nav.html:16
-#: codedevils_org/templates/_index/nav.html:65
-#: codedevils_org/templates/_index/nav.html:79
+#: codedevils_org/templates/_index/nav.html:17
+#: codedevils_org/templates/_index/nav.html:70
+#: codedevils_org/templates/_index/nav.html:84
 #: codedevils_org/templates/pages/about.html:62
 #: codedevils_org/templates/pages/about.html:197
 #: codedevils_org/templates/pages/workspace.html:10
 msgid "Workspace"
 msgstr "Espace de travail"
 
-#: codedevils_org/templates/_index/nav.html:20
-#: codedevils_org/templates/_index/nav.html:69
+#: codedevils_org/templates/_index/nav.html:21
+#: codedevils_org/templates/_index/nav.html:74
 msgid "Admin"
 msgstr "Admin"
 
-#: codedevils_org/templates/_index/nav.html:27
-#: codedevils_org/templates/_index/nav.html:90
+#: codedevils_org/templates/_index/nav.html:28
+#: codedevils_org/templates/_index/nav.html:95
 msgid "Register"
 msgstr "S'inscrire"
 
-#: codedevils_org/templates/_index/nav.html:31
+#: codedevils_org/templates/_index/nav.html:32
 #: codedevils_org/templates/pages/about.html:206
 msgid "Login"
 msgstr "S'identifier"
 
-#: codedevils_org/templates/_index/nav.html:40
-#: codedevils_org/templates/_index/nav.html:101
+#: codedevils_org/templates/_index/nav.html:39
+#: codedevils_org/templates/_index/nav.html:106
 msgid "Profile"
 msgstr "Profil"
 
-#: codedevils_org/templates/_index/nav.html:44
-#: codedevils_org/templates/_index/nav.html:106
+#: codedevils_org/templates/_index/nav.html:43
+#: codedevils_org/templates/_index/nav.html:111
 msgid "Logout"
 msgstr "Se déconnecter"
 
-#: codedevils_org/templates/_index/nav.html:56
+#: codedevils_org/templates/_index/nav.html:48
+msgid "Language"
+msgstr "Langue"
+
+#: codedevils_org/templates/_index/nav.html:60
 msgid "Close"
 msgstr "Fermer"
 
-#: codedevils_org/templates/_index/nav.html:58
+#: codedevils_org/templates/_index/nav.html:62
 msgid "Pages"
 msgstr "Pages"
 
-#: codedevils_org/templates/_index/nav.html:76
+#: codedevils_org/templates/_index/nav.html:81
 msgid "CodeDevils"
 msgstr "CodeDevils"
 
-#: codedevils_org/templates/_index/nav.html:82
+#: codedevils_org/templates/_index/nav.html:87
 msgid "Project Request"
 msgstr "Demande de projet"
 
-#: codedevils_org/templates/_index/nav.html:95
+#: codedevils_org/templates/_index/nav.html:100
 msgid "Sign in"
 msgstr "Se connecter"
 
@@ -775,7 +779,6 @@ msgid "Events"
 msgstr "Événements"
 
 #: codedevils_org/templates/pages/home.html:99
-#| msgid "CodeDevils"
 msgid "CodeDevils Hackathon"
 msgstr "CodeDevils Hackathon"
 
@@ -794,9 +797,6 @@ msgid "Virtual Study Hall"
 msgstr "Salle d'étude virtuelle"
 
 #: codedevils_org/templates/pages/home.html:114
-#| msgid ""
-#| "Join us for a virtual study session! Find your study buddies, conquer that "
-#| "homework, and enjoy the nerdiest study breaks at ASU!"
 msgid ""
 "\n"
 "\t\t\t\t\t\t\t\t\tJoin us for a virtual study session! Find your study buddies, conquer that homework, and enjoy the nerdiest study breaks at ASU!\n"
@@ -1164,6 +1164,19 @@ msgstr "Utilisatrices"
 
 #: codedevils_org/templates/users/user_detail.html:158
 msgid ""
+"Your account is currently anonymous. Only you can view this profile page. To"
+" make your profile public please"
+msgstr ""
+"Votre compte est actuellement anonyme. Vous seul pouvez voir cette page de "
+"profil. Pour rendre votre profil public, veuillez"
+
+#: codedevils_org/templates/users/user_detail.html:159
+#| msgid "Create account"
+msgid "edit your account"
+msgstr "modifier votre compte"
+
+#: codedevils_org/templates/users/user_detail.html:167
+msgid ""
 "Stay tuned! Here you will soon be able to see everything you are involved "
 "with at CodeDevils."
 msgstr ""
@@ -1190,7 +1203,7 @@ msgstr "Les ordres de position ont bien été rebasés"
 msgid "Rebase order starting at 1"
 msgstr "Ordre de rebase à partir de 1"
 
-#: codedevils_org/users/admin.py:98 codedevils_org/users/models.py:260
+#: codedevils_org/users/admin.py:98 codedevils_org/users/models.py:259
 msgid "Position"
 msgstr "Position"
 
@@ -1198,94 +1211,94 @@ msgstr "Position"
 msgid "This username has already been taken."
 msgstr "Ce nom d'utilisateur a déjà été saisi."
 
-#: codedevils_org/users/models.py:19
+#: codedevils_org/users/models.py:18
 msgid "Name of User"
 msgstr "Nom de l'utilisateur"
 
-#: codedevils_org/users/models.py:22
+#: codedevils_org/users/models.py:21
 msgid "Image 24"
 msgstr "Image 24"
 
-#: codedevils_org/users/models.py:25
+#: codedevils_org/users/models.py:24
 msgid "User 24px profile image"
 msgstr "Image de profil utilisateur 24 pixels"
 
-#: codedevils_org/users/models.py:29
+#: codedevils_org/users/models.py:28
 msgid "Image 512"
 msgstr "Image 512"
 
-#: codedevils_org/users/models.py:32
+#: codedevils_org/users/models.py:31
 msgid "User 512px profile image"
 msgstr "Image de profil utilisateur 512 pixels"
 
-#: codedevils_org/users/models.py:40
+#: codedevils_org/users/models.py:39
 msgid "Date of birth"
 msgstr "Date de naissance"
 
-#: codedevils_org/users/models.py:49
+#: codedevils_org/users/models.py:48
 msgid "City"
 msgstr "Ville"
 
-#: codedevils_org/users/models.py:50
+#: codedevils_org/users/models.py:49
 msgid "The city that the user currently resides in"
 msgstr "La ville dans laquelle l'utilisateur réside actuellement"
 
-#: codedevils_org/users/models.py:57
+#: codedevils_org/users/models.py:56
 msgid "State"
 msgstr "Etat"
 
-#: codedevils_org/users/models.py:58
+#: codedevils_org/users/models.py:57
 msgid "The state the city resides in (for inside the US only)"
 msgstr ""
 "L'état dans lequel la ville réside (pour l'intérieur des États-Unis "
 "uniquement)"
 
-#: codedevils_org/users/models.py:65
+#: codedevils_org/users/models.py:64
 msgid "Country"
 msgstr "Pays"
 
-#: codedevils_org/users/models.py:66
+#: codedevils_org/users/models.py:65
 msgid "The country the city resides in"
 msgstr "Le pays dans lequel la ville réside"
 
-#: codedevils_org/users/models.py:75
+#: codedevils_org/users/models.py:74
 msgid "GitHub Username"
 msgstr "Nom d'utilisateur GitHub"
 
-#: codedevils_org/users/models.py:76
+#: codedevils_org/users/models.py:75
 msgid "We use this to automatically enroll you in our GitHub projects."
 msgstr ""
 "Nous l'utilisons pour vous inscrire automatiquement à nos projets GitHub."
 
-#: codedevils_org/users/models.py:83
+#: codedevils_org/users/models.py:82
 msgid "ID assigned to this user on Slack"
 msgstr "ID attribué à cet utilisateur sur Slack"
 
-#: codedevils_org/users/models.py:90
+#: codedevils_org/users/models.py:89
 msgid "Twitter Username"
 msgstr "Nom d'utilisateur Twitter"
 
-#: codedevils_org/users/models.py:95
+#: codedevils_org/users/models.py:94
 msgid "Instagram URL"
 msgstr "Lien Instagram"
 
-#: codedevils_org/users/models.py:98
+#: codedevils_org/users/models.py:97
 msgid "Facebook URL"
 msgstr "Lien Facebook"
 
-#: codedevils_org/users/models.py:101
+#: codedevils_org/users/models.py:100
 msgid "LinkedIn URL"
 msgstr "Lien LinkedIn"
 
-#: codedevils_org/users/models.py:108
+#: codedevils_org/users/models.py:107
 msgid "Receive notifications"
 msgstr "Recevoir des notifications"
 
-#: codedevils_org/users/models.py:116
+#: codedevils_org/users/models.py:115
 msgid "Anonymous"
 msgstr "Anonyme"
 
-#: codedevils_org/users/models.py:118
+#: codedevils_org/users/models.py:117
 msgid ""
 "You have the option of keeping your account anonymous with CD. Selectingthis"
 " will ensure your account stays private and supported applications don't "
@@ -1295,19 +1308,19 @@ msgstr ""
 "sélectionnant cette option, votre compte restera privé et les applications "
 "prises en charge n'auront pas accès à vos données."
 
-#: codedevils_org/users/models.py:145
+#: codedevils_org/users/models.py:144
 msgid "Name of the position"
 msgstr "Nom du poste"
 
-#: codedevils_org/users/models.py:147
+#: codedevils_org/users/models.py:146
 msgid "Name"
 msgstr "Nom"
 
-#: codedevils_org/users/models.py:152
+#: codedevils_org/users/models.py:151
 msgid "Order"
 msgstr "Ordre"
 
-#: codedevils_org/users/models.py:154
+#: codedevils_org/users/models.py:153
 msgid ""
 "The order of precedence of the position. For example, the President is 1, "
 "Vice President is 2, and so on."
@@ -1315,39 +1328,39 @@ msgstr ""
 "L'ordre de priorité du poste. Par exemple, le président est 1, le vice-"
 "président est 2, etc."
 
-#: codedevils_org/users/models.py:163
+#: codedevils_org/users/models.py:162
 msgid "SunDevilSync Position"
 msgstr "Position SunDevilSync"
 
-#: codedevils_org/users/models.py:165
+#: codedevils_org/users/models.py:164
 msgid "The name of the officer position as it is registered on SunDevilSync"
 msgstr "Le nom du poste d'officier tel qu'il est enregistré sur SunDevilSync"
 
-#: codedevils_org/users/models.py:173
+#: codedevils_org/users/models.py:172
 msgid "The email address associated to the Officer position"
 msgstr "L'adresse e-mail associée au poste d'agent"
 
-#: codedevils_org/users/models.py:178
+#: codedevils_org/users/models.py:177
 msgid "Officer position"
 msgstr "Poste d'officier"
 
-#: codedevils_org/users/models.py:179
+#: codedevils_org/users/models.py:178
 msgid "Officer positions"
 msgstr "Postes d'officier"
 
-#: codedevils_org/users/models.py:267
+#: codedevils_org/users/models.py:266
 msgid "User"
 msgstr "Utilisatrice"
 
-#: codedevils_org/users/models.py:268
+#: codedevils_org/users/models.py:267
 msgid "The holder the position"
 msgstr "Le titulaire du poste"
 
-#: codedevils_org/users/models.py:274
+#: codedevils_org/users/models.py:273
 msgid "Personal email"
 msgstr "Email personnel"
 
-#: codedevils_org/users/models.py:276
+#: codedevils_org/users/models.py:275
 msgid ""
 "The email address belonging to the student (generally <first name>.<last "
 "name>@codedevils.org)"
@@ -1355,27 +1368,32 @@ msgstr ""
 "L'adresse e-mail appartenant à l'étudiant (généralement "
 "<prénom>.<Nom>@codedevils.org)"
 
-#: codedevils_org/users/models.py:284
+#: codedevils_org/users/models.py:283
 msgid "Quote"
 msgstr "Citation"
 
-#: codedevils_org/users/models.py:285
+#: codedevils_org/users/models.py:284
 msgid "A cliche quote that truly defines who this being is"
 msgstr "Une citation de cliché qui définit vraiment qui est cet être"
 
-#: codedevils_org/users/models.py:292
+#: codedevils_org/users/models.py:291
 msgid "Officer"
 msgstr "Officière"
 
-#: codedevils_org/users/models.py:293
+#: codedevils_org/users/models.py:292
 msgid "Officers"
 msgstr "Officières"
 
-#: codedevils_org/users/views.py:44
+#: codedevils_org/users/views.py:23
+#| msgid "This username has already been taken."
+msgid "This user has asked to remain anonymous."
+msgstr "Cet utilisateur a demandé à rester anonyme."
+
+#: codedevils_org/users/views.py:52
 msgid "Profile successfully updated"
 msgstr "Profil mis à jour avec succès"
 
-#: codedevils_org/users/views.py:74
+#: codedevils_org/users/views.py:82
 msgid ""
 "Email notifications have been turned off. Turn them back on by editing your "
 "profile."
