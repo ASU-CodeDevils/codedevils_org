@@ -9387,16 +9387,17 @@ hr[class*='bg'] {
       bottom: 80px;
       background-color: #8C1D40 !important;
       box-shadow: 0 1px 2px 0 #7a869a;
-      display: block;
+      display: block !important;
       z-index: 999999 !important;
   }
 
   .dot-icon {
-      display: inline-block;
+      display: inline-block !important;
       color: white !important;
       font-size: 29px;
       margin-left: 3.5px !important;
-      margin-top: 10px !important;
+      margin-top: 5px !important;
+      text-align: center;
   }
 
   a.dropdown-toggle.dot-icon::before {
@@ -9407,7 +9408,6 @@ hr[class*='bg'] {
       transform: translate3d(-158.5px, -150px, 0px) !important;
   } }
 
-.dot .dot-icon {
-  display: hidden;
-  height: 0;
+.dot {
+  display: none;
 }
