@@ -199,6 +199,7 @@ TEMPLATES = [
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
                 "codedevils_org.utils.context_processors.settings_context",
+                "codedevils_org.utils.context_processors.language_path_context",
             ],
         },
     }
