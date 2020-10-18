@@ -9392,6 +9392,7 @@ hr[class*='bg'] {
   }
 
   .dot-icon {
+      display: inline-block;
       color: white !important;
       font-size: 29px;
       margin-left: 3.5px !important;
@@ -9406,6 +9407,6 @@ hr[class*='bg'] {
       transform: translate3d(-158.5px, -150px, 0px) !important;
   } }
 
-.dot {
+.dot .dot-icon {
   display: hidden;
 }
