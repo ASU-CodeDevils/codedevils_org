@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseForbidden
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import DetailView, RedirectView, UpdateView
@@ -14,6 +15,13 @@ class UserDetailView(LoginRequiredMixin, DetailView):
     slug_field = "username"
     slug_url_kwarg = "username"
     context_object_name = "profile_user"
+
+    def get(self, request, *args, **kwargs):
+        profile_user = self.get_object()
+        request_user = request.user
+        if profile_user != request_user and profile_user.anonymous:
+            return HttpResponseForbidden(_("This user has asked to remain anonymous."))
+        return super().get(request, *args, **kwargs)
 
 
 user_detail_view = UserDetailView.as_view()
