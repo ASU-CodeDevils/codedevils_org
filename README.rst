@@ -8,8 +8,8 @@ The official CodeDevils website. Check out our `Documentation`_ for more informa
 .. image:: https://travis-ci.com/ASU-CodeDevils/codedevils.org.svg?branch=master
     :target: https://travis-ci.com/ASU-CodeDevils/codedevils.org
     :alt: Build
-.. image:: https://codecov.io/gh/ASU-CodeDevils/codedevils_org/branch/master/graph/badge.svg?token=FF94MF9N4M
-    :target: https://codecov.io/gh/ASU-CodeDevils/codedevils_org
+.. image:: https://codecov.io/gh/ASU-CodeDevils/codedevils.org/branch/master/graph/badge.svg?token=FF94MF9N4M
+    :target: https://codecov.io/gh/ASU-CodeDevils/codedevils.org
     :alt: Codecov
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
     :target: https://github.com/pydanny/cookiecutter-django/
