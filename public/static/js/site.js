@@ -14,6 +14,8 @@ const TYPED_LAGUAGES = {
     'fr': ['Réseau.', 'Développer.', 'Créer.'],
     'nl': ['Netwerk.', 'Ontwikkelen.', 'Creëer.'],
     'hi': ['नेटवर्क।', 'का विकास करना।', 'सृजन करना।'],
+    'ge': ['Netzwerk', 'Entwickeln', 'Erstellen'],
+    'ja': ['通信網', '発展させる', '作成する']
 };
 
 (function() {
