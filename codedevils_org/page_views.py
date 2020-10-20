@@ -95,9 +95,9 @@ def contact_us(request):
         return redirect("home")
     else:
         # if a get request, support passing of form fields
-        email = request.GET.get("email", None)
-        subject = request.GET.get("subject", None)
-        message = request.GET.get("message", None)
+        email = request.GET.get("email", "")
+        subject = request.GET.get("subject", "")
+        message = request.GET.get("message", "")
         context.update({"email": email, "subject": subject, "message": message})
 
     # default behavior is to return to the Contact Us page

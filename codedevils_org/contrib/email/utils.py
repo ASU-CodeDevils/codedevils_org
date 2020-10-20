@@ -95,18 +95,21 @@ def send_templated_email(
     )
 
 
-def send_contact_us_email(subject: str, body: str):
+def send_contact_us_email(subject: str, body: str, reply_to: str):
     """
     Sends the email from the Contact Us page to the designated officer.
 
-        :param subject: The email subject.
-        :param body: The email body to place in the template.
+    Args:
+        subject (str): The email subject.
+        body (str): The email body to place in the template.
+        reply_to (str): The email of the person contacting support.
     """
     body = ["Someone has contacted CodeDevils from the website:", body]
     context = {"title": subject, "body": body}
     send_templated_email(
         subject=subject,
         to=settings.EMAIL_INFO,
+        from_email=reply_to,
         template="contact_us",
         template_context=context,
     )
