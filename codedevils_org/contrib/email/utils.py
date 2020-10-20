@@ -3,7 +3,7 @@ from typing import List, Union
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.core.mail import BadHeaderError, EmailMultiAlternatives, send_mail
+from django.core.mail import BadHeaderError, send_mail
 from django.template.loader import render_to_string
 
 from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
