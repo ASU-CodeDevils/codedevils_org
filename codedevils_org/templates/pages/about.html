@@ -78,6 +78,7 @@
 				<!-- sm: 576px, md: 768px,-->
 				<div class="swiper-container pb-5" data-sw-centered-slides="false" data-sw-show-items="2" data-sw-space-between="30" data-sw-breakpoints='{"576": {"slidesPerView": 1, "spaceBetween": 10, "slidesPerGroup": 1}}'>
 					<div class="swiper-wrapper">
+						{% if officers %}
                         {% for officer in officers %}
 						<div class="swiper-slide">
 							<div class="card shadow">
@@ -131,6 +132,7 @@
 							</div>
 						</div>
                         {% endfor %}
+						{% endif %}
 					</div>
 					<!-- Add Arrows -->
 					<div class="swiper-button-next"></div>
@@ -192,7 +194,7 @@
 					</div>
 					<div class="col-md-6 col-lg-5 ml-md-auto">
 						<div class="shadow card">
-							<div class="card-header overlay gradient gradient-34 alpha-5 image-background cover" style="background-image: url({% static 'home/img/screens/dash/4.png' %})">
+							<div class="card-header overlay gradient gradient-34 alpha-5 image-background cover" style="background-image: url({% static 'img/screens/dash/4.png' %})">
 								<div class="content">
 									<h2 class="mt-9 color-1 light">{% trans 'Workspace' %}</h2>
 								</div>
@@ -223,13 +225,14 @@
 					<p class="color-2 lead">{% trans 'CodeDevils sponsors projects developed by club members by providing assistance and insight. <br>Check out some of our projects. ' %}</p>
 				</div>
 				<ul class="list-unstyled d-flex flex-wrap justify-content-around">
-					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-right" data-aos-delay="0" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-6" style="background-image: url(img...)"></li>
-					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-down-right" data-aos-delay="100" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-4" style="background-image: url(img...)"></li>
-					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-up-right" data-aos-delay="200" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-5" style="background-image: url(img...)"></li>
-					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-up" data-aos-delay="300" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-6" style="background-image: url(img...)"></li>
-					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-down-left" data-aos-delay="400" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-4" style="background-image: url(img...)"></li>
-					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-up-left" data-aos-delay="0" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-5" style="background-image: url(img...)"></li>
-					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-left" data-aos-delay="100" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-6" style="background-image: url(img...)"></li>
+					<!-- TODO add background image to circles by adding  `style="background-image: url(<insert url here>)"`-->
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-right" data-aos-delay="0" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-6"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-down-right" data-aos-delay="100" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-4"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-up-right" data-aos-delay="200" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-5"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-up" data-aos-delay="300" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-6"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-down-left" data-aos-delay="400" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-4"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-up-left" data-aos-delay="0" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-5"></li>
+					<li data-aos-easing="ease-in-out-cubic" data-aos="fade-left" data-aos-delay="100" class="shadow-box bg-6 rounded-circle icon-xxl image-background contain mt-6"></li>
 				</ul>
 			</div>
 		</section>
