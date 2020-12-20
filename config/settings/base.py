@@ -149,7 +149,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    #"config.middleware.RootRedirectMiddleware"
+    "config.middleware.RootRedirectMiddleware"
 ]
 
 # STATIC
@@ -257,7 +257,6 @@ ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = [
     ("""Kevin Shelley""", "kevin.shelley@pm.me"),
-    ("""Abraham Cifuentes""", "acifuen1@asu.edu"),
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
