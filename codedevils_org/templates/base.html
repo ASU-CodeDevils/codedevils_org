@@ -1,19 +1,20 @@
 {% load i18n static custom_urls %}
 <!doctype html>
-<html lang="en">
-
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!-- Current language: {{ LANGUAGE_CODE }} -->
+<html lang="{{ LANGUAGE_CODE|default:'en-us' }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
     {% include '_index/header_meta.html' %}
     {% block extrahead %}{% endblock extrahead %}
 </head>
 
 <body>
-    {% block navbar %}
-        {% include '_index/nav.html' %}
-    {% endblock navbar %}
+    <!--NAVBAR-->
+    {% block navbar %}{% include '_index/nav.html' %}{% endblock navbar %}
 	<main class="{% block main_class %}{% endblock main_class %}">
-        {% block header %}
+
 		<!--HEADER-->
+        {% block header %}
             <header class="page header color-1 overlay alpha-8 image-background cover gradient gradient-53"
                     style="background-image: url({% static 'img/bg/code-grid.png' %})">
                 <div class="divider-shape">
@@ -27,15 +28,17 @@
                 <div class="container" style="">
                     <div class="row">
                         <div class="col-md-6">
-                            <h1 class="regular display-4 color-1 mb-4">{% block header_title %}{% endblock %}</h1>
-                            <p class="lead color-1">{% block header_message %}{% endblock %}</p>
+                            <h1 class="regular display-4 color-1 mb-4">{% block head_title %}{% endblock head_title %}</h1>
+                            <p class="lead color-1">{% block head_message %}{% endblock head_message %}</p>
                         </div>
                     </div>
                 </div>
             </header>
         {% endblock header %}
+
         <!--CONTENT-->
-        {% block base_content %}{% endblock base_content %}
+        {% block content %}{% endblock content %}
+
 		<!--CREATE ACCOUNT-->
         {% block create_account_footer %}
             {% if not user.is_authenticated %}
@@ -43,15 +46,29 @@
 			        <div class="container pt-5">
 				        <div class="d-flex align-items-center flex-column flex-md-row">
 					        <div class="text-center text-md-left">
-						        <p class="light mb-0 accent lead">{% trans 'Ready to join?' %}</p>
-						        <h2 class="mt-0">{% trans 'Create a CodeDevil account' %}</h2>
+						        <p class="light mb-0 accent lead">{% blocktrans %}Ready to join?{% endblocktrans %}</p>
+						        <h2 class="mt-0">{% blocktrans %}Create a CodeDevil account{% endblocktrans %}</h2>
 					        </div>
-					        <a href="{% custom_url 'join' %}" class="btn btn-accent btn-rounded mt-3 mt-md-0 ml-md-auto">{% trans 'Create account' %}</a>
+					        <a href="{% custom_url 'join' %}" class="btn btn-accent btn-rounded mt-3 mt-md-0 ml-md-auto">{% blocktrans %}Create account{% endblocktrans %}</a>
 				        </div>
 			        </div>
 		        </section>
             {% endif %}
         {% endblock create_account_footer %}
+        <!-- mobile language button -->
+        <div class="btn-group dropleft dot">
+            <a type="button" class="dropdown-toggle dot-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                <i class="fas fa-language dot-icon"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-bottom bring-to-front">
+                {% for code, lang in LANGUAGES %}
+                    <a class="dropdown-item{% if LANGUAGE_CODE == code %} active{% endif %}" href="/{{ code }}/{{ no_lang_path }}">
+                        {% language code %}{{ lang }}{% endlanguage %}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+            
 	</main>
     <!--FOOTER-->
     {% include '_index/footer.html' %}
@@ -63,7 +80,7 @@
     {% if messages %}
         {% for message in messages %}
             <div id="snackbar" class="alert alert-{{ message.tags }}">
-                {% blocktrans %}{{ message }}{% endblocktrans %}
+                {{ message }}
             </div>
         {% endfor %}
         <script type="application/javascript">
@@ -72,6 +89,8 @@
             })
         </script>
     {% endif %}
+
+    <!--JIRA SERVICE DESK FAB-->
     {% block help_fab %}
         <script data-jsd-embedded data-key="990dc0da-6ab1-474e-a40a-444084903b30"
                 data-base-url="https://jsd-widget.atlassian.com"
