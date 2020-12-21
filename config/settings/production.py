@@ -134,7 +134,7 @@ LOGGING = {
     "root": {"level": "INFO", "handlers": ["console"]},
     "loggers": {
         "django.request": {
-            "handlers": ["mail_admins"],
+            "handlers": ["mail_admins, production_file"],
             "level": "ERROR",
             "propagate": True,
         },
@@ -143,7 +143,8 @@ LOGGING = {
             "handlers": ["console", "mail_admins"],
             "propagate": True,
         },
-        "": {"handlers": ["console", "production_file"], "level": "DEBUG"},
+        "view_logs": {"handlers": ["console", "test_file"], "level": "DEBUG"},
+        "middleware_logs": {"handlers": ["production_file"], "level": "ERROR"},
     },
 }
 
