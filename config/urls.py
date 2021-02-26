@@ -37,7 +37,7 @@ if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
     # these url in browser to see how these error pages look like.
 
-    urlpatterns += [
+    urlpatterns += i18n_patterns(
         # custom error pages for debugging in development
         # these will be replaced by the server's error pages
         path(
@@ -56,7 +56,7 @@ if settings.DEBUG:
             kwargs={"exception": Exception("Page not Found")},
         ),
         path("500/", default_views.server_error),
-    ]
+    )
     if "debug_toolbar" in settings.INSTALLED_APPS:
         import debug_toolbar
 
