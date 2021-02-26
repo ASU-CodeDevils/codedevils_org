@@ -13,11 +13,12 @@ from codedevils_org.contrib.email.utils import (
 )
 from codedevils_org.users.models import Officer
 
-logger = logging.getLogger("")
+logger = logging.getLogger("view_logs")
 
 
 def home(request):
     """Provides context to visiting the home page."""
+    logger.debug(str(request))
     return render(request, "pages/home.html")
 
 

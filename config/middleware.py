@@ -11,7 +11,7 @@ class InternalServerErrorMiddleware:
 
     def __init__(self, get_response):
         self.get_response = get_response
-        self.logger = logging.getLogger("")
+        self.logger = logging.getLogger("middleware_logs")
 
     def __call__(self, request):
         response = self.get_response(request)
