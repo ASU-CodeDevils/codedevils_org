@@ -1,6 +1,5 @@
 {% extends "base.html" %}
-{% load i18n %}
-
+{% load static %}
 {% block title %}Forbidden (403){% endblock %}
 
 {% block content %}
@@ -12,5 +11,5 @@
           <p class="text-secondary">Sorry, you're not allowed to do want you meant to do.</p><a href="{% url 'home' %}" class="btn btn-info btn-rounded mt-5 py-3"><i class="icon fas fa-long-arrow-alt-left"></i> Back to home</a>
       </div>
     </div>
-  </div>>
+  </div>
 {% endblock content %}
