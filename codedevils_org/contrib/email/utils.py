@@ -3,7 +3,7 @@ from typing import List, Union
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.core.mail import BadHeaderError, EmailMultiAlternatives
+from django.core.mail import BadHeaderError, send_mail
 from django.template.loader import render_to_string
 
 from codedevils_org.contrib.email.models import BlacklistDomain, BlacklistEmail
@@ -18,13 +18,12 @@ logger = logging.getLogger("")
 
 @celery_app.task()
 def send_email(
-    subject: str,
-    text_content: str = None,
-    from_email: str = settings.DEFAULT_FROM_EMAIL,
-    to: EmailList = None,
-    reply_to: EmailList = None,
-    html_content: str = None,
-    attachments: Attachments = None,
+        subject: str,
+        text_content: str = None,
+        from_email: str = settings.DEFAULT_FROM_EMAIL,
+        to: EmailList = None,
+        reply_to: EmailList = None,
+        html_content: str = None,
 ) -> None:
     """
     Wrapper for the built-in django send_mail util.
@@ -36,7 +35,6 @@ def send_email(
             If None, it will send a mass email to all users who opt to receive notifications.
         :param reply_to: The email to reply to, default is None.
         :param html_content: The html message.
-        :param attachments: A list of attachments by name. These can be referential or complete URLs.
     """
 
     # set the list of recipients if not already set
@@ -53,34 +51,25 @@ def send_email(
     if reply_to and isinstance(reply_to, str):
         reply_to = [reply_to]
 
-    email = EmailMultiAlternatives(
-        subject=subject,
-        body=html_content if html_content else text_content,
-        from_email=from_email,
-        to=to,
-        reply_to=reply_to,
-    )
-
-    # attach files
-    if attachments:
-        for attachment in attachments:
-            email.attach_file(attachment)
-
     try:
-        email.send()
+        send_mail(
+            subject=subject,
+            message=text_content,
+            html_message=html_content,
+            recipient_list=to,
+            from_email=from_email
+        )
     except BadHeaderError as bhe:
         logger.error(f"Header injection attempt: {bhe}")
         raise
 
 
 def send_templated_email(
-    subject: str,
-    template: str,
-    template_context: dict = None,
-    from_email: str = settings.EMAIL_HOST_USER,
-    to: EmailList = None,
-    reply_to: EmailList = None,
-    attachments: Attachments = None,
+        subject: str,
+        template: str,
+        template_context: dict = None,
+        from_email: str = settings.EMAIL_HOST_USER,
+        to: EmailList = None,
 ):
     """
     Sends a templated email message.
@@ -101,27 +90,26 @@ def send_templated_email(
         subject=subject,
         from_email=from_email,
         to=to,
-        reply_to=reply_to,
         text_content=text_content,
         html_content=html_content,
-        attachments=attachments,
     )
 
 
-def send_contact_us_email(subject: str, reply_to: str, body: str):
+def send_contact_us_email(subject: str, body: str, reply_to: str):
     """
     Sends the email from the Contact Us page to the designated officer.
 
-        :param subject: The email subject.
-        :param reply_to: The person's email who filled in the contact form.
-        :param body: The email body to place in the template.
+    Args:
+        subject (str): The email subject.
+        body (str): The email body to place in the template.
+        reply_to (str): The email of the person contacting support.
     """
     body = ["Someone has contacted CodeDevils from the website:", body]
     context = {"title": subject, "body": body}
     send_templated_email(
         subject=subject,
         to=settings.EMAIL_INFO,
-        reply_to=reply_to,
+        from_email=reply_to,
         template="contact_us",
         template_context=context,
     )

@@ -149,16 +149,17 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "config.middleware.RootRedirectMiddleware"
 ]
 
 # STATIC
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-root
-STATIC_ROOT = str(APPS_DIR / "staticfiles")
+STATIC_ROOT = str(ROOT_DIR / "public/static/")
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-url
 STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
-STATICFILES_DIRS = [str(ROOT_DIR / "public/static")]
+STATICFILES_DIRS = [str(APPS_DIR / "static")]
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -255,8 +256,9 @@ DEFAULT_FROM_EMAIL = env(
 ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = [
-    ("""Kevin Shelley""", "kevin.shelley@pm.me"),
-    ("""Abraham Cifuentes""", "acifuen1@asu.edu"),
+    ("""Kevin Shelley""", "krshelle@asu.edu"),
+    ("""David Welbourne""", "dswelbor@asu.edu"),
+    ("""Jacob Labrec""", "jlabrec@asu.edu")
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS

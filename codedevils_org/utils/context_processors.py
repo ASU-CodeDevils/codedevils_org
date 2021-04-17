@@ -8,4 +8,7 @@ def settings_context(_request):
 def language_path_context(_request):
     """Removes the language from the path"""
     path: str = _request.path
-    return {"no_lang_path": path.split("/", 2)[2]}
+    try:
+        return {"no_lang_path": path.split("/", 2)[2]}
+    except:  # noqa: E722
+        return {}

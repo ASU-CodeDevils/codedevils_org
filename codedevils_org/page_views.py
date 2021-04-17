@@ -13,11 +13,12 @@ from codedevils_org.contrib.email.utils import (
 )
 from codedevils_org.users.models import Officer
 
-logger = logging.getLogger("")
+logger = logging.getLogger("view_logs")
 
 
 def home(request):
     """Provides context to visiting the home page."""
+    logger.debug(str(request))
     return render(request, "pages/home.html")
 
 
@@ -95,9 +96,9 @@ def contact_us(request):
         return redirect("home")
     else:
         # if a get request, support passing of form fields
-        email = request.GET.get("email", None)
-        subject = request.GET.get("subject", None)
-        message = request.GET.get("message", None)
+        email = request.GET.get("email", "")
+        subject = request.GET.get("subject", "")
+        message = request.GET.get("message", "")
         context.update({"email": email, "subject": subject, "message": message})
 
     # default behavior is to return to the Contact Us page

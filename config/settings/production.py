@@ -55,7 +55,7 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
 
 # STATIC
 # ------------------------
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 # MEDIA
 # ------------------------------------------------------------------------------
 
@@ -143,7 +143,8 @@ LOGGING = {
             "handlers": ["console", "mail_admins"],
             "propagate": True,
         },
-        "": {"handlers": ["console", "production_file"], "level": "DEBUG"},
+        "view_logs": {"handlers": ["console", "test_file"], "level": "DEBUG"},
+        "middleware_logs": {"handlers": ["production_file"], "level": "ERROR"},
     },
 }
 
