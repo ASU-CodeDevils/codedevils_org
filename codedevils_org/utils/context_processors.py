@@ -10,5 +10,5 @@ def language_path_context(_request):
     path: str = _request.path
     try:
         return {"no_lang_path": path.split("/", 2)[2]}
-    except:
+    except:  # noqa: E722
         return {}
