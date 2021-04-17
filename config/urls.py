@@ -43,7 +43,7 @@ if settings.DEBUG:
         path(
             "400/",
             default_views.bad_request,
-            kwargs={"exception": Exception("Bad Request!")},
+            kwargs={"exception": Exception("Bad Request")},
         ),
         path(
             "403/",
@@ -61,7 +61,3 @@ if settings.DEBUG:
         import debug_toolbar
 
         urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
-else:
-    handler403 = default_views.permission_denied
-    handler404 = default_views.page_not_found
-    handler500 = default_views.server_error
