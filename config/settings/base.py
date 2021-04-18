@@ -256,9 +256,7 @@ DEFAULT_FROM_EMAIL = env(
 ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = [
-    ("""Kevin Shelley""", "krshelle@asu.edu"),
-    ("""David Welbourne""", "dswelbor@asu.edu"),
-    ("""Jacob Labrec""", "jlabrec@asu.edu")
+    ("""Kevin Shelley""", "krshelle@asu.edu")
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
