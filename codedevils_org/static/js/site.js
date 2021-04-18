@@ -6,7 +6,7 @@
 // languages for the typed text on the home page
 // The array is in the order: Network, Develop, Create
 const TYPED_LAGUAGES = {
-    'en-us': ['Network.', 'Develop.', 'Create'],
+    'en-us': ['Network.', 'Develop.', 'Create.'],
     'ar': ['شبكة الاتصال.', 'طور.', 'خلق.'],
     'cmn': ['網絡。', '發展。', '創造。'],
     'de': ['Netzwerk.', 'Sich entwickeln.', 'Erstellen.'],
