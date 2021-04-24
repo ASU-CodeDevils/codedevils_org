@@ -1,0 +1,20 @@
+{% extends '_index/base.html' %}
+{% load i18n static %}
+{% block create_account_footer %}{% endblock create_account_footer %}
+{% block header %}
+    <!--HEADER-->
+    <header class="bg-3 section image-background overlay gradient gradient-53 alpha-8 color-1" style="background-image: url({% static 'img/bg/code-grid.png' %})">
+        <div class="container overflow-hidden">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-4 color-1 light">{% trans 'Workshops' %}</h1>
+                    <!--
+                    <h1 class="color-1">
+                        <span class="typed bold display-4 display-md-3"></span>
+                    </h1>
+                -->
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}

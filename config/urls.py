@@ -14,6 +14,7 @@ urlpatterns = i18n_patterns(
     path("about/", page_views.about, name="about"),
     path("contactus/", page_views.contact_us, name="contactus"),
     path("workspace/", page_views.workspace, name="workspace"),
+    path("workshops/", page_views.workshops, name="workshops"),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # cas log in

@@ -34,6 +34,9 @@ def workspace(request):
     """Provides context to visiting the workspace page."""
     return render(request, "pages/workspace.html")
 
+def workshops(request):
+    return render(request, "pages/workshops.html")
+
 
 def contact_us(request):
     """View function for the Contact Us page."""
