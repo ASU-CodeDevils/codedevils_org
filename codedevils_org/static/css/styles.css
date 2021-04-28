@@ -9372,6 +9372,15 @@ hr[class*='bg'] {
 .nav-process {
   min-height: 60px; }
 
+.iframe-container {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* TODO add media query for iframe container*/
+
 /*# sourceMappingURL=styles.css.map */
 
 @media (max-width: 768px) {
