@@ -9376,10 +9376,26 @@ hr[class*='bg'] {
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.iframe-container iframe {
+  margin: 10px 0;
 }
 
 /* TODO add media query for iframe container*/
+@media(max-width: 768px){
+  .iframe-container {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .iframe-container iframe{
+    margin: 10px 0;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
 
