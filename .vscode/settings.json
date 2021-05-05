@@ -1,6 +1,6 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": "${workspaceFolder}/../.envs/cdweb/bin/python",
+    "python.pythonPath": "E:\\Users\\swimd\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
     "files.associations": {
         "**/*.html": "html",
         "**/templates/**/*.html": "django-html",
@@ -10,4 +10,5 @@
     },
     "python.formatting.provider": "black",
     "restructuredtext.confPath": "${workspaceFolder}/sphinx",
+    "python.linting.enabled": true,
 }

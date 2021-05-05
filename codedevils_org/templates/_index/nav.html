@@ -16,6 +16,7 @@
                 {% if user.is_authenticated %}
                     <a class="st-root-link nav-link" href="{% url 'workspace' %}">{% trans 'Workspace' %} </a>
                 {% endif %}
+                <a class="st-root-link nav-link" href="{% url 'workshops' %}">{% trans 'Workshops' %}</a>
                 <a class="st-root-link nav-link" href="{% url 'contactus' %}">{% trans 'Contact Us' %}</a>
                 {% if user.is_staff %}
                     <a class="st-root-link nav-link" href="{% url 'admin:index' %}" target="_blank">{% trans 'Admin' %}</a>
@@ -64,6 +65,9 @@
                                 <i class="far fa-building icon"></i> {% trans 'Home' %} </a>
                             <a class="regular text-success" href="{% url 'about' %}">
                                 <i class="far fa-envelope icon"></i> {% trans 'About' %} </a>
+                            </a>
+                            <a class="regular text-info" href="{% url 'workshops' %}">
+                                <i class="fas fa-chalkboard-teacher icon"></i> {% trans 'Workshops' %} </a>
                             </a>
                             {% if user.is_authenticated %}
                                 <a class="regular text-warning" href="{% url 'workspace' %}">

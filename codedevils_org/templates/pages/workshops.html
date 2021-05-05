@@ -1,0 +1,31 @@
+{% extends '_index/base.html' %}
+{% load i18n static %}
+{% load custom_urls %}
+{% block head_title %}{% trans 'Workshops' %}{% endblock head_title %}
+{% block head_message %}
+    {% blocktrans trimmed %}This is some placeholder text to fill a subheading in the workshops page.{% endblocktrans %}
+{% endblock head_message %}
+{% block content %}
+    <section class="section overview">
+        <section class="section overview">
+			<div class="container bring-to-front">
+				<div class="row align-items-center gap-y">
+					<div class="col-lg-5 mr-auto text-center text-md-left">
+						<div class="section-heading">
+                        	{% blocktrans %}<h2>Our Past Workshops</h2>{% endblocktrans %}
+                        </div>
+                        <div class="iframe-container">
+                            <iframe data-aos="fade-up" width="560" height="315" src="https://www.youtube.com/embed/Ys7-6_t7OEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
+                            <iframe data-aos="fade-up" width="560" height="315" src="https://www.youtube.com/embed/Ys7-6_t7OEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            
+                            <iframe data-aos="fade-up" width="560" height="315" src="https://www.youtube.com/embed/Ys7-6_t7OEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
+                            <iframe data-aos="fade-up" width="560" height="315" src="https://www.youtube.com/embed/Ys7-6_t7OEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+{% endblock content %}
