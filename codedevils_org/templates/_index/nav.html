@@ -66,6 +66,9 @@
                             <a class="regular text-success" href="{% url 'about' %}">
                                 <i class="far fa-envelope icon"></i> {% trans 'About' %} </a>
                             </a>
+                            <a class="regular text-info" href="{% url 'workshops' %}">
+                                <i class="fas fa-chalkboard-teacher icon"></i> {% trans 'Workshops' %} </a>
+                            </a>
                             {% if user.is_authenticated %}
                                 <a class="regular text-warning" href="{% url 'workspace' %}">
                                     <i class="fas fa-hand-holding-usd icon"></i> {% trans 'Workspace' %} </a>

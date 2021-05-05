@@ -9374,6 +9374,7 @@ hr[class*='bg'] {
 
 .iframe-container {
   width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -9387,6 +9388,7 @@ hr[class*='bg'] {
 @media(max-width: 768px){
   .iframe-container {
     width: 300px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
